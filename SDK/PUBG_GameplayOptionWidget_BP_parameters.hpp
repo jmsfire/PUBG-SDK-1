@@ -47,11 +47,6 @@ struct UGameplayOptionWidget_BP_C_InitializeWidgets_Params
 {
 };
 
-// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
-struct UGameplayOptionWidget_BP_C_Construct_Params
-{
-};
-
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnReset
 struct UGameplayOptionWidget_BP_C_OnReset_Params
 {
@@ -64,6 +59,11 @@ struct UGameplayOptionWidget_BP_C_OnDefault_Params
 
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnApply
 struct UGameplayOptionWidget_BP_C_OnApply_Params
+{
+};
+
+// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
+struct UGameplayOptionWidget_BP_C_Construct_Params
 {
 };
 

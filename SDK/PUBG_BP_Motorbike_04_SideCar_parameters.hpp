@@ -14,6 +14,11 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ProcessCamera
+struct ABP_Motorbike_04_SideCar_C_ProcessCamera_Params
+{
+};
+
 // Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.Process_FuelConsumption
 struct ABP_Motorbike_04_SideCar_C_Process_FuelConsumption_Params
 {
@@ -32,6 +37,12 @@ struct ABP_Motorbike_04_SideCar_C_UserConstructionScript_Params
 // Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ReceiveBeginPlay
 struct ABP_Motorbike_04_SideCar_C_ReceiveBeginPlay_Params
 {
+};
+
+// Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ReceiveTick
+struct ABP_Motorbike_04_SideCar_C_ReceiveTick_Params
+{
+	float*                                             DeltaSeconds;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.InpAxisEvt_AirControlPitch_K2Node_InputAxisEvent_8

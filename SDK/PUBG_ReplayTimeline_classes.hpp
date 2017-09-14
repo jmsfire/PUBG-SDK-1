@@ -48,6 +48,7 @@ public:
 	}
 
 
+	void ClearKillEventItems();
 	void CreateGetKillEventsTimer();
 	void UpdatePlayPauseBtns();
 	void SetVisibleCtrls(bool bVisible);

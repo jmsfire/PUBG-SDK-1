@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Uaz_A_01.Uaz_A_01_C
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x08E0 - 0x08E0)
 class AUaz_A_01_C : public AUaz_C
 {
 public:

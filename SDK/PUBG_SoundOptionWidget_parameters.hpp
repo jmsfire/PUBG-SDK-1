@@ -47,6 +47,11 @@ struct USoundOptionWidget_C_OnReset_Params
 {
 };
 
+// Function SoundOptionWidget.SoundOptionWidget_C.Construct
+struct USoundOptionWidget_C_Construct_Params
+{
+};
+
 // Function SoundOptionWidget.SoundOptionWidget_C.ExecuteUbergraph_SoundOptionWidget
 struct USoundOptionWidget_C_ExecuteUbergraph_SoundOptionWidget_Params
 {

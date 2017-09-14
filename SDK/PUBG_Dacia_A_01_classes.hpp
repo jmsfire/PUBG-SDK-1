@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dacia_A_01.Dacia_A_01_C
-// 0x0000 (0x08C0 - 0x08C0)
+// 0x0000 (0x08D0 - 0x08D0)
 class ADacia_A_01_C : public ADacia_C
 {
 public:

@@ -14,6 +14,11 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems
+struct UReplayTimeline_C_ClearKillEventItems_Params
+{
+};
+
 // Function ReplayTimeline.ReplayTimeline_C.CreateGetKillEventsTimer
 struct UReplayTimeline_C_CreateGetKillEventsTimer_Params
 {

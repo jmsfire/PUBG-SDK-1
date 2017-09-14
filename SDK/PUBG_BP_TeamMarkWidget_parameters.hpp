@@ -49,17 +49,6 @@ struct UBP_TeamMarkWidget_C_Get_PlayerName_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Construct
-struct UBP_TeamMarkWidget_C_Construct_Params
-{
-};
-
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.ExecuteUbergraph_BP_TeamMarkWidget
-struct UBP_TeamMarkWidget_C_ExecuteUbergraph_BP_TeamMarkWidget_Params
-{
-	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 }
 
 #ifdef _MSC_VER

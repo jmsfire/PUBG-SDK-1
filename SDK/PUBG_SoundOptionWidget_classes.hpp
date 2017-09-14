@@ -34,6 +34,7 @@ public:
 	void OnApply();
 	void OnDefault();
 	void OnReset();
+	void Construct();
 	void ExecuteUbergraph_SoundOptionWidget(int EntryPoint);
 };
 
