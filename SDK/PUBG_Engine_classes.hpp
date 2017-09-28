@@ -411,7 +411,9 @@ public:
 	unsigned char                                      bAbsoluteTranslation : 1;                                 // 0x0169(0x0001) (CPF_Deprecated)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x016A(0x0002) MISSED OFFSET
 	TWeakObjectPtr<class APhysicsVolume>               PhysicsVolume;                                            // 0x016C(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x6C];                                      // 0x0174(0x006C) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x2C];                                      // 0x0174(0x002C) MISSED OFFSET
+	class Vector3D                                     Location;												 // 0x01A0(0x000C)
+	unsigned char                                      UnknownData07[0x34];                                      // 0x01AC(0x0034) MISSED OFFSET
 	class Vector3D                                     RelativeLocation;                                         // 0x01E0(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Rotator                                      RelativeRotation;                                         // 0x01EC(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData03[0x28];                                      // 0x01F8(0x0028) MISSED OFFSET
@@ -3851,7 +3853,8 @@ public:
 class ULevel : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x88];                                      // 0x0028(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0028(0x0078) MISSED OFFSET
+	TArray<class AActor*>							   AActors;													 // 0x00A0(0x0010)		
 	class UWorld*                                      OwningWorld;                                              // 0x00B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	class UModel*                                      Model;                                                    // 0x00B8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<class UModelComponent*>                     ModelComponents;                                          // 0x00C0(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)

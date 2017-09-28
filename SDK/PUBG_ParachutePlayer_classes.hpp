@@ -31,7 +31,7 @@ public:
 	class USpringArmInVehicleComponent*                ThirdPersonSpringArmInVehicle;                            // 0x0590(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              _____0______1_48D534754930C313D14949AAF35C3B50;           // 0x0598(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _____0__Direction_48D534754930C313D14949AAF35C3B50;       // 0x059C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x059D(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB];                                       // 0x059D(0x000B) MISSED OFFSET
 	float                                              MaxTerminalVelocity;                                      // 0x05A8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MaxDecreaseTerminalVelocity;                              // 0x05AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              LandingBrakeFactor;                                       // 0x05B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
