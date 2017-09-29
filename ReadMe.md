@@ -1,0 +1,2 @@
+Make sure to add in your Project both PUBG_Basic.cpp and PUBG_CoreUObject_functions.cpp
+If you want to use engine functions (You are internal, WHY WOULDN'T YOU! haha) add both PUBG_Engine_functions.cpp and PUBG_TslGame_functions.cpp as well
