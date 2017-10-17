@@ -430,6 +430,10 @@ namespace Classes {
 		__forceinline FVector2D FVector2D::operator-(const FVector2D& V) {
 			return FVector2D(X - V.X, Y - V.Y);
 		}
+		
+		__forceinline FVector2D FVector2D::operator+(const FVector2D& V) {
+			return FVector2D(X + V.X, Y + V.Y);
+		}
 
 		__forceinline FVector2D FVector2D::operator*(float Scale) const {
 			return FVector2D(X * Scale, Y * Scale);
