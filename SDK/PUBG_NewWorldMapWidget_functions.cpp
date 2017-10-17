@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,9 +15,9 @@ namespace Classes
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMoveMapGridViewCenterToMyIconCenterDir
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UNewWorldMapWidget_C::GetMoveMapGridViewCenterToMyIconCenterDir()
+struct FVector2D UNewWorldMapWidget_C::GetMoveMapGridViewCenterToMyIconCenterDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetMoveMapGridViewCenterToMyIconCenterDir");
 
@@ -53,9 +53,9 @@ void UNewWorldMapWidget_C::OnMoveMapGridViewCenterToMyIconCenter()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.SetMapGridPositoin
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::SetMapGridPositoin(const class Vector2D& Position)
+void UNewWorldMapWidget_C::SetMapGridPositoin(const struct FVector2D& Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.SetMapGridPositoin");
 
@@ -240,9 +240,9 @@ void UNewWorldMapWidget_C::OnPutMarkerPad()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UNewWorldMapWidget_C::GetPadGuidePos_MC()
+struct FVector2D UNewWorldMapWidget_C::GetPadGuidePos_MC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC");
 
@@ -261,9 +261,9 @@ class Vector2D UNewWorldMapWidget_C::GetPadGuidePos_MC()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UNewWorldMapWidget_C::GetPadGuidePos_UC()
+struct FVector2D UNewWorldMapWidget_C::GetPadGuidePos_UC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC");
 
@@ -359,10 +359,10 @@ void UNewWorldMapWidget_C::MapMoveGamepadX(float Value)
 // Function NewWorldMapWidget.NewWorldMapWidget_C.ComputeServerToLocalPosition
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Server                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Server                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UNewWorldMapWidget_C::ComputeServerToLocalPosition(const class Vector3D& Server)
+struct FVector UNewWorldMapWidget_C::ComputeServerToLocalPosition(const struct FVector& Server)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.ComputeServerToLocalPosition");
 
@@ -476,9 +476,9 @@ void UNewWorldMapWidget_C::OnMapMove()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.MoveMapGrid
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D                 AdditionalPos                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               AdditionalPos                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::MoveMapGrid(const class Vector2D& AdditionalPos)
+void UNewWorldMapWidget_C::MoveMapGrid(const struct FVector2D& AdditionalPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.MoveMapGrid");
 
@@ -547,11 +547,11 @@ void UNewWorldMapWidget_C::InitNewWorldMapWidget()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapWidgetScreenLocation
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 LeftTop                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 RightBottom                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               LeftTop                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               RightBottom                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::GetMapWidgetScreenLocation(const class Vector2D& Position, class Vector2D* LeftTop, class Vector2D* RightBottom)
+void UNewWorldMapWidget_C::GetMapWidgetScreenLocation(const struct FVector2D& Position, struct FVector2D* LeftTop, struct FVector2D* RightBottom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapWidgetScreenLocation");
 
@@ -574,9 +574,9 @@ void UNewWorldMapWidget_C::GetMapWidgetScreenLocation(const class Vector2D& Posi
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetWheelUpAlignment
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Alignment                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Alignment                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::GetWheelUpAlignment(class Vector2D* Alignment)
+void UNewWorldMapWidget_C::GetWheelUpAlignment(struct FVector2D* Alignment)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetWheelUpAlignment");
 
@@ -613,10 +613,10 @@ void UNewWorldMapWidget_C::TestClear()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMapAlignment
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D                 Aligment                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Aligment                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::UpdateMapAlignment(const class Vector2D& Aligment, const class Vector2D& Size)
+void UNewWorldMapWidget_C::UpdateMapAlignment(const struct FVector2D& Aligment, const struct FVector2D& Size)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMapAlignment");
 
@@ -675,10 +675,10 @@ void UNewWorldMapWidget_C::TickMapPositionMove(float DeltaTime)
 // Function NewWorldMapWidget.NewWorldMapWidget_C.IsInMapWidget
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsIn                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::IsInMapWidget(const class Vector2D& Position, bool* IsIn)
+void UNewWorldMapWidget_C::IsInMapWidget(const struct FVector2D& Position, bool* IsIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.IsInMapWidget");
 
@@ -699,10 +699,10 @@ void UNewWorldMapWidget_C::IsInMapWidget(const class Vector2D& Position, bool* I
 // Function NewWorldMapWidget.NewWorldMapWidget_C.ClampPosition
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ConvertedPosition              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ConvertedPosition              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::ClampPosition(const class Vector2D& Position, class Vector2D* ConvertedPosition)
+void UNewWorldMapWidget_C::ClampPosition(const struct FVector2D& Position, struct FVector2D* ConvertedPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.ClampPosition");
 
@@ -860,9 +860,9 @@ void UNewWorldMapWidget_C::InitializeWorldMap()
 // Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMap
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D                 MapSize                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               MapSize                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::UpdateMap(const class Vector2D& MapSize)
+void UNewWorldMapWidget_C::UpdateMap(const struct FVector2D& MapSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMap");
 
@@ -881,9 +881,9 @@ void UNewWorldMapWidget_C::UpdateMap(const class Vector2D& MapSize)
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Zoom                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 MapSize                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               MapSize                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::GetMapSize(float Zoom, class Vector2D* MapSize)
+void UNewWorldMapWidget_C::GetMapSize(float Zoom, struct FVector2D* MapSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapSize");
 

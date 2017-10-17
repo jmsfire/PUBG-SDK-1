@@ -1,34 +1,31 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// WidgetBlueprintGeneratedClass VersionInfoWidget.VersionInfoWidget_C
-// 0x0000 (0x02C8 - 0x02C8)
-class UVersionInfoWidget_C : public UVersionInfoBaseWidget
-{
-public:
+	// WidgetBlueprintGeneratedClass VersionInfoWidget.VersionInfoWidget_C
+	// 0x0000 (0x02C8 - 0x02C8)
+	class UVersionInfoWidget_C : public UVersionInfoBaseWidget {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass VersionInfoWidget.VersionInfoWidget_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass VersionInfoWidget.VersionInfoWidget_C");
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

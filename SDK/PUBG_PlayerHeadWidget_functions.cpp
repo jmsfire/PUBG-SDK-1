@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -605,10 +605,10 @@ void UPlayerHeadWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 // Function PlayerHeadWidget.PlayerHeadWidget_C.SetCharacterIconPosition_UC
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D*                Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D*              Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool*                          IsHidden                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPlayerHeadWidget_C::SetCharacterIconPosition_UC(class Vector2D* Pos_UC, bool* IsHidden)
+void UPlayerHeadWidget_C::SetCharacterIconPosition_UC(struct FVector2D* Pos_UC, bool* IsHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.SetCharacterIconPosition_UC");
 

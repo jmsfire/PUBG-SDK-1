@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -226,9 +226,9 @@ void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZoneRadius(float* CurrentPlayzoneR
 // Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayZonePosition
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 CurrentPlayzonePosition        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CurrentPlayzonePosition        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZonePosition(class Vector3D* CurrentPlayzonePosition)
+void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZonePosition(struct FVector* CurrentPlayzonePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayZonePosition");
 
@@ -292,9 +292,9 @@ void UBlueZoneGpsWidget_Base_C::GetNextplayzoneRadiusBp(float* NextPlayzoneRadiu
 // Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionBp
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 NextPlayzonePosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NextPlayzonePosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionBp(class Vector3D* NextPlayzonePosition)
+void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionBp(struct FVector* NextPlayzonePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionBp");
 
@@ -526,9 +526,9 @@ void UBlueZoneGpsWidget_Base_C::GetPlayerLength(float* PlayerLength)
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Direction                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCharacterDirection(float Scale, class Vector3D* Direction)
+void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCharacterDirection(float Scale, struct FVector* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayerzoneToCharacterDirection");
 
@@ -550,10 +550,10 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCharacterDirection(float Scal
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
 // float                          SafeLength                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 A                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetSafeLength(float* SafeLength, class Vector3D* A, class Vector3D* B)
+void UBlueZoneGpsWidget_Base_C::GetSafeLength(float* SafeLength, struct FVector* A, struct FVector* B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetSafeLength");
 
@@ -577,10 +577,10 @@ void UBlueZoneGpsWidget_Base_C::GetSafeLength(float* SafeLength, class Vector3D*
 // Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetBluezonePositionAndRadius
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 BluezonePosition               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BluezonePosition               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BluezoneRadius                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetBluezonePositionAndRadius(class Vector3D* BluezonePosition, float* BluezoneRadius)
+void UBlueZoneGpsWidget_Base_C::GetBluezonePositionAndRadius(struct FVector* BluezonePosition, float* BluezoneRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetBluezonePositionAndRadius");
 
@@ -602,10 +602,10 @@ void UBlueZoneGpsWidget_Base_C::GetBluezonePositionAndRadius(class Vector3D* Blu
 // Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayzonePositionAndRadius
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 CurrentPlayzonePosition        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CurrentPlayzonePosition        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          CurrentPlayzoneRadius          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetCurrentPlayzonePositionAndRadius(class Vector3D* CurrentPlayzonePosition, float* CurrentPlayzoneRadius)
+void UBlueZoneGpsWidget_Base_C::GetCurrentPlayzonePositionAndRadius(struct FVector* CurrentPlayzonePosition, float* CurrentPlayzoneRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayzonePositionAndRadius");
 
@@ -627,10 +627,10 @@ void UBlueZoneGpsWidget_Base_C::GetCurrentPlayzonePositionAndRadius(class Vector
 // Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionAndRadius
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 NextPlayzonePosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NextPlayzonePosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionAndRadius(class Vector3D* NextPlayzonePosition, float* Radius)
+void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionAndRadius(struct FVector* NextPlayzonePosition, float* Radius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionAndRadius");
 
@@ -653,10 +653,10 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionAndRadius(class Vector3D*
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
 // float                          DangerLength                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 A                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBlueZoneGpsWidget_Base_C::GetDangerLength(float* DangerLength, class Vector3D* A, class Vector3D* B)
+void UBlueZoneGpsWidget_Base_C::GetDangerLength(float* DangerLength, struct FVector* A, struct FVector* B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetDangerLength");
 

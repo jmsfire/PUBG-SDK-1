@@ -1,34 +1,31 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// Class JsonUtilities.JsonUtilitiesDummyObject
-// 0x0000 (0x0028 - 0x0028)
-class UJsonUtilitiesDummyObject : public UObject
-{
-public:
+	// Class JsonUtilities.JsonUtilitiesDummyObject
+	// 0x0000 (0x0028 - 0x0028)
+	class UJsonUtilitiesDummyObject : public UObject {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class JsonUtilities.JsonUtilitiesDummyObject");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static auto ptr = UObject::FindClass("Class JsonUtilities.JsonUtilitiesDummyObject");
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

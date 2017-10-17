@@ -1,34 +1,31 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C
-// 0x0000 (0x0840 - 0x0840)
-class ALobbyCharacterBase_C : public ALobbyCharacter
-{
-public:
+	// BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C
+	// 0x0000 (0x0840 - 0x0840)
+	class ALobbyCharacterBase_C : public ALobbyCharacter {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static auto ptr = UObject::FindClass("BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C");
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

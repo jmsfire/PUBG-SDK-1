@@ -1,34 +1,31 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass Dacia_WheelPuncture.Dacia_WheelPuncture_C
-// 0x0000 (0x0200 - 0x0200)
-class UDacia_WheelPuncture_C : public UDacia_Wheel_C
-{
-public:
+	// BlueprintGeneratedClass Dacia_WheelPuncture.Dacia_WheelPuncture_C
+	// 0x0000 (0x0200 - 0x0200)
+	class UDacia_WheelPuncture_C : public UDacia_Wheel_C {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Dacia_WheelPuncture.Dacia_WheelPuncture_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Dacia_WheelPuncture.Dacia_WheelPuncture_C");
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

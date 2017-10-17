@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -265,9 +265,9 @@ void AActor::SetActorTickEnabled(bool bEnabled)
 // Function Engine.Actor.SetActorScale3D
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewScale3D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewScale3D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::SetActorScale3D(const class Vector3D& NewScale3D)
+void AActor::SetActorScale3D(const struct FVector& NewScale3D)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.SetActorScale3D");
 
@@ -286,9 +286,9 @@ void AActor::SetActorScale3D(const class Vector3D& NewScale3D)
 // Function Engine.Actor.SetActorRelativeScale3D
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewRelativeScale               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewRelativeScale               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::SetActorRelativeScale3D(const class Vector3D& NewRelativeScale)
+void AActor::SetActorRelativeScale3D(const struct FVector& NewRelativeScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.SetActorRelativeScale3D");
 
@@ -413,12 +413,12 @@ void AActor::ReceiveTick(float DeltaSeconds)
 // Parameters:
 // float                          DamageReceived                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDamageType*             DamageType                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              HitInfo                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // class AController*             InstigatedBy                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::ReceiveRadialDamage(float DamageReceived, class UDamageType* DamageType, const class Vector3D& Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser)
+void AActor::ReceiveRadialDamage(float DamageReceived, class UDamageType* DamageType, const struct FVector& Origin, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.ReceiveRadialDamage");
 
@@ -443,16 +443,16 @@ void AActor::ReceiveRadialDamage(float DamageReceived, class UDamageType* Damage
 // Parameters:
 // float                          Damage                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDamageType*             DamageType                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ShotFromDirection              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ShotFromDirection              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AController*             InstigatedBy                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              HitInfo                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void AActor::ReceivePointDamage(float Damage, class UDamageType* DamageType, const class Vector3D& HitLocation, const class Vector3D& HitNormal, class UPrimitiveComponent* HitComponent, const struct FName& BoneName, const class Vector3D& ShotFromDirection, class AController* InstigatedBy, class AActor* DamageCauser, const struct FHitResult& HitInfo)
+void AActor::ReceivePointDamage(float Damage, class UDamageType* DamageType, const struct FVector& HitLocation, const struct FVector& HitNormal, class UPrimitiveComponent* HitComponent, const struct FName& BoneName, const struct FVector& ShotFromDirection, class AController* InstigatedBy, class AActor* DamageCauser, const struct FHitResult& HitInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.ReceivePointDamage");
 
@@ -483,12 +483,12 @@ void AActor::ReceivePointDamage(float Damage, class UDamageType* DamageType, con
 // class AActor*                  Other                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           bSelfMoved                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void AActor::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const class Vector3D& HitLocation, const class Vector3D& HitNormal, const class Vector3D& NormalImpulse, const struct FHitResult& Hit)
+void AActor::ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.ReceiveHit");
 
@@ -879,11 +879,11 @@ void AActor::OnRep_AttachmentReplication()
 // Parameters:
 // float                          Loudness                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APawn*                   NoiseInstigator                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NoiseLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NoiseLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          MaxRange                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   Tag                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::MakeNoise(float Loudness, class APawn* NoiseInstigator, const class Vector3D& NoiseLocation, float MaxRange, const struct FName& Tag)
+void AActor::MakeNoise(float Loudness, class APawn* NoiseInstigator, const struct FVector& NoiseLocation, float MaxRange, const struct FName& Tag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.MakeNoise");
 
@@ -930,11 +930,11 @@ class UMaterialInstanceDynamic* AActor::MakeMIDForMaterial(class UMaterialInterf
 // Function Engine.Actor.K2_TeleportTo
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DestLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  DestRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DestLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DestRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool AActor::K2_TeleportTo(const class Vector3D& DestLocation, const class Rotator& DestRotation)
+bool AActor::K2_TeleportTo(const struct FVector& DestLocation, const struct FRotator& DestRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_TeleportTo");
 
@@ -988,11 +988,11 @@ bool AActor::K2_SetActorTransform(const struct FTransform& NewTransform, bool bS
 // Function Engine.Actor.K2_SetActorRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTeleportPhysics               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool AActor::K2_SetActorRotation(const class Rotator& NewRotation, bool bTeleportPhysics)
+bool AActor::K2_SetActorRotation(const struct FRotator& NewRotation, bool bTeleportPhysics)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_SetActorRotation");
 
@@ -1043,12 +1043,12 @@ void AActor::K2_SetActorRelativeTransform(const struct FTransform& NewRelativeTr
 // Function Engine.Actor.K2_SetActorRelativeRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRelativeRotation            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRelativeRotation            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_SetActorRelativeRotation(const class Rotator& NewRelativeRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_SetActorRelativeRotation(const struct FRotator& NewRelativeRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_SetActorRelativeRotation");
 
@@ -1072,12 +1072,12 @@ void AActor::K2_SetActorRelativeRotation(const class Rotator& NewRelativeRotatio
 // Function Engine.Actor.K2_SetActorRelativeLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewRelativeLocation            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewRelativeLocation            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_SetActorRelativeLocation(const class Vector3D& NewRelativeLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_SetActorRelativeLocation(const struct FVector& NewRelativeLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_SetActorRelativeLocation");
 
@@ -1101,14 +1101,14 @@ void AActor::K2_SetActorRelativeLocation(const class Vector3D& NewRelativeLocati
 // Function Engine.Actor.K2_SetActorLocationAndRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool AActor::K2_SetActorLocationAndRotation(const class Vector3D& NewLocation, const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+bool AActor::K2_SetActorLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_SetActorLocationAndRotation");
 
@@ -1135,13 +1135,13 @@ bool AActor::K2_SetActorLocationAndRotation(const class Vector3D& NewLocation, c
 // Function Engine.Actor.K2_SetActorLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool AActor::K2_SetActorLocation(const class Vector3D& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+bool AActor::K2_SetActorLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_SetActorLocation");
 
@@ -1246,9 +1246,9 @@ class USceneComponent* AActor::K2_GetRootComponent()
 // Function Engine.Actor.K2_GetActorRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator AActor::K2_GetActorRotation()
+struct FRotator AActor::K2_GetActorRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_GetActorRotation");
 
@@ -1268,9 +1268,9 @@ class Rotator AActor::K2_GetActorRotation()
 // Function Engine.Actor.K2_GetActorLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::K2_GetActorLocation()
+struct FVector AActor::K2_GetActorLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_GetActorLocation");
 
@@ -1499,12 +1499,12 @@ void AActor::K2_AddActorWorldTransform(const struct FTransform& DeltaTransform, 
 // Function Engine.Actor.K2_AddActorWorldRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_AddActorWorldRotation(const class Rotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_AddActorWorldRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_AddActorWorldRotation");
 
@@ -1528,12 +1528,12 @@ void AActor::K2_AddActorWorldRotation(const class Rotator& DeltaRotation, bool b
 // Function Engine.Actor.K2_AddActorWorldOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_AddActorWorldOffset(const class Vector3D& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_AddActorWorldOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_AddActorWorldOffset");
 
@@ -1586,12 +1586,12 @@ void AActor::K2_AddActorLocalTransform(const struct FTransform& NewTransform, bo
 // Function Engine.Actor.K2_AddActorLocalRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_AddActorLocalRotation(const class Rotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_AddActorLocalRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_AddActorLocalRotation");
 
@@ -1615,12 +1615,12 @@ void AActor::K2_AddActorLocalRotation(const class Rotator& DeltaRotation, bool b
 // Function Engine.Actor.K2_AddActorLocalOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::K2_AddActorLocalOffset(const class Vector3D& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void AActor::K2_AddActorLocalOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.K2_AddActorLocalOffset");
 
@@ -1780,9 +1780,9 @@ float AActor::GetVerticalDistanceTo(class AActor* OtherActor)
 // Function Engine.Actor.GetVelocity
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetVelocity()
+struct FVector AActor::GetVelocity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetVelocity");
 
@@ -2073,9 +2073,9 @@ class APawn* AActor::GetInstigator()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FKey                    InputAxisKey                   (CPF_ConstParm, CPF_Parm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetInputVectorAxisValue(const struct FKey& InputAxisKey)
+struct FVector AActor::GetInputVectorAxisValue(const struct FKey& InputAxisKey)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetInputVectorAxisValue");
 
@@ -2384,9 +2384,9 @@ void AActor::GetAllChildActors(bool bIncludeDescendants, TArray<class AActor*>* 
 // Function Engine.Actor.GetActorUpVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetActorUpVector()
+struct FVector AActor::GetActorUpVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorUpVector");
 
@@ -2450,9 +2450,9 @@ float AActor::GetActorTickInterval()
 // Function Engine.Actor.GetActorScale3D
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetActorScale3D()
+struct FVector AActor::GetActorScale3D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorScale3D");
 
@@ -2472,9 +2472,9 @@ class Vector3D AActor::GetActorScale3D()
 // Function Engine.Actor.GetActorRightVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetActorRightVector()
+struct FVector AActor::GetActorRightVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorRightVector");
 
@@ -2494,9 +2494,9 @@ class Vector3D AActor::GetActorRightVector()
 // Function Engine.Actor.GetActorRelativeScale3D
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetActorRelativeScale3D()
+struct FVector AActor::GetActorRelativeScale3D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorRelativeScale3D");
 
@@ -2516,9 +2516,9 @@ class Vector3D AActor::GetActorRelativeScale3D()
 // Function Engine.Actor.GetActorForwardVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AActor::GetActorForwardVector()
+struct FVector AActor::GetActorForwardVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorForwardVector");
 
@@ -2538,10 +2538,10 @@ class Vector3D AActor::GetActorForwardVector()
 // Function Engine.Actor.GetActorEyesViewPoint
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 OutLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::GetActorEyesViewPoint(class Vector3D* OutLocation, class Rotator* OutRotation)
+void AActor::GetActorEyesViewPoint(struct FVector* OutLocation, struct FRotator* OutRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorEyesViewPoint");
 
@@ -2587,10 +2587,10 @@ bool AActor::GetActorEnableCollision()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // bool                           bOnlyCollidingComponents       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AActor::GetActorBounds(bool bOnlyCollidingComponents, class Vector3D* Origin, class Vector3D* BoxExtent)
+void AActor::GetActorBounds(bool bOnlyCollidingComponents, struct FVector* Origin, struct FVector* BoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Actor.GetActorBounds");
 
@@ -3033,10 +3033,10 @@ void AHUD::ReceiveDrawHUD(int SizeX, int SizeY)
 // Function Engine.HUD.Project
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D AHUD::Project(const class Vector3D& Location)
+struct FVector AHUD::Project(const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.Project");
 
@@ -3134,13 +3134,13 @@ class APawn* AHUD::GetOwningPawn()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UClass*                  ClassFilter                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 FirstPoint                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 SecondPoint                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector2D               FirstPoint                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector2D               SecondPoint                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           bIncludeNonCollidingComponents (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bActorMustBeFullyEnclosed      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::GetActorsInSelectionRectangle(class UClass* ClassFilter, const class Vector2D& FirstPoint, const class Vector2D& SecondPoint, bool bIncludeNonCollidingComponents, bool bActorMustBeFullyEnclosed, TArray<class AActor*>* OutActors)
+void AHUD::GetActorsInSelectionRectangle(class UClass* ClassFilter, const struct FVector2D& FirstPoint, const struct FVector2D& SecondPoint, bool bIncludeNonCollidingComponents, bool bActorMustBeFullyEnclosed, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.GetActorsInSelectionRectangle");
 
@@ -3209,9 +3209,9 @@ void AHUD::DrawTextureSimple(class UTexture* Texture, float ScreenX, float Scree
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bScalePosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 RotPivot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               RotPivot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::DrawTexture(class UTexture* Texture, float ScreenX, float ScreenY, float ScreenW, float ScreenH, float TextureU, float TextureV, float TextureUWidth, float TextureVHeight, const struct FLinearColor& TintColor, TEnumAsByte<EBlendMode> BlendMode, float Scale, bool bScalePosition, float Rotation, const class Vector2D& RotPivot)
+void AHUD::DrawTexture(class UTexture* Texture, float ScreenX, float ScreenY, float ScreenW, float ScreenH, float TextureU, float TextureV, float TextureUWidth, float TextureVHeight, const struct FLinearColor& TintColor, TEnumAsByte<EBlendMode> BlendMode, float Scale, bool bScalePosition, float Rotation, const struct FVector2D& RotPivot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.DrawTexture");
 
@@ -3307,17 +3307,17 @@ void AHUD::DrawRect(const struct FLinearColor& RectColor, float ScreenX, float S
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*      Material                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V0_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V1_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V2_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V0_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V1_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 V2_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V0_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V1_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V2_Pos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V0_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V1_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               V2_UV                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            V0_Color                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            V1_Color                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            V2_Color                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::DrawMaterialTriangle(class UMaterialInterface* Material, const class Vector2D& V0_Pos, const class Vector2D& V1_Pos, const class Vector2D& V2_Pos, const class Vector2D& V0_UV, const class Vector2D& V1_UV, const class Vector2D& V2_UV, const struct FLinearColor& V0_Color, const struct FLinearColor& V1_Color, const struct FLinearColor& V2_Color)
+void AHUD::DrawMaterialTriangle(class UMaterialInterface* Material, const struct FVector2D& V0_Pos, const struct FVector2D& V1_Pos, const struct FVector2D& V2_Pos, const struct FVector2D& V0_UV, const struct FVector2D& V1_UV, const struct FVector2D& V2_UV, const struct FLinearColor& V0_Color, const struct FLinearColor& V1_Color, const struct FLinearColor& V2_Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.DrawMaterialTriangle");
 
@@ -3390,9 +3390,9 @@ void AHUD::DrawMaterialSimple(class UMaterialInterface* Material, float ScreenX,
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bScalePosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 RotPivot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               RotPivot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::DrawMaterial(class UMaterialInterface* Material, float ScreenX, float ScreenY, float ScreenW, float ScreenH, float MaterialU, float MaterialV, float MaterialUWidth, float MaterialVHeight, float Scale, bool bScalePosition, float Rotation, const class Vector2D& RotPivot)
+void AHUD::DrawMaterial(class UMaterialInterface* Material, float ScreenX, float ScreenY, float ScreenW, float ScreenH, float MaterialU, float MaterialV, float MaterialUWidth, float MaterialVHeight, float Scale, bool bScalePosition, float Rotation, const struct FVector2D& RotPivot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.DrawMaterial");
 
@@ -3456,10 +3456,10 @@ void AHUD::DrawLine(float StartScreenX, float StartScreenY, float EndScreenX, fl
 // Parameters:
 // float                          ScreenX                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ScreenY                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::Deproject(float ScreenX, float ScreenY, class Vector3D* WorldPosition, class Vector3D* WorldDirection)
+void AHUD::Deproject(float ScreenX, float ScreenY, struct FVector* WorldPosition, struct FVector* WorldDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.Deproject");
 
@@ -3484,13 +3484,13 @@ void AHUD::Deproject(float ScreenX, float ScreenY, class Vector3D* WorldPosition
 // Function Engine.HUD.AddHitBox
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   InName                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bConsumesInput                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Priority                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::AddHitBox(const class Vector2D& Position, const class Vector2D& Size, const struct FName& InName, bool bConsumesInput, int Priority)
+void AHUD::AddHitBox(const struct FVector2D& Position, const struct FVector2D& Size, const struct FName& InName, bool bConsumesInput, int Priority)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.AddHitBox");
 
@@ -3516,8 +3516,8 @@ void AHUD::AddHitBox(const class Vector2D& Position, const class Vector2D& Size,
 // struct FString                 DebugText                      (CPF_Parm, CPF_ZeroConstructor)
 // class AActor*                  SrcActor                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Offset                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 DesiredOffset                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Offset                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DesiredOffset                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FColor                  TextColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSkipOverwriteCheck            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAbsoluteLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3526,7 +3526,7 @@ void AHUD::AddHitBox(const class Vector2D& Position, const class Vector2D& Size,
 // float                          FontScale                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bDrawShadow                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AHUD::AddDebugText(const struct FString& DebugText, class AActor* SrcActor, float Duration, const class Vector3D& Offset, const class Vector3D& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow)
+void AHUD::AddDebugText(const struct FString& DebugText, class AActor* SrcActor, float Duration, const struct FVector& Offset, const struct FVector& DesiredOffset, const struct FColor& TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, class UFont* InFont, float FontScale, bool bDrawShadow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HUD.AddDebugText");
 
@@ -4149,9 +4149,9 @@ bool USceneComponent::SnapTo(class USceneComponent* InParent, const struct FName
 // Function Engine.SceneComponent.SetWorldScale3D
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewScale                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewScale                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::SetWorldScale3D(const class Vector3D& NewScale)
+void USceneComponent::SetWorldScale3D(const struct FVector& NewScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.SetWorldScale3D");
 
@@ -4193,9 +4193,9 @@ void USceneComponent::SetVisibility(bool bNewVisibility, bool bPropagateToChildr
 // Function Engine.SceneComponent.SetRelativeScale3D
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewScale3D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewScale3D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::SetRelativeScale3D(const class Vector3D& NewScale3D)
+void USceneComponent::SetRelativeScale3D(const struct FVector& NewScale3D)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.SetRelativeScale3D");
 
@@ -4444,12 +4444,12 @@ void USceneComponent::K2_SetWorldTransform(const struct FTransform& NewTransform
 // Function Engine.SceneComponent.K2_SetWorldRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetWorldRotation(const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetWorldRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetWorldRotation");
 
@@ -4473,13 +4473,13 @@ void USceneComponent::K2_SetWorldRotation(const class Rotator& NewRotation, bool
 // Function Engine.SceneComponent.K2_SetWorldLocationAndRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetWorldLocationAndRotation(const class Vector3D& NewLocation, const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetWorldLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetWorldLocationAndRotation");
 
@@ -4504,12 +4504,12 @@ void USceneComponent::K2_SetWorldLocationAndRotation(const class Vector3D& NewLo
 // Function Engine.SceneComponent.K2_SetWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetWorldLocation(const class Vector3D& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetWorldLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetWorldLocation");
 
@@ -4562,12 +4562,12 @@ void USceneComponent::K2_SetRelativeTransform(const struct FTransform& NewTransf
 // Function Engine.SceneComponent.K2_SetRelativeRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetRelativeRotation(const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetRelativeRotation(const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetRelativeRotation");
 
@@ -4591,13 +4591,13 @@ void USceneComponent::K2_SetRelativeRotation(const class Rotator& NewRotation, b
 // Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetRelativeLocationAndRotation(const class Vector3D& NewLocation, const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetRelativeLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetRelativeLocationAndRotation");
 
@@ -4622,12 +4622,12 @@ void USceneComponent::K2_SetRelativeLocationAndRotation(const class Vector3D& Ne
 // Function Engine.SceneComponent.K2_SetRelativeLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_SetRelativeLocation(const class Vector3D& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_SetRelativeLocation(const struct FVector& NewLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_SetRelativeLocation");
 
@@ -4673,9 +4673,9 @@ struct FTransform USceneComponent::K2_GetComponentToWorld()
 // Function Engine.SceneComponent.K2_GetComponentScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::K2_GetComponentScale()
+struct FVector USceneComponent::K2_GetComponentScale()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_GetComponentScale");
 
@@ -4695,9 +4695,9 @@ class Vector3D USceneComponent::K2_GetComponentScale()
 // Function Engine.SceneComponent.K2_GetComponentRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USceneComponent::K2_GetComponentRotation()
+struct FRotator USceneComponent::K2_GetComponentRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_GetComponentRotation");
 
@@ -4717,9 +4717,9 @@ class Rotator USceneComponent::K2_GetComponentRotation()
 // Function Engine.SceneComponent.K2_GetComponentLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::K2_GetComponentLocation()
+struct FVector USceneComponent::K2_GetComponentLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_GetComponentLocation");
 
@@ -4859,12 +4859,12 @@ void USceneComponent::K2_AddWorldTransform(const struct FTransform& DeltaTransfo
 // Function Engine.SceneComponent.K2_AddWorldRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddWorldRotation(const class Rotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddWorldRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddWorldRotation");
 
@@ -4888,12 +4888,12 @@ void USceneComponent::K2_AddWorldRotation(const class Rotator& DeltaRotation, bo
 // Function Engine.SceneComponent.K2_AddWorldOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddWorldOffset(const class Vector3D& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddWorldOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddWorldOffset");
 
@@ -4917,12 +4917,12 @@ void USceneComponent::K2_AddWorldOffset(const class Vector3D& DeltaLocation, boo
 // Function Engine.SceneComponent.K2_AddRelativeRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddRelativeRotation(const class Rotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddRelativeRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddRelativeRotation");
 
@@ -4946,12 +4946,12 @@ void USceneComponent::K2_AddRelativeRotation(const class Rotator& DeltaRotation,
 // Function Engine.SceneComponent.K2_AddRelativeLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddRelativeLocation(const class Vector3D& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddRelativeLocation(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddRelativeLocation");
 
@@ -5004,12 +5004,12 @@ void USceneComponent::K2_AddLocalTransform(const struct FTransform& DeltaTransfo
 // Function Engine.SceneComponent.K2_AddLocalRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddLocalRotation(const class Rotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddLocalRotation(const struct FRotator& DeltaRotation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddLocalRotation");
 
@@ -5033,12 +5033,12 @@ void USceneComponent::K2_AddLocalRotation(const class Rotator& DeltaRotation, bo
 // Function Engine.SceneComponent.K2_AddLocalOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DeltaLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              SweepHitResult                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USceneComponent::K2_AddLocalOffset(const class Vector3D& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
+void USceneComponent::K2_AddLocalOffset(const struct FVector& DeltaLocation, bool bSweep, bool bTeleport, struct FHitResult* SweepHitResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.K2_AddLocalOffset");
 
@@ -5130,9 +5130,9 @@ bool USceneComponent::IsAnySimulatingPhysics()
 // Function Engine.SceneComponent.GetUpVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::GetUpVector()
+struct FVector USceneComponent::GetUpVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetUpVector");
 
@@ -5179,9 +5179,9 @@ struct FTransform USceneComponent::GetSocketTransform(const struct FName& InSock
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FName                   InSocketName                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USceneComponent::GetSocketRotation(const struct FName& InSocketName)
+struct FRotator USceneComponent::GetSocketRotation(const struct FName& InSocketName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetSocketRotation");
 
@@ -5227,9 +5227,9 @@ struct FQuat USceneComponent::GetSocketQuaternion(const struct FName& InSocketNa
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FName                   InSocketName                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::GetSocketLocation(const struct FName& InSocketName)
+struct FVector USceneComponent::GetSocketLocation(const struct FName& InSocketName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetSocketLocation");
 
@@ -5250,9 +5250,9 @@ class Vector3D USceneComponent::GetSocketLocation(const struct FName& InSocketNa
 // Function Engine.SceneComponent.GetRightVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::GetRightVector()
+struct FVector USceneComponent::GetRightVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetRightVector");
 
@@ -5361,9 +5361,9 @@ int USceneComponent::GetNumChildrenComponents()
 // Function Engine.SceneComponent.GetForwardVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::GetForwardVector()
+struct FVector USceneComponent::GetForwardVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetForwardVector");
 
@@ -5383,9 +5383,9 @@ class Vector3D USceneComponent::GetForwardVector()
 // Function Engine.SceneComponent.GetComponentVelocity
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USceneComponent::GetComponentVelocity()
+struct FVector USceneComponent::GetComponentVelocity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.GetComponentVelocity");
 
@@ -5757,11 +5757,11 @@ void UPrimitiveComponent::SetPhysicsMaxAngularVelocity(float NewMaxAngVel, bool 
 // Function Engine.PrimitiveComponent.SetPhysicsLinearVelocity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAddToCurrent                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::SetPhysicsLinearVelocity(const class Vector3D& NewVel, bool bAddToCurrent, const struct FName& BoneName)
+void UPrimitiveComponent::SetPhysicsLinearVelocity(const struct FVector& NewVel, bool bAddToCurrent, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.SetPhysicsLinearVelocity");
 
@@ -5782,11 +5782,11 @@ void UPrimitiveComponent::SetPhysicsLinearVelocity(const class Vector3D& NewVel,
 // Function Engine.PrimitiveComponent.SetPhysicsAngularVelocity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewAngVel                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewAngVel                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAddToCurrent                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::SetPhysicsAngularVelocity(const class Vector3D& NewAngVel, bool bAddToCurrent, const struct FName& BoneName)
+void UPrimitiveComponent::SetPhysicsAngularVelocity(const struct FVector& NewAngVel, bool bAddToCurrent, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.SetPhysicsAngularVelocity");
 
@@ -6197,10 +6197,10 @@ void UPrimitiveComponent::SetCollisionEnabled(TEnumAsByte<ECollisionEnabled> New
 // Function Engine.PrimitiveComponent.SetCenterOfMass
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 CenterOfMassOffset             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CenterOfMassOffset             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::SetCenterOfMass(const class Vector3D& CenterOfMassOffset, const struct FName& BoneName)
+void UPrimitiveComponent::SetCenterOfMass(const struct FVector& CenterOfMassOffset, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.SetCenterOfMass");
 
@@ -6283,10 +6283,10 @@ void UPrimitiveComponent::SetAngularDamping(float InDamping)
 // Function Engine.PrimitiveComponent.SetAllPhysicsLinearVelocity
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAddToCurrent                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::SetAllPhysicsLinearVelocity(const class Vector3D& NewVel, bool bAddToCurrent)
+void UPrimitiveComponent::SetAllPhysicsLinearVelocity(const struct FVector& NewVel, bool bAddToCurrent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.SetAllPhysicsLinearVelocity");
 
@@ -6327,11 +6327,11 @@ void UPrimitiveComponent::SetAllMassScale(float InMassScale)
 // Function Engine.PrimitiveComponent.ScaleByMomentOfInertia
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 InputVector                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InputVector                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::ScaleByMomentOfInertia(const class Vector3D& InputVector, const struct FName& BoneName)
+struct FVector UPrimitiveComponent::ScaleByMomentOfInertia(const struct FVector& InputVector, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.ScaleByMomentOfInertia");
 
@@ -6374,16 +6374,16 @@ void UPrimitiveComponent::PutRigidBodyToSleep(const struct FName& BoneName)
 // Function Engine.PrimitiveComponent.K2_LineTraceComponent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 TraceStart                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TraceEnd                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceStart                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceEnd                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bShowTrace                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitNormal                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitNormal                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UPrimitiveComponent::K2_LineTraceComponent(const class Vector3D& TraceStart, const class Vector3D& TraceEnd, bool bTraceComplex, bool bShowTrace, class Vector3D* HitLocation, class Vector3D* HitNormal, struct FName* BoneName)
+bool UPrimitiveComponent::K2_LineTraceComponent(const struct FVector& TraceStart, const struct FVector& TraceEnd, bool bTraceComplex, bool bShowTrace, struct FVector* HitLocation, struct FVector* HitNormal, struct FName* BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.K2_LineTraceComponent");
 
@@ -6640,11 +6640,11 @@ struct FWalkableSlopeOverride UPrimitiveComponent::GetWalkableSlopeOverride()
 // Function Engine.PrimitiveComponent.GetPhysicsLinearVelocityAtPoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::GetPhysicsLinearVelocityAtPoint(const class Vector3D& Point, const struct FName& BoneName)
+struct FVector UPrimitiveComponent::GetPhysicsLinearVelocityAtPoint(const struct FVector& Point, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetPhysicsLinearVelocityAtPoint");
 
@@ -6667,9 +6667,9 @@ class Vector3D UPrimitiveComponent::GetPhysicsLinearVelocityAtPoint(const class 
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::GetPhysicsLinearVelocity(const struct FName& BoneName)
+struct FVector UPrimitiveComponent::GetPhysicsLinearVelocity(const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetPhysicsLinearVelocity");
 
@@ -6691,9 +6691,9 @@ class Vector3D UPrimitiveComponent::GetPhysicsLinearVelocity(const struct FName&
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::GetPhysicsAngularVelocity(const struct FName& BoneName)
+struct FVector UPrimitiveComponent::GetPhysicsAngularVelocity(const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetPhysicsAngularVelocity");
 
@@ -6899,9 +6899,9 @@ float UPrimitiveComponent::GetLinearDamping()
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::GetInertiaTensor(const struct FName& BoneName)
+struct FVector UPrimitiveComponent::GetInertiaTensor(const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetInertiaTensor");
 
@@ -7012,12 +7012,12 @@ TEnumAsByte<ECollisionEnabled> UPrimitiveComponent::GetCollisionEnabled()
 // Function Engine.PrimitiveComponent.GetClosestPointOnCollision
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Point                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 OutPointOnBody                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 OutPointOnBody                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UPrimitiveComponent::GetClosestPointOnCollision(const class Vector3D& Point, const struct FName& BoneName, class Vector3D* OutPointOnBody)
+float UPrimitiveComponent::GetClosestPointOnCollision(const struct FVector& Point, const struct FName& BoneName, struct FVector* OutPointOnBody)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetClosestPointOnCollision");
 
@@ -7043,9 +7043,9 @@ float UPrimitiveComponent::GetClosestPointOnCollision(const class Vector3D& Poin
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPrimitiveComponent::GetCenterOfMass(const struct FName& BoneName)
+struct FVector UPrimitiveComponent::GetCenterOfMass(const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.GetCenterOfMass");
 
@@ -7268,11 +7268,11 @@ bool UPrimitiveComponent::CanCharacterStepUp(class APawn* Pawn)
 // Function Engine.PrimitiveComponent.AddTorque
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Torque                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Torque                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAccelChange                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddTorque(const class Vector3D& Torque, const struct FName& BoneName, bool bAccelChange)
+void UPrimitiveComponent::AddTorque(const struct FVector& Torque, const struct FName& BoneName, bool bAccelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddTorque");
 
@@ -7293,13 +7293,13 @@ void UPrimitiveComponent::AddTorque(const class Vector3D& Torque, const struct F
 // Function Engine.PrimitiveComponent.AddRadialImpulse
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Strength                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ERadialImpulseFalloff> Falloff                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bVelChange                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddRadialImpulse(const class Vector3D& Origin, float Radius, float Strength, TEnumAsByte<ERadialImpulseFalloff> Falloff, bool bVelChange)
+void UPrimitiveComponent::AddRadialImpulse(const struct FVector& Origin, float Radius, float Strength, TEnumAsByte<ERadialImpulseFalloff> Falloff, bool bVelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddRadialImpulse");
 
@@ -7322,13 +7322,13 @@ void UPrimitiveComponent::AddRadialImpulse(const class Vector3D& Origin, float R
 // Function Engine.PrimitiveComponent.AddRadialForce
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Strength                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ERadialImpulseFalloff> Falloff                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAccelChange                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddRadialForce(const class Vector3D& Origin, float Radius, float Strength, TEnumAsByte<ERadialImpulseFalloff> Falloff, bool bAccelChange)
+void UPrimitiveComponent::AddRadialForce(const struct FVector& Origin, float Radius, float Strength, TEnumAsByte<ERadialImpulseFalloff> Falloff, bool bAccelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddRadialForce");
 
@@ -7351,11 +7351,11 @@ void UPrimitiveComponent::AddRadialForce(const class Vector3D& Origin, float Rad
 // Function Engine.PrimitiveComponent.AddImpulseAtLocation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddImpulseAtLocation(const class Vector3D& Impulse, const class Vector3D& Location, const struct FName& BoneName)
+void UPrimitiveComponent::AddImpulseAtLocation(const struct FVector& Impulse, const struct FVector& Location, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddImpulseAtLocation");
 
@@ -7376,11 +7376,11 @@ void UPrimitiveComponent::AddImpulseAtLocation(const class Vector3D& Impulse, co
 // Function Engine.PrimitiveComponent.AddImpulse
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bVelChange                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddImpulse(const class Vector3D& Impulse, const struct FName& BoneName, bool bVelChange)
+void UPrimitiveComponent::AddImpulse(const struct FVector& Impulse, const struct FName& BoneName, bool bVelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddImpulse");
 
@@ -7401,11 +7401,11 @@ void UPrimitiveComponent::AddImpulse(const class Vector3D& Impulse, const struct
 // Function Engine.PrimitiveComponent.AddForceAtLocation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddForceAtLocation(const class Vector3D& Force, const class Vector3D& Location, const struct FName& BoneName)
+void UPrimitiveComponent::AddForceAtLocation(const struct FVector& Force, const struct FVector& Location, const struct FName& BoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddForceAtLocation");
 
@@ -7426,11 +7426,11 @@ void UPrimitiveComponent::AddForceAtLocation(const class Vector3D& Force, const 
 // Function Engine.PrimitiveComponent.AddForce
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAccelChange                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddForce(const class Vector3D& Force, const struct FName& BoneName, bool bAccelChange)
+void UPrimitiveComponent::AddForce(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddForce");
 
@@ -7451,11 +7451,11 @@ void UPrimitiveComponent::AddForce(const class Vector3D& Force, const struct FNa
 // Function Engine.PrimitiveComponent.AddAngularImpulse
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bVelChange                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPrimitiveComponent::AddAngularImpulse(const class Vector3D& Impulse, const struct FName& BoneName, bool bVelChange)
+void UPrimitiveComponent::AddAngularImpulse(const struct FVector& Impulse, const struct FName& BoneName, bool bVelChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PrimitiveComponent.AddAngularImpulse");
 
@@ -7477,9 +7477,9 @@ void UPrimitiveComponent::AddAngularImpulse(const class Vector3D& Impulse, const
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   ParameterName                  (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ParameterValue                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ParameterValue                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMeshComponent::SetVectorParameterValueOnMaterials(const struct FName& ParameterName, const class Vector3D& ParameterValue)
+void UMeshComponent::SetVectorParameterValueOnMaterials(const struct FName& ParameterName, const struct FVector& ParameterValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MeshComponent.SetVectorParameterValueOnMaterials");
 
@@ -7680,10 +7680,10 @@ void UStaticMeshComponent::OnRep_StaticMesh(class UStaticMesh* OldStaticMesh)
 // Function Engine.StaticMeshComponent.GetLocalBounds
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Min                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Max                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Min                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Max                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UStaticMeshComponent::GetLocalBounds(class Vector3D* Min, class Vector3D* Max)
+void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* Max)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.StaticMeshComponent.GetLocalBounds");
 
@@ -7742,10 +7742,10 @@ void AController::StopMovement()
 // Function Engine.Controller.SetInitialLocationAndRotation
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void AController::SetInitialLocationAndRotation(const class Vector3D& NewLocation, const class Rotator& NewRotation)
+void AController::SetInitialLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.SetInitialLocationAndRotation");
 
@@ -7807,9 +7807,9 @@ void AController::SetIgnoreLookInput(bool bNewLookInput)
 // Function Engine.Controller.SetControlRotation
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void AController::SetControlRotation(const class Rotator& NewRotation)
+void AController::SetControlRotation(const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.SetControlRotation");
 
@@ -7966,11 +7966,11 @@ void AController::OnRep_Pawn()
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class AActor*                  Other                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ViewPoint                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ViewPoint                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAlternateChecks               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool AController::LineOfSightTo(class AActor* Other, const class Vector3D& ViewPoint, bool bAlternateChecks)
+bool AController::LineOfSightTo(class AActor* Other, const struct FVector& ViewPoint, bool bAlternateChecks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.LineOfSightTo");
 
@@ -8147,9 +8147,9 @@ class AActor* AController::GetViewTarget()
 // Function Engine.Controller.GetDesiredRotation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator AController::GetDesiredRotation()
+struct FRotator AController::GetDesiredRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.GetDesiredRotation");
 
@@ -8169,9 +8169,9 @@ class Rotator AController::GetDesiredRotation()
 // Function Engine.Controller.GetControlRotation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator AController::GetControlRotation()
+struct FRotator AController::GetControlRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.GetControlRotation");
 
@@ -8191,10 +8191,10 @@ class Rotator AController::GetControlRotation()
 // Function Engine.Controller.ClientSetRotation
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bResetCamera                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AController::ClientSetRotation(const class Rotator& NewRotation, bool bResetCamera)
+void AController::ClientSetRotation(const struct FRotator& NewRotation, bool bResetCamera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.ClientSetRotation");
 
@@ -8214,10 +8214,10 @@ void AController::ClientSetRotation(const class Rotator& NewRotation, bool bRese
 // Function Engine.Controller.ClientSetLocation
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AController::ClientSetLocation(const class Vector3D& NewLocation, const class Rotator& NewRotation)
+void AController::ClientSetLocation(const struct FVector& NewLocation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Controller.ClientSetLocation");
 
@@ -8561,10 +8561,10 @@ void APlayerController::SetCinematicMode(bool bInCinematicMode, bool bHidePlayer
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class USceneComponent*         AttachToComponent              (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::SetAudioListenerOverride(class USceneComponent* AttachToComponent, const class Vector3D& Location, const class Rotator& Rotation)
+void APlayerController::SetAudioListenerOverride(class USceneComponent* AttachToComponent, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.SetAudioListenerOverride");
 
@@ -8683,10 +8683,10 @@ void APlayerController::ServerUpdateLevelVisibility(const struct FName& PackageN
 // Function Engine.PlayerController.ServerUpdateCamera
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
-// class Vector3D                 CamLoc                         (CPF_Parm)
+// struct FVector_NetQuantize     CamLoc                         (CPF_Parm)
 // int                            CamPitchAndYaw                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ServerUpdateCamera(const class Vector3D& CamLoc, int CamPitchAndYaw)
+void APlayerController::ServerUpdateCamera(const struct FVector_NetQuantize& CamLoc, int CamPitchAndYaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ServerUpdateCamera");
 
@@ -8784,10 +8784,10 @@ void APlayerController::ServerSetSpectatorWaiting(bool bWaiting)
 // Function Engine.PlayerController.ServerSetSpectatorLocation
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
 // Parameters:
-// class Vector3D                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRot                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRot                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ServerSetSpectatorLocation(const class Vector3D& NewLoc, const class Rotator& NewRot)
+void APlayerController::ServerSetSpectatorLocation(const struct FVector& NewLoc, const struct FRotator& NewRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ServerSetSpectatorLocation");
 
@@ -9023,12 +9023,12 @@ void APlayerController::RestartLevel()
 // Function Engine.PlayerController.ProjectWorldLocationToScreen
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenLocation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenLocation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bPlayerViewportRelative        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool APlayerController::ProjectWorldLocationToScreen(const class Vector3D& WorldLocation, bool bPlayerViewportRelative, class Vector2D* ScreenLocation)
+bool APlayerController::ProjectWorldLocationToScreen(const struct FVector& WorldLocation, bool bPlayerViewportRelative, struct FVector2D* ScreenLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ProjectWorldLocationToScreen");
 
@@ -9277,9 +9277,9 @@ bool APlayerController::GetMousePosition(float* LocationX, float* LocationY)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FKey                    Key                            (CPF_Parm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APlayerController::GetInputVectorKeyState(const struct FKey& Key)
+struct FVector APlayerController::GetInputVectorKeyState(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.GetInputVectorKeyState");
 
@@ -9357,12 +9357,12 @@ void APlayerController::GetInputMouseDelta(float* DeltaX, float* DeltaY)
 // Function Engine.PlayerController.GetInputMotionState
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Tilt                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 RotationRate                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Gravity                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Acceleration                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Tilt                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 RotationRate                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Gravity                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Acceleration                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::GetInputMotionState(class Vector3D* Tilt, class Vector3D* RotationRate, class Vector3D* Gravity, class Vector3D* Acceleration)
+void APlayerController::GetInputMotionState(struct FVector* Tilt, struct FVector* RotationRate, struct FVector* Gravity, struct FVector* Acceleration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.GetInputMotionState");
 
@@ -9673,9 +9673,9 @@ bool APlayerController::GetHitResultUnderCursor(TEnumAsByte<ECollisionChannel> T
 // Function Engine.PlayerController.GetFocalLocation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APlayerController::GetFocalLocation()
+struct FVector APlayerController::GetFocalLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.GetFocalLocation");
 
@@ -9736,11 +9736,11 @@ void APlayerController::EnableCheats()
 // Parameters:
 // float                          ScreenX                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ScreenY                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool APlayerController::DeprojectScreenPositionToWorld(float ScreenX, float ScreenY, class Vector3D* WorldLocation, class Vector3D* WorldDirection)
+bool APlayerController::DeprojectScreenPositionToWorld(float ScreenX, float ScreenY, struct FVector* WorldLocation, struct FVector* WorldDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.DeprojectScreenPositionToWorld");
 
@@ -9767,11 +9767,11 @@ bool APlayerController::DeprojectScreenPositionToWorld(float ScreenX, float Scre
 // Function Engine.PlayerController.DeprojectMousePositionToWorld
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool APlayerController::DeprojectMousePositionToWorld(class Vector3D* WorldLocation, class Vector3D* WorldDirection)
+bool APlayerController::DeprojectMousePositionToWorld(struct FVector* WorldLocation, struct FVector* WorldDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.DeprojectMousePositionToWorld");
 
@@ -10233,11 +10233,11 @@ void APlayerController::ClientSetCameraMode(const struct FName& NewCamMode)
 // Parameters:
 // bool                           bEnableFading                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FColor                  FadeColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 FadeAlpha                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               FadeAlpha                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          FadeTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bFadeAudio                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ClientSetCameraFade(bool bEnableFading, const struct FColor& FadeColor, const class Vector2D& FadeAlpha, float FadeTime, bool bFadeAudio)
+void APlayerController::ClientSetCameraFade(bool bEnableFading, const struct FColor& FadeColor, const struct FVector2D& FadeAlpha, float FadeTime, bool bFadeAudio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientSetCameraFade");
 
@@ -10462,11 +10462,11 @@ void APlayerController::ClientPrepareMapChange(const struct FName& LevelName, bo
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
 // class USoundBase*              Sound                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          PitchMultiplier                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ClientPlaySoundAtLocation(class USoundBase* Sound, const class Vector3D& Location, float VolumeMultiplier, float PitchMultiplier)
+void APlayerController::ClientPlaySoundAtLocation(class USoundBase* Sound, const struct FVector& Location, float VolumeMultiplier, float PitchMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientPlaySoundAtLocation");
 
@@ -10541,9 +10541,9 @@ void APlayerController::ClientPlayForceFeedback(class UForceFeedbackEffect* Forc
 // class UClass*                  Shake                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const class Rotator& UserPlaySpaceRot)
+void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientPlayCameraShake");
 
@@ -10573,9 +10573,9 @@ void APlayerController::ClientPlayCameraShake(class UClass* Shake, float Scale, 
 // bool                           bLoop                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bRandomStartTime               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> Space                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  CustomPlaySpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                CustomPlaySpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ClientPlayCameraAnim(class UCameraAnim* AnimToPlay, float Scale, float Rate, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, TEnumAsByte<ECameraAnimPlaySpace> Space, const class Rotator& CustomPlaySpace)
+void APlayerController::ClientPlayCameraAnim(class UCameraAnim* AnimToPlay, float Scale, float Rate, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, TEnumAsByte<ECameraAnimPlaySpace> Space, const struct FRotator& CustomPlaySpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientPlayCameraAnim");
 
@@ -10884,11 +10884,11 @@ void APlayerController::ClientCancelPendingMapChange()
 // Function Engine.PlayerController.ClientAddTextureStreamingLoc
 // (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
-// class Vector3D                 InLoc                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InLoc                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bOverrideLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerController::ClientAddTextureStreamingLoc(const class Vector3D& InLoc, float Duration, bool bOverrideLocation)
+void APlayerController::ClientAddTextureStreamingLoc(const struct FVector& InLoc, float Duration, bool bOverrideLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerController.ClientAddTextureStreamingLoc");
 
@@ -11114,11 +11114,11 @@ void APawn::ReceivePossessed(class AController* NewController)
 // (FUNC_Final, FUNC_BlueprintAuthorityOnly, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // float                          Loudness                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NoiseLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NoiseLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseNoiseMakerLocation         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  NoiseMaker                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APawn::PawnMakeNoise(float Loudness, const class Vector3D& NoiseLocation, bool bUseNoiseMakerLocation, class AActor* NoiseMaker)
+void APawn::PawnMakeNoise(float Loudness, const struct FVector& NoiseLocation, bool bUseNoiseMakerLocation, class AActor* NoiseMaker)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.PawnMakeNoise");
 
@@ -11176,11 +11176,11 @@ void APawn::OnRep_Controller()
 // Function Engine.Pawn.LaunchPawn
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bXYOverride                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bZOverride                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APawn::LaunchPawn(const class Vector3D& LaunchVelocity, bool bXYOverride, bool bZOverride)
+void APawn::LaunchPawn(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.LaunchPawn");
 
@@ -11201,9 +11201,9 @@ void APawn::LaunchPawn(const class Vector3D& LaunchVelocity, bool bXYOverride, b
 // Function Engine.Pawn.K2_GetMovementInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APawn::K2_GetMovementInputVector()
+struct FVector APawn::K2_GetMovementInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.K2_GetMovementInputVector");
 
@@ -11311,9 +11311,9 @@ bool APawn::IsControlled()
 // Function Engine.Pawn.GetPendingMovementInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APawn::GetPendingMovementInputVector()
+struct FVector APawn::GetPendingMovementInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.GetPendingMovementInputVector");
 
@@ -11333,9 +11333,9 @@ class Vector3D APawn::GetPendingMovementInputVector()
 // Function Engine.Pawn.GetNavAgentLocation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APawn::GetNavAgentLocation()
+struct FVector APawn::GetNavAgentLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.GetNavAgentLocation");
 
@@ -11401,9 +11401,9 @@ class AActor* APawn::STATIC_GetMovementBaseActor(class APawn* Pawn)
 // Function Engine.Pawn.GetLastMovementInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APawn::GetLastMovementInputVector()
+struct FVector APawn::GetLastMovementInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.GetLastMovementInputVector");
 
@@ -11423,9 +11423,9 @@ class Vector3D APawn::GetLastMovementInputVector()
 // Function Engine.Pawn.GetControlRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator APawn::GetControlRotation()
+struct FRotator APawn::GetControlRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.GetControlRotation");
 
@@ -11467,9 +11467,9 @@ class AController* APawn::GetController()
 // Function Engine.Pawn.GetBaseAimRotation
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator APawn::GetBaseAimRotation()
+struct FRotator APawn::GetBaseAimRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.GetBaseAimRotation");
 
@@ -11507,9 +11507,9 @@ void APawn::DetachFromControllerPendingDestroy()
 // Function Engine.Pawn.ConsumeMovementInputVector
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APawn::ConsumeMovementInputVector()
+struct FVector APawn::ConsumeMovementInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.ConsumeMovementInputVector");
 
@@ -11529,11 +11529,11 @@ class Vector3D APawn::ConsumeMovementInputVector()
 // Function Engine.Pawn.AddMovementInput
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ScaleValue                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bForce                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APawn::AddMovementInput(const class Vector3D& WorldDirection, float ScaleValue, bool bForce)
+void APawn::AddMovementInput(const struct FVector& WorldDirection, float ScaleValue, bool bForce)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Pawn.AddMovementInput");
 
@@ -11726,12 +11726,12 @@ float ACharacter::PlayAnimMontage(class UAnimMontage* AnimMontage, float InPlayR
 // Function Engine.Character.OnWalkingOffLedge
 // (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector3D                 PreviousFloorImpactNormal      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PreviousFloorContactNormal     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PreviousLocation               (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PreviousFloorImpactNormal      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PreviousFloorContactNormal     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PreviousLocation               (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          TimeDelta                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACharacter::OnWalkingOffLedge(const class Vector3D& PreviousFloorImpactNormal, const class Vector3D& PreviousFloorContactNormal, const class Vector3D& PreviousLocation, float TimeDelta)
+void ACharacter::OnWalkingOffLedge(const struct FVector& PreviousFloorImpactNormal, const struct FVector& PreviousFloorContactNormal, const struct FVector& PreviousLocation, float TimeDelta)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.OnWalkingOffLedge");
 
@@ -11807,11 +11807,11 @@ void ACharacter::OnRep_IsCrouched()
 // Function Engine.Character.OnLaunched
 // (FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector3D                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bXYOverride                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bZOverride                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACharacter::OnLaunched(const class Vector3D& LaunchVelocity, bool bXYOverride, bool bZOverride)
+void ACharacter::OnLaunched(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.OnLaunched");
 
@@ -11869,11 +11869,11 @@ void ACharacter::OnJumped()
 // Function Engine.Character.LaunchCharacter
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bXYOverride                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bZOverride                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACharacter::LaunchCharacter(const class Vector3D& LaunchVelocity, bool bXYOverride, bool bZOverride)
+void ACharacter::LaunchCharacter(const struct FVector& LaunchVelocity, bool bXYOverride, bool bZOverride)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.LaunchCharacter");
 
@@ -12090,9 +12090,9 @@ class UAnimMontage* ACharacter::GetCurrentMontage()
 // Function Engine.Character.GetBaseTranslationOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D ACharacter::GetBaseTranslationOffset()
+struct FVector ACharacter::GetBaseTranslationOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.GetBaseTranslationOffset");
 
@@ -12112,9 +12112,9 @@ class Vector3D ACharacter::GetBaseTranslationOffset()
 // Function Engine.Character.GetBaseRotationOffsetRotator
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator ACharacter::GetBaseRotationOffsetRotator()
+struct FRotator ACharacter::GetBaseRotationOffsetRotator()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Character.GetBaseRotationOffsetRotator");
 
@@ -12332,9 +12332,9 @@ void UMovementComponent::SetUpdatedComponent(class USceneComponent* NewUpdatedCo
 // Function Engine.MovementComponent.SetPlaneConstraintOrigin
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 PlaneOrigin                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneOrigin                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMovementComponent::SetPlaneConstraintOrigin(const class Vector3D& PlaneOrigin)
+void UMovementComponent::SetPlaneConstraintOrigin(const struct FVector& PlaneOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.SetPlaneConstraintOrigin");
 
@@ -12353,9 +12353,9 @@ void UMovementComponent::SetPlaneConstraintOrigin(const class Vector3D& PlaneOri
 // Function Engine.MovementComponent.SetPlaneConstraintNormal
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMovementComponent::SetPlaneConstraintNormal(const class Vector3D& PlaneNormal)
+void UMovementComponent::SetPlaneConstraintNormal(const struct FVector& PlaneNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.SetPlaneConstraintNormal");
 
@@ -12374,10 +12374,10 @@ void UMovementComponent::SetPlaneConstraintNormal(const class Vector3D& PlaneNor
 // Function Engine.MovementComponent.SetPlaneConstraintFromVectors
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Forward                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Up                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Forward                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Up                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMovementComponent::SetPlaneConstraintFromVectors(const class Vector3D& Forward, const class Vector3D& Up)
+void UMovementComponent::SetPlaneConstraintFromVectors(const struct FVector& Forward, const struct FVector& Up)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.SetPlaneConstraintFromVectors");
 
@@ -12460,14 +12460,14 @@ void UMovementComponent::PhysicsVolumeChanged(class APhysicsVolume* NewVolume)
 // Function Engine.MovementComponent.K2_MoveUpdatedComponent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Delta                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Delta                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              OutHit                         (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           bSweep                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTeleport                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UMovementComponent::K2_MoveUpdatedComponent(const class Vector3D& Delta, const class Rotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* OutHit)
+bool UMovementComponent::K2_MoveUpdatedComponent(const struct FVector& Delta, const struct FRotator& NewRotation, bool bSweep, bool bTeleport, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.K2_MoveUpdatedComponent");
 
@@ -12562,9 +12562,9 @@ bool UMovementComponent::IsExceedingMaxSpeed(float MaxSpeed)
 // Function Engine.MovementComponent.GetPlaneConstraintOrigin
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-class Vector3D UMovementComponent::GetPlaneConstraintOrigin()
+struct FVector UMovementComponent::GetPlaneConstraintOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.GetPlaneConstraintOrigin");
 
@@ -12584,9 +12584,9 @@ class Vector3D UMovementComponent::GetPlaneConstraintOrigin()
 // Function Engine.MovementComponent.GetPlaneConstraintNormal
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-class Vector3D UMovementComponent::GetPlaneConstraintNormal()
+struct FVector UMovementComponent::GetPlaneConstraintNormal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.GetPlaneConstraintNormal");
 
@@ -12694,10 +12694,10 @@ float UMovementComponent::GetGravityZ()
 // Function Engine.MovementComponent.ConstrainNormalToPlane
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UMovementComponent::ConstrainNormalToPlane(const class Vector3D& Normal)
+struct FVector UMovementComponent::ConstrainNormalToPlane(const struct FVector& Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.ConstrainNormalToPlane");
 
@@ -12718,10 +12718,10 @@ class Vector3D UMovementComponent::ConstrainNormalToPlane(const class Vector3D& 
 // Function Engine.MovementComponent.ConstrainLocationToPlane
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UMovementComponent::ConstrainLocationToPlane(const class Vector3D& Location)
+struct FVector UMovementComponent::ConstrainLocationToPlane(const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.ConstrainLocationToPlane");
 
@@ -12742,10 +12742,10 @@ class Vector3D UMovementComponent::ConstrainLocationToPlane(const class Vector3D
 // Function Engine.MovementComponent.ConstrainDirectionToPlane
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UMovementComponent::ConstrainDirectionToPlane(const class Vector3D& Direction)
+struct FVector UMovementComponent::ConstrainDirectionToPlane(const struct FVector& Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.MovementComponent.ConstrainDirectionToPlane");
 
@@ -12912,9 +12912,9 @@ bool UNavMovementComponent::IsCrouching()
 // Function Engine.PawnMovementComponent.K2_GetInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPawnMovementComponent::K2_GetInputVector()
+struct FVector UPawnMovementComponent::K2_GetInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnMovementComponent.K2_GetInputVector");
 
@@ -12956,9 +12956,9 @@ bool UPawnMovementComponent::IsMoveInputIgnored()
 // Function Engine.PawnMovementComponent.GetPendingInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPawnMovementComponent::GetPendingInputVector()
+struct FVector UPawnMovementComponent::GetPendingInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnMovementComponent.GetPendingInputVector");
 
@@ -13000,9 +13000,9 @@ class APawn* UPawnMovementComponent::GetPawnOwner()
 // Function Engine.PawnMovementComponent.GetLastInputVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPawnMovementComponent::GetLastInputVector()
+struct FVector UPawnMovementComponent::GetLastInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnMovementComponent.GetLastInputVector");
 
@@ -13022,9 +13022,9 @@ class Vector3D UPawnMovementComponent::GetLastInputVector()
 // Function Engine.PawnMovementComponent.ConsumeInputVector
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPawnMovementComponent::ConsumeInputVector()
+struct FVector UPawnMovementComponent::ConsumeInputVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnMovementComponent.ConsumeInputVector");
 
@@ -13044,10 +13044,10 @@ class Vector3D UPawnMovementComponent::ConsumeInputVector()
 // Function Engine.PawnMovementComponent.AddInputVector
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 WorldVector                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldVector                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bForce                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPawnMovementComponent::AddInputVector(const class Vector3D& WorldVector, bool bForce)
+void UPawnMovementComponent::AddInputVector(const struct FVector& WorldVector, bool bForce)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnMovementComponent.AddInputVector");
 
@@ -13413,9 +13413,9 @@ void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, 
 // Function Engine.WheeledVehicleMovementComponent.OnRep_TirePunctured
 // (FUNC_Native, FUNC_Public)
 // Parameters:
-// TArray<unsigned char>          LastTirePunctured              (CPF_Parm, CPF_ZeroConstructor)
+// TArray<bool>                   LastTirePunctured              (CPF_Parm, CPF_ZeroConstructor)
 
-void UWheeledVehicleMovementComponent::OnRep_TirePunctured(TArray<unsigned char> LastTirePunctured)
+void UWheeledVehicleMovementComponent::OnRep_TirePunctured(TArray<bool> LastTirePunctured)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.WheeledVehicleMovementComponent.OnRep_TirePunctured");
 
@@ -13566,9 +13566,9 @@ int UWheeledVehicleMovementComponent::GetCurrentGear()
 // Function Engine.CharacterMovementComponent.SeverAddRotationVelocity
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
 // Parameters:
-// class Vector3D                 RotationVelocity               (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 RotationVelocity               (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::SeverAddRotationVelocity(const class Vector3D& RotationVelocity)
+void UCharacterMovementComponent::SeverAddRotationVelocity(const struct FVector& RotationVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.SeverAddRotationVelocity");
 
@@ -14038,10 +14038,10 @@ float UCharacterMovementComponent::K2_GetModifiedMaxAcceleration()
 // Function Engine.CharacterMovementComponent.K2_FindFloor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 CapsuleLocation                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsuleLocation                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FFindFloorResult        FloorResult                    (CPF_Parm, CPF_OutParm)
 
-void UCharacterMovementComponent::K2_FindFloor(const class Vector3D& CapsuleLocation, struct FFindFloorResult* FloorResult)
+void UCharacterMovementComponent::K2_FindFloor(const struct FVector& CapsuleLocation, struct FFindFloorResult* FloorResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.K2_FindFloor");
 
@@ -14063,13 +14063,13 @@ void UCharacterMovementComponent::K2_FindFloor(const class Vector3D& CapsuleLoca
 // Function Engine.CharacterMovementComponent.K2_ComputeFloorDist
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 CapsuleLocation                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsuleLocation                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          LineDistance                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SweepDistance                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SweepRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FFindFloorResult        FloorResult                    (CPF_Parm, CPF_OutParm)
 
-void UCharacterMovementComponent::K2_ComputeFloorDist(const class Vector3D& CapsuleLocation, float LineDistance, float SweepDistance, float SweepRadius, struct FFindFloorResult* FloorResult)
+void UCharacterMovementComponent::K2_ComputeFloorDist(const struct FVector& CapsuleLocation, float LineDistance, float SweepDistance, float SweepRadius, struct FFindFloorResult* FloorResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.K2_ComputeFloorDist");
 
@@ -14250,9 +14250,9 @@ float UCharacterMovementComponent::GetMaxAcceleration()
 // Function Engine.CharacterMovementComponent.GetImpartedMovementBaseVelocity
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UCharacterMovementComponent::GetImpartedMovementBaseVelocity()
+struct FVector UCharacterMovementComponent::GetImpartedMovementBaseVelocity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.GetImpartedMovementBaseVelocity");
 
@@ -14272,9 +14272,9 @@ class Vector3D UCharacterMovementComponent::GetImpartedMovementBaseVelocity()
 // Function Engine.CharacterMovementComponent.GetCurrentAcceleration
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UCharacterMovementComponent::GetCurrentAcceleration()
+struct FVector UCharacterMovementComponent::GetCurrentAcceleration()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.GetCurrentAcceleration");
 
@@ -14357,14 +14357,14 @@ void UCharacterMovementComponent::DisableMovement()
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
 // float                          TimeStamp                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   NewBaseBoneName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bHasBase                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bBaseRelativePosition          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // unsigned char                  ServerMovementMode             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp, const class Vector3D& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp, const struct FVector& NewLoc, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition");
 
@@ -14393,8 +14393,8 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp,
 // struct FRootMotionSourceGroup  ServerRootMotion               (CPF_Parm)
 // bool                           bHasAnimRootMotion             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ServerMontageTrackPosition     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ServerLoc                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ServerRotation                 (CPF_Parm)
+// struct FVector                 ServerLoc                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector_NetQuantizeNormal ServerRotation                 (CPF_Parm)
 // float                          ServerVelZ                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     ServerBase                     (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   ServerBoneName                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -14402,7 +14402,7 @@ void UCharacterMovementComponent::ClientVeryShortAdjustPosition(float TimeStamp,
 // bool                           bBaseRelativePosition          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // unsigned char                  ServerMovementMode             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustRootMotionSourcePosition(float TimeStamp, const struct FRootMotionSourceGroup& ServerRootMotion, bool bHasAnimRootMotion, float ServerMontageTrackPosition, const class Vector3D& ServerLoc, const class Vector3D& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustRootMotionSourcePosition(float TimeStamp, const struct FRootMotionSourceGroup& ServerRootMotion, bool bHasAnimRootMotion, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.ClientAdjustRootMotionSourcePosition");
 
@@ -14434,8 +14434,8 @@ void UCharacterMovementComponent::ClientAdjustRootMotionSourcePosition(float Tim
 // Parameters:
 // float                          TimeStamp                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ServerMontageTrackPosition     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ServerLoc                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ServerRotation                 (CPF_Parm)
+// struct FVector                 ServerLoc                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector_NetQuantizeNormal ServerRotation                 (CPF_Parm)
 // float                          ServerVelZ                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     ServerBase                     (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   ServerBoneName                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -14443,7 +14443,7 @@ void UCharacterMovementComponent::ClientAdjustRootMotionSourcePosition(float Tim
 // bool                           bBaseRelativePosition          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // unsigned char                  ServerMovementMode             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp, float ServerMontageTrackPosition, const class Vector3D& ServerLoc, const class Vector3D& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp, float ServerMontageTrackPosition, const struct FVector& ServerLoc, const struct FVector_NetQuantizeNormal& ServerRotation, float ServerVelZ, class UPrimitiveComponent* ServerBase, const struct FName& ServerBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition");
 
@@ -14472,15 +14472,15 @@ void UCharacterMovementComponent::ClientAdjustRootMotionPosition(float TimeStamp
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_NetClient)
 // Parameters:
 // float                          TimeStamp                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLoc                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewVel                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     NewBase                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   NewBaseBoneName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bHasBase                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bBaseRelativePosition          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // unsigned char                  ServerMovementMode             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const class Vector3D& NewLoc, const class Vector3D& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
+void UCharacterMovementComponent::ClientAdjustPosition(float TimeStamp, const struct FVector& NewLoc, const struct FVector& NewVel, class UPrimitiveComponent* NewBase, const struct FName& NewBaseBoneName, bool bHasBase, bool bBaseRelativePosition, unsigned char ServerMovementMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.ClientAdjustPosition");
 
@@ -14585,10 +14585,10 @@ void UCharacterMovementComponent::CalcVelocity(float DeltaTime, float Friction, 
 // Function Engine.CharacterMovementComponent.AddImpulse
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bVelocityChange                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::AddImpulse(const class Vector3D& Impulse, bool bVelocityChange)
+void UCharacterMovementComponent::AddImpulse(const struct FVector& Impulse, bool bVelocityChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.AddImpulse");
 
@@ -14608,9 +14608,9 @@ void UCharacterMovementComponent::AddImpulse(const class Vector3D& Impulse, bool
 // Function Engine.CharacterMovementComponent.AddForce
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCharacterMovementComponent::AddForce(const class Vector3D& Force)
+void UCharacterMovementComponent::AddForce(const struct FVector& Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CharacterMovementComponent.AddForce");
 
@@ -16007,11 +16007,11 @@ void UAnimInstance::ClearMorphTargets()
 // Function Engine.AnimInstance.CalculateDirection
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Velocity                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  BaseRotation                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Velocity                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                BaseRotation                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UAnimInstance::CalculateDirection(const class Vector3D& Velocity, const class Rotator& BaseRotation)
+float UAnimInstance::CalculateDirection(const struct FVector& Velocity, const struct FRotator& BaseRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimInstance.CalculateDirection");
 
@@ -17260,12 +17260,12 @@ void UCheatManager::ChangeSize(float F)
 // Function Engine.CheatManager.BugItStringCreator
 // (FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults)
 // Parameters:
-// class Vector3D                 ViewLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ViewRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ViewLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ViewRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 GoString                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // struct FString                 LocString                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-void UCheatManager::BugItStringCreator(const class Vector3D& ViewLocation, const class Rotator& ViewRotation, struct FString* GoString, struct FString* LocString)
+void UCheatManager::BugItStringCreator(const struct FVector& ViewLocation, const struct FRotator& ViewRotation, struct FString* GoString, struct FString* LocString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CheatManager.BugItStringCreator");
 
@@ -17421,12 +17421,12 @@ void USkinnedMeshComponent::UnHideBoneByName(const struct FName& BoneName)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InPosition                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutPosition                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InPosition                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutPosition                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkinnedMeshComponent::TransformToBoneSpace(const struct FName& BoneName, const class Vector3D& InPosition, const class Rotator& InRotation, class Vector3D* OutPosition, class Rotator* OutRotation)
+void USkinnedMeshComponent::TransformToBoneSpace(const struct FName& BoneName, const struct FVector& InPosition, const struct FRotator& InRotation, struct FVector* OutPosition, struct FRotator* OutRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkinnedMeshComponent.TransformToBoneSpace");
 
@@ -17453,12 +17453,12 @@ void USkinnedMeshComponent::TransformToBoneSpace(const struct FName& BoneName, c
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InPosition                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutPosition                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InPosition                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutPosition                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                OutRotation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkinnedMeshComponent::TransformFromBoneSpace(const struct FName& BoneName, const class Vector3D& InPosition, const class Rotator& InRotation, class Vector3D* OutPosition, class Rotator* OutRotation)
+void USkinnedMeshComponent::TransformFromBoneSpace(const struct FName& BoneName, const struct FVector& InPosition, const struct FRotator& InRotation, struct FVector* OutPosition, struct FRotator* OutRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkinnedMeshComponent.TransformFromBoneSpace");
 
@@ -17758,13 +17758,13 @@ int USkinnedMeshComponent::GetBoneIndex(const struct FName& BoneName)
 // Function Engine.SkinnedMeshComponent.FindClosestBone_K2
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 TestLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoneLocation                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TestLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoneLocation                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          IgnoreScale                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bRequirePhysicsAsset           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FName USkinnedMeshComponent::FindClosestBone_K2(const class Vector3D& TestLocation, float IgnoreScale, bool bRequirePhysicsAsset, class Vector3D* BoneLocation)
+struct FName USkinnedMeshComponent::FindClosestBone_K2(const struct FVector& TestLocation, float IgnoreScale, bool bRequirePhysicsAsset, struct FVector* BoneLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkinnedMeshComponent.FindClosestBone_K2");
 
@@ -17860,12 +17860,12 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // float                          BaseDamage                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HurtOrigin                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 HurtOrigin                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          DamageRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ImpulseStrength                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bFullDamage                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const class Vector3D& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
+void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DestructibleComponent.ApplyRadiusDamage");
 
@@ -17889,11 +17889,11 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const class Vec
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // float                          DamageAmount                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          ImpulseStrength                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UDestructibleComponent::ApplyDamage(float DamageAmount, const class Vector3D& HitLocation, const class Vector3D& ImpulseDir, float ImpulseStrength)
+void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DestructibleComponent.ApplyDamage");
 
@@ -20515,12 +20515,12 @@ bool UInstancedStaticMeshComponent::GetInstanceTransform(int InstanceIndex, bool
 // Function Engine.InstancedStaticMeshComponent.GetInstancesOverlappingSphere
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 Center                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bSphereInWorldSpace            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<int>                    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-TArray<int> UInstancedStaticMeshComponent::GetInstancesOverlappingSphere(const class Vector3D& Center, float Radius, bool bSphereInWorldSpace)
+TArray<int> UInstancedStaticMeshComponent::GetInstancesOverlappingSphere(const struct FVector& Center, float Radius, bool bSphereInWorldSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.InstancedStaticMeshComponent.GetInstancesOverlappingSphere");
 
@@ -21029,10 +21029,10 @@ void APlayerCameraManager::RemoveCameraLensEffect(class AEmitterCameraLensEffect
 // class UClass*                  ShakeClass                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UCameraShake*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const class Rotator& UserPlaySpaceRot)
+class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeClass, float Scale, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraShake");
 
@@ -21065,10 +21065,10 @@ class UCameraShake* APlayerCameraManager::PlayCameraShake(class UClass* ShakeCla
 // bool                           bRandomStartTime               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECameraAnimPlaySpace> PlaySpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                UserPlaySpaceRot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UCameraAnimInst*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const class Rotator& UserPlaySpaceRot)
+class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* Anim, float Rate, float Scale, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, float Duration, TEnumAsByte<ECameraAnimPlaySpace> PlaySpace, const struct FRotator& UserPlaySpaceRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PlayCameraAnim");
 
@@ -21098,12 +21098,12 @@ class UCameraAnimInst* APlayerCameraManager::PlayCameraAnim(class UCameraAnim* A
 // Function Engine.PlayerCameraManager.PhotographyCameraModify
 // (FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector3D                 NewCameraLocation              (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PreviousCameraLocation         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OriginalCameraLocation         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ResultCameraLocation           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewCameraLocation              (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PreviousCameraLocation         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OriginalCameraLocation         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ResultCameraLocation           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void APlayerCameraManager::PhotographyCameraModify(const class Vector3D& NewCameraLocation, const class Vector3D& PreviousCameraLocation, const class Vector3D& OriginalCameraLocation, class Vector3D* ResultCameraLocation)
+void APlayerCameraManager::PhotographyCameraModify(const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* ResultCameraLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.PhotographyCameraModify");
 
@@ -21243,9 +21243,9 @@ float APlayerCameraManager::GetFOVAngle()
 // Function Engine.PlayerCameraManager.GetCameraRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator APlayerCameraManager::GetCameraRotation()
+struct FRotator APlayerCameraManager::GetCameraRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraRotation");
 
@@ -21265,9 +21265,9 @@ class Rotator APlayerCameraManager::GetCameraRotation()
 // Function Engine.PlayerCameraManager.GetCameraLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D APlayerCameraManager::GetCameraLocation()
+struct FVector APlayerCameraManager::GetCameraLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.GetCameraLocation");
 
@@ -21330,12 +21330,12 @@ void APlayerCameraManager::ClearCameraLensEffects()
 // (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
 // class AActor*                  CameraTarget                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewCameraLocation              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewCameraRotation              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewCameraLocation              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewCameraRotation              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          NewCameraFOV                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, class Vector3D* NewCameraLocation, class Rotator* NewCameraRotation, float* NewCameraFOV)
+bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, struct FVector* NewCameraLocation, struct FRotator* NewCameraRotation, float* NewCameraFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PlayerCameraManager.BlueprintUpdateCamera");
 
@@ -21522,10 +21522,10 @@ void APlayerState::OnRep_bIsInactive()
 // Function Engine.BoxComponent.SetBoxExtent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InBoxExtent                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InBoxExtent                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateOverlaps                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UBoxComponent::SetBoxExtent(const class Vector3D& InBoxExtent, bool bUpdateOverlaps)
+void UBoxComponent::SetBoxExtent(const struct FVector& InBoxExtent, bool bUpdateOverlaps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.SetBoxExtent");
 
@@ -21545,9 +21545,9 @@ void UBoxComponent::SetBoxExtent(const class Vector3D& InBoxExtent, bool bUpdate
 // Function Engine.BoxComponent.GetUnscaledBoxExtent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UBoxComponent::GetUnscaledBoxExtent()
+struct FVector UBoxComponent::GetUnscaledBoxExtent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetUnscaledBoxExtent");
 
@@ -21567,9 +21567,9 @@ class Vector3D UBoxComponent::GetUnscaledBoxExtent()
 // Function Engine.BoxComponent.GetScaledBoxExtent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UBoxComponent::GetScaledBoxExtent()
+struct FVector UBoxComponent::GetScaledBoxExtent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.BoxComponent.GetScaledBoxExtent");
 
@@ -21880,9 +21880,9 @@ void USplineComponent::UpdateSpline()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void USplineComponent::SetWorldLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation)
+void USplineComponent::SetWorldLocationAtSplinePoint(int PointIndex, const struct FVector& InLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetWorldLocationAtSplinePoint");
 
@@ -21903,11 +21903,11 @@ void USplineComponent::SetWorldLocationAtSplinePoint(int PointIndex, const class
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InUpVector                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InUpVector                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetUpVectorAtSplinePoint(int PointIndex, const class Vector3D& InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::SetUpVectorAtSplinePoint(int PointIndex, const struct FVector& InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetUpVectorAtSplinePoint");
 
@@ -21951,12 +21951,12 @@ void USplineComponent::SetUnselectedSplineSegmentColor(const struct FLinearColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InArriveTangent                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 InLeaveTangent                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InArriveTangent                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InLeaveTangent                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetTangentsAtSplinePoint(int PointIndex, const class Vector3D& InArriveTangent, const class Vector3D& InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::SetTangentsAtSplinePoint(int PointIndex, const struct FVector& InArriveTangent, const struct FVector& InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetTangentsAtSplinePoint");
 
@@ -21980,11 +21980,11 @@ void USplineComponent::SetTangentsAtSplinePoint(int PointIndex, const class Vect
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InTangent                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InTangent                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetTangentAtSplinePoint(int PointIndex, const class Vector3D& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::SetTangentAtSplinePoint(int PointIndex, const struct FVector& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetTangentAtSplinePoint");
 
@@ -22006,9 +22006,9 @@ void USplineComponent::SetTangentAtSplinePoint(int PointIndex, const class Vecto
 // Function Engine.SplineComponent.SetSplineWorldPoints
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
-// TArray<class Vector3D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// TArray<struct FVector>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-void USplineComponent::SetSplineWorldPoints(TArray<class Vector3D> Points)
+void USplineComponent::SetSplineWorldPoints(TArray<struct FVector> Points)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetSplineWorldPoints");
 
@@ -22052,11 +22052,11 @@ void USplineComponent::SetSplinePointType(int PointIndex, TEnumAsByte<ESplinePoi
 // Function Engine.SplineComponent.SetSplinePoints
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
-// TArray<class Vector3D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// TArray<struct FVector>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetSplinePoints(TArray<class Vector3D> Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::SetSplinePoints(TArray<struct FVector> Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetSplinePoints");
 
@@ -22077,9 +22077,9 @@ void USplineComponent::SetSplinePoints(TArray<class Vector3D> Points, TEnumAsByt
 // Function Engine.SplineComponent.SetSplineLocalPoints
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
-// TArray<class Vector3D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// TArray<struct FVector>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-void USplineComponent::SetSplineLocalPoints(TArray<class Vector3D> Points)
+void USplineComponent::SetSplineLocalPoints(TArray<struct FVector> Points)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetSplineLocalPoints");
 
@@ -22120,11 +22120,11 @@ void USplineComponent::SetSelectedSplineSegmentColor(const struct FLinearColor& 
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::SetLocationAtSplinePoint(int PointIndex, const struct FVector& InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetLocationAtSplinePoint");
 
@@ -22167,10 +22167,10 @@ void USplineComponent::SetDrawDebug(bool bShow)
 // Function Engine.SplineComponent.SetDefaultUpVector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 UpVector                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 UpVector                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::SetDefaultUpVector(const class Vector3D& UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+void USplineComponent::SetDefaultUpVector(const struct FVector& UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.SetDefaultUpVector");
 
@@ -22284,9 +22284,9 @@ bool USplineComponent::IsClosedLoop()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldTangentAtDistanceAlongSpline(float Distance)
+struct FVector USplineComponent::GetWorldTangentAtDistanceAlongSpline(float Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldTangentAtDistanceAlongSpline");
 
@@ -22309,9 +22309,9 @@ class Vector3D USplineComponent::GetWorldTangentAtDistanceAlongSpline(float Dist
 // Parameters:
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::GetWorldRotationAtTime(float Time, bool bUseConstantVelocity)
+struct FRotator USplineComponent::GetWorldRotationAtTime(float Time, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldRotationAtTime");
 
@@ -22334,9 +22334,9 @@ class Rotator USplineComponent::GetWorldRotationAtTime(float Time, bool bUseCons
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::GetWorldRotationAtDistanceAlongSpline(float Distance)
+struct FRotator USplineComponent::GetWorldRotationAtDistanceAlongSpline(float Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldRotationAtDistanceAlongSpline");
 
@@ -22359,9 +22359,9 @@ class Rotator USplineComponent::GetWorldRotationAtDistanceAlongSpline(float Dist
 // Parameters:
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldLocationAtTime(float Time, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetWorldLocationAtTime(float Time, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldLocationAtTime");
 
@@ -22384,9 +22384,9 @@ class Vector3D USplineComponent::GetWorldLocationAtTime(float Time, bool bUseCon
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldLocationAtSplinePoint(int PointIndex)
+struct FVector USplineComponent::GetWorldLocationAtSplinePoint(int PointIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldLocationAtSplinePoint");
 
@@ -22408,9 +22408,9 @@ class Vector3D USplineComponent::GetWorldLocationAtSplinePoint(int PointIndex)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldLocationAtDistanceAlongSpline(float Distance)
+struct FVector USplineComponent::GetWorldLocationAtDistanceAlongSpline(float Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldLocationAtDistanceAlongSpline");
 
@@ -22433,9 +22433,9 @@ class Vector3D USplineComponent::GetWorldLocationAtDistanceAlongSpline(float Dis
 // Parameters:
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldDirectionAtTime");
 
@@ -22458,9 +22458,9 @@ class Vector3D USplineComponent::GetWorldDirectionAtTime(float Time, bool bUseCo
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetWorldDirectionAtDistanceAlongSpline(float Distance)
+struct FVector USplineComponent::GetWorldDirectionAtDistanceAlongSpline(float Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetWorldDirectionAtDistanceAlongSpline");
 
@@ -22484,9 +22484,9 @@ class Vector3D USplineComponent::GetWorldDirectionAtDistanceAlongSpline(float Di
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetUpVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetUpVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetUpVectorAtTime");
 
@@ -22511,9 +22511,9 @@ class Vector3D USplineComponent::GetUpVectorAtTime(float Time, TEnumAsByte<ESpli
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetUpVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetUpVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetUpVectorAtSplinePoint");
 
@@ -22537,9 +22537,9 @@ class Vector3D USplineComponent::GetUpVectorAtSplinePoint(int PointIndex, TEnumA
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetUpVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetUpVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetUpVectorAtDistanceAlongSpline");
 
@@ -22650,9 +22650,9 @@ struct FTransform USplineComponent::GetTransformAtDistanceAlongSpline(float Dist
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetTangentAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetTangentAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetTangentAtTime");
 
@@ -22677,9 +22677,9 @@ class Vector3D USplineComponent::GetTangentAtTime(float Time, TEnumAsByte<ESplin
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetTangentAtSplinePoint");
 
@@ -22703,9 +22703,9 @@ class Vector3D USplineComponent::GetTangentAtSplinePoint(int PointIndex, TEnumAs
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetTangentAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetTangentAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetTangentAtDistanceAlongSpline");
 
@@ -22775,9 +22775,9 @@ float USplineComponent::GetSplineLength()
 // Parameters:
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetScaleAtTime(float Time, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetScaleAtTime(float Time, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetScaleAtTime");
 
@@ -22800,9 +22800,9 @@ class Vector3D USplineComponent::GetScaleAtTime(float Time, bool bUseConstantVel
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetScaleAtSplinePoint(int PointIndex)
+struct FVector USplineComponent::GetScaleAtSplinePoint(int PointIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetScaleAtSplinePoint");
 
@@ -22824,9 +22824,9 @@ class Vector3D USplineComponent::GetScaleAtSplinePoint(int PointIndex)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetScaleAtDistanceAlongSpline(float Distance)
+struct FVector USplineComponent::GetScaleAtDistanceAlongSpline(float Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetScaleAtDistanceAlongSpline");
 
@@ -22850,9 +22850,9 @@ class Vector3D USplineComponent::GetScaleAtDistanceAlongSpline(float Distance)
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::GetRotationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FRotator USplineComponent::GetRotationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRotationAtTime");
 
@@ -22877,9 +22877,9 @@ class Rotator USplineComponent::GetRotationAtTime(float Time, TEnumAsByte<ESplin
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::GetRotationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FRotator USplineComponent::GetRotationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRotationAtSplinePoint");
 
@@ -22903,9 +22903,9 @@ class Rotator USplineComponent::GetRotationAtSplinePoint(int PointIndex, TEnumAs
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::GetRotationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FRotator USplineComponent::GetRotationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRotationAtDistanceAlongSpline");
 
@@ -23010,9 +23010,9 @@ float USplineComponent::GetRollAtDistanceAlongSpline(float Distance, TEnumAsByte
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetRightVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetRightVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRightVectorAtTime");
 
@@ -23037,9 +23037,9 @@ class Vector3D USplineComponent::GetRightVectorAtTime(float Time, TEnumAsByte<ES
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetRightVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetRightVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRightVectorAtSplinePoint");
 
@@ -23063,9 +23063,9 @@ class Vector3D USplineComponent::GetRightVectorAtSplinePoint(int PointIndex, TEn
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetRightVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetRightVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetRightVectorAtDistanceAlongSpline");
 
@@ -23112,9 +23112,9 @@ int USplineComponent::GetNumberOfSplinePoints()
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetLocationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetLocationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLocationAtTime");
 
@@ -23139,9 +23139,9 @@ class Vector3D USplineComponent::GetLocationAtTime(float Time, TEnumAsByte<ESpli
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetLocationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetLocationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLocationAtSplinePoint");
 
@@ -23165,9 +23165,9 @@ class Vector3D USplineComponent::GetLocationAtSplinePoint(int PointIndex, TEnumA
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetLocationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetLocationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLocationAtDistanceAlongSpline");
 
@@ -23190,11 +23190,11 @@ class Vector3D USplineComponent::GetLocationAtDistanceAlongSpline(float Distance
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Tangent                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Tangent                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::GetLocationAndTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, class Vector3D* Location, class Vector3D* Tangent)
+void USplineComponent::GetLocationAndTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, struct FVector* Location, struct FVector* Tangent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLocationAndTangentAtSplinePoint");
 
@@ -23220,10 +23220,10 @@ void USplineComponent::GetLocationAndTangentAtSplinePoint(int PointIndex, TEnumA
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LocalLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LocalTangent                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LocalLocation                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LocalTangent                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::GetLocalLocationAndTangentAtSplinePoint(int PointIndex, class Vector3D* LocalLocation, class Vector3D* LocalTangent)
+void USplineComponent::GetLocalLocationAndTangentAtSplinePoint(int PointIndex, struct FVector* LocalLocation, struct FVector* LocalTangent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLocalLocationAndTangentAtSplinePoint");
 
@@ -23249,9 +23249,9 @@ void USplineComponent::GetLocalLocationAndTangentAtSplinePoint(int PointIndex, c
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetLeaveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetLeaveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetLeaveTangentAtSplinePoint");
 
@@ -23324,9 +23324,9 @@ float USplineComponent::GetDistanceAlongSplineAtSplinePoint(int PointIndex)
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseConstantVelocity           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetDirectionAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
+struct FVector USplineComponent::GetDirectionAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetDirectionAtTime");
 
@@ -23351,9 +23351,9 @@ class Vector3D USplineComponent::GetDirectionAtTime(float Time, TEnumAsByte<ESpl
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetDirectionAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetDirectionAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetDirectionAtSplinePoint");
 
@@ -23377,9 +23377,9 @@ class Vector3D USplineComponent::GetDirectionAtSplinePoint(int PointIndex, TEnum
 // Parameters:
 // float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetDirectionAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetDirectionAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetDirectionAtDistanceAlongSpline");
 
@@ -23402,9 +23402,9 @@ class Vector3D USplineComponent::GetDirectionAtDistanceAlongSpline(float Distanc
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetDefaultUpVector(TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetDefaultUpVector(TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetDefaultUpVector");
 
@@ -23427,9 +23427,9 @@ class Vector3D USplineComponent::GetDefaultUpVector(TEnumAsByte<ESplineCoordinat
 // Parameters:
 // int                            PointIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::GetArriveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::GetArriveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.GetArriveTangentAtSplinePoint");
 
@@ -23451,11 +23451,11 @@ class Vector3D USplineComponent::GetArriveTangentAtSplinePoint(int PointIndex, T
 // Function Engine.SplineComponent.FindUpVectorClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindUpVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::FindUpVectorClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindUpVectorClosestToWorldLocation");
 
@@ -23477,12 +23477,12 @@ class Vector3D USplineComponent::FindUpVectorClosestToWorldLocation(const class 
 // Function Engine.SplineComponent.FindTransformClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseScale                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FTransform USplineComponent::FindTransformClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale)
+struct FTransform USplineComponent::FindTransformClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindTransformClosestToWorldLocation");
 
@@ -23505,11 +23505,11 @@ struct FTransform USplineComponent::FindTransformClosestToWorldLocation(const cl
 // Function Engine.SplineComponent.FindTangentClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindTangentClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::FindTangentClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindTangentClosestToWorldLocation");
 
@@ -23531,10 +23531,10 @@ class Vector3D USplineComponent::FindTangentClosestToWorldLocation(const class V
 // Function Engine.SplineComponent.FindScaleClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindScaleClosestToWorldLocation(const class Vector3D& WorldLocation)
+struct FVector USplineComponent::FindScaleClosestToWorldLocation(const struct FVector& WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindScaleClosestToWorldLocation");
 
@@ -23555,11 +23555,11 @@ class Vector3D USplineComponent::FindScaleClosestToWorldLocation(const class Vec
 // Function Engine.SplineComponent.FindRotationClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator USplineComponent::FindRotationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FRotator USplineComponent::FindRotationClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindRotationClosestToWorldLocation");
 
@@ -23581,11 +23581,11 @@ class Rotator USplineComponent::FindRotationClosestToWorldLocation(const class V
 // Function Engine.SplineComponent.FindRollClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float USplineComponent::FindRollClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+float USplineComponent::FindRollClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindRollClosestToWorldLocation");
 
@@ -23607,11 +23607,11 @@ float USplineComponent::FindRollClosestToWorldLocation(const class Vector3D& Wor
 // Function Engine.SplineComponent.FindRightVectorClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindRightVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::FindRightVectorClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindRightVectorClosestToWorldLocation");
 
@@ -23633,11 +23633,11 @@ class Vector3D USplineComponent::FindRightVectorClosestToWorldLocation(const cla
 // Function Engine.SplineComponent.FindLocationClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindLocationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::FindLocationClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindLocationClosestToWorldLocation");
 
@@ -23659,10 +23659,10 @@ class Vector3D USplineComponent::FindLocationClosestToWorldLocation(const class 
 // Function Engine.SplineComponent.FindInputKeyClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float USplineComponent::FindInputKeyClosestToWorldLocation(const class Vector3D& WorldLocation)
+float USplineComponent::FindInputKeyClosestToWorldLocation(const struct FVector& WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindInputKeyClosestToWorldLocation");
 
@@ -23683,11 +23683,11 @@ float USplineComponent::FindInputKeyClosestToWorldLocation(const class Vector3D&
 // Function Engine.SplineComponent.FindDirectionClosestToWorldLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineComponent::FindDirectionClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
+struct FVector USplineComponent::FindDirectionClosestToWorldLocation(const struct FVector& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.FindDirectionClosestToWorldLocation");
 
@@ -23730,9 +23730,9 @@ void USplineComponent::ClearSplinePoints(bool bUpdateSpline)
 // Function Engine.SplineComponent.AddSplineWorldPoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void USplineComponent::AddSplineWorldPoint(const class Vector3D& Position)
+void USplineComponent::AddSplineWorldPoint(const struct FVector& Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.AddSplineWorldPoint");
 
@@ -23751,12 +23751,12 @@ void USplineComponent::AddSplineWorldPoint(const class Vector3D& Position)
 // Function Engine.SplineComponent.AddSplinePointAtIndex
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::AddSplinePointAtIndex(const class Vector3D& Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::AddSplinePointAtIndex(const struct FVector& Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.AddSplinePointAtIndex");
 
@@ -23778,11 +23778,11 @@ void USplineComponent::AddSplinePointAtIndex(const class Vector3D& Position, int
 // Function Engine.SplineComponent.AddSplinePoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateSpline                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineComponent::AddSplinePoint(const class Vector3D& Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
+void USplineComponent::AddSplinePoint(const struct FVector& Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.AddSplinePoint");
 
@@ -23803,9 +23803,9 @@ void USplineComponent::AddSplinePoint(const class Vector3D& Position, TEnumAsByt
 // Function Engine.SplineComponent.AddSplineLocalPoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void USplineComponent::AddSplineLocalPoint(const class Vector3D& Position)
+void USplineComponent::AddSplineLocalPoint(const struct FVector& Position)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineComponent.AddSplineLocalPoint");
 
@@ -24420,9 +24420,9 @@ void UInputComponent::GetTouchState(int FingerIndex, float* LocationX, float* Lo
 // (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // struct FKey                    Key                            (CPF_Parm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UInputComponent::GetControllerVectorKeyState(const struct FKey& Key)
+struct FVector UInputComponent::GetControllerVectorKeyState(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.InputComponent.GetControllerVectorKeyState");
 
@@ -24699,11 +24699,11 @@ void ADebugCameraController::ReceiveOnDeactivate(class APlayerController* Restor
 // (FUNC_Event, FUNC_Protected, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
 // class AActor*                  NewSelectedActor               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SelectHitLocation              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 SelectHitNormal                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 SelectHitLocation              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 SelectHitNormal                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void ADebugCameraController::ReceiveOnActorSelected(class AActor* NewSelectedActor, const class Vector3D& SelectHitLocation, const class Vector3D& SelectHitNormal, const struct FHitResult& Hit)
+void ADebugCameraController::ReceiveOnActorSelected(class AActor* NewSelectedActor, const struct FVector& SelectHitLocation, const struct FVector& SelectHitNormal, const struct FHitResult& Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DebugCameraController.ReceiveOnActorSelected");
 
@@ -24850,9 +24850,9 @@ void AEmitter::ToggleActive()
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   ParameterName                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Param                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Param                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void AEmitter::SetVectorParameter(const struct FName& ParameterName, const class Vector3D& Param)
+void AEmitter::SetVectorParameter(const struct FName& ParameterName, const struct FVector& Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Emitter.SetVectorParameter");
 
@@ -25200,9 +25200,9 @@ void ULightComponent::SetTemperature(float NewTemperature)
 // Function Engine.LightComponent.SetLightFunctionScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLightFunctionScale          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLightFunctionScale          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ULightComponent::SetLightFunctionScale(const class Vector3D& NewLightFunctionScale)
+void ULightComponent::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LightComponent.SetLightFunctionScale");
 
@@ -25514,9 +25514,9 @@ void ALight::ToggleEnabled()
 // Function Engine.Light.SetLightFunctionScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLightFunctionScale          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLightFunctionScale          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ALight::SetLightFunctionScale(const class Vector3D& NewLightFunctionScale)
+void ALight::SetLightFunctionScale(const struct FVector& NewLightFunctionScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Light.SetLightFunctionScale");
 
@@ -26050,9 +26050,9 @@ void ANavLinkProxy::ResumePathFollowing(class AActor* Agent)
 // (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
 // class AActor*                  Agent                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Destination                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Destination                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void ANavLinkProxy::ReceiveSmartLinkReached(class AActor* Agent, const class Vector3D& Destination)
+void ANavLinkProxy::ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavLinkProxy.ReceiveSmartLinkReached");
 
@@ -27105,14 +27105,14 @@ void USkeletalMeshComponent::OverrideAnimationData(class UAnimationAsset* InAnim
 // Function Engine.SkeletalMeshComponent.K2_GetClosestPointOnPhysicsAsset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 WorldPosition                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 ClosestWorldPosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Normal                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldPosition                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ClosestWorldPosition           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Normal                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Distance                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool USkeletalMeshComponent::K2_GetClosestPointOnPhysicsAsset(const class Vector3D& WorldPosition, class Vector3D* ClosestWorldPosition, class Vector3D* Normal, struct FName* BoneName, float* Distance)
+bool USkeletalMeshComponent::K2_GetClosestPointOnPhysicsAsset(const struct FVector& WorldPosition, struct FVector* ClosestWorldPosition, struct FVector* Normal, struct FName* BoneName, float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.K2_GetClosestPointOnPhysicsAsset");
 
@@ -27188,9 +27188,9 @@ bool USkeletalMeshComponent::IsBodyGravityEnabled(const struct FName& BoneName)
 // Function Engine.SkeletalMeshComponent.GetSkeletalCenterOfMass
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USkeletalMeshComponent::GetSkeletalCenterOfMass()
+struct FVector USkeletalMeshComponent::GetSkeletalCenterOfMass()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.GetSkeletalCenterOfMass");
 
@@ -27501,11 +27501,11 @@ void USkeletalMeshComponent::ClearMorphTargets()
 // Function Engine.SkeletalMeshComponent.BreakConstraint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   InBoneName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkeletalMeshComponent::BreakConstraint(const class Vector3D& Impulse, const class Vector3D& HitLocation, const struct FName& InBoneName)
+void USkeletalMeshComponent::BreakConstraint(const struct FVector& Impulse, const struct FVector& HitLocation, const struct FName& InBoneName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.BreakConstraint");
 
@@ -27544,12 +27544,12 @@ void USkeletalMeshComponent::BindClothToMasterPoseComponent()
 // Function Engine.SkeletalMeshComponent.AddImpulseToAllBodiesBelow
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bVelChange                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bIncludeSelf                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkeletalMeshComponent::AddImpulseToAllBodiesBelow(const class Vector3D& Impulse, const struct FName& BoneName, bool bVelChange, bool bIncludeSelf)
+void USkeletalMeshComponent::AddImpulseToAllBodiesBelow(const struct FVector& Impulse, const struct FName& BoneName, bool bVelChange, bool bIncludeSelf)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.AddImpulseToAllBodiesBelow");
 
@@ -27571,12 +27571,12 @@ void USkeletalMeshComponent::AddImpulseToAllBodiesBelow(const class Vector3D& Im
 // Function Engine.SkeletalMeshComponent.AddForceToAllBodiesBelow
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Force                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAccelChange                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bIncludeSelf                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkeletalMeshComponent::AddForceToAllBodiesBelow(const class Vector3D& Force, const struct FName& BoneName, bool bAccelChange, bool bIncludeSelf)
+void USkeletalMeshComponent::AddForceToAllBodiesBelow(const struct FVector& Force, const struct FName& BoneName, bool bAccelChange, bool bIncludeSelf)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshComponent.AddForceToAllBodiesBelow");
 
@@ -27904,9 +27904,9 @@ void UNavigationSystem::UnregisterNavigationInvoker(class AActor* Invoker)
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class AController*             Controller                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Goal                           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Goal                           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UNavigationSystem::STATIC_SimpleMoveToLocation(class AController* Controller, const class Vector3D& Goal)
+void UNavigationSystem::STATIC_SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.SimpleMoveToLocation");
 
@@ -28035,13 +28035,13 @@ void UNavigationSystem::RegisterNavigationInvoker(class AActor* Invoker, float T
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Point                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // class ANavigationData*         NavData                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 QueryExtent                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 QueryExtent                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UNavigationSystem::STATIC_ProjectPointToNavigation(class UObject* WorldContext, const class Vector3D& Point, class ANavigationData* NavData, class UClass* FilterClass, const class Vector3D& QueryExtent)
+struct FVector UNavigationSystem::STATIC_ProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.ProjectPointToNavigation");
 
@@ -28088,14 +28088,14 @@ void UNavigationSystem::OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* Na
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 RayStart                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 RayEnd                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 HitLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 RayStart                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 RayEnd                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 HitLocation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AController*             Querier                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UNavigationSystem::STATIC_NavigationRaycast(class UObject* WorldContext, const class Vector3D& RayStart, const class Vector3D& RayEnd, class UClass* FilterClass, class AController* Querier, class Vector3D* HitLocation)
+bool UNavigationSystem::STATIC_NavigationRaycast(class UObject* WorldContext, const struct FVector& RayStart, const struct FVector& RayEnd, class UClass* FilterClass, class AController* Querier, struct FVector* HitLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.NavigationRaycast");
 
@@ -28172,13 +28172,13 @@ bool UNavigationSystem::STATIC_IsNavigationBeingBuilt(class UObject* WorldContex
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class ANavigationData*         NavData                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UNavigationSystem::STATIC_GetRandomReachablePointInRadius(class UObject* WorldContext, const class Vector3D& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
+struct FVector UNavigationSystem::STATIC_GetRandomReachablePointInRadius(class UObject* WorldContext, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.GetRandomReachablePointInRadius");
 
@@ -28204,13 +28204,13 @@ class Vector3D UNavigationSystem::STATIC_GetRandomReachablePointInRadius(class U
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class ANavigationData*         NavData                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UNavigationSystem::STATIC_GetRandomPointInNavigableRadius(class UObject* WorldContext, const class Vector3D& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
+struct FVector UNavigationSystem::STATIC_GetRandomPointInNavigableRadius(class UObject* WorldContext, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.GetRandomPointInNavigableRadius");
 
@@ -28236,14 +28236,14 @@ class Vector3D UNavigationSystem::STATIC_GetRandomPointInNavigableRadius(class U
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          PathLength                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class ANavigationData*         NavData                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ENavigationQueryResult> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ENavigationQueryResult> UNavigationSystem::STATIC_GetPathLength(class UObject* WorldContext, const class Vector3D& PathStart, const class Vector3D& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathLength)
+TEnumAsByte<ENavigationQueryResult> UNavigationSystem::STATIC_GetPathLength(class UObject* WorldContext, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathLength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.GetPathLength");
 
@@ -28272,14 +28272,14 @@ TEnumAsByte<ENavigationQueryResult> UNavigationSystem::STATIC_GetPathLength(clas
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          PathCost                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class ANavigationData*         NavData                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ENavigationQueryResult> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ENavigationQueryResult> UNavigationSystem::STATIC_GetPathCost(class UObject* WorldContext, const class Vector3D& PathStart, const class Vector3D& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathCost)
+TEnumAsByte<ENavigationQueryResult> UNavigationSystem::STATIC_GetPathCost(class UObject* WorldContext, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathCost)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.GetPathCost");
 
@@ -28332,13 +28332,13 @@ class UNavigationSystem* UNavigationSystem::STATIC_GetNavigationSystem(class UOb
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // class AActor*                  PathfindingContext             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UNavigationPath*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UNavigationPath* UNavigationSystem::STATIC_FindPathToLocationSynchronously(class UObject* WorldContext, const class Vector3D& PathStart, const class Vector3D& PathEnd, class AActor* PathfindingContext, class UClass* FilterClass)
+class UNavigationPath* UNavigationSystem::STATIC_FindPathToLocationSynchronously(class UObject* WorldContext, const struct FVector& PathStart, const struct FVector& PathEnd, class AActor* PathfindingContext, class UClass* FilterClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.FindPathToLocationSynchronously");
 
@@ -28364,14 +28364,14 @@ class UNavigationPath* UNavigationSystem::STATIC_FindPathToLocationSynchronously
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContext                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PathStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // class AActor*                  GoalActor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          TetherDistance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  PathfindingContext             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  FilterClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UNavigationPath*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UNavigationPath* UNavigationSystem::STATIC_FindPathToActorSynchronously(class UObject* WorldContext, const class Vector3D& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, class UClass* FilterClass)
+class UNavigationPath* UNavigationSystem::STATIC_FindPathToActorSynchronously(class UObject* WorldContext, const struct FVector& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, class UClass* FilterClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.NavigationSystem.FindPathToActorSynchronously");
 
@@ -28418,9 +28418,9 @@ void UProjectileMovementComponent::StopSimulating(const struct FHitResult& HitRe
 // Function Engine.ProjectileMovementComponent.SetVelocityInLocalSpace
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewVelocity                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewVelocity                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UProjectileMovementComponent::SetVelocityInLocalSpace(const class Vector3D& NewVelocity)
+void UProjectileMovementComponent::SetVelocityInLocalSpace(const struct FVector& NewVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ProjectileMovementComponent.SetVelocityInLocalSpace");
 
@@ -28460,9 +28460,9 @@ void UProjectileMovementComponent::OnProjectileStopDelegate__DelegateSignature(c
 // (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate, FUNC_HasOutParms, FUNC_HasDefaults)
 // Parameters:
 // struct FHitResult              ImpactResult                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 ImpactVelocity                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ImpactVelocity                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UProjectileMovementComponent::OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const class Vector3D& ImpactVelocity)
+void UProjectileMovementComponent::OnProjectileBounceDelegate__DelegateSignature(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("DelegateFunction Engine.ProjectileMovementComponent.OnProjectileBounceDelegate__DelegateSignature");
 
@@ -28481,10 +28481,10 @@ void UProjectileMovementComponent::OnProjectileBounceDelegate__DelegateSignature
 // Function Engine.ProjectileMovementComponent.LimitVelocity
 // (FUNC_Final, FUNC_Native, FUNC_Protected, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 NewVelocity                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 NewVelocity                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UProjectileMovementComponent::LimitVelocity(const class Vector3D& NewVelocity)
+struct FVector UProjectileMovementComponent::LimitVelocity(const struct FVector& NewVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ProjectileMovementComponent.LimitVelocity");
 
@@ -28618,9 +28618,9 @@ void UNavModifierComponent::SetAreaClass(class UClass* NewAreaClass)
 // Parameters:
 // class AActor*                  NoiseMaker                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Loudness                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NoiseLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 NoiseLocation                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPawnNoiseEmitterComponent::MakeNoise(class AActor* NoiseMaker, float Loudness, const class Vector3D& NoiseLocation)
+void UPawnNoiseEmitterComponent::MakeNoise(class AActor* NoiseMaker, float Loudness, const struct FVector& NoiseLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PawnNoiseEmitterComponent.MakeNoise");
 
@@ -28758,9 +28758,9 @@ void UPhysicalAnimationComponent::ApplyPhysicalAnimationProfileBelow(const struc
 // Function Engine.PhysicsHandleComponent.SetTargetRotation
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::SetTargetRotation(const class Rotator& NewRotation)
+void UPhysicsHandleComponent::SetTargetRotation(const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.SetTargetRotation");
 
@@ -28779,10 +28779,10 @@ void UPhysicsHandleComponent::SetTargetRotation(const class Rotator& NewRotation
 // Function Engine.PhysicsHandleComponent.SetTargetLocationAndRotation
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewRotation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::SetTargetLocationAndRotation(const class Vector3D& NewLocation, const class Rotator& NewRotation)
+void UPhysicsHandleComponent::SetTargetLocationAndRotation(const struct FVector& NewLocation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.SetTargetLocationAndRotation");
 
@@ -28802,9 +28802,9 @@ void UPhysicsHandleComponent::SetTargetLocationAndRotation(const class Vector3D&
 // Function Engine.PhysicsHandleComponent.SetTargetLocation
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::SetTargetLocation(const class Vector3D& NewLocation)
+void UPhysicsHandleComponent::SetTargetLocation(const struct FVector& NewLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.SetTargetLocation");
 
@@ -28948,10 +28948,10 @@ void UPhysicsHandleComponent::ReleaseComponent()
 // Parameters:
 // class UPrimitiveComponent*     Component                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   InBoneName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::GrabComponentAtLocationWithRotation(class UPrimitiveComponent* Component, const struct FName& InBoneName, const class Vector3D& Location, const class Rotator& Rotation)
+void UPhysicsHandleComponent::GrabComponentAtLocationWithRotation(class UPrimitiveComponent* Component, const struct FName& InBoneName, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.GrabComponentAtLocationWithRotation");
 
@@ -28975,9 +28975,9 @@ void UPhysicsHandleComponent::GrabComponentAtLocationWithRotation(class UPrimiti
 // Parameters:
 // class UPrimitiveComponent*     Component                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   InBoneName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 GrabLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 GrabLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::GrabComponentAtLocation(class UPrimitiveComponent* Component, const struct FName& InBoneName, const class Vector3D& GrabLocation)
+void UPhysicsHandleComponent::GrabComponentAtLocation(class UPrimitiveComponent* Component, const struct FName& InBoneName, const struct FVector& GrabLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.GrabComponentAtLocation");
 
@@ -29000,10 +29000,10 @@ void UPhysicsHandleComponent::GrabComponentAtLocation(class UPrimitiveComponent*
 // Parameters:
 // class UPrimitiveComponent*     Component                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   InBoneName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 GrabLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 GrabLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bConstrainRotation             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::GrabComponent(class UPrimitiveComponent* Component, const struct FName& InBoneName, const class Vector3D& GrabLocation, bool bConstrainRotation)
+void UPhysicsHandleComponent::GrabComponent(class UPrimitiveComponent* Component, const struct FName& InBoneName, const struct FVector& GrabLocation, bool bConstrainRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.GrabComponent");
 
@@ -29025,10 +29025,10 @@ void UPhysicsHandleComponent::GrabComponent(class UPrimitiveComponent* Component
 // Function Engine.PhysicsHandleComponent.GetTargetLocationAndRotation
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 TargetLocation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  TargetRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TargetLocation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                TargetRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsHandleComponent::GetTargetLocationAndRotation(class Vector3D* TargetLocation, class Rotator* TargetRotation)
+void UPhysicsHandleComponent::GetTargetLocationAndRotation(struct FVector* TargetLocation, struct FRotator* TargetRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsHandleComponent.GetTargetLocationAndRotation");
 
@@ -30359,9 +30359,9 @@ void UDirectionalLightComponent::SetOcclusionMaskDarkness(float NewValue)
 // Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 NewValue                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewValue                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UDirectionalLightComponent::SetLightShaftOverrideDirection(const class Vector3D& NewValue)
+void UDirectionalLightComponent::SetLightShaftOverrideDirection(const struct FVector& NewValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.DirectionalLightComponent.SetLightShaftOverrideDirection");
 
@@ -30870,9 +30870,9 @@ void UPhysicsConstraintComponent::SetLinearXLimit(TEnumAsByte<ELinearConstraintM
 // Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InVelTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InVelTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetLinearVelocityTarget(const class Vector3D& InVelTarget)
+void UPhysicsConstraintComponent::SetLinearVelocityTarget(const struct FVector& InVelTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetLinearVelocityTarget");
 
@@ -30916,9 +30916,9 @@ void UPhysicsConstraintComponent::SetLinearVelocityDrive(bool bEnableDriveX, boo
 // Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InPosTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InPosTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetLinearPositionTarget(const class Vector3D& InPosTarget)
+void UPhysicsConstraintComponent::SetLinearPositionTarget(const struct FVector& InPosTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetLinearPositionTarget");
 
@@ -31009,9 +31009,9 @@ void UPhysicsConstraintComponent::SetDisableCollision(bool bDisableCollision)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // TEnumAsByte<EConstraintFrame>  Frame                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 RefPosition                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 RefPosition                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetConstraintReferencePosition(TEnumAsByte<EConstraintFrame> Frame, const class Vector3D& RefPosition)
+void UPhysicsConstraintComponent::SetConstraintReferencePosition(TEnumAsByte<EConstraintFrame> Frame, const struct FVector& RefPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetConstraintReferencePosition");
 
@@ -31032,10 +31032,10 @@ void UPhysicsConstraintComponent::SetConstraintReferencePosition(TEnumAsByte<ECo
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // TEnumAsByte<EConstraintFrame>  Frame                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PriAxis                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 SecAxis                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PriAxis                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 SecAxis                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetConstraintReferenceOrientation(TEnumAsByte<EConstraintFrame> Frame, const class Vector3D& PriAxis, const class Vector3D& SecAxis)
+void UPhysicsConstraintComponent::SetConstraintReferenceOrientation(TEnumAsByte<EConstraintFrame> Frame, const struct FVector& PriAxis, const struct FVector& SecAxis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetConstraintReferenceOrientation");
 
@@ -31106,9 +31106,9 @@ void UPhysicsConstraintComponent::SetConstrainedComponents(class UPrimitiveCompo
 // Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InVelTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InVelTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetAngularVelocityTarget(const class Vector3D& InVelTarget)
+void UPhysicsConstraintComponent::SetAngularVelocityTarget(const struct FVector& InVelTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetAngularVelocityTarget");
 
@@ -31219,9 +31219,9 @@ void UPhysicsConstraintComponent::SetAngularSwing1Limit(TEnumAsByte<EAngularCons
 // Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  InPosTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                InPosTarget                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::SetAngularOrientationTarget(const class Rotator& InPosTarget)
+void UPhysicsConstraintComponent::SetAngularOrientationTarget(const struct FRotator& InPosTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.SetAngularOrientationTarget");
 
@@ -31354,10 +31354,10 @@ float UPhysicsConstraintComponent::GetCurrentSwing1()
 // Function Engine.PhysicsConstraintComponent.GetConstraintForce
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 OutLinearForce                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutAngularForce                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutLinearForce                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutAngularForce                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPhysicsConstraintComponent::GetConstraintForce(class Vector3D* OutLinearForce, class Vector3D* OutAngularForce)
+void UPhysicsConstraintComponent::GetConstraintForce(struct FVector* OutLinearForce, struct FVector* OutAngularForce)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsConstraintComponent.GetConstraintForce");
 
@@ -31398,9 +31398,9 @@ void UPhysicsConstraintComponent::BreakConstraint()
 // Function Engine.PhysicsSpringComponent.GetSpringRestingPoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPhysicsSpringComponent::GetSpringRestingPoint()
+struct FVector UPhysicsSpringComponent::GetSpringRestingPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsSpringComponent.GetSpringRestingPoint");
 
@@ -31420,9 +31420,9 @@ class Vector3D UPhysicsSpringComponent::GetSpringRestingPoint()
 // Function Engine.PhysicsSpringComponent.GetSpringDirection
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPhysicsSpringComponent::GetSpringDirection()
+struct FVector UPhysicsSpringComponent::GetSpringDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsSpringComponent.GetSpringDirection");
 
@@ -31442,9 +31442,9 @@ class Vector3D UPhysicsSpringComponent::GetSpringDirection()
 // Function Engine.PhysicsSpringComponent.GetSpringCurrentEndPoint
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPhysicsSpringComponent::GetSpringCurrentEndPoint()
+struct FVector UPhysicsSpringComponent::GetSpringCurrentEndPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PhysicsSpringComponent.GetSpringCurrentEndPoint");
 
@@ -31706,10 +31706,10 @@ void UPoseableMeshComponent::SetBoneTransformByName(const struct FName& BoneName
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InScale3D                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InScale3D                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPoseableMeshComponent::SetBoneScaleByName(const struct FName& BoneName, const class Vector3D& InScale3D, TEnumAsByte<EBoneSpaces> BoneSpace)
+void UPoseableMeshComponent::SetBoneScaleByName(const struct FName& BoneName, const struct FVector& InScale3D, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.SetBoneScaleByName");
 
@@ -31731,10 +31731,10 @@ void UPoseableMeshComponent::SetBoneScaleByName(const struct FName& BoneName, co
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPoseableMeshComponent::SetBoneRotationByName(const struct FName& BoneName, const class Rotator& InRotation, TEnumAsByte<EBoneSpaces> BoneSpace)
+void UPoseableMeshComponent::SetBoneRotationByName(const struct FName& BoneName, const struct FRotator& InRotation, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.SetBoneRotationByName");
 
@@ -31756,10 +31756,10 @@ void UPoseableMeshComponent::SetBoneRotationByName(const struct FName& BoneName,
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPoseableMeshComponent::SetBoneLocationByName(const struct FName& BoneName, const class Vector3D& InLocation, TEnumAsByte<EBoneSpaces> BoneSpace)
+void UPoseableMeshComponent::SetBoneLocationByName(const struct FName& BoneName, const struct FVector& InLocation, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.SetBoneLocationByName");
 
@@ -31829,9 +31829,9 @@ struct FTransform UPoseableMeshComponent::GetBoneTransformByName(const struct FN
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPoseableMeshComponent::GetBoneScaleByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
+struct FVector UPoseableMeshComponent::GetBoneScaleByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.GetBoneScaleByName");
 
@@ -31855,9 +31855,9 @@ class Vector3D UPoseableMeshComponent::GetBoneScaleByName(const struct FName& Bo
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UPoseableMeshComponent::GetBoneRotationByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
+struct FRotator UPoseableMeshComponent::GetBoneRotationByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.GetBoneRotationByName");
 
@@ -31881,9 +31881,9 @@ class Rotator UPoseableMeshComponent::GetBoneRotationByName(const struct FName& 
 // Parameters:
 // struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBoneSpaces>       BoneSpace                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UPoseableMeshComponent::GetBoneLocationByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
+struct FVector UPoseableMeshComponent::GetBoneLocationByName(const struct FName& BoneName, TEnumAsByte<EBoneSpaces> BoneSpace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.PoseableMeshComponent.GetBoneLocationByName");
 
@@ -31944,10 +31944,10 @@ void USplineMeshComponent::UpdateMesh()
 // Function Engine.SplineMeshComponent.SetStartTangent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 StartTangent                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartTangent                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetStartTangent(const class Vector3D& StartTangent, bool bUpdateMesh)
+void USplineMeshComponent::SetStartTangent(const struct FVector& StartTangent, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetStartTangent");
 
@@ -31967,10 +31967,10 @@ void USplineMeshComponent::SetStartTangent(const class Vector3D& StartTangent, b
 // Function Engine.SplineMeshComponent.SetStartScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 StartScale                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               StartScale                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetStartScale(const class Vector2D& StartScale, bool bUpdateMesh)
+void USplineMeshComponent::SetStartScale(const struct FVector2D& StartScale, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetStartScale");
 
@@ -32013,10 +32013,10 @@ void USplineMeshComponent::SetStartRoll(float StartRoll, bool bUpdateMesh)
 // Function Engine.SplineMeshComponent.SetStartPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetStartPosition(const class Vector3D& StartPos, bool bUpdateMesh)
+void USplineMeshComponent::SetStartPosition(const struct FVector& StartPos, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetStartPosition");
 
@@ -32036,10 +32036,10 @@ void USplineMeshComponent::SetStartPosition(const class Vector3D& StartPos, bool
 // Function Engine.SplineMeshComponent.SetStartOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 StartOffset                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               StartOffset                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetStartOffset(const class Vector2D& StartOffset, bool bUpdateMesh)
+void USplineMeshComponent::SetStartOffset(const struct FVector2D& StartOffset, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetStartOffset");
 
@@ -32059,13 +32059,13 @@ void USplineMeshComponent::SetStartOffset(const class Vector2D& StartOffset, boo
 // Function Engine.SplineMeshComponent.SetStartAndEnd
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 StartTangent                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 EndTangent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartTangent                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndTangent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetStartAndEnd(const class Vector3D& StartPos, const class Vector3D& StartTangent, const class Vector3D& EndPos, const class Vector3D& EndTangent, bool bUpdateMesh)
+void USplineMeshComponent::SetStartAndEnd(const struct FVector& StartPos, const struct FVector& StartTangent, const struct FVector& EndPos, const struct FVector& EndTangent, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetStartAndEnd");
 
@@ -32088,10 +32088,10 @@ void USplineMeshComponent::SetStartAndEnd(const class Vector3D& StartPos, const 
 // Function Engine.SplineMeshComponent.SetSplineUpDir
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InSplineUpDir                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InSplineUpDir                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetSplineUpDir(const class Vector3D& InSplineUpDir, bool bUpdateMesh)
+void USplineMeshComponent::SetSplineUpDir(const struct FVector& InSplineUpDir, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetSplineUpDir");
 
@@ -32134,10 +32134,10 @@ void USplineMeshComponent::SetForwardAxis(TEnumAsByte<ESplineMeshAxis> InForward
 // Function Engine.SplineMeshComponent.SetEndTangent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 EndTangent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndTangent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetEndTangent(const class Vector3D& EndTangent, bool bUpdateMesh)
+void USplineMeshComponent::SetEndTangent(const struct FVector& EndTangent, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetEndTangent");
 
@@ -32157,10 +32157,10 @@ void USplineMeshComponent::SetEndTangent(const class Vector3D& EndTangent, bool 
 // Function Engine.SplineMeshComponent.SetEndScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 EndScale                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               EndScale                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetEndScale(const class Vector2D& EndScale, bool bUpdateMesh)
+void USplineMeshComponent::SetEndScale(const struct FVector2D& EndScale, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetEndScale");
 
@@ -32203,10 +32203,10 @@ void USplineMeshComponent::SetEndRoll(float EndRoll, bool bUpdateMesh)
 // Function Engine.SplineMeshComponent.SetEndPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetEndPosition(const class Vector3D& EndPos, bool bUpdateMesh)
+void USplineMeshComponent::SetEndPosition(const struct FVector& EndPos, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetEndPosition");
 
@@ -32226,10 +32226,10 @@ void USplineMeshComponent::SetEndPosition(const class Vector3D& EndPos, bool bUp
 // Function Engine.SplineMeshComponent.SetEndOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 EndOffset                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               EndOffset                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUpdateMesh                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USplineMeshComponent::SetEndOffset(const class Vector2D& EndOffset, bool bUpdateMesh)
+void USplineMeshComponent::SetEndOffset(const struct FVector2D& EndOffset, bool bUpdateMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.SetEndOffset");
 
@@ -32295,9 +32295,9 @@ void USplineMeshComponent::SetBoundaryMax(float InBoundaryMax, bool bUpdateMesh)
 // Function Engine.SplineMeshComponent.GetStartTangent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineMeshComponent::GetStartTangent()
+struct FVector USplineMeshComponent::GetStartTangent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetStartTangent");
 
@@ -32317,9 +32317,9 @@ class Vector3D USplineMeshComponent::GetStartTangent()
 // Function Engine.SplineMeshComponent.GetStartScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USplineMeshComponent::GetStartScale()
+struct FVector2D USplineMeshComponent::GetStartScale()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetStartScale");
 
@@ -32361,9 +32361,9 @@ float USplineMeshComponent::GetStartRoll()
 // Function Engine.SplineMeshComponent.GetStartPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineMeshComponent::GetStartPosition()
+struct FVector USplineMeshComponent::GetStartPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetStartPosition");
 
@@ -32383,9 +32383,9 @@ class Vector3D USplineMeshComponent::GetStartPosition()
 // Function Engine.SplineMeshComponent.GetStartOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USplineMeshComponent::GetStartOffset()
+struct FVector2D USplineMeshComponent::GetStartOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetStartOffset");
 
@@ -32405,9 +32405,9 @@ class Vector2D USplineMeshComponent::GetStartOffset()
 // Function Engine.SplineMeshComponent.GetSplineUpDir
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineMeshComponent::GetSplineUpDir()
+struct FVector USplineMeshComponent::GetSplineUpDir()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetSplineUpDir");
 
@@ -32449,9 +32449,9 @@ TEnumAsByte<ESplineMeshAxis> USplineMeshComponent::GetForwardAxis()
 // Function Engine.SplineMeshComponent.GetEndTangent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineMeshComponent::GetEndTangent()
+struct FVector USplineMeshComponent::GetEndTangent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetEndTangent");
 
@@ -32471,9 +32471,9 @@ class Vector3D USplineMeshComponent::GetEndTangent()
 // Function Engine.SplineMeshComponent.GetEndScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USplineMeshComponent::GetEndScale()
+struct FVector2D USplineMeshComponent::GetEndScale()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetEndScale");
 
@@ -32515,9 +32515,9 @@ float USplineMeshComponent::GetEndRoll()
 // Function Engine.SplineMeshComponent.GetEndPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USplineMeshComponent::GetEndPosition()
+struct FVector USplineMeshComponent::GetEndPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetEndPosition");
 
@@ -32537,9 +32537,9 @@ class Vector3D USplineMeshComponent::GetEndPosition()
 // Function Engine.SplineMeshComponent.GetEndOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USplineMeshComponent::GetEndOffset()
+struct FVector2D USplineMeshComponent::GetEndOffset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SplineMeshComponent.GetEndOffset");
 
@@ -32628,9 +32628,9 @@ bool UParticleSystem::ContainsEmitterType(class UClass* TypeData)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FName                   ParameterName                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Param                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Param                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetVectorParameter(const struct FName& ParameterName, const class Vector3D& Param)
+void UParticleSystemComponent::SetVectorParameter(const struct FName& ParameterName, const struct FVector& Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetVectorParameter");
 
@@ -32791,10 +32791,10 @@ void UParticleSystemComponent::SetColorParameter(const struct FName& ParameterNa
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewTangentPoint                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewTangentPoint                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            TargetIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetBeamTargetTangent(int emitterIndex, const class Vector3D& NewTangentPoint, int TargetIndex)
+void UParticleSystemComponent::SetBeamTargetTangent(int emitterIndex, const struct FVector& NewTangentPoint, int TargetIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetBeamTargetTangent");
 
@@ -32841,10 +32841,10 @@ void UParticleSystemComponent::SetBeamTargetStrength(int emitterIndex, float New
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewTargetPoint                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewTargetPoint                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            TargetIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetBeamTargetPoint(int emitterIndex, const class Vector3D& NewTargetPoint, int TargetIndex)
+void UParticleSystemComponent::SetBeamTargetPoint(int emitterIndex, const struct FVector& NewTargetPoint, int TargetIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetBeamTargetPoint");
 
@@ -32866,10 +32866,10 @@ void UParticleSystemComponent::SetBeamTargetPoint(int emitterIndex, const class 
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewTangentPoint                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewTangentPoint                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SourceIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetBeamSourceTangent(int emitterIndex, const class Vector3D& NewTangentPoint, int SourceIndex)
+void UParticleSystemComponent::SetBeamSourceTangent(int emitterIndex, const struct FVector& NewTangentPoint, int SourceIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetBeamSourceTangent");
 
@@ -32916,10 +32916,10 @@ void UParticleSystemComponent::SetBeamSourceStrength(int emitterIndex, float New
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewSourcePoint                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewSourcePoint                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SourceIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetBeamSourcePoint(int emitterIndex, const class Vector3D& NewSourcePoint, int SourceIndex)
+void UParticleSystemComponent::SetBeamSourcePoint(int emitterIndex, const struct FVector& NewSourcePoint, int SourceIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetBeamSourcePoint");
 
@@ -32941,9 +32941,9 @@ void UParticleSystemComponent::SetBeamSourcePoint(int emitterIndex, const class 
 // (FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewEndPoint                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewEndPoint                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::SetBeamEndPoint(int emitterIndex, const class Vector3D& NewEndPoint)
+void UParticleSystemComponent::SetBeamEndPoint(int emitterIndex, const struct FVector& NewEndPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.SetBeamEndPoint");
 
@@ -33088,10 +33088,10 @@ class UMaterialInterface* UParticleSystemComponent::GetNamedMaterial(const struc
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            TargetIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutTangentPoint                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutTangentPoint                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UParticleSystemComponent::GetBeamTargetTangent(int emitterIndex, int TargetIndex, class Vector3D* OutTangentPoint)
+bool UParticleSystemComponent::GetBeamTargetTangent(int emitterIndex, int TargetIndex, struct FVector* OutTangentPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GetBeamTargetTangent");
 
@@ -33148,10 +33148,10 @@ bool UParticleSystemComponent::GetBeamTargetStrength(int emitterIndex, int Targe
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            TargetIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutTargetPoint                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutTargetPoint                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UParticleSystemComponent::GetBeamTargetPoint(int emitterIndex, int TargetIndex, class Vector3D* OutTargetPoint)
+bool UParticleSystemComponent::GetBeamTargetPoint(int emitterIndex, int TargetIndex, struct FVector* OutTargetPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GetBeamTargetPoint");
 
@@ -33178,10 +33178,10 @@ bool UParticleSystemComponent::GetBeamTargetPoint(int emitterIndex, int TargetIn
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SourceIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutTangentPoint                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutTangentPoint                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UParticleSystemComponent::GetBeamSourceTangent(int emitterIndex, int SourceIndex, class Vector3D* OutTangentPoint)
+bool UParticleSystemComponent::GetBeamSourceTangent(int emitterIndex, int SourceIndex, struct FVector* OutTangentPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GetBeamSourceTangent");
 
@@ -33238,10 +33238,10 @@ bool UParticleSystemComponent::GetBeamSourceStrength(int emitterIndex, int Sourc
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SourceIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutSourcePoint                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutSourcePoint                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UParticleSystemComponent::GetBeamSourcePoint(int emitterIndex, int SourceIndex, class Vector3D* OutSourcePoint)
+bool UParticleSystemComponent::GetBeamSourcePoint(int emitterIndex, int SourceIndex, struct FVector* OutSourcePoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GetBeamSourcePoint");
 
@@ -33267,10 +33267,10 @@ bool UParticleSystemComponent::GetBeamSourcePoint(int emitterIndex, int SourceIn
 // (FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutEndPoint                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutEndPoint                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UParticleSystemComponent::GetBeamEndPoint(int emitterIndex, class Vector3D* OutEndPoint)
+bool UParticleSystemComponent::GetBeamEndPoint(int emitterIndex, struct FVector* OutEndPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GetBeamEndPoint");
 
@@ -33296,11 +33296,11 @@ bool UParticleSystemComponent::GetBeamEndPoint(int emitterIndex, class Vector3D*
 // Parameters:
 // struct FName                   InEventName                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InEmitterTime                  (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InDirection                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InVelocity                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InDirection                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVelocity                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UParticleSystemComponent::GenerateParticleEvent(const struct FName& InEventName, float InEmitterTime, const class Vector3D& InLocation, const class Vector3D& InDirection, const class Vector3D& InVelocity)
+void UParticleSystemComponent::GenerateParticleEvent(const struct FName& InEventName, float InEmitterTime, const struct FVector& InLocation, const struct FVector& InDirection, const struct FVector& InVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.ParticleSystemComponent.GenerateParticleEvent");
 
@@ -34088,9 +34088,9 @@ void UTextRenderComponent::K2_SetText(const struct FText& Value)
 // Function Engine.TextRenderComponent.GetTextWorldSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UTextRenderComponent::GetTextWorldSize()
+struct FVector UTextRenderComponent::GetTextWorldSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.TextRenderComponent.GetTextWorldSize");
 
@@ -34110,9 +34110,9 @@ class Vector3D UTextRenderComponent::GetTextWorldSize()
 // Function Engine.TextRenderComponent.GetTextLocalSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UTextRenderComponent::GetTextLocalSize()
+struct FVector UTextRenderComponent::GetTextLocalSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.TextRenderComponent.GetTextLocalSize");
 
@@ -34273,9 +34273,9 @@ void UStereoLayerComponent::SetTexture(class UTexture* InTexture)
 // Function Engine.StereoLayerComponent.SetQuadSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InQuadSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InQuadSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UStereoLayerComponent::SetQuadSize(const class Vector2D& InQuadSize)
+void UStereoLayerComponent::SetQuadSize(const struct FVector2D& InQuadSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.StereoLayerComponent.SetQuadSize");
 
@@ -34377,9 +34377,9 @@ class UTexture* UStereoLayerComponent::GetTexture()
 // Function Engine.StereoLayerComponent.GetQuadSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UStereoLayerComponent::GetQuadSize()
+struct FVector2D UStereoLayerComponent::GetQuadSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.StereoLayerComponent.GetQuadSize");
 
@@ -35100,9 +35100,9 @@ void UAnimSingleNodeInstance::SetLooping(bool bIsLooping)
 // Function Engine.AnimSingleNodeInstance.SetBlendSpaceInput
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 InBlendInput                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 InBlendInput                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UAnimSingleNodeInstance::SetBlendSpaceInput(const class Vector3D& InBlendInput)
+void UAnimSingleNodeInstance::SetBlendSpaceInput(const struct FVector& InBlendInput)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AnimSingleNodeInstance.SetBlendSpaceInput");
 
@@ -35414,9 +35414,9 @@ int UAvoidanceManager::GetNewAvoidanceUID()
 // struct FNavAvoidanceData       AvoidanceData                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            IgnoreThisUID                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UAvoidanceManager::GetAvoidanceVelocityIgnoringUID(const struct FNavAvoidanceData& AvoidanceData, float DeltaTime, int IgnoreThisUID)
+struct FVector UAvoidanceManager::GetAvoidanceVelocityIgnoringUID(const struct FNavAvoidanceData& AvoidanceData, float DeltaTime, int IgnoreThisUID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AvoidanceManager.GetAvoidanceVelocityIgnoringUID");
 
@@ -35440,9 +35440,9 @@ class Vector3D UAvoidanceManager::GetAvoidanceVelocityIgnoringUID(const struct F
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UMovementComponent*      MovementComp                   (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UAvoidanceManager::GetAvoidanceVelocityForComponent(class UMovementComponent* MovementComp)
+struct FVector UAvoidanceManager::GetAvoidanceVelocityForComponent(class UMovementComponent* MovementComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AvoidanceManager.GetAvoidanceVelocityForComponent");
 
@@ -35465,9 +35465,9 @@ class Vector3D UAvoidanceManager::GetAvoidanceVelocityForComponent(class UMoveme
 // Parameters:
 // struct FNavAvoidanceData       AvoidanceData                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UAvoidanceManager::GetAvoidanceVelocity(const struct FNavAvoidanceData& AvoidanceData, float DeltaTime)
+struct FVector UAvoidanceManager::GetAvoidanceVelocity(const struct FNavAvoidanceData& AvoidanceData, float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.AvoidanceManager.GetAvoidanceVelocity");
 
@@ -36092,8 +36092,8 @@ void UKismetSystemLibrary::STATIC_StackTrace()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36103,7 +36103,7 @@ void UKismetSystemLibrary::STATIC_StackTrace()
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceSingleForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_SphereTraceSingleForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceSingleForObjects");
 
@@ -36136,8 +36136,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingleForObjects(class UObject* Wor
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36147,7 +36147,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingleForObjects(class UObject* Wor
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_SphereTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceSingleByObject_DEPRECATED");
 
@@ -36180,8 +36180,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingleByObject_DEPRECATED(class UOb
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36191,7 +36191,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingleByObject_DEPRECATED(class UOb
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceSingle_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_SphereTraceSingle_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceSingle_NEW");
 
@@ -36224,8 +36224,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingle_NEW(class UObject* WorldCont
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36235,7 +36235,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingle_NEW(class UObject* WorldCont
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceSingle_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_SphereTraceSingle_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceSingle_DEPRECATED");
 
@@ -36268,8 +36268,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingle_DEPRECATED(class UObject* Wo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36279,7 +36279,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceSingle_DEPRECATED(class UObject* Wo
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceMultiForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_SphereTraceMultiForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceMultiForObjects");
 
@@ -36312,8 +36312,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMultiForObjects(class UObject* Worl
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36323,7 +36323,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMultiForObjects(class UObject* Worl
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_SphereTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceMultiByObject_DEPRECATED");
 
@@ -36356,8 +36356,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMultiByObject_DEPRECATED(class UObj
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36367,7 +36367,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMultiByObject_DEPRECATED(class UObj
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceMulti_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_SphereTraceMulti_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceMulti_NEW");
 
@@ -36400,8 +36400,8 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMulti_NEW(class UObject* WorldConte
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36411,7 +36411,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMulti_NEW(class UObject* WorldConte
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereTraceMulti_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_SphereTraceMulti_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereTraceMulti_DEPRECATED");
 
@@ -36444,7 +36444,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMulti_DEPRECATED(class UObject* Wor
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SphereRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // class UClass*                  ComponentClassFilter           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36452,7 +36452,7 @@ bool UKismetSystemLibrary::STATIC_SphereTraceMulti_DEPRECATED(class UObject* Wor
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_NEW(class UObject* WorldContextObject, const class Vector3D& SpherePos, float SphereRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_NEW(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereOverlapComponents_NEW");
 
@@ -36482,7 +36482,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_NEW(class UObject* Wor
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SphereRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  ComponentClassFilter           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36490,7 +36490,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_NEW(class UObject* Wor
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& SpherePos, float SphereRadius, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereOverlapComponents_DEPRECATED");
 
@@ -36520,7 +36520,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_DEPRECATED(class UObje
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SphereRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // class UClass*                  ActorClassFilter               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36528,7 +36528,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapComponents_DEPRECATED(class UObje
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereOverlapActors_NEW(class UObject* WorldContextObject, const class Vector3D& SpherePos, float SphereRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_SphereOverlapActors_NEW(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereOverlapActors_NEW");
 
@@ -36558,7 +36558,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapActors_NEW(class UObject* WorldCo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SpherePos                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SphereRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  ActorClassFilter               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36566,7 +36566,7 @@ bool UKismetSystemLibrary::STATIC_SphereOverlapActors_NEW(class UObject* WorldCo
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_SphereOverlapActors_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& SpherePos, float SphereRadius, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_SphereOverlapActors_DEPRECATED(class UObject* WorldContextObject, const struct FVector& SpherePos, float SphereRadius, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SphereOverlapActors_DEPRECATED");
 
@@ -36722,9 +36722,9 @@ void UKismetSystemLibrary::STATIC_SetVolumeButtonsHandledBySystem(bool bEnabled)
 // Parameters:
 // class UObject*                 Object                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   PropertyName                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Value                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Value                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_SetVectorPropertyByName(class UObject* Object, const struct FName& PropertyName, const class Vector3D& Value)
+void UKismetSystemLibrary::STATIC_SetVectorPropertyByName(class UObject* Object, const struct FName& PropertyName, const struct FVector& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SetVectorPropertyByName");
 
@@ -36891,9 +36891,9 @@ void UKismetSystemLibrary::STATIC_SetStringPropertyByName(class UObject* Object,
 // Parameters:
 // class UObject*                 Object                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   PropertyName                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Value                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                Value                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_SetRotatorPropertyByName(class UObject* Object, const struct FName& PropertyName, const class Rotator& Value)
+void UKismetSystemLibrary::STATIC_SetRotatorPropertyByName(class UObject* Object, const struct FName& PropertyName, const struct FRotator& Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.SetRotatorPropertyByName");
 
@@ -37445,8 +37445,8 @@ void UKismetSystemLibrary::OnAssetClassLoaded__DelegateSignature(class UClass* L
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class USceneComponent*         Component                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 TargetRelativeLocation         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  TargetRelativeRotation         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TargetRelativeLocation         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                TargetRelativeRotation         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bEaseOut                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bEaseIn                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OverTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -37454,7 +37454,7 @@ void UKismetSystemLibrary::OnAssetClassLoaded__DelegateSignature(class UClass* L
 // TEnumAsByte<EMoveComponentAction> MoveAction                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLatentActionInfo       LatentInfo                     (CPF_Parm)
 
-void UKismetSystemLibrary::STATIC_MoveComponentTo(class USceneComponent* Component, const class Vector3D& TargetRelativeLocation, const class Rotator& TargetRelativeRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, TEnumAsByte<EMoveComponentAction> MoveAction, const struct FLatentActionInfo& LatentInfo)
+void UKismetSystemLibrary::STATIC_MoveComponentTo(class USceneComponent* Component, const struct FVector& TargetRelativeLocation, const struct FRotator& TargetRelativeRotation, bool bEaseOut, bool bEaseIn, float OverTime, bool bForceShortestRotationPath, TEnumAsByte<EMoveComponentAction> MoveAction, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.MoveComponentTo");
 
@@ -37725,8 +37725,8 @@ void UKismetSystemLibrary::STATIC_LoadAsset(class UObject* WorldContextObject, T
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37738,7 +37738,7 @@ void UKismetSystemLibrary::STATIC_LoadAsset(class UObject* WorldContextObject, T
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceSingleForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_LineTraceSingleForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceSingleForObjects");
 
@@ -37773,8 +37773,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingleForObjects(class UObject* World
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37786,7 +37786,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingleForObjects(class UObject* World
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_LineTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceSingleByObject_DEPRECATED");
 
@@ -37821,8 +37821,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingleByObject_DEPRECATED(class UObje
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37834,7 +37834,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingleByObject_DEPRECATED(class UObje
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceSingle_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_LineTraceSingle_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceSingle_NEW");
 
@@ -37869,8 +37869,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingle_NEW(class UObject* WorldContex
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37882,7 +37882,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingle_NEW(class UObject* WorldContex
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceSingle_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_LineTraceSingle_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceSingle_DEPRECATED");
 
@@ -37917,8 +37917,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingle_DEPRECATED(class UObject* Worl
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37930,7 +37930,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceSingle_DEPRECATED(class UObject* Worl
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceMultiForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_LineTraceMultiForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceMultiForObjects");
 
@@ -37965,8 +37965,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceMultiForObjects(class UObject* WorldC
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -37978,7 +37978,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceMultiForObjects(class UObject* WorldC
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_LineTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceMultiByObject_DEPRECATED");
 
@@ -38013,8 +38013,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceMultiByObject_DEPRECATED(class UObjec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -38026,7 +38026,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceMultiByObject_DEPRECATED(class UObjec
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceMulti_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_LineTraceMulti_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceMulti_NEW");
 
@@ -38061,8 +38061,8 @@ bool UKismetSystemLibrary::STATIC_LineTraceMulti_NEW(class UObject* WorldContext
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -38074,7 +38074,7 @@ bool UKismetSystemLibrary::STATIC_LineTraceMulti_NEW(class UObject* WorldContext
 // float                          DrawTime                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_LineTraceMulti_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_LineTraceMulti_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, const struct FLinearColor& TraceColor, const struct FLinearColor& TraceHitColor, float DrawTime, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.LineTraceMulti_DEPRECATED");
 
@@ -39530,11 +39530,11 @@ bool UKismetSystemLibrary::STATIC_GetConvenientWindowedResolutions(TArray<struct
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class USceneComponent*         Component                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          SphereRadius                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_GetComponentBounds(class USceneComponent* Component, class Vector3D* Origin, class Vector3D* BoxExtent, float* SphereRadius)
+void UKismetSystemLibrary::STATIC_GetComponentBounds(class USceneComponent* Component, struct FVector* Origin, struct FVector* BoxExtent, float* SphereRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.GetComponentBounds");
 
@@ -39634,10 +39634,10 @@ void UKismetSystemLibrary::STATIC_GetActorListFromComponentList(TArray<class UPr
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_GetActorBounds(class AActor* Actor, class Vector3D* Origin, class Vector3D* BoxExtent)
+void UKismetSystemLibrary::STATIC_GetActorBounds(class AActor* Actor, struct FVector* Origin, struct FVector* BoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.GetActorBounds");
 
@@ -39747,13 +39747,13 @@ void UKismetSystemLibrary::STATIC_ExecuteConsoleCommand(class UObject* WorldCont
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TextLocation                   (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TextLocation                   (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 Text                           (CPF_Parm, CPF_ZeroConstructor)
 // class AActor*                  TestBaseActor                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            TextColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugString(class UObject* WorldContextObject, const class Vector3D& TextLocation, const struct FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration)
+void UKismetSystemLibrary::STATIC_DrawDebugString(class UObject* WorldContextObject, const struct FVector& TextLocation, const struct FString& Text, class AActor* TestBaseActor, const struct FLinearColor& TextColor, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugString");
 
@@ -39778,14 +39778,14 @@ void UKismetSystemLibrary::STATIC_DrawDebugString(class UObject* WorldContextObj
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Segments                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugSphere(class UObject* WorldContextObject, const class Vector3D& Center, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugSphere(class UObject* WorldContextObject, const struct FVector& Center, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugSphere");
 
@@ -39811,12 +39811,12 @@ void UKismetSystemLibrary::STATIC_DrawDebugSphere(class UObject* WorldContextObj
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Position                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            PointColor                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugPoint(class UObject* WorldContextObject, const class Vector3D& Position, float Size, const struct FLinearColor& PointColor, float Duration)
+void UKismetSystemLibrary::STATIC_DrawDebugPoint(class UObject* WorldContextObject, const struct FVector& Position, float Size, const struct FLinearColor& PointColor, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugPoint");
 
@@ -39841,12 +39841,12 @@ void UKismetSystemLibrary::STATIC_DrawDebugPoint(class UObject* WorldContextObje
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FPlane                  PlaneCoordinates               (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            PlaneColor                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugPlane(class UObject* WorldContextObject, const struct FPlane& PlaneCoordinates, const class Vector3D& Location, float Size, const struct FLinearColor& PlaneColor, float Duration)
+void UKismetSystemLibrary::STATIC_DrawDebugPlane(class UObject* WorldContextObject, const struct FPlane& PlaneCoordinates, const struct FVector& Location, float Size, const struct FLinearColor& PlaneColor, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugPlane");
 
@@ -39871,13 +39871,13 @@ void UKismetSystemLibrary::STATIC_DrawDebugPlane(class UObject* WorldContextObje
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugLine(class UObject* WorldContextObject, const class Vector3D& LineStart, const class Vector3D& LineEnd, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugLine(class UObject* WorldContextObject, const struct FVector& LineStart, const struct FVector& LineEnd, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugLine");
 
@@ -39933,11 +39933,11 @@ void UKismetSystemLibrary::STATIC_DrawDebugFrustum(class UObject* WorldContextOb
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FDebugFloatHistory      FloatHistory                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // struct FTransform              DrawTransform                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 DrawSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               DrawSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            DrawColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryTransform(class UObject* WorldContextObject, const struct FDebugFloatHistory& FloatHistory, const struct FTransform& DrawTransform, const class Vector2D& DrawSize, const struct FLinearColor& DrawColor, float Duration)
+void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryTransform(class UObject* WorldContextObject, const struct FDebugFloatHistory& FloatHistory, const struct FTransform& DrawTransform, const struct FVector2D& DrawSize, const struct FLinearColor& DrawColor, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugFloatHistoryTransform");
 
@@ -39963,12 +39963,12 @@ void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryTransform(class UObject* 
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FDebugFloatHistory      FloatHistory                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector3D                 DrawLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 DrawSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DrawLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               DrawSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            DrawColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryLocation(class UObject* WorldContextObject, const struct FDebugFloatHistory& FloatHistory, const class Vector3D& DrawLocation, const class Vector2D& DrawSize, const struct FLinearColor& DrawColor, float Duration)
+void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryLocation(class UObject* WorldContextObject, const struct FDebugFloatHistory& FloatHistory, const struct FVector& DrawLocation, const struct FVector2D& DrawSize, const struct FLinearColor& DrawColor, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugFloatHistoryLocation");
 
@@ -39993,15 +39993,15 @@ void UKismetSystemLibrary::STATIC_DrawDebugFloatHistoryLocation(class UObject* W
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Segments                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugCylinder(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugCylinder(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, int Segments, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugCylinder");
 
@@ -40028,13 +40028,13 @@ void UKismetSystemLibrary::STATIC_DrawDebugCylinder(class UObject* WorldContextO
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 AxisLoc                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  AxisRot                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 AxisLoc                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                AxisRot                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugCoordinateSystem(class UObject* WorldContextObject, const class Vector3D& AxisLoc, const class Rotator& AxisRot, float Scale, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugCoordinateSystem(class UObject* WorldContextObject, const struct FVector& AxisLoc, const struct FRotator& AxisRot, float Scale, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugCoordinateSystem");
 
@@ -40059,8 +40059,8 @@ void UKismetSystemLibrary::STATIC_DrawDebugCoordinateSystem(class UObject* World
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Direction                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Length                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          AngleWidth                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          AngleHeight                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40069,7 +40069,7 @@ void UKismetSystemLibrary::STATIC_DrawDebugCoordinateSystem(class UObject* World
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugConeInDegrees(class UObject* WorldContextObject, const class Vector3D& Origin, const class Vector3D& Direction, float Length, float AngleWidth, float AngleHeight, int NumSides, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugConeInDegrees(class UObject* WorldContextObject, const struct FVector& Origin, const struct FVector& Direction, float Length, float AngleWidth, float AngleHeight, int NumSides, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugConeInDegrees");
 
@@ -40098,8 +40098,8 @@ void UKismetSystemLibrary::STATIC_DrawDebugConeInDegrees(class UObject* WorldCon
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Direction                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Length                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          AngleWidth                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          AngleHeight                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40108,7 +40108,7 @@ void UKismetSystemLibrary::STATIC_DrawDebugConeInDegrees(class UObject* WorldCon
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugCone(class UObject* WorldContextObject, const class Vector3D& Origin, const class Vector3D& Direction, float Length, float AngleWidth, float AngleHeight, int NumSides, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugCone(class UObject* WorldContextObject, const struct FVector& Origin, const struct FVector& Direction, float Length, float AngleWidth, float AngleHeight, int NumSides, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugCone");
 
@@ -40137,17 +40137,17 @@ void UKismetSystemLibrary::STATIC_DrawDebugCone(class UObject* WorldContextObjec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Center                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            NumSegments                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 YAxis                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ZAxis                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 YAxis                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ZAxis                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bDrawAxis                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugCircle(class UObject* WorldContextObject, const class Vector3D& Center, float Radius, int NumSegments, const struct FLinearColor& LineColor, float Duration, float Thickness, const class Vector3D& YAxis, const class Vector3D& ZAxis, bool bDrawAxis)
+void UKismetSystemLibrary::STATIC_DrawDebugCircle(class UObject* WorldContextObject, const struct FVector& Center, float Radius, int NumSegments, const struct FLinearColor& LineColor, float Duration, float Thickness, const struct FVector& YAxis, const struct FVector& ZAxis, bool bDrawAxis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugCircle");
 
@@ -40176,15 +40176,15 @@ void UKismetSystemLibrary::STATIC_DrawDebugCircle(class UObject* WorldContextObj
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugCapsule(class UObject* WorldContextObject, const class Vector3D& Center, float HalfHeight, float Radius, const class Rotator& Rotation, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugCapsule(class UObject* WorldContextObject, const struct FVector& Center, float HalfHeight, float Radius, const struct FRotator& Rotation, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugCapsule");
 
@@ -40236,14 +40236,14 @@ void UKismetSystemLibrary::STATIC_DrawDebugCamera(class ACameraActor* CameraActo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugBox(class UObject* WorldContextObject, const class Vector3D& Center, const class Vector3D& Extent, const struct FLinearColor& LineColor, const class Rotator& Rotation, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugBox(class UObject* WorldContextObject, const struct FVector& Center, const struct FVector& Extent, const struct FLinearColor& LineColor, const struct FRotator& Rotation, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugBox");
 
@@ -40269,14 +40269,14 @@ void UKismetSystemLibrary::STATIC_DrawDebugBox(class UObject* WorldContextObject
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ArrowSize                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            LineColor                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetSystemLibrary::STATIC_DrawDebugArrow(class UObject* WorldContextObject, const class Vector3D& LineStart, const class Vector3D& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration, float Thickness)
+void UKismetSystemLibrary::STATIC_DrawDebugArrow(class UObject* WorldContextObject, const struct FVector& LineStart, const struct FVector& LineEnd, float ArrowSize, const struct FLinearColor& LineColor, float Duration, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.DrawDebugArrow");
 
@@ -40629,8 +40629,8 @@ void UKismetSystemLibrary::STATIC_CollectGarbage()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -40641,7 +40641,7 @@ void UKismetSystemLibrary::STATIC_CollectGarbage()
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceSingleForObjects");
 
@@ -40675,8 +40675,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleForObjects(class UObject* Wo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -40687,7 +40687,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleForObjects(class UObject* Wo
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceSingleByObject_DEPRECATED");
 
@@ -40721,8 +40721,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleByObject_DEPRECATED(class UO
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40733,7 +40733,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingleByObject_DEPRECATED(class UO
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceSingle_NEW");
 
@@ -40767,8 +40767,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_NEW(class UObject* WorldCon
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40779,7 +40779,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_NEW(class UObject* WorldCon
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceSingle_DEPRECATED");
 
@@ -40813,8 +40813,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_DEPRECATED(class UObject* W
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -40825,7 +40825,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceSingle_DEPRECATED(class UObject* W
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceMultiForObjects");
 
@@ -40859,8 +40859,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiForObjects(class UObject* Wor
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -40871,7 +40871,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiForObjects(class UObject* Wor
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiByObject_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<TEnumAsByte<ECollisionChannel>> ObjectsToTrace, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceMultiByObject_DEPRECATED");
 
@@ -40905,8 +40905,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiByObject_DEPRECATED(class UOb
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40917,7 +40917,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMultiByObject_DEPRECATED(class UOb
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_NEW(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_NEW(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceMulti_NEW");
 
@@ -40951,8 +40951,8 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_NEW(class UObject* WorldCont
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40963,7 +40963,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_NEW(class UObject* WorldCont
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_DEPRECATED(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleTraceMulti_DEPRECATED");
 
@@ -40997,7 +40997,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_DEPRECATED(class UObject* Wo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41006,7 +41006,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleTraceMulti_DEPRECATED(class UObject* Wo
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_NEW(class UObject* WorldContextObject, const class Vector3D& CapsulePos, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_NEW(class UObject* WorldContextObject, const struct FVector& CapsulePos, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleOverlapComponents_NEW");
 
@@ -41037,7 +41037,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_NEW(class UObject* Wo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -41046,7 +41046,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_NEW(class UObject* Wo
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& CapsulePos, float Radius, float HalfHeight, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const struct FVector& CapsulePos, float Radius, float HalfHeight, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleOverlapComponents_DEPRECATED");
 
@@ -41077,7 +41077,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_DEPRECATED(class UObj
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41086,7 +41086,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapComponents_DEPRECATED(class UObj
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_NEW(class UObject* WorldContextObject, const class Vector3D& CapsulePos, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_NEW(class UObject* WorldContextObject, const struct FVector& CapsulePos, float Radius, float HalfHeight, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleOverlapActors_NEW");
 
@@ -41117,7 +41117,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_NEW(class UObject* WorldC
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CapsulePos                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HalfHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -41126,7 +41126,7 @@ bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_NEW(class UObject* WorldC
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& CapsulePos, float Radius, float HalfHeight, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_CapsuleOverlapActors_DEPRECATED(class UObject* WorldContextObject, const struct FVector& CapsulePos, float Radius, float HalfHeight, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.CapsuleOverlapActors_DEPRECATED");
 
@@ -41181,10 +41181,10 @@ bool UKismetSystemLibrary::STATIC_CanLaunchURL(const struct FString& URL)
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41193,7 +41193,7 @@ bool UKismetSystemLibrary::STATIC_CanLaunchURL(const struct FString& URL)
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxTraceSingleForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, const class Vector3D& HalfSize, const class Rotator& Orientation, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_BoxTraceSingleForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, const struct FVector& HalfSize, const struct FRotator& Orientation, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxTraceSingleForObjects");
 
@@ -41227,10 +41227,10 @@ bool UKismetSystemLibrary::STATIC_BoxTraceSingleForObjects(class UObject* WorldC
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41239,7 +41239,7 @@ bool UKismetSystemLibrary::STATIC_BoxTraceSingleForObjects(class UObject* WorldC
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxTraceSingle(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, const class Vector3D& HalfSize, const class Rotator& Orientation, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
+bool UKismetSystemLibrary::STATIC_BoxTraceSingle(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, const struct FVector& HalfSize, const struct FRotator& Orientation, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, struct FHitResult* OutHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxTraceSingle");
 
@@ -41273,10 +41273,10 @@ bool UKismetSystemLibrary::STATIC_BoxTraceSingle(class UObject* WorldContextObje
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HalfSize                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41285,7 +41285,7 @@ bool UKismetSystemLibrary::STATIC_BoxTraceSingle(class UObject* WorldContextObje
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxTraceMultiForObjects(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, const class Vector3D& HalfSize, const class Rotator& Orientation, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_BoxTraceMultiForObjects(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, const struct FVector& HalfSize, const struct FRotator& Orientation, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxTraceMultiForObjects");
 
@@ -41319,10 +41319,10 @@ bool UKismetSystemLibrary::STATIC_BoxTraceMultiForObjects(class UObject* WorldCo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HalfSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 End                            (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 HalfSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Orientation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ETraceTypeQuery>   TraceChannel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTraceComplex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -41331,7 +41331,7 @@ bool UKismetSystemLibrary::STATIC_BoxTraceMultiForObjects(class UObject* WorldCo
 // bool                           bIgnoreSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxTraceMulti(class UObject* WorldContextObject, const class Vector3D& Start, const class Vector3D& End, const class Vector3D& HalfSize, const class Rotator& Orientation, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
+bool UKismetSystemLibrary::STATIC_BoxTraceMulti(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, const struct FVector& HalfSize, const struct FRotator& Orientation, TEnumAsByte<ETraceTypeQuery> TraceChannel, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, bool bIgnoreSelf, TArray<struct FHitResult>* OutHits)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxTraceMulti");
 
@@ -41365,15 +41365,15 @@ bool UKismetSystemLibrary::STATIC_BoxTraceMulti(class UObject* WorldContextObjec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // class UClass*                  ComponentClassFilter           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_NEW(class UObject* WorldContextObject, const class Vector3D& BoxPos, const class Vector3D& Extent, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_NEW(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& Extent, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxOverlapComponents_NEW");
 
@@ -41403,15 +41403,15 @@ bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_NEW(class UObject* WorldC
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Extent                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  ComponentClassFilter           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // TArray<class UPrimitiveComponent*> OutComponents                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& BoxPos, const class Vector3D& Extent, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
+bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_DEPRECATED(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& Extent, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ComponentClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class UPrimitiveComponent*>* OutComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxOverlapComponents_DEPRECATED");
 
@@ -41441,15 +41441,15 @@ bool UKismetSystemLibrary::STATIC_BoxOverlapComponents_DEPRECATED(class UObject*
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // class UClass*                  ActorClassFilter               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxOverlapActors_NEW(class UObject* WorldContextObject, const class Vector3D& BoxPos, const class Vector3D& BoxExtent, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_BoxOverlapActors_NEW(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxOverlapActors_NEW");
 
@@ -41479,15 +41479,15 @@ bool UKismetSystemLibrary::STATIC_BoxOverlapActors_NEW(class UObject* WorldConte
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxPos                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EOverlapFilterOption> Filter                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  ActorClassFilter               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          ActorsToIgnore                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // TArray<class AActor*>          OutActors                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetSystemLibrary::STATIC_BoxOverlapActors_DEPRECATED(class UObject* WorldContextObject, const class Vector3D& BoxPos, const class Vector3D& BoxExtent, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
+bool UKismetSystemLibrary::STATIC_BoxOverlapActors_DEPRECATED(class UObject* WorldContextObject, const struct FVector& BoxPos, const struct FVector& BoxExtent, TEnumAsByte<EOverlapFilterOption> Filter, class UClass* ActorClassFilter, TArray<class AActor*> ActorsToIgnore, TArray<class AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetSystemLibrary.BoxOverlapActors_DEPRECATED");
 
@@ -41568,14 +41568,14 @@ void UGameplayStatics::STATIC_UnloadStreamLevel(class UObject* WorldContextObjec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 OutLaunchVelocity              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutLaunchVelocity              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndPos                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OverrideGravityZ               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ArcParam                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_SuggestProjectileVelocity_CustomArc(class UObject* WorldContextObject, const class Vector3D& StartPos, const class Vector3D& EndPos, float OverrideGravityZ, float ArcParam, class Vector3D* OutLaunchVelocity)
+bool UGameplayStatics::STATIC_SuggestProjectileVelocity_CustomArc(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& EndPos, float OverrideGravityZ, float ArcParam, struct FVector* OutLaunchVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SuggestProjectileVelocity_CustomArc");
 
@@ -41606,8 +41606,8 @@ bool UGameplayStatics::STATIC_SuggestProjectileVelocity_CustomArc(class UObject*
 // class USoundBase*              Sound                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   AttachPointName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EAttachLocation>   LocationType                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bStopWhenAttachedToDestroyed   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -41617,7 +41617,7 @@ bool UGameplayStatics::STATIC_SuggestProjectileVelocity_CustomArc(class UObject*
 // class USoundConcurrency*       ConcurrencySettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAudioComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAttached(class USoundBase* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const class Vector3D& Location, const class Rotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
+class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAttached(class USoundBase* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnSoundAttached");
 
@@ -41651,8 +41651,8 @@ class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAttached(class USoundB
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundBase*              Sound                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          PitchMultiplier                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          StartTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -41660,7 +41660,7 @@ class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAttached(class USoundB
 // class USoundConcurrency*       ConcurrencySettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAudioComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const class Vector3D& Location, const class Rotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
+class UAudioComponent* UGameplayStatics::STATIC_SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnSoundAtLocation");
 
@@ -41754,13 +41754,13 @@ class UObject* UGameplayStatics::STATIC_SpawnObject(class UClass* ObjectClass, c
 // class UParticleSystem*         EmitterTemplate                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   AttachPointName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EAttachLocation>   LocationType                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAutoDestroy                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UParticleSystemComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAttached(class UParticleSystem* EmitterTemplate, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const class Vector3D& Location, const class Rotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy)
+class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAttached(class UParticleSystem* EmitterTemplate, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnEmitterAttached");
 
@@ -41789,12 +41789,12 @@ class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAttached(cl
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UParticleSystem*         EmitterTemplate                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bAutoDestroy                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UParticleSystemComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAtLocation(class UObject* WorldContextObject, class UParticleSystem* EmitterTemplate, const class Vector3D& Location, const class Rotator& Rotation, bool bAutoDestroy)
+class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAtLocation(class UObject* WorldContextObject, class UParticleSystem* EmitterTemplate, const struct FVector& Location, const struct FRotator& Rotation, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnEmitterAtLocation");
 
@@ -41823,8 +41823,8 @@ class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAtLocation(
 // struct FDialogueContext        Context                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // class USceneComponent*         AttachToComponent              (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   AttachPointName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EAttachLocation>   LocationType                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bStopWhenAttachedToDestroyed   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -41833,7 +41833,7 @@ class UParticleSystemComponent* UGameplayStatics::STATIC_SpawnEmitterAtLocation(
 // class USoundAttenuation*       AttenuationSettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAudioComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogueAttached(class UDialogueWave* Dialogue, const struct FDialogueContext& Context, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const class Vector3D& Location, const class Rotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
+class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogueAttached(class UDialogueWave* Dialogue, const struct FDialogueContext& Context, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnDialogueAttached");
 
@@ -41868,15 +41868,15 @@ class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogueAttached(class UDia
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDialogueWave*           Dialogue                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FDialogueContext        Context                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          PitchMultiplier                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          StartTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundAttenuation*       AttenuationSettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAudioComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogueAtLocation(class UObject* WorldContextObject, class UDialogueWave* Dialogue, const struct FDialogueContext& Context, const class Vector3D& Location, const class Rotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
+class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogueAtLocation(class UObject* WorldContextObject, class UDialogueWave* Dialogue, const struct FDialogueContext& Context, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnDialogueAtLocation");
 
@@ -41940,16 +41940,16 @@ class UAudioComponent* UGameplayStatics::STATIC_SpawnDialogue2D(class UObject* W
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*      DecalMaterial                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 DecalSize                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DecalSize                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   AttachPointName                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EAttachLocation>   LocationType                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          LifeSpan                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDecalComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UDecalComponent* UGameplayStatics::STATIC_SpawnDecalAttached(class UMaterialInterface* DecalMaterial, const class Vector3D& DecalSize, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const class Vector3D& Location, const class Rotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, float LifeSpan)
+class UDecalComponent* UGameplayStatics::STATIC_SpawnDecalAttached(class UMaterialInterface* DecalMaterial, const struct FVector& DecalSize, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, float LifeSpan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnDecalAttached");
 
@@ -41979,13 +41979,13 @@ class UDecalComponent* UGameplayStatics::STATIC_SpawnDecalAttached(class UMateri
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UMaterialInterface*      DecalMaterial                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 DecalSize                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DecalSize                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          LifeSpan                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDecalComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-class UDecalComponent* UGameplayStatics::STATIC_SpawnDecalAtLocation(class UObject* WorldContextObject, class UMaterialInterface* DecalMaterial, const class Vector3D& DecalSize, const class Vector3D& Location, const class Rotator& Rotation, float LifeSpan)
+class UDecalComponent* UGameplayStatics::STATIC_SpawnDecalAtLocation(class UObject* WorldContextObject, class UMaterialInterface* DecalMaterial, const struct FVector& DecalSize, const struct FVector& Location, const struct FRotator& Rotation, float LifeSpan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.SpawnDecalAtLocation");
 
@@ -42297,10 +42297,10 @@ void UGameplayStatics::STATIC_RemovePlayer(class APlayerController* Player, bool
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UGameplayStatics::STATIC_RebaseZeroOriginOntoLocal(class UObject* WorldContextObject, const class Vector3D& WorldLocation)
+struct FVector UGameplayStatics::STATIC_RebaseZeroOriginOntoLocal(class UObject* WorldContextObject, const struct FVector& WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.RebaseZeroOriginOntoLocal");
 
@@ -42323,10 +42323,10 @@ class Vector3D UGameplayStatics::STATIC_RebaseZeroOriginOntoLocal(class UObject*
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UGameplayStatics::STATIC_RebaseLocalOriginOntoZero(class UObject* WorldContextObject, const class Vector3D& WorldLocation)
+struct FVector UGameplayStatics::STATIC_RebaseLocalOriginOntoZero(class UObject* WorldContextObject, const struct FVector& WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.RebaseLocalOriginOntoZero");
 
@@ -42372,12 +42372,12 @@ void UGameplayStatics::STATIC_PushSoundMixModifier(class UObject* WorldContextOb
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class APlayerController*       Player                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldPosition                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldPosition                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bPlayerViewportRelative        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_ProjectWorldToScreen(class APlayerController* Player, const class Vector3D& WorldPosition, bool bPlayerViewportRelative, class Vector2D* ScreenPosition)
+bool UGameplayStatics::STATIC_ProjectWorldToScreen(class APlayerController* Player, const struct FVector& WorldPosition, bool bPlayerViewportRelative, struct FVector2D* ScreenPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.ProjectWorldToScreen");
 
@@ -42405,10 +42405,10 @@ bool UGameplayStatics::STATIC_ProjectWorldToScreen(class APlayerController* Play
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              OutHit                         (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
-// TArray<class Vector3D>         OutPathPositions               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
-// class Vector3D                 OutLastTraceDestination        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TArray<struct FVector>         OutPathPositions               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+// struct FVector                 OutLastTraceDestination        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartPos                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LaunchVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bTracePath                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ProjectileRadius               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -42421,7 +42421,7 @@ bool UGameplayStatics::STATIC_ProjectWorldToScreen(class APlayerController* Play
 // float                          OverrideGravityZ               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_PredictProjectilePath(class UObject* WorldContextObject, const class Vector3D& StartPos, const class Vector3D& LaunchVelocity, bool bTracePath, float ProjectileRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<class Vector3D>* OutPathPositions, class Vector3D* OutLastTraceDestination)
+bool UGameplayStatics::STATIC_PredictProjectilePath(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& LaunchVelocity, bool bTracePath, float ProjectileRadius, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<struct FVector>* OutPathPositions, struct FVector* OutLastTraceDestination)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.PredictProjectilePath");
 
@@ -42486,13 +42486,13 @@ void UGameplayStatics::STATIC_PopSoundMixModifier(class UObject* WorldContextObj
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  Shake                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Epicenter                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Epicenter                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InnerRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OuterRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Falloff                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bOrientShakeTowardsEpicenter   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_PlayWorldCameraShake(class UObject* WorldContextObject, class UClass* Shake, const class Vector3D& Epicenter, float InnerRadius, float OuterRadius, float Falloff, bool bOrientShakeTowardsEpicenter)
+void UGameplayStatics::STATIC_PlayWorldCameraShake(class UObject* WorldContextObject, class UClass* Shake, const struct FVector& Epicenter, float InnerRadius, float OuterRadius, float Falloff, bool bOrientShakeTowardsEpicenter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.PlayWorldCameraShake");
 
@@ -42519,15 +42519,15 @@ void UGameplayStatics::STATIC_PlayWorldCameraShake(class UObject* WorldContextOb
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundBase*              Sound                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          PitchMultiplier                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          StartTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundAttenuation*       AttenuationSettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundConcurrency*       ConcurrencySettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_PlaySoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const class Vector3D& Location, const class Rotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
+void UGameplayStatics::STATIC_PlaySoundAtLocation(class UObject* WorldContextObject, class USoundBase* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.PlaySoundAtLocation");
 
@@ -42588,14 +42588,14 @@ void UGameplayStatics::STATIC_PlaySound2D(class UObject* WorldContextObject, cla
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UDialogueWave*           Dialogue                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FDialogueContext        Context                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VolumeMultiplier               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          PitchMultiplier                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          StartTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class USoundAttenuation*       AttenuationSettings            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_PlayDialogueAtLocation(class UObject* WorldContextObject, class UDialogueWave* Dialogue, const struct FDialogueContext& Context, const class Vector3D& Location, const class Rotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
+void UGameplayStatics::STATIC_PlayDialogueAtLocation(class UObject* WorldContextObject, class UDialogueWave* Dialogue, const struct FDialogueContext& Context, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.PlayDialogueAtLocation");
 
@@ -42709,21 +42709,21 @@ void UGameplayStatics::STATIC_OpenLevel(class UObject* WorldContextObject, const
 // bool                           bBlockingHit                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bInitialOverlap                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ImpactPoint                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ImpactNormal                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ImpactPoint                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ImpactNormal                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPhysicalMaterial*       PhysMat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  HitActor                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   HitBoneName                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            HitItem                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            FaceIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TraceStart                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TraceEnd                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceStart                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceEnd                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FHitResult UGameplayStatics::STATIC_MakeHitResult(bool bBlockingHit, bool bInitialOverlap, float Time, const class Vector3D& Location, const class Vector3D& ImpactPoint, const class Vector3D& Normal, const class Vector3D& ImpactNormal, class UPhysicalMaterial* PhysMat, class AActor* HitActor, class UPrimitiveComponent* HitComponent, const struct FName& HitBoneName, int HitItem, int FaceIndex, const class Vector3D& TraceStart, const class Vector3D& TraceEnd)
+struct FHitResult UGameplayStatics::STATIC_MakeHitResult(bool bBlockingHit, bool bInitialOverlap, float Time, const struct FVector& Location, const struct FVector& ImpactPoint, const struct FVector& Normal, const struct FVector& ImpactNormal, class UPhysicalMaterial* PhysMat, class AActor* HitActor, class UPrimitiveComponent* HitComponent, const struct FName& HitBoneName, int HitItem, int FaceIndex, const struct FVector& TraceStart, const struct FVector& TraceEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.MakeHitResult");
 
@@ -42865,11 +42865,11 @@ bool UGameplayStatics::STATIC_HasOption(const struct FString& Options, const str
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UStaticMesh*             StaticMesh                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 CenterPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CenterPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-int UGameplayStatics::STATIC_GrassOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const class Vector3D& CenterPosition, float Radius)
+int UGameplayStatics::STATIC_GrassOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.GrassOverlappingSphereCount");
 
@@ -43546,10 +43546,10 @@ void UGameplayStatics::STATIC_GetAllActorsOfClass(class UObject* WorldContextObj
 // Parameters:
 // TArray<class AActor*>          Actors                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // bool                           bOnlyCollidingComponents       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Center                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Center                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_GetActorArrayBounds(TArray<class AActor*> Actors, bool bOnlyCollidingComponents, class Vector3D* Center, class Vector3D* BoxExtent)
+void UGameplayStatics::STATIC_GetActorArrayBounds(TArray<class AActor*> Actors, bool bOnlyCollidingComponents, struct FVector* Center, struct FVector* BoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.GetActorArrayBounds");
 
@@ -43575,9 +43575,9 @@ void UGameplayStatics::STATIC_GetActorArrayBounds(TArray<class AActor*> Actors, 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // TArray<class AActor*>          Actors                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UGameplayStatics::STATIC_GetActorArrayAverageLocation(TArray<class AActor*> Actors)
+struct FVector UGameplayStatics::STATIC_GetActorArrayAverageLocation(TArray<class AActor*> Actors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.GetActorArrayAverageLocation");
 
@@ -43675,10 +43675,10 @@ class AActor* UGameplayStatics::STATIC_FinishSpawningActor(class AActor* Actor, 
 // Parameters:
 // struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // int                            UVChannel                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 UV                             (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               UV                             (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_FindCollisionUV(const struct FHitResult& Hit, int UVChannel, class Vector2D* UV)
+bool UGameplayStatics::STATIC_FindCollisionUV(const struct FHitResult& Hit, int UVChannel, struct FVector2D* UV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.FindCollisionUV");
 
@@ -43751,12 +43751,12 @@ bool UGameplayStatics::STATIC_DoesSaveGameExist(const struct FString& SlotName, 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class APlayerController*       Player                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 WorldPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 WorldPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_DeprojectScreenToWorld(class APlayerController* Player, const class Vector2D& ScreenPosition, class Vector3D* WorldPosition, class Vector3D* WorldDirection)
+bool UGameplayStatics::STATIC_DeprojectScreenToWorld(class APlayerController* Player, const struct FVector2D& ScreenPosition, struct FVector* WorldPosition, struct FVector* WorldDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.DeprojectScreenToWorld");
 
@@ -44014,20 +44014,20 @@ void UGameplayStatics::STATIC_CancelAsyncLoading()
 // bool                           bBlockingHit                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bInitialOverlap                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Time                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ImpactPoint                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Normal                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ImpactNormal                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ImpactPoint                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Normal                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ImpactNormal                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPhysicalMaterial*       PhysMat                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  HitActor                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FName                   HitBoneName                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            HitItem                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            FaceIndex                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TraceStart                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TraceEnd                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceStart                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TraceEnd                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_BreakHitResult(const struct FHitResult& Hit, bool* bBlockingHit, bool* bInitialOverlap, float* Time, class Vector3D* Location, class Vector3D* ImpactPoint, class Vector3D* Normal, class Vector3D* ImpactNormal, class UPhysicalMaterial** PhysMat, class AActor** HitActor, class UPrimitiveComponent** HitComponent, struct FName* HitBoneName, int* HitItem, int* FaceIndex, class Vector3D* TraceStart, class Vector3D* TraceEnd)
+void UGameplayStatics::STATIC_BreakHitResult(const struct FHitResult& Hit, bool* bBlockingHit, bool* bInitialOverlap, float* Time, struct FVector* Location, struct FVector* ImpactPoint, struct FVector* Normal, struct FVector* ImpactNormal, class UPhysicalMaterial** PhysMat, class AActor** HitActor, class UPrimitiveComponent** HitComponent, struct FName* HitBoneName, int* HitItem, int* FaceIndex, struct FVector* TraceStart, struct FVector* TraceEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.BreakHitResult");
 
@@ -44078,9 +44078,9 @@ void UGameplayStatics::STATIC_BreakHitResult(const struct FHitResult& Hit, bool*
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 TossVelocity                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 StartLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 EndLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 TossVelocity                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 StartLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 EndLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          LaunchSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OverrideGravityZ               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<ESuggestProjVelocityTraceOption> TraceOption                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -44089,7 +44089,7 @@ void UGameplayStatics::STATIC_BreakHitResult(const struct FHitResult& Hit, bool*
 // bool                           bDrawDebug                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_BlueprintSuggestProjectileVelocity(class UObject* WorldContextObject, const class Vector3D& StartLocation, const class Vector3D& EndLocation, float LaunchSpeed, float OverrideGravityZ, TEnumAsByte<ESuggestProjVelocityTraceOption> TraceOption, float CollisionRadius, bool bFavorHighArc, bool bDrawDebug, class Vector3D* TossVelocity)
+bool UGameplayStatics::STATIC_BlueprintSuggestProjectileVelocity(class UObject* WorldContextObject, const struct FVector& StartLocation, const struct FVector& EndLocation, float LaunchSpeed, float OverrideGravityZ, TEnumAsByte<ESuggestProjVelocityTraceOption> TraceOption, float CollisionRadius, bool bFavorHighArc, bool bDrawDebug, struct FVector* TossVelocity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.BlueprintSuggestProjectileVelocity");
 
@@ -44238,11 +44238,11 @@ bool UGameplayStatics::STATIC_AreSubtitlesEnabled()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          MaximumRange                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_AreAnyListenersWithinRange(class UObject* WorldContextObject, const class Vector3D& Location, float MaximumRange)
+bool UGameplayStatics::STATIC_AreAnyListenersWithinRange(class UObject* WorldContextObject, const struct FVector& Location, float MaximumRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.AreAnyListenersWithinRange");
 
@@ -44268,7 +44268,7 @@ bool UGameplayStatics::STATIC_AreAnyListenersWithinRange(class UObject* WorldCon
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BaseDamage                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          MinimumDamage                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          DamageInnerRadius              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DamageOuterRadius              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DamageFalloff                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -44279,7 +44279,7 @@ bool UGameplayStatics::STATIC_AreAnyListenersWithinRange(class UObject* WorldCon
 // TEnumAsByte<ECollisionChannel> DamagePreventionChannel        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, const class Vector3D& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel)
+bool UGameplayStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, const struct FVector& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.ApplyRadialDamageWithFalloff");
 
@@ -44313,7 +44313,7 @@ bool UGameplayStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldC
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BaseDamage                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          DamageRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  DamageTypeClass                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TArray<class AActor*>          IgnoreActors                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -44323,7 +44323,7 @@ bool UGameplayStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldC
 // TEnumAsByte<ECollisionChannel> DamagePreventionChannel        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UGameplayStatics::STATIC_ApplyRadialDamage(class UObject* WorldContextObject, float BaseDamage, const class Vector3D& Origin, float DamageRadius, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, class AActor* DamageCauser, class AController* InstigatedByController, bool bDoFullDamage, TEnumAsByte<ECollisionChannel> DamagePreventionChannel)
+bool UGameplayStatics::STATIC_ApplyRadialDamage(class UObject* WorldContextObject, float BaseDamage, const struct FVector& Origin, float DamageRadius, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, class AActor* DamageCauser, class AController* InstigatedByController, bool bDoFullDamage, TEnumAsByte<ECollisionChannel> DamagePreventionChannel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.ApplyRadialDamage");
 
@@ -44355,13 +44355,13 @@ bool UGameplayStatics::STATIC_ApplyRadialDamage(class UObject* WorldContextObjec
 // Parameters:
 // class AActor*                  DamagedActor                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BaseDamage                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 HitFromDirection               (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 HitFromDirection               (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // struct FHitResult              HitInfo                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // class AController*             EventInstigator                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  DamageTypeClass                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGameplayStatics::STATIC_ApplyPointDamage(class AActor* DamagedActor, float BaseDamage, const class Vector3D& HitFromDirection, const struct FHitResult& HitInfo, class AController* EventInstigator, class AActor* DamageCauser, class UClass* DamageTypeClass)
+void UGameplayStatics::STATIC_ApplyPointDamage(class AActor* DamagedActor, float BaseDamage, const struct FVector& HitFromDirection, const struct FHitResult& HitInfo, class AController* EventInstigator, class AActor* DamageCauser, class UClass* DamageTypeClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.GameplayStatics.ApplyPointDamage");
 
@@ -44652,8 +44652,8 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetVRFocusState(bool* bUseFocus,
 // Function Engine.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          LeftFOV                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          RightFOV                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          TopFOV                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -44664,7 +44664,7 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetVRFocusState(bool* bUseFocus,
 // bool                           IsActive                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingSensorParameters(int Index, class Vector3D* Origin, class Rotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetTrackingSensorParameters(int Index, struct FVector* Origin, struct FRotator* Rotation, float* LeftFOV, float* RightFOV, float* TopFOV, float* BottomFOV, float* Distance, float* NearPlane, float* FarPlane, bool* IsActive)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HeadMountedDisplayFunctionLibrary.GetTrackingSensorParameters");
 
@@ -44748,15 +44748,15 @@ float UHeadMountedDisplayFunctionLibrary::STATIC_GetScreenPercentage()
 // Function Engine.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 CameraOrigin                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  CameraRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 CameraOrigin                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                CameraRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          HFOV                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          VFOV                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          CameraDistance                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          NearPlane                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          FarPlane                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::STATIC_GetPositionalTrackingCameraParameters(class Vector3D* CameraOrigin, class Rotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetPositionalTrackingCameraParameters(struct FVector* CameraOrigin, struct FRotator* CameraRotation, float* HFOV, float* VFOV, float* CameraDistance, float* NearPlane, float* FarPlane)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HeadMountedDisplayFunctionLibrary.GetPositionalTrackingCameraParameters");
 
@@ -44789,10 +44789,10 @@ void UHeadMountedDisplayFunctionLibrary::STATIC_GetPositionalTrackingCameraParam
 // Function Engine.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  DeviceRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 DevicePosition                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                DeviceRotation                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 DevicePosition                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHeadMountedDisplayFunctionLibrary::STATIC_GetOrientationAndPosition(class Rotator* DeviceRotation, class Vector3D* DevicePosition)
+void UHeadMountedDisplayFunctionLibrary::STATIC_GetOrientationAndPosition(struct FRotator* DeviceRotation, struct FVector* DevicePosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.HeadMountedDisplayFunctionLibrary.GetOrientationAndPosition");
 
@@ -45646,9 +45646,9 @@ int UKismetInputLibrary::STATIC_PointerEvent_GetTouchpadIndex(const struct FPoin
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FPointerEvent           Input                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetInputLibrary::STATIC_PointerEvent_GetScreenSpacePosition(const struct FPointerEvent& Input)
+struct FVector2D UKismetInputLibrary::STATIC_PointerEvent_GetScreenSpacePosition(const struct FPointerEvent& Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetInputLibrary.PointerEvent_GetScreenSpacePosition");
 
@@ -45694,9 +45694,9 @@ int UKismetInputLibrary::STATIC_PointerEvent_GetPointerIndex(const struct FPoint
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FPointerEvent           Input                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetInputLibrary::STATIC_PointerEvent_GetLastScreenSpacePosition(const struct FPointerEvent& Input)
+struct FVector2D UKismetInputLibrary::STATIC_PointerEvent_GetLastScreenSpacePosition(const struct FPointerEvent& Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetInputLibrary.PointerEvent_GetLastScreenSpacePosition");
 
@@ -45718,9 +45718,9 @@ class Vector2D UKismetInputLibrary::STATIC_PointerEvent_GetLastScreenSpacePositi
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FPointerEvent           Input                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetInputLibrary::STATIC_PointerEvent_GetGestureDelta(const struct FPointerEvent& Input)
+struct FVector2D UKismetInputLibrary::STATIC_PointerEvent_GetGestureDelta(const struct FPointerEvent& Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetInputLibrary.PointerEvent_GetGestureDelta");
 
@@ -45766,9 +45766,9 @@ struct FKey UKismetInputLibrary::STATIC_PointerEvent_GetEffectingButton(const st
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FPointerEvent           Input                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetInputLibrary::STATIC_PointerEvent_GetCursorDelta(const struct FPointerEvent& Input)
+struct FVector2D UKismetInputLibrary::STATIC_PointerEvent_GetCursorDelta(const struct FPointerEvent& Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetInputLibrary.PointerEvent_GetCursorDelta");
 
@@ -46645,10 +46645,10 @@ int UKismetMathLibrary::STATIC_Xor_IntInt(int A, int B)
 // Function Engine.KismetMathLibrary.VSizeSquared
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_VSizeSquared(const class Vector3D& A)
+float UKismetMathLibrary::STATIC_VSizeSquared(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VSizeSquared");
 
@@ -46669,10 +46669,10 @@ float UKismetMathLibrary::STATIC_VSizeSquared(const class Vector3D& A)
 // Function Engine.KismetMathLibrary.VSize2DSquared
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_VSize2DSquared(const class Vector2D& A)
+float UKismetMathLibrary::STATIC_VSize2DSquared(const struct FVector2D& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VSize2DSquared");
 
@@ -46693,10 +46693,10 @@ float UKismetMathLibrary::STATIC_VSize2DSquared(const class Vector2D& A)
 // Function Engine.KismetMathLibrary.VSize2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_VSize2D(const class Vector2D& A)
+float UKismetMathLibrary::STATIC_VSize2D(const struct FVector2D& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VSize2D");
 
@@ -46717,10 +46717,10 @@ float UKismetMathLibrary::STATIC_VSize2D(const class Vector2D& A)
 // Function Engine.KismetMathLibrary.VSize
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_VSize(const class Vector3D& A)
+float UKismetMathLibrary::STATIC_VSize(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VSize");
 
@@ -46741,12 +46741,12 @@ float UKismetMathLibrary::STATIC_VSize(const class Vector3D& A)
 // Function Engine.KismetMathLibrary.VLerp
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Alpha                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_VLerp(const class Vector3D& A, const class Vector3D& B, float Alpha)
+struct FVector UKismetMathLibrary::STATIC_VLerp(const struct FVector& A, const struct FVector& B, float Alpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VLerp");
 
@@ -46769,13 +46769,13 @@ class Vector3D UKismetMathLibrary::STATIC_VLerp(const class Vector3D& A, const c
 // Function Engine.KismetMathLibrary.VInterpTo_Constant
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_VInterpTo_Constant(const class Vector3D& Current, const class Vector3D& Target, float DeltaTime, float InterpSpeed)
+struct FVector UKismetMathLibrary::STATIC_VInterpTo_Constant(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo_Constant");
 
@@ -46799,13 +46799,13 @@ class Vector3D UKismetMathLibrary::STATIC_VInterpTo_Constant(const class Vector3
 // Function Engine.KismetMathLibrary.VInterpTo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_VInterpTo(const class Vector3D& Current, const class Vector3D& Target, float DeltaTime, float InterpSpeed)
+struct FVector UKismetMathLibrary::STATIC_VInterpTo(const struct FVector& Current, const struct FVector& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VInterpTo");
 
@@ -46829,16 +46829,16 @@ class Vector3D UKismetMathLibrary::STATIC_VInterpTo(const class Vector3D& Curren
 // Function Engine.KismetMathLibrary.VectorSpringInterp
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FVectorSpringState      SpringState                    (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // float                          Stiffness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          CriticalDampingFactor          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Mass                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_VectorSpringInterp(const class Vector3D& Current, const class Vector3D& Target, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass, struct FVectorSpringState* SpringState)
+struct FVector UKismetMathLibrary::STATIC_VectorSpringInterp(const struct FVector& Current, const struct FVector& Target, float Stiffness, float CriticalDampingFactor, float DeltaTime, float Mass, struct FVectorSpringState* SpringState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VectorSpringInterp");
 
@@ -46867,13 +46867,13 @@ class Vector3D UKismetMathLibrary::STATIC_VectorSpringInterp(const class Vector3
 // Function Engine.KismetMathLibrary.Vector2DInterpTo_Constant
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Vector2DInterpTo_Constant(const class Vector2D& Current, const class Vector2D& Target, float DeltaTime, float InterpSpeed)
+struct FVector2D UKismetMathLibrary::STATIC_Vector2DInterpTo_Constant(const struct FVector2D& Current, const struct FVector2D& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Vector2DInterpTo_Constant");
 
@@ -46897,13 +46897,13 @@ class Vector2D UKismetMathLibrary::STATIC_Vector2DInterpTo_Constant(const class 
 // Function Engine.KismetMathLibrary.Vector2DInterpTo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Vector2DInterpTo(const class Vector2D& Current, const class Vector2D& Target, float DeltaTime, float InterpSpeed)
+struct FVector2D UKismetMathLibrary::STATIC_Vector2DInterpTo(const struct FVector2D& Current, const struct FVector2D& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Vector2DInterpTo");
 
@@ -46927,15 +46927,15 @@ class Vector2D UKismetMathLibrary::STATIC_Vector2DInterpTo(const class Vector2D&
 // Function Engine.KismetMathLibrary.VEase
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Alpha                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EEasingFunc>       EasingFunc                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BlendExp                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Steps                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_VEase(const class Vector3D& A, const class Vector3D& B, float Alpha, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps)
+struct FVector UKismetMathLibrary::STATIC_VEase(const struct FVector& A, const struct FVector& B, float Alpha, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.VEase");
 
@@ -46984,10 +46984,10 @@ struct FDateTime UKismetMathLibrary::STATIC_UtcNow()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FTransform              T                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_TransformLocation(const struct FTransform& T, const class Vector3D& Location)
+struct FVector UKismetMathLibrary::STATIC_TransformLocation(const struct FTransform& T, const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.TransformLocation");
 
@@ -47010,10 +47010,10 @@ class Vector3D UKismetMathLibrary::STATIC_TransformLocation(const struct FTransf
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FTransform              T                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_TransformDirection(const struct FTransform& T, const class Vector3D& Direction)
+struct FVector UKismetMathLibrary::STATIC_TransformDirection(const struct FTransform& T, const struct FVector& Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.TransformDirection");
 
@@ -47295,11 +47295,11 @@ float UKismetMathLibrary::STATIC_Tan(float A)
 // Function Engine.KismetMathLibrary.Subtract_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorVector(const class Vector3D& A, const class Vector3D& B)
+struct FVector UKismetMathLibrary::STATIC_Subtract_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Subtract_VectorVector");
 
@@ -47321,11 +47321,11 @@ class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorVector(const class Vect
 // Function Engine.KismetMathLibrary.Subtract_VectorInt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorInt(const class Vector3D& A, int B)
+struct FVector UKismetMathLibrary::STATIC_Subtract_VectorInt(const struct FVector& A, int B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Subtract_VectorInt");
 
@@ -47347,11 +47347,11 @@ class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorInt(const class Vector3
 // Function Engine.KismetMathLibrary.Subtract_VectorFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorFloat(const class Vector3D& A, float B)
+struct FVector UKismetMathLibrary::STATIC_Subtract_VectorFloat(const struct FVector& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Subtract_VectorFloat");
 
@@ -47373,11 +47373,11 @@ class Vector3D UKismetMathLibrary::STATIC_Subtract_VectorFloat(const class Vecto
 // Function Engine.KismetMathLibrary.Subtract_Vector2DVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Subtract_Vector2DVector2D(const class Vector2D& A, const class Vector2D& B)
+struct FVector2D UKismetMathLibrary::STATIC_Subtract_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Subtract_Vector2DVector2D");
 
@@ -47399,11 +47399,11 @@ class Vector2D UKismetMathLibrary::STATIC_Subtract_Vector2DVector2D(const class 
 // Function Engine.KismetMathLibrary.Subtract_Vector2DFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Subtract_Vector2DFloat(const class Vector2D& A, float B)
+struct FVector2D UKismetMathLibrary::STATIC_Subtract_Vector2DFloat(const struct FVector2D& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Subtract_Vector2DFloat");
 
@@ -47726,12 +47726,12 @@ void UKismetMathLibrary::STATIC_SetRandomStreamSeed(int NewSeed, struct FRandomS
 // Function Engine.KismetMathLibrary.SelectVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bPickA                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_SelectVector(const class Vector3D& A, const class Vector3D& B, bool bPickA)
+struct FVector UKismetMathLibrary::STATIC_SelectVector(const struct FVector& A, const struct FVector& B, bool bPickA)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.SelectVector");
 
@@ -47810,12 +47810,12 @@ struct FString UKismetMathLibrary::STATIC_SelectString(const struct FString& A, 
 // Function Engine.KismetMathLibrary.SelectRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bPickA                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_SelectRotator(const class Rotator& A, const class Rotator& B, bool bPickA)
+struct FRotator UKismetMathLibrary::STATIC_SelectRotator(const struct FRotator& A, const struct FRotator& B, bool bPickA)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.SelectRotator");
 
@@ -48025,11 +48025,11 @@ int UKismetMathLibrary::STATIC_Round(float A)
 // Function Engine.KismetMathLibrary.RotatorFromAxisAndAngle
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Axis                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Axis                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Angle                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RotatorFromAxisAndAngle(const class Vector3D& Axis, float Angle)
+struct FRotator UKismetMathLibrary::STATIC_RotatorFromAxisAndAngle(const struct FVector& Axis, float Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RotatorFromAxisAndAngle");
 
@@ -48051,12 +48051,12 @@ class Rotator UKismetMathLibrary::STATIC_RotatorFromAxisAndAngle(const class Vec
 // Function Engine.KismetMathLibrary.RotateAngleAxis
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVect                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVect                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          AngleDeg                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Axis                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Axis                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RotateAngleAxis(const class Vector3D& InVect, float AngleDeg, const class Vector3D& Axis)
+struct FVector UKismetMathLibrary::STATIC_RotateAngleAxis(const struct FVector& InVect, float AngleDeg, const struct FVector& Axis)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RotateAngleAxis");
 
@@ -48079,13 +48079,13 @@ class Vector3D UKismetMathLibrary::STATIC_RotateAngleAxis(const class Vector3D& 
 // Function Engine.KismetMathLibrary.RLerp
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Alpha                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bShortestPath                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RLerp(const class Rotator& A, const class Rotator& B, float Alpha, bool bShortestPath)
+struct FRotator UKismetMathLibrary::STATIC_RLerp(const struct FRotator& A, const struct FRotator& B, float Alpha, bool bShortestPath)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RLerp");
 
@@ -48109,13 +48109,13 @@ class Rotator UKismetMathLibrary::STATIC_RLerp(const class Rotator& A, const cla
 // Function Engine.KismetMathLibrary.RInterpTo_Constant
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RInterpTo_Constant(const class Rotator& Current, const class Rotator& Target, float DeltaTime, float InterpSpeed)
+struct FRotator UKismetMathLibrary::STATIC_RInterpTo_Constant(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo_Constant");
 
@@ -48139,13 +48139,13 @@ class Rotator UKismetMathLibrary::STATIC_RInterpTo_Constant(const class Rotator&
 // Function Engine.KismetMathLibrary.RInterpTo
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          InterpSpeed                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RInterpTo(const class Rotator& Current, const class Rotator& Target, float DeltaTime, float InterpSpeed)
+struct FRotator UKismetMathLibrary::STATIC_RInterpTo(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RInterpTo");
 
@@ -48295,16 +48295,16 @@ void UKismetMathLibrary::STATIC_ResetFloatSpringState(struct FFloatSpringState* 
 // Function Engine.KismetMathLibrary.REase
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Alpha                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bShortestPath                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EEasingFunc>       EasingFunc                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          BlendExp                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            Steps                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_REase(const class Rotator& A, const class Rotator& B, float Alpha, bool bShortestPath, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps)
+struct FRotator UKismetMathLibrary::STATIC_REase(const struct FRotator& A, const struct FRotator& B, float Alpha, bool bShortestPath, TEnumAsByte<EEasingFunc> EasingFunc, float BlendExp, int Steps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.REase");
 
@@ -48331,12 +48331,12 @@ class Rotator UKismetMathLibrary::STATIC_REase(const class Rotator& A, const cla
 // Function Engine.KismetMathLibrary.RandomUnitVectorInConeWithYawAndPitch
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 ConeDir                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ConeDir                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          MaxYawInDegrees                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          MaxPitchInDegrees              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorInConeWithYawAndPitch(const class Vector3D& ConeDir, float MaxYawInDegrees, float MaxPitchInDegrees)
+struct FVector UKismetMathLibrary::STATIC_RandomUnitVectorInConeWithYawAndPitch(const struct FVector& ConeDir, float MaxYawInDegrees, float MaxPitchInDegrees)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomUnitVectorInConeWithYawAndPitch");
 
@@ -48359,11 +48359,11 @@ class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorInConeWithYawAndPitch(
 // Function Engine.KismetMathLibrary.RandomUnitVectorInCone
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 ConeDir                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ConeDir                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ConeHalfAngle                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorInCone(const class Vector3D& ConeDir, float ConeHalfAngle)
+struct FVector UKismetMathLibrary::STATIC_RandomUnitVectorInCone(const struct FVector& ConeDir, float ConeHalfAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomUnitVectorInCone");
 
@@ -48386,9 +48386,9 @@ class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorInCone(const class Vec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FRandomStream           Stream                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorFromStream(const struct FRandomStream& Stream)
+struct FVector UKismetMathLibrary::STATIC_RandomUnitVectorFromStream(const struct FRandomStream& Stream)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomUnitVectorFromStream");
 
@@ -48409,9 +48409,9 @@ class Vector3D UKismetMathLibrary::STATIC_RandomUnitVectorFromStream(const struc
 // Function Engine.KismetMathLibrary.RandomUnitVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RandomUnitVector()
+struct FVector UKismetMathLibrary::STATIC_RandomUnitVector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomUnitVector");
 
@@ -48433,9 +48433,9 @@ class Vector3D UKismetMathLibrary::STATIC_RandomUnitVector()
 // Parameters:
 // bool                           bRoll                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FRandomStream           Stream                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RandomRotatorFromStream(bool bRoll, const struct FRandomStream& Stream)
+struct FRotator UKismetMathLibrary::STATIC_RandomRotatorFromStream(bool bRoll, const struct FRandomStream& Stream)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomRotatorFromStream");
 
@@ -48458,9 +48458,9 @@ class Rotator UKismetMathLibrary::STATIC_RandomRotatorFromStream(bool bRoll, con
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // bool                           bRoll                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_RandomRotator(bool bRoll)
+struct FRotator UKismetMathLibrary::STATIC_RandomRotator(bool bRoll)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomRotator");
 
@@ -48481,11 +48481,11 @@ class Rotator UKismetMathLibrary::STATIC_RandomRotator(bool bRoll)
 // Function Engine.KismetMathLibrary.RandomPointInBoundingBox
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 BoxExtent                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 BoxExtent                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_RandomPointInBoundingBox(const class Vector3D& Origin, const class Vector3D& BoxExtent)
+struct FVector UKismetMathLibrary::STATIC_RandomPointInBoundingBox(const struct FVector& Origin, const struct FVector& BoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.RandomPointInBoundingBox");
 
@@ -48831,11 +48831,11 @@ float UKismetMathLibrary::STATIC_RadiansToDegrees(float A)
 // Function Engine.KismetMathLibrary.ProjectVectorOnToVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 V                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 V                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_ProjectVectorOnToVector(const class Vector3D& V, const class Vector3D& Target)
+struct FVector UKismetMathLibrary::STATIC_ProjectVectorOnToVector(const struct FVector& V, const struct FVector& Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.ProjectVectorOnToVector");
 
@@ -48857,11 +48857,11 @@ class Vector3D UKismetMathLibrary::STATIC_ProjectVectorOnToVector(const class Ve
 // Function Engine.KismetMathLibrary.ProjectVectorOnToPlane
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 V                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 V                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_ProjectVectorOnToPlane(const class Vector3D& V, const class Vector3D& PlaneNormal)
+struct FVector UKismetMathLibrary::STATIC_ProjectVectorOnToPlane(const struct FVector& V, const struct FVector& PlaneNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.ProjectVectorOnToPlane");
 
@@ -48883,12 +48883,12 @@ class Vector3D UKismetMathLibrary::STATIC_ProjectVectorOnToPlane(const class Vec
 // Function Engine.KismetMathLibrary.ProjectPointOnToPlane
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PlaneBase                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneBase                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_ProjectPointOnToPlane(const class Vector3D& Point, const class Vector3D& PlaneBase, const class Vector3D& PlaneNormal)
+struct FVector UKismetMathLibrary::STATIC_ProjectPointOnToPlane(const struct FVector& Point, const struct FVector& PlaneBase, const struct FVector& PlaneNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.ProjectPointOnToPlane");
 
@@ -48911,11 +48911,11 @@ class Vector3D UKismetMathLibrary::STATIC_ProjectPointOnToPlane(const class Vect
 // Function Engine.KismetMathLibrary.PointsAreCoplanar
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// TArray<class Vector3D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// TArray<struct FVector>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // float                          Tolerance                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_PointsAreCoplanar(TArray<class Vector3D> Points, float Tolerance)
+bool UKismetMathLibrary::STATIC_PointsAreCoplanar(TArray<struct FVector> Points, float Tolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.PointsAreCoplanar");
 
@@ -49063,12 +49063,12 @@ struct FDateTime UKismetMathLibrary::STATIC_Now()
 // Function Engine.KismetMathLibrary.NotEqual_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_NotEqual_VectorVector(const class Vector3D& A, const class Vector3D& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_NotEqual_VectorVector(const struct FVector& A, const struct FVector& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NotEqual_VectorVector");
 
@@ -49091,12 +49091,12 @@ bool UKismetMathLibrary::STATIC_NotEqual_VectorVector(const class Vector3D& A, c
 // Function Engine.KismetMathLibrary.NotEqual_Vector2DVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_NotEqual_Vector2DVector2D(const class Vector2D& A, const class Vector2D& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_NotEqual_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NotEqual_Vector2DVector2D");
 
@@ -49145,12 +49145,12 @@ bool UKismetMathLibrary::STATIC_NotEqual_TimespanTimespan(const struct FTimespan
 // Function Engine.KismetMathLibrary.NotEqual_RotatorRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_NotEqual_RotatorRotator(const class Rotator& A, const class Rotator& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_NotEqual_RotatorRotator(const struct FRotator& A, const struct FRotator& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NotEqual_RotatorRotator");
 
@@ -49457,11 +49457,11 @@ float UKismetMathLibrary::STATIC_NormalizeToRange(float Value, float RangeMin, f
 // Function Engine.KismetMathLibrary.NormalizedDeltaRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_NormalizedDeltaRotator(const class Rotator& A, const class Rotator& B)
+struct FRotator UKismetMathLibrary::STATIC_NormalizedDeltaRotator(const struct FRotator& A, const struct FRotator& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NormalizedDeltaRotator");
 
@@ -49507,10 +49507,10 @@ float UKismetMathLibrary::STATIC_NormalizeAxis(float Angle)
 // Function Engine.KismetMathLibrary.Normal2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Normal2D(const class Vector2D& A)
+struct FVector2D UKismetMathLibrary::STATIC_Normal2D(const struct FVector2D& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Normal2D");
 
@@ -49531,10 +49531,10 @@ class Vector2D UKismetMathLibrary::STATIC_Normal2D(const class Vector2D& A)
 // Function Engine.KismetMathLibrary.Normal
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Normal(const class Vector3D& A)
+struct FVector UKismetMathLibrary::STATIC_Normal(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Normal");
 
@@ -49555,10 +49555,10 @@ class Vector3D UKismetMathLibrary::STATIC_Normal(const class Vector3D& A)
 // Function Engine.KismetMathLibrary.NegateVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_NegateVector(const class Vector3D& A)
+struct FVector UKismetMathLibrary::STATIC_NegateVector(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NegateVector");
 
@@ -49579,10 +49579,10 @@ class Vector3D UKismetMathLibrary::STATIC_NegateVector(const class Vector3D& A)
 // Function Engine.KismetMathLibrary.NegateRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_NegateRotator(const class Rotator& A)
+struct FRotator UKismetMathLibrary::STATIC_NegateRotator(const struct FRotator& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.NegateRotator");
 
@@ -49713,11 +49713,11 @@ float UKismetMathLibrary::STATIC_MultiplyByPi(float Value)
 // Function Engine.KismetMathLibrary.Multiply_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorVector(const class Vector3D& A, const class Vector3D& B)
+struct FVector UKismetMathLibrary::STATIC_Multiply_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_VectorVector");
 
@@ -49739,11 +49739,11 @@ class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorVector(const class Vect
 // Function Engine.KismetMathLibrary.Multiply_VectorInt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorInt(const class Vector3D& A, int B)
+struct FVector UKismetMathLibrary::STATIC_Multiply_VectorInt(const struct FVector& A, int B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_VectorInt");
 
@@ -49765,11 +49765,11 @@ class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorInt(const class Vector3
 // Function Engine.KismetMathLibrary.Multiply_VectorFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorFloat(const class Vector3D& A, float B)
+struct FVector UKismetMathLibrary::STATIC_Multiply_VectorFloat(const struct FVector& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_VectorFloat");
 
@@ -49791,11 +49791,11 @@ class Vector3D UKismetMathLibrary::STATIC_Multiply_VectorFloat(const class Vecto
 // Function Engine.KismetMathLibrary.Multiply_Vector2DVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Multiply_Vector2DVector2D(const class Vector2D& A, const class Vector2D& B)
+struct FVector2D UKismetMathLibrary::STATIC_Multiply_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_Vector2DVector2D");
 
@@ -49817,11 +49817,11 @@ class Vector2D UKismetMathLibrary::STATIC_Multiply_Vector2DVector2D(const class 
 // Function Engine.KismetMathLibrary.Multiply_Vector2DFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Multiply_Vector2DFloat(const class Vector2D& A, float B)
+struct FVector2D UKismetMathLibrary::STATIC_Multiply_Vector2DFloat(const struct FVector2D& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_Vector2DFloat");
 
@@ -49869,11 +49869,11 @@ struct FTimespan UKismetMathLibrary::STATIC_Multiply_TimespanFloat(const struct 
 // Function Engine.KismetMathLibrary.Multiply_RotatorInt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_Multiply_RotatorInt(const class Rotator& A, int B)
+struct FRotator UKismetMathLibrary::STATIC_Multiply_RotatorInt(const struct FRotator& A, int B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_RotatorInt");
 
@@ -49895,11 +49895,11 @@ class Rotator UKismetMathLibrary::STATIC_Multiply_RotatorInt(const class Rotator
 // Function Engine.KismetMathLibrary.Multiply_RotatorFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_Multiply_RotatorFloat(const class Rotator& A, float B)
+struct FRotator UKismetMathLibrary::STATIC_Multiply_RotatorFloat(const struct FRotator& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Multiply_RotatorFloat");
 
@@ -50077,11 +50077,11 @@ unsigned char UKismetMathLibrary::STATIC_Multiply_ByteByte(unsigned char A, unsi
 // Function Engine.KismetMathLibrary.MirrorVectorByNormal
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVect                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 InNormal                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 InVect                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InNormal                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_MirrorVectorByNormal(const class Vector3D& InVect, const class Vector3D& InNormal)
+struct FVector UKismetMathLibrary::STATIC_MirrorVectorByNormal(const struct FVector& InVect, const struct FVector& InNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MirrorVectorByNormal");
 
@@ -50188,15 +50188,15 @@ void UKismetMathLibrary::STATIC_MinOfByteArray(TArray<unsigned char> ByteArray, 
 // (FUNC_Final, FUNC_BlueprintAuthorityOnly, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// TArray<class Vector3D>         InVerts                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// class Vector3D                 SampleSurfaceNormal            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 OutRectCenter                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  OutRectRotation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TArray<struct FVector>         InVerts                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// struct FVector                 SampleSurfaceNormal            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 OutRectCenter                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                OutRectRotation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OutSideLengthX                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          OutSideLengthY                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bDebugDraw                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_MinimumAreaRectangle(class UObject* WorldContextObject, TArray<class Vector3D> InVerts, const class Vector3D& SampleSurfaceNormal, bool bDebugDraw, class Vector3D* OutRectCenter, class Rotator* OutRectRotation, float* OutSideLengthX, float* OutSideLengthY)
+void UKismetMathLibrary::STATIC_MinimumAreaRectangle(class UObject* WorldContextObject, TArray<struct FVector> InVerts, const struct FVector& SampleSurfaceNormal, bool bDebugDraw, struct FVector* OutRectCenter, struct FRotator* OutRectRotation, float* OutSideLengthX, float* OutSideLengthY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MinimumAreaRectangle");
 
@@ -50429,9 +50429,9 @@ float UKismetMathLibrary::STATIC_MapRangeClamped(float Value, float InRangeA, fl
 // Parameters:
 // float                          X                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Y                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_MakeVector2D(float X, float Y)
+struct FVector2D UKismetMathLibrary::STATIC_MakeVector2D(float X, float Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeVector2D");
 
@@ -50456,9 +50456,9 @@ class Vector2D UKismetMathLibrary::STATIC_MakeVector2D(float X, float Y)
 // float                          X                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Y                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Z                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_MakeVector(float X, float Y, float Z)
+struct FVector UKismetMathLibrary::STATIC_MakeVector(float X, float Y, float Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeVector");
 
@@ -50481,12 +50481,12 @@ class Vector3D UKismetMathLibrary::STATIC_MakeVector(float X, float Y, float Z)
 // Function Engine.KismetMathLibrary.MakeTransform
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FTransform UKismetMathLibrary::STATIC_MakeTransform(const class Vector3D& Location, const class Rotator& Rotation, const class Vector3D& Scale)
+struct FTransform UKismetMathLibrary::STATIC_MakeTransform(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeTransform");
 
@@ -50541,11 +50541,11 @@ struct FTimespan UKismetMathLibrary::STATIC_MakeTimespan(int Days, int Hours, in
 // Function Engine.KismetMathLibrary.MakeRotFromZY
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromZY(const class Vector3D& Z, const class Vector3D& Y)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromZY(const struct FVector& Z, const struct FVector& Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromZY");
 
@@ -50567,11 +50567,11 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromZY(const class Vector3D& Z, 
 // Function Engine.KismetMathLibrary.MakeRotFromZX
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromZX(const class Vector3D& Z, const class Vector3D& X)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromZX(const struct FVector& Z, const struct FVector& X)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromZX");
 
@@ -50593,10 +50593,10 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromZX(const class Vector3D& Z, 
 // Function Engine.KismetMathLibrary.MakeRotFromZ
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromZ(const class Vector3D& Z)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromZ(const struct FVector& Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromZ");
 
@@ -50617,11 +50617,11 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromZ(const class Vector3D& Z)
 // Function Engine.KismetMathLibrary.MakeRotFromYZ
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromYZ(const class Vector3D& Y, const class Vector3D& Z)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromYZ(const struct FVector& Y, const struct FVector& Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromYZ");
 
@@ -50643,11 +50643,11 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromYZ(const class Vector3D& Y, 
 // Function Engine.KismetMathLibrary.MakeRotFromYX
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromYX(const class Vector3D& Y, const class Vector3D& X)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromYX(const struct FVector& Y, const struct FVector& X)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromYX");
 
@@ -50669,10 +50669,10 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromYX(const class Vector3D& Y, 
 // Function Engine.KismetMathLibrary.MakeRotFromY
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromY(const class Vector3D& Y)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromY(const struct FVector& Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromY");
 
@@ -50693,11 +50693,11 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromY(const class Vector3D& Y)
 // Function Engine.KismetMathLibrary.MakeRotFromXZ
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromXZ(const class Vector3D& X, const class Vector3D& Z)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromXZ(const struct FVector& X, const struct FVector& Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromXZ");
 
@@ -50719,11 +50719,11 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromXZ(const class Vector3D& X, 
 // Function Engine.KismetMathLibrary.MakeRotFromXY
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromXY(const class Vector3D& X, const class Vector3D& Y)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromXY(const struct FVector& X, const struct FVector& Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromXY");
 
@@ -50745,10 +50745,10 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromXY(const class Vector3D& X, 
 // Function Engine.KismetMathLibrary.MakeRotFromX
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotFromX(const class Vector3D& X)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotFromX(const struct FVector& X)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotFromX");
 
@@ -50772,9 +50772,9 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotFromX(const class Vector3D& X)
 // float                          Roll                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Pitch                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Yaw                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotator(float Roll, float Pitch, float Yaw)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotator(float Roll, float Pitch, float Yaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotator");
 
@@ -50797,12 +50797,12 @@ class Rotator UKismetMathLibrary::STATIC_MakeRotator(float Roll, float Pitch, fl
 // Function Engine.KismetMathLibrary.MakeRotationFromAxes
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Forward                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Right                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Up                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Forward                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Right                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Up                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_MakeRotationFromAxes(const class Vector3D& Forward, const class Vector3D& Right, const class Vector3D& Up)
+struct FRotator UKismetMathLibrary::STATIC_MakeRotationFromAxes(const struct FVector& Forward, const struct FVector& Right, const struct FVector& Up)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakeRotationFromAxes");
 
@@ -50877,11 +50877,11 @@ float UKismetMathLibrary::STATIC_MakePulsatingValue(float InCurrentTime, float I
 // Function Engine.KismetMathLibrary.MakePlaneFromPointAndNormal
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FPlane                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FPlane UKismetMathLibrary::STATIC_MakePlaneFromPointAndNormal(const class Vector3D& Point, const class Vector3D& Normal)
+struct FPlane UKismetMathLibrary::STATIC_MakePlaneFromPointAndNormal(const struct FVector& Point, const struct FVector& Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.MakePlaneFromPointAndNormal");
 
@@ -50993,15 +50993,15 @@ float UKismetMathLibrary::STATIC_Loge(float A)
 // Function Engine.KismetMathLibrary.LinePlaneIntersection_OriginNormal
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 PlaneOrigin                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 PlaneOrigin                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 PlaneNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          T                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Intersection                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Intersection                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_LinePlaneIntersection_OriginNormal(const class Vector3D& LineStart, const class Vector3D& LineEnd, const class Vector3D& PlaneOrigin, const class Vector3D& PlaneNormal, float* T, class Vector3D* Intersection)
+bool UKismetMathLibrary::STATIC_LinePlaneIntersection_OriginNormal(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlaneOrigin, const struct FVector& PlaneNormal, float* T, struct FVector* Intersection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.LinePlaneIntersection_OriginNormal");
 
@@ -51030,14 +51030,14 @@ bool UKismetMathLibrary::STATIC_LinePlaneIntersection_OriginNormal(const class V
 // Function Engine.KismetMathLibrary.LinePlaneIntersection
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 LineStart                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 LineEnd                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // struct FPlane                  APlane                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          T                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Intersection                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Intersection                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_LinePlaneIntersection(const class Vector3D& LineStart, const class Vector3D& LineEnd, const struct FPlane& APlane, float* T, class Vector3D* Intersection)
+bool UKismetMathLibrary::STATIC_LinePlaneIntersection(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FPlane& APlane, float* T, struct FVector* Intersection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.LinePlaneIntersection");
 
@@ -51121,11 +51121,11 @@ struct FLinearColor UKismetMathLibrary::STATIC_LinearColorLerp(const struct FLin
 // Function Engine.KismetMathLibrary.LessLess_VectorRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_LessLess_VectorRotator(const class Vector3D& A, const class Rotator& B)
+struct FVector UKismetMathLibrary::STATIC_LessLess_VectorRotator(const struct FVector& A, const struct FRotator& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.LessLess_VectorRotator");
 
@@ -51532,10 +51532,10 @@ struct FTransform UKismetMathLibrary::STATIC_InvertTransform(const struct FTrans
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FTransform              T                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_InverseTransformLocation(const struct FTransform& T, const class Vector3D& Location)
+struct FVector UKismetMathLibrary::STATIC_InverseTransformLocation(const struct FTransform& T, const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.InverseTransformLocation");
 
@@ -51558,10 +51558,10 @@ class Vector3D UKismetMathLibrary::STATIC_InverseTransformLocation(const struct 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FTransform              T                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_InverseTransformDirection(const struct FTransform& T, const class Vector3D& Direction)
+struct FVector UKismetMathLibrary::STATIC_InverseTransformDirection(const struct FTransform& T, const struct FVector& Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.InverseTransformDirection");
 
@@ -51750,11 +51750,11 @@ float UKismetMathLibrary::STATIC_GridSnap_Float(float Location, float GridSize)
 // Function Engine.KismetMathLibrary.GreaterGreater_VectorRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GreaterGreater_VectorRotator(const class Vector3D& A, const class Rotator& B)
+struct FVector UKismetMathLibrary::STATIC_GreaterGreater_VectorRotator(const struct FVector& A, const struct FRotator& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GreaterGreater_VectorRotator");
 
@@ -52060,11 +52060,11 @@ int UKismetMathLibrary::STATIC_GetYear(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetYawPitchFromVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Yaw                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Pitch                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_GetYawPitchFromVector(const class Vector3D& InVec, float* Yaw, float* Pitch)
+void UKismetMathLibrary::STATIC_GetYawPitchFromVector(const struct FVector& InVec, float* Yaw, float* Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetYawPitchFromVector");
 
@@ -52088,10 +52088,10 @@ void UKismetMathLibrary::STATIC_GetYawPitchFromVector(const class Vector3D& InVe
 // Function Engine.KismetMathLibrary.GetVectorArrayAverage
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// TArray<class Vector3D>         Vectors                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// TArray<struct FVector>         Vectors                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GetVectorArrayAverage(TArray<class Vector3D> Vectors)
+struct FVector UKismetMathLibrary::STATIC_GetVectorArrayAverage(TArray<struct FVector> Vectors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetVectorArrayAverage");
 
@@ -52112,10 +52112,10 @@ class Vector3D UKismetMathLibrary::STATIC_GetVectorArrayAverage(TArray<class Vec
 // Function Engine.KismetMathLibrary.GetUpVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GetUpVector(const class Rotator& InRot)
+struct FVector UKismetMathLibrary::STATIC_GetUpVector(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetUpVector");
 
@@ -52350,10 +52350,10 @@ int UKismetMathLibrary::STATIC_GetSecond(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetRightVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GetRightVector(const class Rotator& InRot)
+struct FVector UKismetMathLibrary::STATIC_GetRightVector(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetRightVector");
 
@@ -52374,12 +52374,12 @@ class Vector3D UKismetMathLibrary::STATIC_GetRightVector(const class Rotator& In
 // Function Engine.KismetMathLibrary.GetPointDistanceToSegment
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SegmentStart                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SegmentEnd                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SegmentStart                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SegmentEnd                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_GetPointDistanceToSegment(const class Vector3D& Point, const class Vector3D& SegmentStart, const class Vector3D& SegmentEnd)
+float UKismetMathLibrary::STATIC_GetPointDistanceToSegment(const struct FVector& Point, const struct FVector& SegmentStart, const struct FVector& SegmentEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetPointDistanceToSegment");
 
@@ -52402,12 +52402,12 @@ float UKismetMathLibrary::STATIC_GetPointDistanceToSegment(const class Vector3D&
 // Function Engine.KismetMathLibrary.GetPointDistanceToLine
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineOrigin                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineDirection                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineOrigin                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineDirection                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_GetPointDistanceToLine(const class Vector3D& Point, const class Vector3D& LineOrigin, const class Vector3D& LineDirection)
+float UKismetMathLibrary::STATIC_GetPointDistanceToLine(const struct FVector& Point, const struct FVector& LineOrigin, const struct FVector& LineDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetPointDistanceToLine");
 
@@ -52524,10 +52524,10 @@ int UKismetMathLibrary::STATIC_GetMinute(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetMinElement
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_GetMinElement(const class Vector3D& A)
+float UKismetMathLibrary::STATIC_GetMinElement(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetMinElement");
 
@@ -52596,10 +52596,10 @@ int UKismetMathLibrary::STATIC_GetMillisecond(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetMaxElement
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_GetMaxElement(const class Vector3D& A)
+float UKismetMathLibrary::STATIC_GetMaxElement(const struct FVector& A)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetMaxElement");
 
@@ -52692,10 +52692,10 @@ int UKismetMathLibrary::STATIC_GetHour(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetForwardVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GetForwardVector(const class Rotator& InRot)
+struct FVector UKismetMathLibrary::STATIC_GetForwardVector(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetForwardVector");
 
@@ -52740,11 +52740,11 @@ struct FTimespan UKismetMathLibrary::STATIC_GetDuration(const struct FTimespan& 
 // Function Engine.KismetMathLibrary.GetDirectionUnitVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 From                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 To                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 From                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 To                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_GetDirectionUnitVector(const class Vector3D& From, const class Vector3D& To)
+struct FVector UKismetMathLibrary::STATIC_GetDirectionUnitVector(const struct FVector& From, const struct FVector& To)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetDirectionUnitVector");
 
@@ -52862,12 +52862,12 @@ struct FDateTime UKismetMathLibrary::STATIC_GetDate(const struct FDateTime& A)
 // Function Engine.KismetMathLibrary.GetAxes
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Z                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_GetAxes(const class Rotator& A, class Vector3D* X, class Vector3D* Y, class Vector3D* Z)
+void UKismetMathLibrary::STATIC_GetAxes(const struct FRotator& A, struct FVector* X, struct FVector* Y, struct FVector* Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.GetAxes");
 
@@ -53299,14 +53299,14 @@ float UKismetMathLibrary::STATIC_FInterpEaseInOut(float A, float B, float Alpha,
 // Function Engine.KismetMathLibrary.FindNearestPointsOnLineSegments
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Segment1Start                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Segment1End                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Segment2Start                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Segment2End                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Segment1Point                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Segment2Point                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment1Start                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment1End                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment2Start                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment2End                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment1Point                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Segment2Point                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_FindNearestPointsOnLineSegments(const class Vector3D& Segment1Start, const class Vector3D& Segment1End, const class Vector3D& Segment2Start, const class Vector3D& Segment2End, class Vector3D* Segment1Point, class Vector3D* Segment2Point)
+void UKismetMathLibrary::STATIC_FindNearestPointsOnLineSegments(const struct FVector& Segment1Start, const struct FVector& Segment1End, const struct FVector& Segment2Start, const struct FVector& Segment2End, struct FVector* Segment1Point, struct FVector* Segment2Point)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FindNearestPointsOnLineSegments");
 
@@ -53333,11 +53333,11 @@ void UKismetMathLibrary::STATIC_FindNearestPointsOnLineSegments(const class Vect
 // Function Engine.KismetMathLibrary.FindLookAtRotation
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Start                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Target                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Start                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Target                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_FindLookAtRotation(const class Vector3D& Start, const class Vector3D& Target)
+struct FRotator UKismetMathLibrary::STATIC_FindLookAtRotation(const struct FVector& Start, const struct FVector& Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FindLookAtRotation");
 
@@ -53359,12 +53359,12 @@ class Rotator UKismetMathLibrary::STATIC_FindLookAtRotation(const class Vector3D
 // Function Engine.KismetMathLibrary.FindClosestPointOnSegment
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SegmentStart                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 SegmentEnd                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SegmentStart                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 SegmentEnd                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_FindClosestPointOnSegment(const class Vector3D& Point, const class Vector3D& SegmentStart, const class Vector3D& SegmentEnd)
+struct FVector UKismetMathLibrary::STATIC_FindClosestPointOnSegment(const struct FVector& Point, const struct FVector& SegmentStart, const struct FVector& SegmentEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FindClosestPointOnSegment");
 
@@ -53387,12 +53387,12 @@ class Vector3D UKismetMathLibrary::STATIC_FindClosestPointOnSegment(const class 
 // Function Engine.KismetMathLibrary.FindClosestPointOnLine
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineOrigin                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 LineDirection                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 Point                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineOrigin                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 LineDirection                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_FindClosestPointOnLine(const class Vector3D& Point, const class Vector3D& LineOrigin, const class Vector3D& LineDirection)
+struct FVector UKismetMathLibrary::STATIC_FindClosestPointOnLine(const struct FVector& Point, const struct FVector& LineOrigin, const struct FVector& LineDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.FindClosestPointOnLine");
 
@@ -53515,12 +53515,12 @@ float UKismetMathLibrary::STATIC_Exp(float A)
 // Function Engine.KismetMathLibrary.EqualEqual_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_EqualEqual_VectorVector(const class Vector3D& A, const class Vector3D& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_EqualEqual_VectorVector(const struct FVector& A, const struct FVector& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.EqualEqual_VectorVector");
 
@@ -53543,12 +53543,12 @@ bool UKismetMathLibrary::STATIC_EqualEqual_VectorVector(const class Vector3D& A,
 // Function Engine.KismetMathLibrary.EqualEqual_Vector2DVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_EqualEqual_Vector2DVector2D(const class Vector2D& A, const class Vector2D& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_EqualEqual_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.EqualEqual_Vector2DVector2D");
 
@@ -53623,12 +53623,12 @@ bool UKismetMathLibrary::STATIC_EqualEqual_TimespanTimespan(const struct FTimesp
 // Function Engine.KismetMathLibrary.EqualEqual_RotatorRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ErrorTolerance                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UKismetMathLibrary::STATIC_EqualEqual_RotatorRotator(const class Rotator& A, const class Rotator& B, float ErrorTolerance)
+bool UKismetMathLibrary::STATIC_EqualEqual_RotatorRotator(const struct FRotator& A, const struct FRotator& B, float ErrorTolerance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.EqualEqual_RotatorRotator");
 
@@ -53893,11 +53893,11 @@ float UKismetMathLibrary::STATIC_Ease(float A, float B, float Alpha, TEnumAsByte
 // Function Engine.KismetMathLibrary.DotProduct2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_DotProduct2D(const class Vector2D& A, const class Vector2D& B)
+float UKismetMathLibrary::STATIC_DotProduct2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.DotProduct2D");
 
@@ -53919,11 +53919,11 @@ float UKismetMathLibrary::STATIC_DotProduct2D(const class Vector2D& A, const cla
 // Function Engine.KismetMathLibrary.Dot_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_Dot_VectorVector(const class Vector3D& A, const class Vector3D& B)
+float UKismetMathLibrary::STATIC_Dot_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Dot_VectorVector");
 
@@ -53945,11 +53945,11 @@ float UKismetMathLibrary::STATIC_Dot_VectorVector(const class Vector3D& A, const
 // Function Engine.KismetMathLibrary.Divide_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Divide_VectorVector(const class Vector3D& A, const class Vector3D& B)
+struct FVector UKismetMathLibrary::STATIC_Divide_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_VectorVector");
 
@@ -53971,11 +53971,11 @@ class Vector3D UKismetMathLibrary::STATIC_Divide_VectorVector(const class Vector
 // Function Engine.KismetMathLibrary.Divide_VectorInt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Divide_VectorInt(const class Vector3D& A, int B)
+struct FVector UKismetMathLibrary::STATIC_Divide_VectorInt(const struct FVector& A, int B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_VectorInt");
 
@@ -53997,11 +53997,11 @@ class Vector3D UKismetMathLibrary::STATIC_Divide_VectorInt(const class Vector3D&
 // Function Engine.KismetMathLibrary.Divide_VectorFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Divide_VectorFloat(const class Vector3D& A, float B)
+struct FVector UKismetMathLibrary::STATIC_Divide_VectorFloat(const struct FVector& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_VectorFloat");
 
@@ -54023,11 +54023,11 @@ class Vector3D UKismetMathLibrary::STATIC_Divide_VectorFloat(const class Vector3
 // Function Engine.KismetMathLibrary.Divide_Vector2DFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Divide_Vector2DFloat(const class Vector2D& A, float B)
+struct FVector2D UKismetMathLibrary::STATIC_Divide_Vector2DFloat(const struct FVector2D& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Divide_Vector2DFloat");
 
@@ -54471,11 +54471,11 @@ bool UKismetMathLibrary::STATIC_DateTimeFromIsoString(const struct FString& IsoS
 // Function Engine.KismetMathLibrary.CrossProduct2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-float UKismetMathLibrary::STATIC_CrossProduct2D(const class Vector2D& A, const class Vector2D& B)
+float UKismetMathLibrary::STATIC_CrossProduct2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.CrossProduct2D");
 
@@ -54497,11 +54497,11 @@ float UKismetMathLibrary::STATIC_CrossProduct2D(const class Vector2D& A, const c
 // Function Engine.KismetMathLibrary.Cross_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Cross_VectorVector(const class Vector3D& A, const class Vector3D& B)
+struct FVector UKismetMathLibrary::STATIC_Cross_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Cross_VectorVector");
 
@@ -54526,9 +54526,9 @@ class Vector3D UKismetMathLibrary::STATIC_Cross_VectorVector(const class Vector3
 // float                          Yaw                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Pitch                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Length                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_CreateVectorFromYawPitch(float Yaw, float Pitch, float Length)
+struct FVector UKismetMathLibrary::STATIC_CreateVectorFromYawPitch(float Yaw, float Pitch, float Length)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.CreateVectorFromYawPitch");
 
@@ -54601,10 +54601,10 @@ struct FTransform UKismetMathLibrary::STATIC_ConvertTransformToRelative(const st
 // Function Engine.KismetMathLibrary.Conv_VectorToVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVector                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 InVector                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Conv_VectorToVector2D(const class Vector3D& InVector)
+struct FVector2D UKismetMathLibrary::STATIC_Conv_VectorToVector2D(const struct FVector& InVector)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_VectorToVector2D");
 
@@ -54625,10 +54625,10 @@ class Vector2D UKismetMathLibrary::STATIC_Conv_VectorToVector2D(const class Vect
 // Function Engine.KismetMathLibrary.Conv_VectorToTransform
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FTransform UKismetMathLibrary::STATIC_Conv_VectorToTransform(const class Vector3D& InLocation)
+struct FTransform UKismetMathLibrary::STATIC_Conv_VectorToTransform(const struct FVector& InLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_VectorToTransform");
 
@@ -54649,10 +54649,10 @@ struct FTransform UKismetMathLibrary::STATIC_Conv_VectorToTransform(const class 
 // Function Engine.KismetMathLibrary.Conv_VectorToRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_Conv_VectorToRotator(const class Vector3D& InVec)
+struct FRotator UKismetMathLibrary::STATIC_Conv_VectorToRotator(const struct FVector& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_VectorToRotator");
 
@@ -54673,10 +54673,10 @@ class Rotator UKismetMathLibrary::STATIC_Conv_VectorToRotator(const class Vector
 // Function Engine.KismetMathLibrary.Conv_VectorToLinearColor
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-struct FLinearColor UKismetMathLibrary::STATIC_Conv_VectorToLinearColor(const class Vector3D& InVec)
+struct FLinearColor UKismetMathLibrary::STATIC_Conv_VectorToLinearColor(const struct FVector& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_VectorToLinearColor");
 
@@ -54697,11 +54697,11 @@ struct FLinearColor UKismetMathLibrary::STATIC_Conv_VectorToLinearColor(const cl
 // Function Engine.KismetMathLibrary.Conv_Vector2DToVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 InVector2D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InVector2D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Z                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Conv_Vector2DToVector(const class Vector2D& InVector2D, float Z)
+struct FVector UKismetMathLibrary::STATIC_Conv_Vector2DToVector(const struct FVector2D& InVector2D, float Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_Vector2DToVector");
 
@@ -54723,10 +54723,10 @@ class Vector3D UKismetMathLibrary::STATIC_Conv_Vector2DToVector(const class Vect
 // Function Engine.KismetMathLibrary.Conv_RotatorToVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Conv_RotatorToVector(const class Rotator& InRot)
+struct FVector UKismetMathLibrary::STATIC_Conv_RotatorToVector(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_RotatorToVector");
 
@@ -54748,9 +54748,9 @@ class Vector3D UKismetMathLibrary::STATIC_Conv_RotatorToVector(const class Rotat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FLinearColor            InLinearColor                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Conv_LinearColorToVector(const struct FLinearColor& InLinearColor)
+struct FVector UKismetMathLibrary::STATIC_Conv_LinearColorToVector(const struct FLinearColor& InLinearColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_LinearColorToVector");
 
@@ -54868,9 +54868,9 @@ bool UKismetMathLibrary::STATIC_Conv_IntToBool(int inInt)
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Conv_FloatToVector(float inFloat)
+struct FVector UKismetMathLibrary::STATIC_Conv_FloatToVector(float inFloat)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Conv_FloatToVector");
 
@@ -55085,11 +55085,11 @@ struct FTransform UKismetMathLibrary::STATIC_ComposeTransforms(const struct FTra
 // Function Engine.KismetMathLibrary.ComposeRotators
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UKismetMathLibrary::STATIC_ComposeRotators(const class Rotator& A, const class Rotator& B)
+struct FRotator UKismetMathLibrary::STATIC_ComposeRotators(const struct FRotator& A, const struct FRotator& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.ComposeRotators");
 
@@ -55137,12 +55137,12 @@ bool UKismetMathLibrary::STATIC_ClassIsChildOf(class UClass* TestClass, class UC
 // Function Engine.KismetMathLibrary.ClampVectorSize
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Min                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Max                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_ClampVectorSize(const class Vector3D& A, float Min, float Max)
+struct FVector UKismetMathLibrary::STATIC_ClampVectorSize(const struct FVector& A, float Min, float Max)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.ClampVectorSize");
 
@@ -55275,11 +55275,11 @@ struct FLinearColor UKismetMathLibrary::STATIC_CInterpTo(const struct FLinearCol
 // Function Engine.KismetMathLibrary.BreakVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_BreakVector2D(const class Vector2D& InVec, float* X, float* Y)
+void UKismetMathLibrary::STATIC_BreakVector2D(const struct FVector2D& InVec, float* X, float* Y)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.BreakVector2D");
 
@@ -55303,12 +55303,12 @@ void UKismetMathLibrary::STATIC_BreakVector2D(const class Vector2D& InVec, float
 // Function Engine.KismetMathLibrary.BreakVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Z                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_BreakVector(const class Vector3D& InVec, float* X, float* Y, float* Z)
+void UKismetMathLibrary::STATIC_BreakVector(const struct FVector& InVec, float* X, float* Y, float* Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.BreakVector");
 
@@ -55335,11 +55335,11 @@ void UKismetMathLibrary::STATIC_BreakVector(const class Vector3D& InVec, float* 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FTransform              InTransform                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_BreakTransform(const struct FTransform& InTransform, class Vector3D* Location, class Rotator* Rotation, class Vector3D* Scale)
+void UKismetMathLibrary::STATIC_BreakTransform(const struct FTransform& InTransform, struct FVector* Location, struct FRotator* Rotation, struct FVector* Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.BreakTransform");
 
@@ -55402,12 +55402,12 @@ void UKismetMathLibrary::STATIC_BreakTimespan(const struct FTimespan& InTimespan
 // Function Engine.KismetMathLibrary.BreakRotIntoAxes
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector3D                 X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Z                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 X                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Y                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Z                              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_BreakRotIntoAxes(const class Rotator& InRot, class Vector3D* X, class Vector3D* Y, class Vector3D* Z)
+void UKismetMathLibrary::STATIC_BreakRotIntoAxes(const struct FRotator& InRot, struct FVector* X, struct FVector* Y, struct FVector* Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.BreakRotIntoAxes");
 
@@ -55433,12 +55433,12 @@ void UKismetMathLibrary::STATIC_BreakRotIntoAxes(const class Rotator& InRot, cla
 // Function Engine.KismetMathLibrary.BreakRotator
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Roll                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Pitch                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Yaw                            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetMathLibrary::STATIC_BreakRotator(const class Rotator& InRot, float* Roll, float* Pitch, float* Yaw)
+void UKismetMathLibrary::STATIC_BreakRotator(const struct FRotator& InRot, float* Roll, float* Pitch, float* Yaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.BreakRotator");
 
@@ -55848,11 +55848,11 @@ int UKismetMathLibrary::STATIC_And_IntInt(int A, int B)
 // Function Engine.KismetMathLibrary.Add_VectorVector
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Add_VectorVector(const class Vector3D& A, const class Vector3D& B)
+struct FVector UKismetMathLibrary::STATIC_Add_VectorVector(const struct FVector& A, const struct FVector& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Add_VectorVector");
 
@@ -55874,11 +55874,11 @@ class Vector3D UKismetMathLibrary::STATIC_Add_VectorVector(const class Vector3D&
 // Function Engine.KismetMathLibrary.Add_VectorInt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Add_VectorInt(const class Vector3D& A, int B)
+struct FVector UKismetMathLibrary::STATIC_Add_VectorInt(const struct FVector& A, int B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Add_VectorInt");
 
@@ -55900,11 +55900,11 @@ class Vector3D UKismetMathLibrary::STATIC_Add_VectorInt(const class Vector3D& A,
 // Function Engine.KismetMathLibrary.Add_VectorFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UKismetMathLibrary::STATIC_Add_VectorFloat(const class Vector3D& A, float B)
+struct FVector UKismetMathLibrary::STATIC_Add_VectorFloat(const struct FVector& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Add_VectorFloat");
 
@@ -55926,11 +55926,11 @@ class Vector3D UKismetMathLibrary::STATIC_Add_VectorFloat(const class Vector3D& 
 // Function Engine.KismetMathLibrary.Add_Vector2DVector2D
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Add_Vector2DVector2D(const class Vector2D& A, const class Vector2D& B)
+struct FVector2D UKismetMathLibrary::STATIC_Add_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Add_Vector2DVector2D");
 
@@ -55952,11 +55952,11 @@ class Vector2D UKismetMathLibrary::STATIC_Add_Vector2DVector2D(const class Vecto
 // Function Engine.KismetMathLibrary.Add_Vector2DFloat
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               A                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          B                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UKismetMathLibrary::STATIC_Add_Vector2DFloat(const class Vector2D& A, float B)
+struct FVector2D UKismetMathLibrary::STATIC_Add_Vector2DFloat(const struct FVector2D& A, float B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetMathLibrary.Add_Vector2DFloat");
 
@@ -56679,10 +56679,10 @@ void UKismetRenderingLibrary::STATIC_ClearRenderTarget2D(class UObject* WorldCon
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UTextureRenderTarget2D*  TextureRenderTarget            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UCanvas*                 Canvas                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Size                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Size                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FDrawToRenderTargetContext Context                        (CPF_Parm, CPF_OutParm)
 
-void UKismetRenderingLibrary::STATIC_BeginDrawCanvasToRenderTarget(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, class UCanvas** Canvas, class Vector2D* Size, struct FDrawToRenderTargetContext* Context)
+void UKismetRenderingLibrary::STATIC_BeginDrawCanvasToRenderTarget(class UObject* WorldContextObject, class UTextureRenderTarget2D* TextureRenderTarget, class UCanvas** Canvas, struct FVector2D* Size, struct FDrawToRenderTargetContext* Context)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetRenderingLibrary.BeginDrawCanvasToRenderTarget");
 
@@ -57564,10 +57564,10 @@ int UKismetStringLibrary::STATIC_CullArray(const struct FString& SourceString, T
 // Function Engine.KismetStringLibrary.Conv_VectorToString
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_Conv_VectorToString(const class Vector3D& InVec)
+struct FString UKismetStringLibrary::STATIC_Conv_VectorToString(const struct FVector& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_VectorToString");
 
@@ -57588,10 +57588,10 @@ struct FString UKismetStringLibrary::STATIC_Conv_VectorToString(const class Vect
 // Function Engine.KismetStringLibrary.Conv_Vector2dToString
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_Conv_Vector2dToString(const class Vector2D& InVec)
+struct FString UKismetStringLibrary::STATIC_Conv_Vector2dToString(const struct FVector2D& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_Vector2dToString");
 
@@ -57637,10 +57637,10 @@ struct FString UKismetStringLibrary::STATIC_Conv_TransformToString(const struct 
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 inString                       (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 OutConvertedVector2D           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               OutConvertedVector2D           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           OutIsValid                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetStringLibrary::STATIC_Conv_StringToVector2D(const struct FString& inString, class Vector2D* OutConvertedVector2D, bool* OutIsValid)
+void UKismetStringLibrary::STATIC_Conv_StringToVector2D(const struct FString& inString, struct FVector2D* OutConvertedVector2D, bool* OutIsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_StringToVector2D");
 
@@ -57665,10 +57665,10 @@ void UKismetStringLibrary::STATIC_Conv_StringToVector2D(const struct FString& in
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 inString                       (CPF_Parm, CPF_ZeroConstructor)
-// class Vector3D                 OutConvertedVector             (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 OutConvertedVector             (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           OutIsValid                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetStringLibrary::STATIC_Conv_StringToVector(const struct FString& inString, class Vector3D* OutConvertedVector, bool* OutIsValid)
+void UKismetStringLibrary::STATIC_Conv_StringToVector(const struct FString& inString, struct FVector* OutConvertedVector, bool* OutIsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_StringToVector");
 
@@ -57693,10 +57693,10 @@ void UKismetStringLibrary::STATIC_Conv_StringToVector(const struct FString& inSt
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FString                 inString                       (CPF_Parm, CPF_ZeroConstructor)
-// class Rotator                  OutConvertedRotator            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                OutConvertedRotator            (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           OutIsValid                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UKismetStringLibrary::STATIC_Conv_StringToRotator(const struct FString& inString, class Rotator* OutConvertedRotator, bool* OutIsValid)
+void UKismetStringLibrary::STATIC_Conv_StringToRotator(const struct FString& inString, struct FRotator* OutConvertedRotator, bool* OutIsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_StringToRotator");
 
@@ -57820,10 +57820,10 @@ void UKismetStringLibrary::STATIC_Conv_StringToColor(const struct FString& inStr
 // Function Engine.KismetStringLibrary.Conv_RotatorToString
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_Conv_RotatorToString(const class Rotator& InRot)
+struct FString UKismetStringLibrary::STATIC_Conv_RotatorToString(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.Conv_RotatorToString");
 
@@ -58070,11 +58070,11 @@ struct FString UKismetStringLibrary::STATIC_Concat_StrStr(const struct FString& 
 // Parameters:
 // struct FString                 AppendTo                       (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 Prefix                         (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 InVector2D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InVector2D                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 Suffix                         (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_BuildString_Vector2d(const struct FString& AppendTo, const struct FString& Prefix, const class Vector2D& InVector2D, const struct FString& Suffix)
+struct FString UKismetStringLibrary::STATIC_BuildString_Vector2d(const struct FString& AppendTo, const struct FString& Prefix, const struct FVector2D& InVector2D, const struct FString& Suffix)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.BuildString_Vector2d");
 
@@ -58100,11 +58100,11 @@ struct FString UKismetStringLibrary::STATIC_BuildString_Vector2d(const struct FS
 // Parameters:
 // struct FString                 AppendTo                       (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 Prefix                         (CPF_Parm, CPF_ZeroConstructor)
-// class Vector3D                 InVector                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVector                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 Suffix                         (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_BuildString_Vector(const struct FString& AppendTo, const struct FString& Prefix, const class Vector3D& InVector, const struct FString& Suffix)
+struct FString UKismetStringLibrary::STATIC_BuildString_Vector(const struct FString& AppendTo, const struct FString& Prefix, const struct FVector& InVector, const struct FString& Suffix)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.BuildString_Vector");
 
@@ -58130,11 +58130,11 @@ struct FString UKismetStringLibrary::STATIC_BuildString_Vector(const struct FStr
 // Parameters:
 // struct FString                 AppendTo                       (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 Prefix                         (CPF_Parm, CPF_ZeroConstructor)
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 Suffix                         (CPF_Parm, CPF_ZeroConstructor)
 // struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-struct FString UKismetStringLibrary::STATIC_BuildString_Rotator(const struct FString& AppendTo, const struct FString& Prefix, const class Rotator& InRot, const struct FString& Suffix)
+struct FString UKismetStringLibrary::STATIC_BuildString_Rotator(const struct FString& AppendTo, const struct FString& Prefix, const struct FRotator& InRot, const struct FString& Suffix)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetStringLibrary.BuildString_Rotator");
 
@@ -58664,10 +58664,10 @@ bool UKismetTextLibrary::STATIC_EqualEqual_IgnoreCase_TextText(const struct FTex
 // Function Engine.KismetTextLibrary.Conv_VectorToText
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector3D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-struct FText UKismetTextLibrary::STATIC_Conv_VectorToText(const class Vector3D& InVec)
+struct FText UKismetTextLibrary::STATIC_Conv_VectorToText(const struct FVector& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetTextLibrary.Conv_VectorToText");
 
@@ -58688,10 +58688,10 @@ struct FText UKismetTextLibrary::STATIC_Conv_VectorToText(const class Vector3D& 
 // Function Engine.KismetTextLibrary.Conv_Vector2dToText
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Vector2D                 InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               InVec                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-struct FText UKismetTextLibrary::STATIC_Conv_Vector2dToText(const class Vector2D& InVec)
+struct FText UKismetTextLibrary::STATIC_Conv_Vector2dToText(const struct FVector2D& InVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetTextLibrary.Conv_Vector2dToText");
 
@@ -58784,10 +58784,10 @@ struct FText UKismetTextLibrary::STATIC_Conv_StringToText(const struct FString& 
 // Function Engine.KismetTextLibrary.Conv_RotatorToText
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class Rotator                  InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                InRot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-struct FText UKismetTextLibrary::STATIC_Conv_RotatorToText(const class Rotator& InRot)
+struct FText UKismetTextLibrary::STATIC_Conv_RotatorToText(const struct FRotator& InRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.KismetTextLibrary.Conv_RotatorToText");
 
@@ -59400,12 +59400,12 @@ void UStereoLayerFunctionLibrary::STATIC_ShowSplashScreen()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UTexture*                Texture                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Offset                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Offset                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bShowLoadingMovie              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bShowOnSet                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UStereoLayerFunctionLibrary::STATIC_SetSplashScreen(class UTexture* Texture, const class Vector2D& Scale, const class Vector2D& Offset, bool bShowLoadingMovie, bool bShowOnSet)
+void UStereoLayerFunctionLibrary::STATIC_SetSplashScreen(class UTexture* Texture, const struct FVector2D& Scale, const struct FVector2D& Offset, bool bShowLoadingMovie, bool bShowOnSet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.StereoLayerFunctionLibrary.SetSplashScreen");
 
@@ -59493,13 +59493,13 @@ void UVisualLoggerKismetLibrary::STATIC_LogText(class UObject* WorldContextObjec
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 Text                           (CPF_Parm, CPF_ZeroConstructor)
 // struct FLinearColor            ObjectColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   LogCategory                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UVisualLoggerKismetLibrary::STATIC_LogLocation(class UObject* WorldContextObject, const class Vector3D& Location, const struct FString& Text, const struct FLinearColor& ObjectColor, float Radius, const struct FName& LogCategory)
+void UVisualLoggerKismetLibrary::STATIC_LogLocation(class UObject* WorldContextObject, const struct FVector& Location, const struct FString& Text, const struct FLinearColor& ObjectColor, float Radius, const struct FName& LogCategory)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.VisualLoggerKismetLibrary.LogLocation");
 
@@ -59726,14 +59726,14 @@ void UCameraModifier::BlueprintModifyPostProcess(float DeltaTime, float* PostPro
 // (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
 // float                          DeltaTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ViewLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ViewRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ViewLocation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ViewRotation                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          FOV                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 NewViewLocation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  NewViewRotation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 NewViewLocation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                NewViewRotation                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          NewFOV                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const class Vector3D& ViewLocation, const class Rotator& ViewRotation, float FOV, class Vector3D* NewViewLocation, class Rotator* NewViewRotation, float* NewFOV)
+void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const struct FVector& ViewLocation, const struct FRotator& ViewRotation, float FOV, struct FVector* NewViewLocation, struct FRotator* NewViewRotation, float* NewFOV)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CameraModifier.BlueprintModifyCamera");
 
@@ -59763,10 +59763,10 @@ void UCameraModifier::BlueprintModifyCamera(float DeltaTime, const class Vector3
 // Parameters:
 // class UFont*                   RenderFont                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 RenderText                     (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UCanvas::K2_TextSize(class UFont* RenderFont, const struct FString& RenderText, const class Vector2D& Scale)
+struct FVector2D UCanvas::K2_TextSize(class UFont* RenderFont, const struct FString& RenderText, const struct FVector2D& Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_TextSize");
 
@@ -59791,9 +59791,9 @@ class Vector2D UCanvas::K2_TextSize(class UFont* RenderFont, const struct FStrin
 // Parameters:
 // class UFont*                   RenderFont                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 RenderText                     (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UCanvas::K2_StrLen(class UFont* RenderFont, const struct FString& RenderText)
+struct FVector2D UCanvas::K2_StrLen(class UFont* RenderFont, const struct FString& RenderText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_StrLen");
 
@@ -59815,10 +59815,10 @@ class Vector2D UCanvas::K2_StrLen(class UFont* RenderFont, const struct FString&
 // Function Engine.Canvas.K2_Project
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UCanvas::K2_Project(const class Vector3D& WorldLocation)
+struct FVector UCanvas::K2_Project(const struct FVector& WorldLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_Project");
 
@@ -59863,16 +59863,16 @@ void UCanvas::K2_DrawTriangle(class UTexture* RenderTexture, TArray<struct FCanv
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UTexture*                RenderTexture                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            RenderColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EBlendMode>        BlendMode                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawTexture(class UTexture* RenderTexture, const class Vector2D& ScreenPosition, const class Vector2D& ScreenSize, const class Vector2D& CoordinatePosition, const class Vector2D& CoordinateSize, const struct FLinearColor& RenderColor, TEnumAsByte<EBlendMode> BlendMode, float Rotation, const class Vector2D& PivotPoint)
+void UCanvas::K2_DrawTexture(class UTexture* RenderTexture, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoordinatePosition, const struct FVector2D& CoordinateSize, const struct FLinearColor& RenderColor, TEnumAsByte<EBlendMode> BlendMode, float Rotation, const struct FVector2D& PivotPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawTexture");
 
@@ -59901,17 +59901,17 @@ void UCanvas::K2_DrawTexture(class UTexture* RenderTexture, const class Vector2D
 // Parameters:
 // class UFont*                   RenderFont                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 RenderText                     (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            RenderColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Kerning                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            ShadowColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ShadowOffset                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ShadowOffset                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bCentreX                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bCentreY                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bOutlined                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            OutlineColor                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawText(class UFont* RenderFont, const struct FString& RenderText, const class Vector2D& ScreenPosition, const struct FLinearColor& RenderColor, float Kerning, const struct FLinearColor& ShadowColor, const class Vector2D& ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, const struct FLinearColor& OutlineColor)
+void UCanvas::K2_DrawText(class UFont* RenderFont, const struct FString& RenderText, const struct FVector2D& ScreenPosition, const struct FLinearColor& RenderColor, float Kerning, const struct FLinearColor& ShadowColor, const struct FVector2D& ShadowOffset, bool bCentreX, bool bCentreY, bool bOutlined, const struct FLinearColor& OutlineColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawText");
 
@@ -59941,12 +59941,12 @@ void UCanvas::K2_DrawText(class UFont* RenderFont, const struct FString& RenderT
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UTexture*                RenderTexture                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            NumberOfSides                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            RenderColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawPolygon(class UTexture* RenderTexture, const class Vector2D& ScreenPosition, const class Vector2D& Radius, int NumberOfSides, const struct FLinearColor& RenderColor)
+void UCanvas::K2_DrawPolygon(class UTexture* RenderTexture, const struct FVector2D& ScreenPosition, const struct FVector2D& Radius, int NumberOfSides, const struct FLinearColor& RenderColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawPolygon");
 
@@ -59993,14 +59993,14 @@ void UCanvas::K2_DrawMaterialTriangle(class UMaterialInterface* RenderMaterial, 
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*      RenderMaterial                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawMaterial(class UMaterialInterface* RenderMaterial, const class Vector2D& ScreenPosition, const class Vector2D& ScreenSize, const class Vector2D& CoordinatePosition, const class Vector2D& CoordinateSize, float Rotation, const class Vector2D& PivotPoint)
+void UCanvas::K2_DrawMaterial(class UMaterialInterface* RenderMaterial, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoordinatePosition, const struct FVector2D& CoordinateSize, float Rotation, const struct FVector2D& PivotPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawMaterial");
 
@@ -60025,12 +60025,12 @@ void UCanvas::K2_DrawMaterial(class UMaterialInterface* RenderMaterial, const cl
 // Function Engine.Canvas.K2_DrawLine
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 ScreenPositionA                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPositionB                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPositionA                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPositionB                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            RenderColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawLine(const class Vector2D& ScreenPositionA, const class Vector2D& ScreenPositionB, float Thickness, const struct FLinearColor& RenderColor)
+void UCanvas::K2_DrawLine(const struct FVector2D& ScreenPositionA, const struct FVector2D& ScreenPositionB, float Thickness, const struct FLinearColor& RenderColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawLine");
 
@@ -60052,11 +60052,11 @@ void UCanvas::K2_DrawLine(const class Vector2D& ScreenPositionA, const class Vec
 // Function Engine.Canvas.K2_DrawBox
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Thickness                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawBox(const class Vector2D& ScreenPosition, const class Vector2D& ScreenSize, float Thickness)
+void UCanvas::K2_DrawBox(const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, float Thickness)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawBox");
 
@@ -60083,18 +60083,18 @@ void UCanvas::K2_DrawBox(const class Vector2D& ScreenPosition, const class Vecto
 // class UTexture*                RightBorderTexture             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UTexture*                TopBorderTexture               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UTexture*                BottomBorderTexture            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinatePosition             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CoordinateSize                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FLinearColor            RenderColor                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 BorderScale                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 BackgroundScale                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               BorderScale                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               BackgroundScale                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 CornerSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               PivotPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               CornerSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_DrawBorder(class UTexture* BorderTexture, class UTexture* BackgroundTexture, class UTexture* LeftBorderTexture, class UTexture* RightBorderTexture, class UTexture* TopBorderTexture, class UTexture* BottomBorderTexture, const class Vector2D& ScreenPosition, const class Vector2D& ScreenSize, const class Vector2D& CoordinatePosition, const class Vector2D& CoordinateSize, const struct FLinearColor& RenderColor, const class Vector2D& BorderScale, const class Vector2D& BackgroundScale, float Rotation, const class Vector2D& PivotPoint, const class Vector2D& CornerSize)
+void UCanvas::K2_DrawBorder(class UTexture* BorderTexture, class UTexture* BackgroundTexture, class UTexture* LeftBorderTexture, class UTexture* RightBorderTexture, class UTexture* TopBorderTexture, class UTexture* BottomBorderTexture, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoordinatePosition, const struct FVector2D& CoordinateSize, const struct FLinearColor& RenderColor, const struct FVector2D& BorderScale, const struct FVector2D& BackgroundScale, float Rotation, const struct FVector2D& PivotPoint, const struct FVector2D& CornerSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_DrawBorder");
 
@@ -60128,11 +60128,11 @@ void UCanvas::K2_DrawBorder(class UTexture* BorderTexture, class UTexture* Backg
 // Function Engine.Canvas.K2_Deproject
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldOrigin                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldOrigin                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldDirection                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCanvas::K2_Deproject(const class Vector2D& ScreenPosition, class Vector3D* WorldOrigin, class Vector3D* WorldDirection)
+void UCanvas::K2_Deproject(const struct FVector2D& ScreenPosition, struct FVector* WorldOrigin, struct FVector* WorldDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.Canvas.K2_Deproject");
 
@@ -60181,9 +60181,9 @@ struct FLinearColor UCurveLinearColor::GetLinearColorValue(float InTime)
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          InTime                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UCurveVector::GetVectorValue(float InTime)
+struct FVector UCurveVector::GetVectorValue(float InTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.CurveVector.GetVectorValue");
 
@@ -60422,12 +60422,12 @@ class ULevelStreaming* ULevelStreaming::CreateInstance(const struct FString& Uni
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 LevelName                      (CPF_Parm, CPF_ZeroConstructor)
-// class Vector3D                 Location                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Rotator                  Rotation                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FRotator                Rotation                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 // bool                           bOutSuccess                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class ULevelStreamingKismet*   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class ULevelStreamingKismet* ULevelStreamingKismet::STATIC_LoadLevelInstance(class UObject* WorldContextObject, const struct FString& LevelName, const class Vector3D& Location, const class Rotator& Rotation, bool* bOutSuccess)
+class ULevelStreamingKismet* ULevelStreamingKismet::STATIC_LoadLevelInstance(class UObject* WorldContextObject, const struct FString& LevelName, const struct FVector& Location, const struct FRotator& Rotation, bool* bOutSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelStreamingKismet.LoadLevelInstance");
 
@@ -61100,10 +61100,10 @@ void UPlatformInterfaceWebResponse::GetHeader(int HeaderIndex, struct FString* H
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*  SkelComp                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldNormal                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void USkeletalMeshSocket::InitializeSocketFromLocation(class USkeletalMeshComponent* SkelComp, const class Vector3D& WorldLocation, const class Vector3D& WorldNormal)
+void USkeletalMeshSocket::InitializeSocketFromLocation(class USkeletalMeshComponent* SkelComp, const struct FVector& WorldLocation, const struct FVector& WorldNormal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshSocket.InitializeSocketFromLocation");
 
@@ -61125,9 +61125,9 @@ void USkeletalMeshSocket::InitializeSocketFromLocation(class USkeletalMeshCompon
 // (FUNC_Final, FUNC_RequiredAPI, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // class USkeletalMeshComponent*  SkelComp                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshComponent* SkelComp)
+struct FVector USkeletalMeshSocket::GetSocketLocation(class USkeletalMeshComponent* SkelComp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SkeletalMeshSocket.GetSocketLocation");
 

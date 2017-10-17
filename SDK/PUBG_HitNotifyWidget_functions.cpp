@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -144,9 +144,9 @@ void UHitNotifyWidget_C::PlayHitNotifySound()
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
+void UHitNotifyWidget_C::GetRandomScale(struct FVector2D* Scale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale");
 
@@ -166,9 +166,9 @@ void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Translation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Translation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomTranslation(class Vector2D* Translation)
+void UHitNotifyWidget_C::GetRandomTranslation(struct FVector2D* Translation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation");
 

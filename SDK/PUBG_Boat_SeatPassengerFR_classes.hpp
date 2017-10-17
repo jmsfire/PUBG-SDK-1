@@ -1,34 +1,31 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass Boat_SeatPassengerFR.Boat_SeatPassengerFR_C
-// 0x0000 (0x0454 - 0x0454)
-class ABoat_SeatPassengerFR_C : public AVehicleSeatPassenger_C
-{
-public:
+	// BlueprintGeneratedClass Boat_SeatPassengerFR.Boat_SeatPassengerFR_C
+	// 0x0000 (0x0454 - 0x0454)
+	class ABoat_SeatPassengerFR_C : public AVehicleSeatPassenger_C {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Boat_SeatPassengerFR.Boat_SeatPassengerFR_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Boat_SeatPassengerFR.Boat_SeatPassengerFR_C");
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

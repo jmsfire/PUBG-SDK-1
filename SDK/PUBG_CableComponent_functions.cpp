@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -40,9 +40,9 @@ void UCableComponent::SetAttachEndTo(class AActor* Actor, const struct FName& Co
 // Function CableComponent.CableComponent.GetCableParticleLocations
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// TArray<class Vector3D>         Locations                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+// TArray<struct FVector>         Locations                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-void UCableComponent::GetCableParticleLocations(TArray<class Vector3D>* Locations)
+void UCableComponent::GetCableParticleLocations(TArray<struct FVector>* Locations)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CableComponent.CableComponent.GetCableParticleLocations");
 
