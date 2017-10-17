@@ -279,6 +279,10 @@ namespace Classes {
 		__forceinline FVector FVector::operator-(const FVector& V) {
 			return FVector(X - V.X, Y - V.Y, Z - V.Z);
 		}
+		
+		__forceinline FVector FVector::operator+(const FVector& V) {
+			return FVector(X + V.X, Y + V.Y, Z + V.Z);
+		}
 
 		__forceinline FVector FVector::operator*(float Scale) const {
 			return FVector(X * Scale, Y * Scale, Z * Scale);
