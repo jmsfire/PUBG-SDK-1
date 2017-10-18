@@ -25,7 +25,8 @@ namespace Classes {
 		struct FTslPlayerMatchResultInfo                   PlayerMatchResultInfo;                                    // 0x0268(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7872f05d);
 			return ptr;
 		}
 

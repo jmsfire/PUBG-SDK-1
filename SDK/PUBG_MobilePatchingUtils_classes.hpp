@@ -18,7 +18,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobileInstalledContent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcc9dfa3f);
 			return ptr;
 		}
 
@@ -36,7 +37,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePendingContent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x105b13be);
 			return ptr;
 		}
 
@@ -57,7 +59,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePatchingLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc8af1749);
 			return ptr;
 		}
 

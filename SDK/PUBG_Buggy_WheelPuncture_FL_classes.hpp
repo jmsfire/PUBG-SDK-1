@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Buggy_WheelPuncture_FL.Buggy_WheelPuncture_FL_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b748e83);
 			return ptr;
 		}
 

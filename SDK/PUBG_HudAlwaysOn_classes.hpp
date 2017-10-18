@@ -28,7 +28,8 @@ namespace Classes {
 		class ATslHUD*                                     refHUD;                                                   // 0x0290(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass HudAlwaysOn.HudAlwaysOn_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3cad82bd);
 			return ptr;
 		}
 

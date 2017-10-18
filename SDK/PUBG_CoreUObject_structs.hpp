@@ -279,7 +279,7 @@ namespace Classes {
 		__forceinline FVector FVector::operator-(const FVector& V) {
 			return FVector(X - V.X, Y - V.Y, Z - V.Z);
 		}
-		
+
 		__forceinline FVector FVector::operator+(const FVector& V) {
 			return FVector(X + V.X, Y + V.Y, Z + V.Z);
 		}
@@ -430,7 +430,7 @@ namespace Classes {
 		__forceinline FVector2D FVector2D::operator-(const FVector2D& V) {
 			return FVector2D(X - V.X, Y - V.Y);
 		}
-		
+
 		__forceinline FVector2D FVector2D::operator+(const FVector2D& V) {
 			return FVector2D(X + V.X, Y + V.Y);
 		}

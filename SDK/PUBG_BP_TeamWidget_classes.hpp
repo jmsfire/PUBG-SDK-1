@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BP_TeamWidget.BP_TeamWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd8c00185);
 			return ptr;
 		}
 

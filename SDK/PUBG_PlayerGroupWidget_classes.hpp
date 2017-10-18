@@ -24,7 +24,8 @@ namespace Classes {
 		class UMaterialInstanceDynamic*                    BGMaterial;                                               // 0x0270(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass PlayerGroupWidget.PlayerGroupWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2812568d);
 			return ptr;
 		}
 

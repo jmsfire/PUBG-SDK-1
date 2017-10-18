@@ -37,7 +37,8 @@ namespace Classes {
 		struct FText                                       OkText;                                                   // 0x0340(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x230af985);
 			return ptr;
 		}
 

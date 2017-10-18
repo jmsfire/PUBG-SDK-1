@@ -48,7 +48,8 @@ namespace Classes {
 		float                                              FuelEfficiency;                                           // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Motorbike_03.BP_Motorbike_03_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe499fc55);
 			return ptr;
 		}
 

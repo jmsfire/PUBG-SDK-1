@@ -26,7 +26,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    TestDispatcher;                                           // 0x02D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InGameMenuWidget.InGameMenuWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbf862695);
 			return ptr;
 		}
 

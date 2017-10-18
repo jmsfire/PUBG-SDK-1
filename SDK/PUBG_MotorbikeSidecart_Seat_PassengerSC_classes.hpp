@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass MotorbikeSidecart_Seat_PassengerSC.MotorbikeSidecart_Seat_PassengerSC_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf14ff6f1);
 			return ptr;
 		}
 

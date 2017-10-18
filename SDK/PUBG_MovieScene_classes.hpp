@@ -31,7 +31,8 @@ namespace Classes {
 		float                                              EndTime;                                                  // 0x00A4(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieScene");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xad0d0963);
 			return ptr;
 		}
 
@@ -49,7 +50,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneFolder");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18373ba3);
 			return ptr;
 		}
 
@@ -70,7 +72,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xccefd5d0);
 			return ptr;
 		}
 
@@ -83,7 +86,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneSequence");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdca4ab94);
 			return ptr;
 		}
 
@@ -96,7 +100,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x72a9e938);
 			return ptr;
 		}
 
@@ -109,7 +114,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieScene.MovieSceneNameableTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1adf3ae7);
 			return ptr;
 		}
 

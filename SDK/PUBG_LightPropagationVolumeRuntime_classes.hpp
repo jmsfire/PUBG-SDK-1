@@ -21,7 +21,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LightPropagationVolumeRuntime.LightPropagationVolumeBlendable");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe8194d36);
 			return ptr;
 		}
 

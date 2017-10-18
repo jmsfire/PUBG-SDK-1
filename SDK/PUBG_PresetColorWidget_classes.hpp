@@ -19,7 +19,8 @@ namespace Classes {
 		struct FLinearColor                                Color;                                                    // 0x0258(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass PresetColorWidget.PresetColorWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc3e70395);
 			return ptr;
 		}
 

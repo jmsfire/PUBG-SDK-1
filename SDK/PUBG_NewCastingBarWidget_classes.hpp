@@ -22,7 +22,8 @@ namespace Classes {
 		class UMaterialInstanceDynamic*                    CircleProgressMaterial;                                   // 0x0260(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass NewCastingBarWidget.NewCastingBarWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa1a01b5d);
 			return ptr;
 		}
 

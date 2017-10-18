@@ -23,7 +23,8 @@ namespace Classes {
 		class UAkAudioEvent*                               HitNotifyWomanSoundAk;                                    // 0x0268(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass HitNotifyWidget.HitNotifyWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xab795009);
 			return ptr;
 		}
 

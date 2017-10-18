@@ -22,7 +22,8 @@ namespace Classes {
 		float                                              Height;                                                   // 0x025C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass LobbyVoiceChat.LobbyVoiceChat_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc01f5995);
 			return ptr;
 		}
 

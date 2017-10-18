@@ -28,7 +28,8 @@ namespace Classes {
 		bool                                               bIsCancelable;                                            // 0x0298(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass CastingBarInfoTextWidget.CastingBarInfoTextWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe2fdef77);
 			return ptr;
 		}
 

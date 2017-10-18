@@ -26,7 +26,8 @@ namespace Classes {
 		bool                                               bInitVisibility;                                          // 0x0290(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass WebPopup.WebPopup_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3c661935);
 			return ptr;
 		}
 

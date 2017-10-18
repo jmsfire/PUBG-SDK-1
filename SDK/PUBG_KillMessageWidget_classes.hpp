@@ -49,7 +49,8 @@ namespace Classes {
 		bool                                               bIsStealFriendlyFire;                                     // 0x05E8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass KillMessageWidget.KillMessageWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x31fbd85);
 			return ptr;
 		}
 

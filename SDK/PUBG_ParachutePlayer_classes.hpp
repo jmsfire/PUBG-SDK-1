@@ -56,7 +56,8 @@ namespace Classes {
 		float                                              RelativeVelocity;                                         // 0x0628(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass ParachutePlayer.ParachutePlayer_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3f8fe905);
 			return ptr;
 		}
 

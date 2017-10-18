@@ -84,7 +84,8 @@ namespace Classes {
 		class UBlendSpaceBase*                             LH_GripBS;                                                // 0x1EE0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass CharProxy_AnimBP.CharProxy_AnimBP_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaeb393d8);
 			return ptr;
 		}
 

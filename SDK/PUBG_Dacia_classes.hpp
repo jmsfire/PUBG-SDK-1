@@ -26,7 +26,8 @@ namespace Classes {
 		class UVehicleSeatInteractionComponent*            DriverSeat;                                               // 0x08C8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Dacia.Dacia_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xde0ee0b5);
 			return ptr;
 		}
 

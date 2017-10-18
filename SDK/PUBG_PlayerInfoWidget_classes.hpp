@@ -45,7 +45,8 @@ namespace Classes {
 		bool                                               IsBlink;                                                  // 0x02F9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass PlayerInfoWidget.PlayerInfoWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9ade4e77);
 			return ptr;
 		}
 

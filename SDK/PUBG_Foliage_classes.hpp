@@ -20,7 +20,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x09F8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb057c160);
 			return ptr;
 		}
 
@@ -33,7 +34,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.FoliageStatistics");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9c9a4e);
 			return ptr;
 		}
 
@@ -136,7 +138,8 @@ namespace Classes {
 		unsigned char                                      UnknownData11[0xA];                                       // 0x03C6(0x000A) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.FoliageType");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x61fe5667);
 			return ptr;
 		}
 
@@ -152,7 +155,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.FoliageType_InstancedStaticMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x27dd4984);
 			return ptr;
 		}
 
@@ -166,7 +170,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x03A0(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.InstancedFoliageActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x19f5);
 			return ptr;
 		}
 
@@ -194,7 +199,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x040C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7593ce4e);
 			return ptr;
 		}
 
@@ -209,7 +215,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.InteractiveFoliageComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb1808720);
 			return ptr;
 		}
 
@@ -223,7 +230,8 @@ namespace Classes {
 		class AProceduralFoliageVolume*                    ProceduralFoliageVolume;                                  // 0x03D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageBlockingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x30eb4227);
 			return ptr;
 		}
 
@@ -241,7 +249,8 @@ namespace Classes {
 		struct FGuid                                       ProceduralGuid;                                           // 0x0110(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b0299d9);
 			return ptr;
 		}
 
@@ -262,7 +271,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x1F];                                      // 0x0051(0x001F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x24ec0be8);
 			return ptr;
 		}
 
@@ -281,7 +291,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x78];                                      // 0x00E0(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb94ae6d0);
 			return ptr;
 		}
 
@@ -295,7 +306,8 @@ namespace Classes {
 		class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x03D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x545c6762);
 			return ptr;
 		}
 

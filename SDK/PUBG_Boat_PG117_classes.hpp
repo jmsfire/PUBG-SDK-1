@@ -30,7 +30,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        StaticMesh;                                               // 0x0570(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Boat_PG117.Boat_PG117_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x72542c6f);
 			return ptr;
 		}
 

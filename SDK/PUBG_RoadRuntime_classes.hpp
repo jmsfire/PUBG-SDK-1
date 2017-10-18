@@ -20,7 +20,8 @@ namespace Classes {
 		TArray<struct FCrossMeshManager>                   SideMeshes;                                               // 0x03D0(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class RoadRuntime.CrossActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1abe78bc);
 			return ptr;
 		}
 
@@ -53,7 +54,8 @@ namespace Classes {
 		TArray<struct FSideMeshManager>                    SideMeshes;                                               // 0x0408(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class RoadRuntime.RoadActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb38f0c0c);
 			return ptr;
 		}
 

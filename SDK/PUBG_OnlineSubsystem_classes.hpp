@@ -20,7 +20,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystem.NamedInterfaces");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb96f5686);
 			return ptr;
 		}
 
@@ -33,7 +34,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystem.TurnBasedMatchInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6e9fd313);
 			return ptr;
 		}
 

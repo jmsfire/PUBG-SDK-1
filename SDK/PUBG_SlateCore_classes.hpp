@@ -18,7 +18,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf53e342d);
 			return ptr;
 		}
 
@@ -32,7 +33,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xA0];                                      // 0x0028(0x00A0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.FontBulkData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fd0eafc);
 			return ptr;
 		}
 
@@ -45,7 +47,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.FontProviderInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83420538);
 			return ptr;
 		}
 
@@ -58,7 +61,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.SlateTypes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd3565345);
 			return ptr;
 		}
 
@@ -71,7 +75,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleContainerInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb83b3e9b);
 			return ptr;
 		}
 
@@ -85,7 +90,8 @@ namespace Classes {
 		class USlateWidgetStyleContainerBase*              CustomStyle;                                              // 0x0028(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateCore.SlateWidgetStyleAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60e544d3);
 			return ptr;
 		}
 

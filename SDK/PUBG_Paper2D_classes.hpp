@@ -21,7 +21,8 @@ namespace Classes {
 		struct FText                                       SlotDisplayName;                                          // 0x01C0(0x0018) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.MaterialExpressionSpriteTextureSampler");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf7f1d788);
 			return ptr;
 		}
 
@@ -36,7 +37,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperCharacter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf5c20ea);
 			return ptr;
 		}
 
@@ -67,7 +69,8 @@ namespace Classes {
 		TArray<struct FVector4>                            BakedRenderData;                                          // 0x00B0(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperSprite");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf55343aa);
 			return ptr;
 		}
 
@@ -86,7 +89,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperFlipbook");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbb0e621b);
 			return ptr;
 		}
 
@@ -120,7 +124,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x07C8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperFlipbookComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x78d2eb3c);
 			return ptr;
 		}
 
@@ -159,7 +164,8 @@ namespace Classes {
 		class UPaperFlipbookComponent*                     RenderComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperFlipbookActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e01c972);
 			return ptr;
 		}
 
@@ -175,7 +181,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x07A0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperGroupedSpriteComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8c7a032f);
 			return ptr;
 		}
 
@@ -198,7 +205,8 @@ namespace Classes {
 		class UPaperGroupedSpriteComponent*                RenderComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperGroupedSpriteActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd9508fd);
 			return ptr;
 		}
 
@@ -215,7 +223,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x5];                                       // 0x002B(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperRuntimeSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x892d00c);
 			return ptr;
 		}
 
@@ -231,7 +240,8 @@ namespace Classes {
 		struct FLinearColor                                SpriteColor;                                              // 0x0790(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperSpriteComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d4056c7);
 			return ptr;
 		}
 
@@ -249,7 +259,8 @@ namespace Classes {
 		class UPaperSpriteComponent*                       RenderComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperSpriteActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x851abe15);
 			return ptr;
 		}
 
@@ -262,7 +273,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperSpriteAtlas");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb4ba51f7);
 			return ptr;
 		}
 
@@ -278,7 +290,8 @@ namespace Classes {
 		class UPaperTerrainComponent*                      RenderComponent;                                          // 0x03B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTerrainActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x408cfd13);
 			return ptr;
 		}
 
@@ -305,7 +318,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x10];                                      // 0x0710(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTerrainComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbb4fc18d);
 			return ptr;
 		}
 
@@ -322,7 +336,8 @@ namespace Classes {
 		class UPaperSprite*                                InteriorFill;                                             // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTerrainMaterial");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeacd1c4b);
 			return ptr;
 		}
 
@@ -336,7 +351,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x40];                                      // 0x07B0(0x0040) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTerrainSplineComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb2ec0fd4);
 			return ptr;
 		}
 
@@ -364,7 +380,8 @@ namespace Classes {
 		int                                                Spacing;                                                  // 0x0094(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTileSet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x97d3d0e3);
 			return ptr;
 		}
 
@@ -394,7 +411,8 @@ namespace Classes {
 		TArray<int>                                        AllocatedGrid;                                            // 0x0088(0x0010) (CPF_ZeroConstructor, CPF_Deprecated)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTileLayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8a2dceb4);
 			return ptr;
 		}
 
@@ -427,7 +445,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTileMap");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e38fcf9);
 			return ptr;
 		}
 
@@ -441,7 +460,8 @@ namespace Classes {
 		class UPaperTileMapComponent*                      RenderComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTileMapActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe8e7c488);
 			return ptr;
 		}
 
@@ -466,7 +486,8 @@ namespace Classes {
 		class UPaperTileMap*                               TileMap;                                                  // 0x07C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.PaperTileMapComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8793821a);
 			return ptr;
 		}
 
@@ -499,7 +520,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Paper2D.TileMapBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6331d227);
 			return ptr;
 		}
 

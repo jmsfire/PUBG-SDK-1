@@ -21,7 +21,8 @@ namespace Classes {
 		bool                                               IsCanShowCarePackageList;                                 // 0x0258(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass CarePackageInteractionWidget.CarePackageInteractionWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x851b5427);
 			return ptr;
 		}
 

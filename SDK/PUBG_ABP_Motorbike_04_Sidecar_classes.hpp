@@ -45,7 +45,8 @@ namespace Classes {
 		struct FVector                                     EF;                                                       // 0x1848(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6552982);
 			return ptr;
 		}
 

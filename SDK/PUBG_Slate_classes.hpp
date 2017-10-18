@@ -18,7 +18,8 @@ namespace Classes {
 		struct FButtonStyle                                ButtonStyle;                                              // 0x0030(0x02A8) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ButtonWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xab0f29bf);
 			return ptr;
 		}
 
@@ -32,7 +33,8 @@ namespace Classes {
 		struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0030(0x05E0) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.CheckBoxWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd194c696);
 			return ptr;
 		}
 
@@ -46,7 +48,8 @@ namespace Classes {
 		struct FComboBoxStyle                              ComboBoxStyle;                                            // 0x0030(0x0428) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ComboBoxWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2d9d3fb4);
 			return ptr;
 		}
 
@@ -60,7 +63,8 @@ namespace Classes {
 		struct FComboButtonStyle                           ComboButtonStyle;                                         // 0x0030(0x03E0) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ComboButtonWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb86cb8f5);
 			return ptr;
 		}
 
@@ -74,7 +78,8 @@ namespace Classes {
 		struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x0870) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.EditableTextBoxWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5ca64be7);
 			return ptr;
 		}
 
@@ -88,7 +93,8 @@ namespace Classes {
 		struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0248) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.EditableTextWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbb1a84c);
 			return ptr;
 		}
 
@@ -102,7 +108,8 @@ namespace Classes {
 		struct FProgressBarStyle                           ProgressBarStyle;                                         // 0x0030(0x01B8) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ProgressWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x59582c44);
 			return ptr;
 		}
 
@@ -116,7 +123,8 @@ namespace Classes {
 		struct FScrollBarStyle                             ScrollBarStyle;                                           // 0x0030(0x0518) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ScrollBarWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x86b63cfd);
 			return ptr;
 		}
 
@@ -130,7 +138,8 @@ namespace Classes {
 		struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0248) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.ScrollBoxWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x36373efd);
 			return ptr;
 		}
 
@@ -144,7 +153,8 @@ namespace Classes {
 		struct FSpinBoxStyle                               SpinBoxStyle;                                             // 0x0030(0x0310) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.SpinBoxWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x35673a76);
 			return ptr;
 		}
 
@@ -158,7 +168,8 @@ namespace Classes {
 		struct FTextBlockStyle                             TextBlockStyle;                                           // 0x0030(0x0208) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Slate.TextBlockWidgetStyle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x80f30493);
 			return ptr;
 		}
 

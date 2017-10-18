@@ -19,7 +19,8 @@ namespace Classes {
 		TArray<class UPlayerHeadWidget_C*>                 PlayerHeadWidgets;                                        // 0x0248(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ObserverTagManagerWidget.ObserverTagManagerWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdea5de0b);
 			return ptr;
 		}
 

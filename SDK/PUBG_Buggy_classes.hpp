@@ -23,7 +23,8 @@ namespace Classes {
 		class UVehicleSeatInteractionComponent*            DriverSeat;                                               // 0x08B0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Buggy.Buggy_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d1f828d);
 			return ptr;
 		}
 

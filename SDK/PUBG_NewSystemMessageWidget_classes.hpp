@@ -34,7 +34,8 @@ namespace Classes {
 		class UAkAudioEvent*                               Sound;                                                    // 0x02E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass NewSystemMessageWidget.NewSystemMessageWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc98cb15);
 			return ptr;
 		}
 

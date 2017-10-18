@@ -39,7 +39,8 @@ namespace Classes {
 		struct FVector2D                                   MouseDownPosition;                                        // 0x0304(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass PlayerListWidget.PlayerListWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2d24fb8f);
 			return ptr;
 		}
 

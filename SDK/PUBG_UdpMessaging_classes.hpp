@@ -29,7 +29,8 @@ namespace Classes {
 		TArray<struct FString>                             RemoteTunnelEndpoints;                                    // 0x0090(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UdpMessaging.UdpMessagingSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6deef3ce);
 			return ptr;
 		}
 

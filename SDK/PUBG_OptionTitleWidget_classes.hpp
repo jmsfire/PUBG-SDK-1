@@ -18,7 +18,8 @@ namespace Classes {
 		struct FText                                       DisplayTitleText;                                         // 0x0240(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass OptionTitleWidget.OptionTitleWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1256e211);
 			return ptr;
 		}
 

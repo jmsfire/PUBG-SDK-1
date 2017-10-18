@@ -19,7 +19,8 @@ namespace Classes {
 		struct FText                                       CategoryName;                                             // 0x0248(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass CategoryGroupWidget.CategoryGroupWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe697b9fd);
 			return ptr;
 		}
 

@@ -25,7 +25,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC];                                       // 0x07D4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class ProceduralMeshComponent.ProceduralMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x10b2ee33);
 			return ptr;
 		}
 
@@ -50,7 +51,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class ProceduralMeshComponent.KismetProceduralMeshLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xba59bada);
 			return ptr;
 		}
 

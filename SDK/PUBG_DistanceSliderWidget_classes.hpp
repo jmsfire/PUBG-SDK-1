@@ -26,7 +26,8 @@ namespace Classes {
 		class ATslSpectatorPawn*                           TslSpectatorPawn;                                         // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass DistanceSliderWidget.DistanceSliderWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdd7c8dd5);
 			return ptr;
 		}
 

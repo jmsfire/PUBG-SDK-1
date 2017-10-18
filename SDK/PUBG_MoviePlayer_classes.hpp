@@ -21,7 +21,8 @@ namespace Classes {
 		TArray<struct FString>                             StartupMovies;                                            // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MoviePlayer.MoviePlayerSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x526edf24);
 			return ptr;
 		}
 

@@ -18,7 +18,8 @@ namespace Classes {
 		struct FGuid                                       ConstraintId;                                             // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DConstraintSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x82ac6d54);
 			return ptr;
 		}
 
@@ -40,7 +41,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DAttachSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9e748086);
 			return ptr;
 		}
 
@@ -61,7 +63,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x00CD(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DPathSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeb04a6b4);
 			return ptr;
 		}
 
@@ -75,7 +78,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  ConstraintSections;                                       // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DConstraintTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x810ca164);
 			return ptr;
 		}
 
@@ -88,7 +92,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DAttachTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeedf98a2);
 			return ptr;
 		}
 
@@ -101,7 +106,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DPathTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c2b7ac4);
 			return ptr;
 		}
 
@@ -118,7 +124,8 @@ namespace Classes {
 		struct FRichCurve                                  Scale[0x3];                                               // 0x0318(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DTransformSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e46f97b);
 			return ptr;
 		}
 
@@ -135,7 +142,8 @@ namespace Classes {
 		TArray<struct FString>                             ActorGuidStrings;                                         // 0x00C8(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneActorReferenceSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x342b4e42);
 			return ptr;
 		}
 
@@ -154,7 +162,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneAudioSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe0e4e68c);
 			return ptr;
 		}
 
@@ -168,7 +177,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  AudioSections;                                            // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneAudioTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xadf3781c);
 			return ptr;
 		}
 
@@ -185,7 +195,8 @@ namespace Classes {
 		struct FIntegralCurve                              BoolCurve;                                                // 0x0050(0x0070)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneBoolSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa88c7908);
 			return ptr;
 		}
 
@@ -198,7 +209,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneVisibilitySection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc3b889f0);
 			return ptr;
 		}
 
@@ -213,7 +225,8 @@ namespace Classes {
 		struct FIntegralCurve                              ByteCurve;                                                // 0x0048(0x0070)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneByteSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8e048572);
 			return ptr;
 		}
 
@@ -236,7 +249,8 @@ namespace Classes {
 		struct FRotator                                    UserDefinedPlaySpace;                                     // 0x005C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraAnimSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x582b7c2a);
 			return ptr;
 		}
 
@@ -250,7 +264,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  CameraAnimSections;                                       // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraAnimTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c80530e);
 			return ptr;
 		}
 
@@ -264,7 +279,8 @@ namespace Classes {
 		struct FGuid                                       CameraGuid;                                               // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraCutSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2a18d337);
 			return ptr;
 		}
 
@@ -278,7 +294,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraCutTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf8e18213);
 			return ptr;
 		}
 
@@ -297,7 +314,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraShakeSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeaef7991);
 			return ptr;
 		}
 
@@ -311,7 +329,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  CameraShakeSections;                                      // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCameraShakeTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b8f1599);
 			return ptr;
 		}
 
@@ -329,7 +348,8 @@ namespace Classes {
 		struct FRichCurve                                  AlphaCurve;                                               // 0x01B0(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneColorSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe71e3d91);
 			return ptr;
 		}
 
@@ -343,7 +363,8 @@ namespace Classes {
 		struct FNameCurve                                  Events;                                                   // 0x0040(0x0068)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEventSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x82b1e22);
 			return ptr;
 		}
 
@@ -360,7 +381,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0030(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneEventTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe5e927e6);
 			return ptr;
 		}
 
@@ -375,7 +397,8 @@ namespace Classes {
 		struct FRichCurve                                  FloatCurve;                                               // 0x0048(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneFloatSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x903dead0);
 			return ptr;
 		}
 
@@ -391,7 +414,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneFadeSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c39405e);
 			return ptr;
 		}
 
@@ -404,7 +428,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSlomoSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc70048e6);
 			return ptr;
 		}
 
@@ -420,7 +445,8 @@ namespace Classes {
 		TArray<struct FName>                               LevelNames;                                               // 0x0048(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneLevelVisibilitySection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x80c588b8);
 			return ptr;
 		}
 
@@ -436,7 +462,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0040(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScenePropertyTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd85c65a1);
 			return ptr;
 		}
 
@@ -450,7 +477,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneLevelVisibilityTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf0765620);
 			return ptr;
 		}
 
@@ -466,7 +494,8 @@ namespace Classes {
 		TArray<struct FColorParameterNameAndCurves>        ColorParameterNamesAndCurves;                             // 0x0060(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneParameterSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa12d5071);
 			return ptr;
 		}
 
@@ -480,7 +509,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneMaterialTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb722f981);
 			return ptr;
 		}
 
@@ -495,7 +525,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneComponentMaterialTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x42919d0c);
 			return ptr;
 		}
 
@@ -509,7 +540,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneParticleParameterTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2ccf3f03);
 			return ptr;
 		}
 
@@ -523,7 +555,8 @@ namespace Classes {
 		struct FIntegralCurve                              ParticleKeys;                                             // 0x0040(0x0070)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneParticleSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xba5d1d0a);
 			return ptr;
 		}
 
@@ -537,7 +570,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  ParticleSections;                                         // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneParticleTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaa84aeee);
 			return ptr;
 		}
 
@@ -550,7 +584,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieScene3DTransformTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf2ff3ff);
 			return ptr;
 		}
 
@@ -563,7 +598,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneActorReferenceTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x81911006);
 			return ptr;
 		}
 
@@ -576,7 +612,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneBoolTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xda8d53f0);
 			return ptr;
 		}
 
@@ -589,7 +626,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneVisibilityTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0322d58);
 			return ptr;
 		}
 
@@ -603,7 +641,8 @@ namespace Classes {
 		class UEnum*                                       Enum;                                                     // 0x0050(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneByteTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf39cd8b6);
 			return ptr;
 		}
 
@@ -618,7 +657,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneColorTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x17c73999);
 			return ptr;
 		}
 
@@ -631,7 +671,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneFloatTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x46b2b638);
 			return ptr;
 		}
 
@@ -644,7 +685,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneFadeTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf00c583a);
 			return ptr;
 		}
 
@@ -657,7 +699,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSlomoTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2dc8b602);
 			return ptr;
 		}
 
@@ -670,7 +713,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneStringTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xde6125a1);
 			return ptr;
 		}
 
@@ -685,7 +729,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneVectorTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa59f1d9f);
 			return ptr;
 		}
 
@@ -706,7 +751,8 @@ namespace Classes {
 		struct FName                                       SlotName;                                                 // 0x0060(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSkeletalAnimationSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x74cf56ed);
 			return ptr;
 		}
 
@@ -720,7 +766,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  AnimationSections;                                        // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSkeletalAnimationTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3b7713fd);
 			return ptr;
 		}
 
@@ -735,7 +782,8 @@ namespace Classes {
 		struct FGuid                                       ObjectGuid;                                               // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSpawnTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3172d721);
 			return ptr;
 		}
 
@@ -750,7 +798,8 @@ namespace Classes {
 		struct FStringCurve                                StringCurve;                                              // 0x0048(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneStringSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdb186639);
 			return ptr;
 		}
 
@@ -772,7 +821,8 @@ namespace Classes {
 		struct FDirectoryPath                              TargetPathToRecordTo;                                     // 0x0088(0x0010) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSubSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x56668ae8);
 			return ptr;
 		}
 
@@ -786,7 +836,8 @@ namespace Classes {
 		struct FText                                       DisplayName;                                              // 0x0098(0x0018)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCinematicShotSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc44d87);
 			return ptr;
 		}
 
@@ -800,7 +851,8 @@ namespace Classes {
 		TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneSubTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x31c8acd0);
 			return ptr;
 		}
 
@@ -813,7 +865,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneCinematicShotTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7ed84923);
 			return ptr;
 		}
 
@@ -830,7 +883,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x022C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneTracks.MovieSceneVectorSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9d01a81b);
 			return ptr;
 		}
 

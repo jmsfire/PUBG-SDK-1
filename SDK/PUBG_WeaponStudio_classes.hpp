@@ -27,7 +27,8 @@ namespace Classes {
 		TArray<class UAsyncStaticMeshComponent*>           Attachments;                                              // 0x0448(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass WeaponStudio.WeaponStudio_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a4d7565);
 			return ptr;
 		}
 

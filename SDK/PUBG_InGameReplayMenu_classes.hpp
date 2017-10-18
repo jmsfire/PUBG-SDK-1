@@ -21,7 +21,8 @@ namespace Classes {
 		class ATslHUD*                                     HUD;                                                      // 0x0258(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InGameReplayMenu.InGameReplayMenu_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1cbf9c53);
 			return ptr;
 		}
 

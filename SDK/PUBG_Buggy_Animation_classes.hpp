@@ -81,7 +81,8 @@ namespace Classes {
 		struct FRotator                                    VelocityArrowRotation;                                    // 0x2FDC(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass Buggy_Animation.Buggy_Animation_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x77a51714);
 			return ptr;
 		}
 

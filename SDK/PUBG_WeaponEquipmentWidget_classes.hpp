@@ -36,7 +36,8 @@ namespace Classes {
 		int                                                SelfPuFocusIndex;                                         // 0x0300(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass WeaponEquipmentWidget.WeaponEquipmentWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8a1a3145);
 			return ptr;
 		}
 

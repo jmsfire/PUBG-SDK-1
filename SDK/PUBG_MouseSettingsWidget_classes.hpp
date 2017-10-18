@@ -24,7 +24,8 @@ namespace Classes {
 		class UQualitySliderWidget_C*                      NewVar_1;                                                 // 0x02B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass MouseSettingsWidget.MouseSettingsWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8a902af5);
 			return ptr;
 		}
 

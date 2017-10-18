@@ -21,7 +21,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x1B];                                      // 0x06D5(0x001B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class HeadMountedDisplay.MotionControllerComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x74a101a6);
 			return ptr;
 		}
 
@@ -44,7 +45,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    HMDRemovedFromHeadDelegate;                               // 0x0168(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class HeadMountedDisplay.VRNotificationsComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7cd0586e);
 			return ptr;
 		}
 

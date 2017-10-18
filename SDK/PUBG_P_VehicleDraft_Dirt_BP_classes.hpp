@@ -18,7 +18,8 @@ namespace Classes {
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03F8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass P_VehicleDraft_Dirt_BP.P_VehicleDraft_Dirt_BP_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xef71fa93);
 			return ptr;
 		}
 

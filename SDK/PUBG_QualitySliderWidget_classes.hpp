@@ -26,7 +26,8 @@ namespace Classes {
 		struct FName                                       MouseSensitiveName;                                       // 0x0288(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass QualitySliderWidget.QualitySliderWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9dcdd6a5);
 			return ptr;
 		}
 

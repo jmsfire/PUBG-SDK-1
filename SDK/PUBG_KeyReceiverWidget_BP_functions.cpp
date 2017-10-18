@@ -19,7 +19,8 @@ namespace Classes
 
 struct FLinearColor UKeyReceiverWidget_BP_C::GetBorderColorAndOpacity()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KeyReceiverWidget_BP.KeyReceiverWidget_BP_C.GetBorderColorAndOpacity");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x358cb6ac);
 
 	UKeyReceiverWidget_BP_C_GetBorderColorAndOpacity_Params params;
 

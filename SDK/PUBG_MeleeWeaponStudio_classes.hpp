@@ -19,7 +19,8 @@ namespace Classes {
 		class UAsyncStaticMeshComponent*                   AsyncStaticMesh;                                          // 0x0408(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass MeleeWeaponStudio.MeleeWeaponStudio_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4754f955);
 			return ptr;
 		}
 

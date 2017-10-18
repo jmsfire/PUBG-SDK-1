@@ -18,7 +18,8 @@ namespace Classes {
 		class UNiagaraComponent*                           NiagaraComponent;                                         // 0x03A0(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x336d3996);
 			return ptr;
 		}
 
@@ -32,7 +33,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x06D0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x33599188);
 			return ptr;
 		}
 
@@ -52,7 +54,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00C9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraScript");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5fafd116);
 			return ptr;
 		}
 
@@ -80,7 +83,8 @@ namespace Classes {
 		struct FNiagaraEmitterScriptProperties             SpawnScriptProps;                                         // 0x00C0(0x0058) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraEmitterProperties");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x719a54a4);
 			return ptr;
 		}
 
@@ -94,7 +98,8 @@ namespace Classes {
 		TArray<class UNiagaraEmitterProperties*>           EmitterProps;                                             // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraEffect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaccf3b84);
 			return ptr;
 		}
 
@@ -108,7 +113,8 @@ namespace Classes {
 		struct FName                                       dummy;                                                    // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraEffectRendererProperties");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2fc528c6);
 			return ptr;
 		}
 
@@ -122,7 +128,8 @@ namespace Classes {
 		class UStaticMesh*                                 ParticleMesh;                                             // 0x0030(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraMeshRendererProperties");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca95578e);
 			return ptr;
 		}
 
@@ -135,7 +142,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraRibbonRendererProperties");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc73b793d);
 			return ptr;
 		}
 
@@ -151,7 +159,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraSpriteRendererProperties");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x66e8689e);
 			return ptr;
 		}
 
@@ -164,7 +173,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3792e9e6);
 			return ptr;
 		}
 
@@ -179,7 +189,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraEventReceiverEmitterAction_SpawnParticles");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3f0fcb27);
 			return ptr;
 		}
 
@@ -192,7 +203,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb88dae4);
 			return ptr;
 		}
 
@@ -210,7 +222,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraScriptSourceBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2d12dd56);
 			return ptr;
 		}
 
@@ -224,7 +237,8 @@ namespace Classes {
 		class UMovieScene*                                 MovieScene;                                               // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Niagara.NiagaraSequence");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x82e84f50);
 			return ptr;
 		}
 

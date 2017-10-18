@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.ControlPointMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb62acff9);
 			return ptr;
 		}
 
@@ -66,7 +67,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x20];                                      // 0x0820(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x54f0aa3c);
 			return ptr;
 		}
 
@@ -79,7 +81,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x247efbf2);
 			return ptr;
 		}
 
@@ -93,7 +96,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x03A0(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeGizmoActiveActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0cb670);
 			return ptr;
 		}
 
@@ -106,7 +110,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeGizmoRenderComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e11d14);
 			return ptr;
 		}
 
@@ -128,7 +133,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xE];                                       // 0x0052(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeGrassType");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xee7b90fb);
 			return ptr;
 		}
 
@@ -155,7 +161,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x48];                                      // 0x0768(0x0048) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeHeightfieldCollisionComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3e88ba0b);
 			return ptr;
 		}
 
@@ -169,7 +176,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x07B0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshCollisionComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x685852b5);
 			return ptr;
 		}
 
@@ -191,7 +199,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xF0];                                      // 0x0110(0x00F0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfo");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1634c6f3);
 			return ptr;
 		}
 
@@ -205,7 +214,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0028(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeInfoMap");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb22f0da7);
 			return ptr;
 		}
 
@@ -223,7 +233,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeLayerInfoObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3a940263);
 			return ptr;
 		}
 
@@ -239,7 +250,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x01B1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeMaterialInstanceConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69043fc1);
 			return ptr;
 		}
 
@@ -253,7 +265,8 @@ namespace Classes {
 		class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa23f8803);
 			return ptr;
 		}
 
@@ -270,7 +283,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0829(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeMeshProxyComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9120ba3d);
 			return ptr;
 		}
 
@@ -327,7 +341,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0xDA];                                      // 0x0696(0x00DA) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc8952e1d);
 			return ptr;
 		}
 
@@ -343,7 +358,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.Landscape");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3791671b);
 			return ptr;
 		}
 
@@ -357,7 +373,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0770(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeStreamingProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4be990b);
 			return ptr;
 		}
 
@@ -374,7 +391,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x06F8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplinesComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf6bfc74);
 			return ptr;
 		}
 
@@ -393,7 +411,8 @@ namespace Classes {
 		TArray<class USplineMeshComponent*>                LocalMeshComponents;                                      // 0x00A0(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineSegment");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x53729ffb);
 			return ptr;
 		}
 
@@ -417,7 +436,8 @@ namespace Classes {
 		class UControlPointMeshComponent*                  LocalMeshComponent;                                       // 0x0090(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.LandscapeSplineControlPoint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9e8358b);
 			return ptr;
 		}
 
@@ -431,7 +451,8 @@ namespace Classes {
 		TArray<struct FGrassInput>                         GrassTypes;                                               // 0x0060(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeGrassOutput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28499759);
 			return ptr;
 		}
 
@@ -446,7 +467,8 @@ namespace Classes {
 		struct FGuid                                       ExpressionGUID;                                           // 0x0070(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerBlend");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeab692e0);
 			return ptr;
 		}
 
@@ -467,7 +489,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerCoords");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4353e86d);
 			return ptr;
 		}
 
@@ -484,7 +507,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSample");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8b3b6b8d);
 			return ptr;
 		}
 
@@ -504,7 +528,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerSwitch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x62e771cb);
 			return ptr;
 		}
 
@@ -523,7 +548,8 @@ namespace Classes {
 		struct FGuid                                       ExpressionGUID;                                           // 0x00E8(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeLayerWeight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x582bcd63);
 			return ptr;
 		}
 
@@ -537,7 +563,8 @@ namespace Classes {
 		struct FGuid                                       ExpressionGUID;                                           // 0x0060(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Landscape.MaterialExpressionLandscapeVisibilityMask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5f8b289c);
 			return ptr;
 		}
 

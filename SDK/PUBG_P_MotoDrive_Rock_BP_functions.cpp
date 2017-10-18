@@ -17,7 +17,8 @@ namespace Classes
 
 void AP_MotoDrive_Rock_BP_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Rock_BP.P_MotoDrive_Rock_BP_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe6b07090);
 
 	AP_MotoDrive_Rock_BP_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void AP_MotoDrive_Rock_BP_C::UserConstructionScript()
 
 void AP_MotoDrive_Rock_BP_C::OnParameterUpdated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Rock_BP.P_MotoDrive_Rock_BP_C.OnParameterUpdated");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf31fae42);
 
 	AP_MotoDrive_Rock_BP_C_OnParameterUpdated_Params params;
 
@@ -53,7 +55,8 @@ void AP_MotoDrive_Rock_BP_C::OnParameterUpdated()
 
 void AP_MotoDrive_Rock_BP_C::ExecuteUbergraph_P_MotoDrive_Rock_BP(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Rock_BP.P_MotoDrive_Rock_BP_C.ExecuteUbergraph_P_MotoDrive_Rock_BP");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x407f1ecc);
 
 	AP_MotoDrive_Rock_BP_C_ExecuteUbergraph_P_MotoDrive_Rock_BP_Params params;
 	params.EntryPoint = EntryPoint;

@@ -40,7 +40,8 @@ namespace Classes {
 		float                                              LastFuelConsumptionTime;                                  // 0x0510(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass BoatBase.BoatBase_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xee89a143);
 			return ptr;
 		}
 

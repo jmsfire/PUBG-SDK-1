@@ -29,7 +29,8 @@ namespace Classes {
 		bool                                               bOldIsInNextPlayzone;                                     // 0x0280(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc618aaed);
 			return ptr;
 		}
 

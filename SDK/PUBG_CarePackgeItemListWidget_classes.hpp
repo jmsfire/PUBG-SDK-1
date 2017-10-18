@@ -23,7 +23,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    EventDispatcher_ShowCarePackageItem;                      // 0x0268(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass CarePackgeItemListWidget.CarePackgeItemListWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0b98aa7);
 			return ptr;
 		}
 

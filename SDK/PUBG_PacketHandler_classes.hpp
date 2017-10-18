@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class PacketHandler.HandlerComponentFactory");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb280434a);
 			return ptr;
 		}
 

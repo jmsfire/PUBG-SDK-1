@@ -22,7 +22,8 @@ namespace Classes {
 		TArray<class UMessageWidget_C*>                    MessageArray;                                             // 0x0258(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass MessageBorderWidget.MessageBorderWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x19d0a58d);
 			return ptr;
 		}
 

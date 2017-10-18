@@ -19,7 +19,8 @@ namespace Classes
 
 void UMinimapCircletype_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MinimapCircletype.MinimapCircletype_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb82479ec);
 
 	UMinimapCircletype_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;

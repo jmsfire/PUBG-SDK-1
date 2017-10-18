@@ -33,7 +33,8 @@ namespace Classes {
 		class ABP_Motorbike_03_C*                          ParentRefMoto;                                            // 0x03E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_CameraMan.BP_CameraMan_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc8284395);
 			return ptr;
 		}
 

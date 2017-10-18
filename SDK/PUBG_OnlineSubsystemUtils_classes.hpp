@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a3993eb);
 			return ptr;
 		}
 
@@ -36,7 +37,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementQueryCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x74539bd2);
 			return ptr;
 		}
 
@@ -55,7 +57,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0048(0x0030) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.AchievementWriteCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x292ffc15);
 			return ptr;
 		}
 
@@ -73,7 +76,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.ConnectionCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe88cc693);
 			return ptr;
 		}
 
@@ -91,7 +95,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xA8];                                      // 0x0048(0x00A8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9008ac9b);
 			return ptr;
 		}
 
@@ -109,7 +114,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf7e8b31);
 			return ptr;
 		}
 
@@ -127,7 +133,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0048(0x0030) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndMatchCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x66ae8529);
 			return ptr;
 		}
 
@@ -145,7 +152,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.EndTurnCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x99958de5);
 			return ptr;
 		}
 
@@ -163,7 +171,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe0290b65);
 			return ptr;
 		}
 
@@ -185,7 +194,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x38];                                      // 0x0048(0x0038) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb4218d5f);
 			return ptr;
 		}
 
@@ -203,7 +213,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x78];                                      // 0x0048(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd3c530e);
 			return ptr;
 		}
 
@@ -221,7 +232,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x91bad8ac);
 			return ptr;
 		}
 
@@ -239,7 +251,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe61e0f92);
 			return ptr;
 		}
 
@@ -255,7 +268,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x20];                                      // 0x336E8(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2f35da3);
 			return ptr;
 		}
 
@@ -273,7 +287,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0420(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.IpNetDriver");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x25d46ca);
 			return ptr;
 		}
 
@@ -289,7 +304,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x118];                                     // 0x0048(0x0118) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.JoinSessionCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa9f98d37);
 			return ptr;
 		}
 
@@ -304,7 +320,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x325e0523);
 			return ptr;
 		}
 
@@ -322,7 +339,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0048(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x385b8c30);
 			return ptr;
 		}
 
@@ -340,7 +358,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x88];                                      // 0x0048(0x0088) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2c67e89a);
 			return ptr;
 		}
 
@@ -358,7 +377,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.LogoutCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9409d381);
 			return ptr;
 		}
 
@@ -378,7 +398,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x03B8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeacon");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6181cdb9);
 			return ptr;
 		}
 
@@ -395,7 +416,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x57];                                      // 0x03D9(0x0057) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe52217dc);
 			return ptr;
 		}
 
@@ -420,7 +442,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconState");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83f3f9e3);
 			return ptr;
 		}
 
@@ -440,7 +463,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x2D];                                      // 0x0533(0x002D) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6dd43751);
 			return ptr;
 		}
 
@@ -461,7 +485,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18a6aa69);
 			return ptr;
 		}
 
@@ -481,7 +506,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xA0];                                      // 0x03E0(0x00A0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHost");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc7e55f97);
 			return ptr;
 		}
 
@@ -497,7 +523,8 @@ namespace Classes {
 		TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x03B8(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9da63d86);
 			return ptr;
 		}
 
@@ -517,7 +544,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x051C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconHost");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb5941a5a);
 			return ptr;
 		}
 
@@ -530,7 +558,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.TestBeaconHost");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa2b261e2);
 			return ptr;
 		}
 
@@ -544,7 +573,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xF8];                                      // 0x0028(0x00F8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x90d80766);
 			return ptr;
 		}
 
@@ -560,7 +590,8 @@ namespace Classes {
 		TArray<struct FPIELoginSettingsInternal>           Logins;                                                   // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlinePIESettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c35253a);
 			return ptr;
 		}
 
@@ -577,7 +608,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xE];                                       // 0x02B2(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineSessionClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa25adc3e);
 			return ptr;
 		}
 
@@ -593,7 +625,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa05c8853);
 			return ptr;
 		}
 
@@ -611,7 +644,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.ShowLoginUICallbackProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf8c7753b);
 			return ptr;
 		}
 
@@ -626,7 +660,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd291594);
 			return ptr;
 		}
 

@@ -21,7 +21,8 @@ namespace Classes {
 		struct FGameplayTagQuery                           TagQueryExportText_Helper;                                // 0x0050(0x0048)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQuery");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaea02e32);
 			return ptr;
 		}
 
@@ -34,7 +35,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96ae14ac);
 			return ptr;
 		}
 
@@ -48,7 +50,8 @@ namespace Classes {
 		struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc35c5877);
 			return ptr;
 		}
 
@@ -62,7 +65,8 @@ namespace Classes {
 		struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x36f9272e);
 			return ptr;
 		}
 
@@ -76,7 +80,8 @@ namespace Classes {
 		struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed19da08);
 			return ptr;
 		}
 
@@ -90,7 +95,8 @@ namespace Classes {
 		TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6f46c211);
 			return ptr;
 		}
 
@@ -104,7 +110,8 @@ namespace Classes {
 		TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x56c54f08);
 			return ptr;
 		}
 
@@ -118,7 +125,8 @@ namespace Classes {
 		TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5108de0e);
 			return ptr;
 		}
 
@@ -131,7 +139,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagAssetInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed4a299f);
 			return ptr;
 		}
 
@@ -149,7 +158,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.BlueprintGameplayTagLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xede5f332);
 			return ptr;
 		}
 
@@ -183,7 +193,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a064002);
 			return ptr;
 		}
 
@@ -197,7 +208,8 @@ namespace Classes {
 		struct FString                                     DeveloperConfigName;                                      // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsDeveloperSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x39f41632);
 			return ptr;
 		}
 
@@ -213,7 +225,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC0];                                      // 0x0170(0x00C0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTags.GameplayTagsManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x70e3667e);
 			return ptr;
 		}
 

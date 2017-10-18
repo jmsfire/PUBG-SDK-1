@@ -18,7 +18,8 @@ namespace Classes {
 		struct FText                                       DisplayName;                                              // 0x0240(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ComboBoxOptionTextWidget.ComboBoxOptionTextWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc1797fb);
 			return ptr;
 		}
 

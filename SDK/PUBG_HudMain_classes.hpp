@@ -53,7 +53,8 @@ namespace Classes {
 		struct FTimerHandle                                ReplayGetTimeHandler;                                     // 0x0358(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass HudMain.HudMain_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x297ff0a1);
 			return ptr;
 		}
 

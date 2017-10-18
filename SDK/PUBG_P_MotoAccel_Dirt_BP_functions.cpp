@@ -17,7 +17,8 @@ namespace Classes
 
 void AP_MotoAccel_Dirt_BP_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoAccel_Dirt_BP.P_MotoAccel_Dirt_BP_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe863ba04);
 
 	AP_MotoAccel_Dirt_BP_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void AP_MotoAccel_Dirt_BP_C::UserConstructionScript()
 
 void AP_MotoAccel_Dirt_BP_C::OnParameterUpdated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoAccel_Dirt_BP.P_MotoAccel_Dirt_BP_C.OnParameterUpdated");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6a721b7e);
 
 	AP_MotoAccel_Dirt_BP_C_OnParameterUpdated_Params params;
 
@@ -53,7 +55,8 @@ void AP_MotoAccel_Dirt_BP_C::OnParameterUpdated()
 
 void AP_MotoAccel_Dirt_BP_C::ExecuteUbergraph_P_MotoAccel_Dirt_BP(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoAccel_Dirt_BP.P_MotoAccel_Dirt_BP_C.ExecuteUbergraph_P_MotoAccel_Dirt_BP");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7bdbdb94);
 
 	AP_MotoAccel_Dirt_BP_C_ExecuteUbergraph_P_MotoAccel_Dirt_BP_Params params;
 	params.EntryPoint = EntryPoint;

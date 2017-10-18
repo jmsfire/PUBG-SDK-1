@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SoundEffectLowPassFilter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69f2efb1);
 			return ptr;
 		}
 
@@ -31,7 +32,8 @@ namespace Classes {
 		struct FSoundEffectLowPassFilterSettings           Settings;                                                 // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SoundEffectLowPassFilterPreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb0a79ae4);
 			return ptr;
 		}
 
@@ -44,7 +46,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SourceEffectFilter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3f5200d2);
 			return ptr;
 		}
 
@@ -58,7 +61,8 @@ namespace Classes {
 		struct FSourceEffectFilterSettings                 Settings;                                                 // 0x0040(0x0010) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SoundEffectSourceFilterPreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x74d70c26);
 			return ptr;
 		}
 
@@ -71,7 +75,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SoundEffectSubmixEQ");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x93829be0);
 			return ptr;
 		}
 
@@ -86,7 +91,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AudioMixer.SoundEffectSubmixEQPreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x47feb9dd);
 			return ptr;
 		}
 

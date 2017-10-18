@@ -42,7 +42,8 @@ namespace Classes {
 		struct FColorBlindColorSet                         ColorBlindColorSet;                                       // 0x04E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BP_TeamMarkWidget.BP_TeamMarkWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6382a961);
 			return ptr;
 		}
 

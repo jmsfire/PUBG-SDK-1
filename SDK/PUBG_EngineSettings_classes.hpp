@@ -30,7 +30,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.ConsoleSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe44e239c);
 			return ptr;
 		}
 
@@ -58,7 +59,8 @@ namespace Classes {
 		TArray<struct FGameModeName>                       GameModeClassAliases;                                     // 0x00C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.GameMapsSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4dfa2900);
 			return ptr;
 		}
 
@@ -84,7 +86,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.GameNetworkManagerSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3b3fb406);
 			return ptr;
 		}
 
@@ -101,7 +104,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.GameSessionSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5115eeb9);
 			return ptr;
 		}
 
@@ -114,7 +118,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.GeneralEngineSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x30902dad);
 			return ptr;
 		}
 
@@ -148,7 +153,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x1];                                       // 0x010F(0x0001) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.GeneralProjectSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x37647a10);
 			return ptr;
 		}
 
@@ -164,7 +170,8 @@ namespace Classes {
 		TArray<struct FName>                               DebugDisplay;                                             // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class EngineSettings.HudSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9f579c4c);
 			return ptr;
 		}
 

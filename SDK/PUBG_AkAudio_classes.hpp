@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkAutoPlayInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe56258d9);
 			return ptr;
 		}
 
@@ -34,7 +35,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x03BC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkAmbientSound");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdbd0f16);
 			return ptr;
 		}
 
@@ -53,7 +55,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkAudioBank");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf57ed491);
 			return ptr;
 		}
 
@@ -69,7 +72,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkAudioEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x781374f1);
 			return ptr;
 		}
 
@@ -84,7 +88,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkAuxBus");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb0caae0f);
 			return ptr;
 		}
 
@@ -107,7 +112,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC8];                                      // 0x0328(0x00C8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x23176db8);
 			return ptr;
 		}
 
@@ -138,7 +144,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkGameplayStatics");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc77bd920);
 			return ptr;
 		}
 
@@ -191,7 +198,8 @@ namespace Classes {
 		class AAkReverbVolume*                             NextLowerPriorityAkReverbVolume;                          // 0x0408(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkReverbVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4e0fe485);
 			return ptr;
 		}
 
@@ -210,7 +218,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x38];                                      // 0x0060(0x0038) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.AkSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4c712b70);
 			return ptr;
 		}
 
@@ -226,7 +235,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.InterpTrackAkAudioEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd6e42d8);
 			return ptr;
 		}
 
@@ -243,7 +253,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.InterpTrackAkAudioRTPC");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7bcdfd49);
 			return ptr;
 		}
 
@@ -258,7 +269,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.InterpTrackInstAkAudioEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xae9a0f0);
 			return ptr;
 		}
 
@@ -273,7 +285,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class AkAudio.InterpTrackInstAkAudioRTPC");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa6ed0161);
 			return ptr;
 		}
 

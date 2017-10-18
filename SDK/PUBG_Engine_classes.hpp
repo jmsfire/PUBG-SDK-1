@@ -106,7 +106,8 @@ namespace Classes {
 		unsigned char                                      UnknownData15[0x8];                                       // 0x0398(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Actor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4e92c4bc);
 			return ptr;
 		}
 
@@ -259,7 +260,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x70];                                      // 0x0418(0x0070) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HUD");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0f01c5c);
 			return ptr;
 		}
 
@@ -300,7 +302,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DataAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x71eb018b);
 			return ptr;
 		}
 
@@ -314,7 +317,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotify");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xff5f5471);
 			return ptr;
 		}
 
@@ -355,7 +359,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ActorComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7f4d0689);
 			return ptr;
 		}
 
@@ -428,7 +433,8 @@ namespace Classes {
 		unsigned char                                      UnknownData09[0x88];                                      // 0x0278(0x0088) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60a1d7a0);
 			return ptr;
 		}
 
@@ -602,7 +608,8 @@ namespace Classes {
 		unsigned char                                      UnknownData17[0x8];                                       // 0x06C8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PrimitiveComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x488d4d11);
 			return ptr;
 		}
 
@@ -700,7 +707,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xB0];                                      // 0x06D0(0x00B0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf3a85f3b);
 			return ptr;
 		}
 
@@ -747,7 +755,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0xC];                                       // 0x0804(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StaticMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1cf2499);
 			return ptr;
 		}
 
@@ -777,7 +786,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnInstigatedAnyDamage;                                    // 0x03F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Controller");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7b1d3461);
 			return ptr;
 		}
 
@@ -877,7 +887,8 @@ namespace Classes {
 		unsigned char                                      UnknownData15[0x2];                                       // 0x06CE(0x0002) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerController");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xef932482);
 			return ptr;
 		}
 
@@ -1011,7 +1022,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Info");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6163de19);
 			return ptr;
 		}
 
@@ -1043,7 +1055,8 @@ namespace Classes {
 		struct FVector                                     LastControlInputVector;                                   // 0x03F4(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Pawn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc3163777);
 			return ptr;
 		}
 
@@ -1124,7 +1137,8 @@ namespace Classes {
 		struct FRepRootMotionMontage                       RepRootMotion;                                            // 0x0660(0x0160) (CPF_Net)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Character");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbbc8fc4a);
 			return ptr;
 		}
 
@@ -1178,7 +1192,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DamageType");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6ce09362);
 			return ptr;
 		}
 
@@ -1207,7 +1222,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x7];                                       // 0x0139(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd6d63637);
 			return ptr;
 		}
 
@@ -1251,7 +1267,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC];                                       // 0x016C(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa325edd8);
 			return ptr;
 		}
 
@@ -1273,7 +1290,8 @@ namespace Classes {
 		class APawn*                                       PawnOwner;                                                // 0x0178(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PawnMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x645f75dd);
 			return ptr;
 		}
 
@@ -1315,7 +1333,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x58];                                      // 0x0338(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SpringArmComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb3dd42bd);
 			return ptr;
 		}
 
@@ -1334,7 +1353,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x03C1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationObjectBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaae0e241);
 			return ptr;
 		}
 
@@ -1348,7 +1368,8 @@ namespace Classes {
 		struct FName                                       PlayerStartTag;                                           // 0x03C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerStart");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc236632);
 			return ptr;
 		}
 
@@ -1375,7 +1396,8 @@ namespace Classes {
 		TArray<struct FGeomSelection>                      SavedSelections;                                          // 0x03C8(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Brush");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7cc2fe7f);
 			return ptr;
 		}
 
@@ -1388,7 +1410,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Volume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xba195563);
 			return ptr;
 		}
 
@@ -1403,7 +1426,8 @@ namespace Classes {
 		class UWheeledVehicleMovementComponent*            VehicleMovement;                                          // 0x0408(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WheeledVehicle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc63a8a2f);
 			return ptr;
 		}
 
@@ -1477,7 +1501,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0x2B];                                      // 0x0285(0x002B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WheeledVehicleMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x23e47315);
 			return ptr;
 		}
 
@@ -1521,7 +1546,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x041C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WheeledVehicleMovementComponent4W");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb35c221e);
 			return ptr;
 		}
 
@@ -1697,7 +1723,8 @@ namespace Classes {
 		unsigned char                                      UnknownData21[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CharacterMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa84e2a4e);
 			return ptr;
 		}
 
@@ -1794,7 +1821,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0xC];                                       // 0x00F4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VehicleWheel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5755eadc);
 			return ptr;
 		}
 
@@ -1830,7 +1858,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x1D8];                                     // 0x02C0(0x01D8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x34d5af4b);
 			return ptr;
 		}
 
@@ -1916,7 +1945,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x7];                                       // 0x0859(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf2a1d615);
 			return ptr;
 		}
 
@@ -1944,7 +1974,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x40];                                      // 0x0038(0x0040) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CheatManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x62ff0637);
 			return ptr;
 		}
 
@@ -2230,7 +2261,8 @@ namespace Classes {
 		unsigned char                                      UnknownData21[0xD4];                                      // 0x0C2C(0x00D4) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Engine");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc92c29bb);
 			return ptr;
 		}
 
@@ -2244,7 +2276,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ScriptViewportClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1021efd3);
 			return ptr;
 		}
 
@@ -2264,7 +2297,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x400];                                     // 0x0090(0x0400) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameViewportClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc023ddc4);
 			return ptr;
 		}
 
@@ -2288,7 +2322,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xB8];                                      // 0x0078(0x00B8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Console");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x279e5e94);
 			return ptr;
 		}
 
@@ -2342,7 +2377,8 @@ namespace Classes {
 		unsigned char                                      UnknownData11[0x4D];                                      // 0x08A3(0x004D) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkinnedMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf9e417c5);
 			return ptr;
 		}
 
@@ -2382,7 +2418,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x90];                                      // 0x0930(0x0090) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DestructibleComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe8f94698);
 			return ptr;
 		}
 
@@ -2404,7 +2441,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x03AA(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StaticMeshActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x675b28c7);
 			return ptr;
 		}
 
@@ -2419,7 +2457,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x48];                                      // 0x0D08(0x0048) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameEngine");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x256fd409);
 			return ptr;
 		}
 
@@ -2448,7 +2487,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x17];                                      // 0x0419(0x0017) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameModeBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x79c977b5);
 			return ptr;
 		}
 
@@ -2503,7 +2543,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x046D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameMode");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x57a5074e);
 			return ptr;
 		}
 
@@ -2533,7 +2574,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xA0];                                      // 0x0050(0x00A0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x315be37e);
 			return ptr;
 		}
 
@@ -2553,7 +2595,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2f84ca4b);
 			return ptr;
 		}
 
@@ -2575,7 +2618,8 @@ namespace Classes {
 		struct FName                                       SessionName;                                              // 0x03B0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameSession");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7f2f708d);
 			return ptr;
 		}
 
@@ -2598,7 +2642,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x03D8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameStateBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x22964029);
 			return ptr;
 		}
 
@@ -2625,7 +2670,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x03F4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameState");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6703f22a);
 			return ptr;
 		}
 
@@ -2669,7 +2715,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnGameUserSettingsUINeedsUpdate;                          // 0x00F0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameUserSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc75b8d);
 			return ptr;
 		}
 
@@ -2752,7 +2799,8 @@ namespace Classes {
 		TArray<struct FInstancedStaticMeshMappingInfo>     CachedMappings;                                           // 0x08B0(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InstancedStaticMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdfb48bae);
 			return ptr;
 		}
 
@@ -2790,7 +2838,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x28];                                      // 0x09B8(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HierarchicalInstancedStaticMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe5c78771);
 			return ptr;
 		}
 
@@ -2805,7 +2854,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GridInstancedStaticMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x580ad1ea);
 			return ptr;
 		}
 
@@ -2820,7 +2870,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelScriptActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcb0b1713);
 			return ptr;
 		}
 
@@ -2838,7 +2889,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SaveGame");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7419c700);
 			return ptr;
 		}
 
@@ -2857,7 +2909,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Player");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xffb85e12);
 			return ptr;
 		}
 
@@ -2876,7 +2929,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x107];                                     // 0x0089(0x0107) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LocalPlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x749a39fd);
 			return ptr;
 		}
 
@@ -2895,7 +2949,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x03E5(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5f1c22a2);
 			return ptr;
 		}
 
@@ -2947,7 +3002,8 @@ namespace Classes {
 		unsigned char                                      UnknownData09[0xC];                                       // 0x1A54(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerCameraManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2a035c84);
 			return ptr;
 		}
 
@@ -3008,7 +3064,8 @@ namespace Classes {
 		unsigned char                                      UnknownData06[0x20];                                      // 0x0410(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerState");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f7c5381);
 			return ptr;
 		}
 
@@ -3035,7 +3092,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x06E8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ShapeComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed13830d);
 			return ptr;
 		}
 
@@ -3049,7 +3107,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x06F0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BoxComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb8c005);
 			return ptr;
 		}
 
@@ -3076,7 +3135,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x68];                                      // 0x0358(0x0068) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83317034);
 			return ptr;
 		}
 
@@ -3103,7 +3163,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC];                                       // 0x08C4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCaptureComponent2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc11ee53e);
 			return ptr;
 		}
 
@@ -3126,7 +3187,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0421(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DefaultPawn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x66756d2);
 			return ptr;
 		}
 
@@ -3147,7 +3209,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SpectatorPawn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x88bb9b72);
 			return ptr;
 		}
 
@@ -3166,7 +3229,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.FloatingPawnMovement");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb8cdb9b6);
 			return ptr;
 		}
 
@@ -3181,7 +3245,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0199(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SpectatorPawnMovement");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1cf7b8f5);
 			return ptr;
 		}
 
@@ -3214,7 +3279,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x4];                                       // 0x07AC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SplineComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4394adf);
 			return ptr;
 		}
 
@@ -3315,7 +3381,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2c1d75cf);
 			return ptr;
 		}
 
@@ -3345,7 +3412,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xD0];                                      // 0x00E0(0x00D0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c281feb);
 			return ptr;
 		}
 
@@ -3358,7 +3426,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialInstanceConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a525d83);
 			return ptr;
 		}
 
@@ -3387,7 +3456,8 @@ namespace Classes {
 		TArray<struct FExpressionOutput>                   Outputs;                                                  // 0x0050(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpression");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbdd8274);
 			return ptr;
 		}
 
@@ -3400,7 +3470,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCustomOutput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe85ca48e);
 			return ptr;
 		}
 
@@ -3413,7 +3484,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintAsyncActionBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd53e75eb);
 			return ptr;
 		}
 
@@ -3442,7 +3514,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x10];                                      // 0x02E8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintGeneratedClass");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a9b139f);
 			return ptr;
 		}
 
@@ -3466,7 +3539,8 @@ namespace Classes {
 		struct FPostProcessSettings                        PostProcessSettings;                                      // 0x03D0(0x04E0) (CPF_Deprecated)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x709a299b);
 			return ptr;
 		}
 
@@ -3485,7 +3559,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AISystemBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b3b88bf);
 			return ptr;
 		}
 
@@ -3499,7 +3574,8 @@ namespace Classes {
 		struct FGuid                                       Guid;                                                     // 0x0098(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.UserDefinedStruct");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x697d9034);
 			return ptr;
 		}
 
@@ -3516,7 +3592,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationQueryFilter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x413fe38b);
 			return ptr;
 		}
 
@@ -3529,7 +3606,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.OnlineBlueprintCallProxyBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f1f3a98);
 			return ptr;
 		}
 
@@ -3545,7 +3623,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x550];                                     // 0x0028(0x0550) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Model");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x33d9006c);
 			return ptr;
 		}
 
@@ -3558,7 +3637,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EngineBaseTypes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96856eb7);
 			return ptr;
 		}
 
@@ -3571,7 +3651,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EngineTypes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4aba4632);
 			return ptr;
 		}
 
@@ -3604,7 +3685,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EdGraphNode");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9f10d72e);
 			return ptr;
 		}
 
@@ -3630,7 +3712,8 @@ namespace Classes {
 		class UEdGraphPin_Deprecated*                      ReferencePassThroughConnection;                           // 0x0138(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EdGraphPin_Deprecated");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca18f5d5);
 			return ptr;
 		}
 
@@ -3650,7 +3733,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintCore");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8abd330f);
 			return ptr;
 		}
 
@@ -3678,7 +3762,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xE8];                                      // 0x00A8(0x00E8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Blueprint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdd5dae86);
 			return ptr;
 		}
 
@@ -3691,7 +3776,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Interface_AssetUserData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8fc648be);
 			return ptr;
 		}
 
@@ -3706,7 +3792,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xF7];                                      // 0x0029(0x00F7) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MapBuildDataRegistry");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5595bfc2);
 			return ptr;
 		}
 
@@ -3750,7 +3837,8 @@ namespace Classes {
 		unsigned char                                      UnknownData07[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Level");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaefd6375);
 			return ptr;
 		}
 
@@ -3764,7 +3852,8 @@ namespace Classes {
 		class UAudioComponent*                             AudioComponent;                                           // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AmbientSound");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96bc3668);
 			return ptr;
 		}
 
@@ -3783,7 +3872,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BrushShape");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x530e63d2);
 			return ptr;
 		}
 
@@ -3802,7 +3892,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x041C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AudioVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9fc53b7);
 			return ptr;
 		}
 
@@ -3821,7 +3912,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlockingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5f51bca6);
 			return ptr;
 		}
 
@@ -3834,7 +3926,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraBlockingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf276063);
 			return ptr;
 		}
 
@@ -3856,7 +3949,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CullDistanceVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1b982b32);
 			return ptr;
 		}
 
@@ -3875,7 +3969,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x03ED(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelStreamingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xff26efe1);
 			return ptr;
 		}
 
@@ -3888,7 +3983,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmassCharacterIndirectDetailVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3752ad53);
 			return ptr;
 		}
 
@@ -3901,7 +3997,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmassImportanceVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x95b0a23b);
 			return ptr;
 		}
 
@@ -3914,7 +4011,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MeshMergeCullingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdcbc1840);
 			return ptr;
 		}
 
@@ -3929,7 +4027,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03DC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavMeshBoundsVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x49f97da6);
 			return ptr;
 		}
 
@@ -3942,7 +4041,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationTypes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb2b73d12);
 			return ptr;
 		}
 
@@ -3955,7 +4055,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavRelevantInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2826c0c);
 			return ptr;
 		}
 
@@ -3970,7 +4071,8 @@ namespace Classes {
 		class UClass*                                      AreaClass;                                                // 0x03E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavModifierVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfac021f1);
 			return ptr;
 		}
 
@@ -3985,7 +4087,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DefaultPhysicsVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcdb88781);
 			return ptr;
 		}
 
@@ -3998,7 +4101,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KillZVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x49b22233);
 			return ptr;
 		}
 
@@ -4021,7 +4125,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0408(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PainCausingVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2d25bc4d);
 			return ptr;
 		}
 
@@ -4034,7 +4139,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlendableInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x99d7fedb);
 			return ptr;
 		}
 
@@ -4047,7 +4153,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Scene");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8c3a4e7f);
 			return ptr;
 		}
 
@@ -4060,7 +4167,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Interface_PostProcessVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28c3d8bc);
 			return ptr;
 		}
 
@@ -4081,7 +4189,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x08CD(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PostProcessVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbb682a38);
 			return ptr;
 		}
 
@@ -4099,7 +4208,8 @@ namespace Classes {
 		TArray<struct FName>                               OverrideInvisibleLevels;                                  // 0x03F8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PrecomputedVisibilityOverrideVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd1684d7f);
 			return ptr;
 		}
 
@@ -4112,7 +4222,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PrecomputedVisibilityVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xadeee597);
 			return ptr;
 		}
 
@@ -4125,7 +4236,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PreCullTrianglesVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x91b81731);
 			return ptr;
 		}
 
@@ -4138,7 +4250,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TriggerVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e872859);
 			return ptr;
 		}
 
@@ -4151,7 +4264,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavAgentInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe69a6afc);
 			return ptr;
 		}
 
@@ -4186,7 +4300,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x8];                                       // 0x0158(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraShake");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa098057a);
 			return ptr;
 		}
 
@@ -4205,7 +4320,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x78];                                      // 0x00F8(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x33046ca0);
 			return ptr;
 		}
 
@@ -4229,7 +4345,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x303ac731);
 			return ptr;
 		}
 
@@ -4248,7 +4365,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveFloat");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd8362d24);
 			return ptr;
 		}
 
@@ -4266,7 +4384,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ForceFeedbackEffect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x44c18480);
 			return ptr;
 		}
 
@@ -4289,7 +4408,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0710(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DebugCameraController");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa8b96c03);
 			return ptr;
 		}
 
@@ -4311,7 +4431,8 @@ namespace Classes {
 		class UDecalComponent*                             Decal;                                                    // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DecalActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xff0720b3);
 			return ptr;
 		}
 
@@ -4332,7 +4453,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnActorFracture;                                          // 0x03B0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DestructibleActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb0f32026);
 			return ptr;
 		}
 
@@ -4346,7 +4468,8 @@ namespace Classes {
 		class UDistanceFieldCaptureComponent*              CaptureComponent;                                         // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistanceFieldCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5f4500da);
 			return ptr;
 		}
 
@@ -4360,7 +4483,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DocumentationActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc61d04b8);
 			return ptr;
 		}
 
@@ -4382,7 +4506,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnParticleCollide;                                        // 0x03E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Emitter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2b636f95);
 			return ptr;
 		}
 
@@ -4419,7 +4544,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x045C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EmitterCameraLensEffectBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5e693d30);
 			return ptr;
 		}
 
@@ -4432,7 +4558,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DebugCameraHUD");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6f297b42);
 			return ptr;
 		}
 
@@ -4446,7 +4573,8 @@ namespace Classes {
 		class UAtmosphericFogComponent*                    AtmosphericFogComponent;                                  // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AtmosphericFog");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x64bc6f04);
 			return ptr;
 		}
 
@@ -4462,7 +4590,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ExponentialHeightFog");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9dfe589);
 			return ptr;
 		}
 
@@ -4511,7 +4640,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xE];                                       // 0x040A(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameNetworkManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1bb9c54c);
 			return ptr;
 		}
 
@@ -4527,7 +4657,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkyLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa7139598);
 			return ptr;
 		}
 
@@ -4543,7 +4674,8 @@ namespace Classes {
 		class UWindDirectionalSourceComponent*             Component;                                                // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WindDirectionalSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1b62a2a);
 			return ptr;
 		}
 
@@ -4612,7 +4744,8 @@ namespace Classes {
 		TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0548(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WorldSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e5aee48);
 			return ptr;
 		}
 
@@ -4629,7 +4762,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelBounds");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5e665536);
 			return ptr;
 		}
 
@@ -4654,7 +4788,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0324(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightComponentBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb8f5c4cb);
 			return ptr;
 		}
 
@@ -4704,7 +4839,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0x80];                                      // 0x03A0(0x0080) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3e9ee114);
 			return ptr;
 		}
 
@@ -4736,7 +4872,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Light");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfc5e7df3);
 			return ptr;
 		}
 
@@ -4763,7 +4900,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DirectionalLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x93701ec5);
 			return ptr;
 		}
 
@@ -4777,7 +4915,8 @@ namespace Classes {
 		class UPointLightComponent*                        PointLightComponent;                                      // 0x03B0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PointLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x612df0db);
 			return ptr;
 		}
 
@@ -4794,7 +4933,8 @@ namespace Classes {
 		class USpotLightComponent*                         SpotLightComponent;                                       // 0x03B0(0x0008) (CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SpotLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x13c0d07b);
 			return ptr;
 		}
 
@@ -4810,7 +4950,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GeneratedMeshAreaLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcb909d74);
 			return ptr;
 		}
 
@@ -4824,7 +4965,8 @@ namespace Classes {
 		class ULightmassPortalComponent*                   PortalComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmassPortal");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x648c4641);
 			return ptr;
 		}
 
@@ -4843,7 +4985,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LODActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x745f2eb1);
 			return ptr;
 		}
 
@@ -4857,7 +5000,8 @@ namespace Classes {
 		TArray<class AActor*>                              TargetActors;                                             // 0x03A0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialInstanceActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x74dfe2);
 			return ptr;
 		}
 
@@ -4910,7 +5054,8 @@ namespace Classes {
 		unsigned char                                      UnknownData07[0x8];                                       // 0x0440(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MatineeActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1a7f6dad);
 			return ptr;
 		}
 
@@ -4933,7 +5078,8 @@ namespace Classes {
 		class UCameraAnim*                                 CameraAnim;                                               // 0x0448(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MatineeActorCameraAnim");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x516bdcef);
 			return ptr;
 		}
 
@@ -4961,7 +5107,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x58];                                      // 0x04E8(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x135c73cb);
 			return ptr;
 		}
 
@@ -4974,7 +5121,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AbstractNavData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb22d4e6e);
 			return ptr;
 		}
 
@@ -4987,7 +5135,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationGraph");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6a59b61);
 			return ptr;
 		}
 
@@ -5058,7 +5207,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x98];                                      // 0x05B8(0x0098) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RecastNavMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3eb0cb01);
 			return ptr;
 		}
 
@@ -5071,7 +5221,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationGraphNode");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf8cae471);
 			return ptr;
 		}
 
@@ -5084,7 +5235,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerStartPIE");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x14a608d4);
 			return ptr;
 		}
 
@@ -5097,7 +5249,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavPathObserverInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb9628944);
 			return ptr;
 		}
 
@@ -5146,7 +5299,8 @@ namespace Classes {
 		unsigned char                                      UnknownData07[0x68];                                      // 0x0448(0x0068) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationTestingActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xecf0e8b4);
 			return ptr;
 		}
 
@@ -5180,7 +5334,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavArea");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3235423);
 			return ptr;
 		}
 
@@ -5196,7 +5351,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkDefinition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7a423bcb);
 			return ptr;
 		}
 
@@ -5209,7 +5365,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkHostInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3026313);
 			return ptr;
 		}
 
@@ -5229,7 +5386,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnSmartLinkReached;                                       // 0x03E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x26546948);
 			return ptr;
 		}
 
@@ -5248,7 +5406,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Note");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x93e3f35);
 			return ptr;
 		}
 
@@ -5261,7 +5420,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleEventManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed61bb6);
 			return ptr;
 		}
 
@@ -5287,7 +5447,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x110];                                     // 0x0270(0x0110) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Skeleton");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6aef0020);
 			return ptr;
 		}
 
@@ -5300,7 +5461,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Interface_CollisionDataProvider");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xea207ac);
 			return ptr;
 		}
 
@@ -5341,7 +5503,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x10];                                      // 0x02B0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9e6227f);
 			return ptr;
 		}
 
@@ -5363,7 +5526,8 @@ namespace Classes {
 		TArray<struct FAssetMapping>                       MappedAssets;                                             // 0x0028(0x0010) (CPF_Edit, CPF_EditFixedSize, CPF_ZeroConstructor, CPF_EditConst)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AssetMappingTable");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6208fc71);
 			return ptr;
 		}
 
@@ -5381,7 +5545,8 @@ namespace Classes {
 		TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0068(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimationAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x638943eb);
 			return ptr;
 		}
 
@@ -5395,7 +5560,8 @@ namespace Classes {
 		class UReflectionCaptureComponent*                 CaptureComponent;                                         // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ReflectionCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4b19c920);
 			return ptr;
 		}
 
@@ -5408,7 +5574,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BoxReflectionCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2c616983);
 			return ptr;
 		}
 
@@ -5421,7 +5588,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlaneReflectionCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x80a45998);
 			return ptr;
 		}
 
@@ -5435,7 +5603,8 @@ namespace Classes {
 		class UDrawSphereComponent*                        DrawCaptureRadius;                                        // 0x03A8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SphereReflectionCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd9375f11);
 			return ptr;
 		}
 
@@ -5448,7 +5617,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RigidBodyBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6a3e2031);
 			return ptr;
 		}
 
@@ -5466,7 +5636,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsConstraintActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3e4f7148);
 			return ptr;
 		}
 
@@ -5480,7 +5651,8 @@ namespace Classes {
 		class UPhysicsThrusterComponent*                   ThrusterComponent;                                        // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsThruster");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbebf7943);
 			return ptr;
 		}
 
@@ -5494,7 +5666,8 @@ namespace Classes {
 		class URadialForceComponent*                       ForceComponent;                                           // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RadialForceActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x43217f04);
 			return ptr;
 		}
 
@@ -5513,7 +5686,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        MeshComp;                                                 // 0x03A0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69eecfd3);
 			return ptr;
 		}
 
@@ -5529,7 +5703,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03B1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlanarReflection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1ef9e8f2);
 			return ptr;
 		}
 
@@ -5546,7 +5721,8 @@ namespace Classes {
 		class UDrawFrustumComponent*                       DrawFrustum;                                              // 0x03B0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCapture2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x955b5415);
 			return ptr;
 		}
 
@@ -5563,7 +5739,8 @@ namespace Classes {
 		class UDrawFrustumComponent*                       DrawFrustum;                                              // 0x03B0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCaptureCube");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x387a4d94);
 			return ptr;
 		}
 
@@ -5644,7 +5821,8 @@ namespace Classes {
 		unsigned char                                      UnknownData16[0x70];                                      // 0x0DE0(0x0070) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc9bc13a0);
 			return ptr;
 		}
 
@@ -5710,7 +5888,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MatineeAnimInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1668edea);
 			return ptr;
 		}
 
@@ -5733,7 +5912,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x50];                                      // 0x03D8(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalMeshActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd03792ce);
 			return ptr;
 		}
 
@@ -5752,7 +5932,8 @@ namespace Classes {
 		class USplineMeshComponent*                        SplineMeshComponent;                                      // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SplineMeshActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf4428944);
 			return ptr;
 		}
 
@@ -5767,7 +5948,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        DisplayMeshComponent;                                     // 0x03A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SubDSurfaceActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbfc93107);
 			return ptr;
 		}
 
@@ -5780,7 +5962,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TargetPoint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x282e4454);
 			return ptr;
 		}
 
@@ -5794,7 +5977,8 @@ namespace Classes {
 		class UTextRenderComponent*                        TextRender;                                               // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextRenderActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe874b8d3);
 			return ptr;
 		}
 
@@ -5809,7 +5993,8 @@ namespace Classes {
 		class UBillboardComponent*                         SpriteComponent;                                          // 0x03A8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TriggerBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x87601e5c);
 			return ptr;
 		}
 
@@ -5822,7 +6007,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TriggerBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x76d4c172);
 			return ptr;
 		}
 
@@ -5835,7 +6021,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TriggerCapsule");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd6783280);
 			return ptr;
 		}
 
@@ -5848,7 +6035,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TriggerSphere");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x779964a4);
 			return ptr;
 		}
 
@@ -5862,7 +6050,8 @@ namespace Classes {
 		class UVectorFieldComponent*                       VectorFieldComponent;                                     // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VectorFieldVolume");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb52ec9de);
 			return ptr;
 		}
 
@@ -5880,7 +6069,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    ApplicationWillTerminateDelegate;                         // 0x0138(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ApplicationLifecycleComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xec9743d4);
 			return ptr;
 		}
 
@@ -5911,7 +6101,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x28];                                      // 0x01B8(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpToMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6f0de114);
 			return ptr;
 		}
 
@@ -5969,7 +6160,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x15];                                      // 0x098B(0x0015) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.World");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc6c83c2f);
 			return ptr;
 		}
 
@@ -6007,7 +6199,8 @@ namespace Classes {
 		unsigned char                                      UnknownData07[0x23B];                                     // 0x0225(0x023B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationSystem");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7813e508);
 			return ptr;
 		}
 
@@ -6040,7 +6233,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RVOAvoidanceInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6285d99b);
 			return ptr;
 		}
 
@@ -6053,7 +6247,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NetworkPredictionInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfd3901af);
 			return ptr;
 		}
 
@@ -6090,7 +6285,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x01A4(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ProjectileMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x87a44324);
 			return ptr;
 		}
 
@@ -6113,7 +6309,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0159(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RotatingMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdcb0baa7);
 			return ptr;
 		}
 
@@ -6126,7 +6323,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SimpleWheeledVehicleMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69b6327f);
 			return ptr;
 		}
 
@@ -6145,7 +6343,8 @@ namespace Classes {
 		float                                              TileRemovalRadius;                                        // 0x00FC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationInvokerComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfbcc381c);
 			return ptr;
 		}
 
@@ -6162,7 +6361,8 @@ namespace Classes {
 		class UObject*                                     CachedNavParent;                                          // 0x0120(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavRelevantComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xff720ec);
 			return ptr;
 		}
 
@@ -6177,7 +6377,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkCustomInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6781dbf6);
 			return ptr;
 		}
 
@@ -6211,7 +6412,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0xAF];                                      // 0x0191(0x00AF) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkCustomComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x660ac43a);
 			return ptr;
 		}
 
@@ -6227,7 +6429,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x14];                                      // 0x013C(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavModifierComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbccf4bd4);
 			return ptr;
 		}
 
@@ -6251,7 +6454,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PawnNoiseEmitterComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e78cc34);
 			return ptr;
 		}
 
@@ -6270,7 +6474,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x28];                                      // 0x0108(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicalAnimationComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3699fced);
 			return ptr;
 		}
 
@@ -6303,7 +6508,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x1C];                                      // 0x0184(0x001C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsHandleComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x192f48ab);
 			return ptr;
 		}
 
@@ -6332,7 +6538,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    PlatformChangedToTabletModeDelegate;                      // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlatformEventsComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x50b176c);
 			return ptr;
 		}
 
@@ -6370,7 +6577,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x190];                                     // 0x0380(0x0190) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AtmosphericFogComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x55dcefd1);
 			return ptr;
 		}
 
@@ -6399,7 +6607,8 @@ namespace Classes {
 		struct FAttenuationSettings                        Attenuation;                                              // 0x0028(0x00F8) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundAttenuation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18f870ea);
 			return ptr;
 		}
 
@@ -6446,11 +6655,12 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x70];                                      // 0x0480(0x0070) MISSED OFFSET
 		struct FScriptMulticastDelegate                    OnAudioPlaybackPercent;                                   // 0x04F0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData06[0x70];                                      // 0x0500(0x0070) MISSED OFFSET
-		struct FScriptDelegate                             OnQueueSubtitles;                                         // 0x0570(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnQueueSubtitles;                                         // 0x0570(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData07[0x10];                                      // 0x0580(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AudioComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9829aa8a);
 			return ptr;
 		}
 
@@ -6485,7 +6695,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0318(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ChildActorComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xef5088b9);
 			return ptr;
 		}
 
@@ -6510,7 +6721,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0328(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DecalComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x42325d2d);
 			return ptr;
 		}
 
@@ -6532,7 +6744,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistanceFieldCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x346b5597);
 			return ptr;
 		}
 
@@ -6565,7 +6778,8 @@ namespace Classes {
 		float                                              Intensity;                                                // 0x036C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ExponentialHeightFogComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x32ac778a);
 			return ptr;
 		}
 
@@ -6623,7 +6837,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DirectionalLightComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x15d1f546);
 			return ptr;
 		}
 
@@ -6655,7 +6870,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0444(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PointLightComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xccf9f4fc);
 			return ptr;
 		}
 
@@ -6675,7 +6891,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x0454(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SpotLightComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf52cfa5c);
 			return ptr;
 		}
 
@@ -6705,7 +6922,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC0];                                      // 0x0420(0x00C0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkyLightComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd06bc6b5);
 			return ptr;
 		}
 
@@ -6729,7 +6947,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0308(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmassPortalComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf7222f22);
 			return ptr;
 		}
 
@@ -6746,7 +6965,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationGraphNodeComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xac3deb72);
 			return ptr;
 		}
 
@@ -6768,7 +6988,8 @@ namespace Classes {
 		struct FConstraintInstance                         ConstraintInstance;                                       // 0x0350(0x01F0) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsConstraintComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8c195fda);
 			return ptr;
 		}
 
@@ -6817,7 +7038,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0318(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsSpringComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7276a074);
 			return ptr;
 		}
 
@@ -6837,7 +7059,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x0304(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsThrusterComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd469ec04);
 			return ptr;
 		}
 
@@ -6858,7 +7081,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x07FD(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PostProcessComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf6e3d1f);
 			return ptr;
 		}
 
@@ -6878,7 +7102,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x06D9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ArrowComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xad35fad9);
 			return ptr;
 		}
 
@@ -6902,7 +7127,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x06E8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BillboardComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x90d28903);
 			return ptr;
 		}
 
@@ -6922,7 +7148,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x06E4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BrushComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb660e7a0);
 			return ptr;
 		}
 
@@ -6941,7 +7168,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x06E8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DrawFrustumComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbad74d60);
 			return ptr;
 		}
 
@@ -6955,7 +7183,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x30];                                      // 0x06D0(0x0030) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LineBatchComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5dd72372);
 			return ptr;
 		}
 
@@ -6969,7 +7198,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x06D0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialBillboardComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x99f4d020);
 			return ptr;
 		}
 
@@ -6986,7 +7216,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xF0];                                      // 0x08F0(0x00F0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PoseableMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbdd29b4a);
 			return ptr;
 		}
 
@@ -7024,7 +7255,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xF];                                       // 0x08A1(0x000F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SplineMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6e41596e);
 			return ptr;
 		}
 
@@ -7071,7 +7303,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x28];                                      // 0x06E8(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ModelComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf7299559);
 			return ptr;
 		}
 
@@ -7084,7 +7317,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkRenderingComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60294f7d);
 			return ptr;
 		}
 
@@ -7098,7 +7332,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x06D0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavMeshRenderingComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x35a59502);
 			return ptr;
 		}
 
@@ -7111,7 +7346,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavTestRenderingComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1cd833f1);
 			return ptr;
 		}
 
@@ -7172,7 +7408,8 @@ namespace Classes {
 		unsigned char                                      UnknownData12[0x8];                                       // 0x0130(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleSystem");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe203ed58);
 			return ptr;
 		}
 
@@ -7207,7 +7444,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x103];                                     // 0x0065(0x0103) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleEmitter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d5efb23);
 			return ptr;
 		}
 
@@ -7264,7 +7502,8 @@ namespace Classes {
 		unsigned char                                      UnknownData12[0xFC];                                      // 0x0854(0x00FC) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleSystemComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fb47b75);
 			return ptr;
 		}
 
@@ -7310,7 +7549,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x06F4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CapsuleComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa423dedb);
 			return ptr;
 		}
 
@@ -7338,7 +7578,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SphereComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c114093);
 			return ptr;
 		}
 
@@ -7356,7 +7597,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DrawSphereComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x56d88e25);
 			return ptr;
 		}
 
@@ -7372,7 +7614,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        DisplayMeshComponent;                                     // 0x06D8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SubDSurfaceComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x898881d9);
 			return ptr;
 		}
 
@@ -7402,7 +7645,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xF];                                       // 0x0711(0x000F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextRenderComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x284eb64d);
 			return ptr;
 		}
 
@@ -7434,7 +7678,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x17];                                      // 0x06D9(0x0017) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VectorFieldComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5437f7f5);
 			return ptr;
 		}
 
@@ -7460,7 +7705,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RadialForceComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x91f1d32e);
 			return ptr;
 		}
 
@@ -7488,7 +7734,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x34];                                      // 0x034C(0x0034) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ReflectionCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca77f6dd);
 			return ptr;
 		}
 
@@ -7503,7 +7750,8 @@ namespace Classes {
 		class UBoxComponent*                               PreviewCaptureBox;                                        // 0x0388(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BoxReflectionCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4db71b44);
 			return ptr;
 		}
 
@@ -7516,7 +7764,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BoxReflectionCaptureSAComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x50612f60);
 			return ptr;
 		}
 
@@ -7531,7 +7780,8 @@ namespace Classes {
 		class UBoxComponent*                               PreviewCaptureBox;                                        // 0x0388(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlaneReflectionCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7d5d2b5);
 			return ptr;
 		}
 
@@ -7546,7 +7796,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0388(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SphereReflectionCaptureComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x194f3552);
 			return ptr;
 		}
 
@@ -7572,7 +7823,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xB3];                                      // 0x03ED(0x00B3) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlanarReflectionComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x70bb5b2f);
 			return ptr;
 		}
 
@@ -7585,7 +7837,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SceneCaptureComponentCube");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed61a433);
 			return ptr;
 		}
 
@@ -7618,7 +7871,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x54];                                      // 0x034C(0x0054) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StereoLayerComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc4b540f1);
 			return ptr;
 		}
 
@@ -7648,7 +7902,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xB];                                       // 0x0315(0x000B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WindDirectionalSourceComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60012247);
 			return ptr;
 		}
 
@@ -7665,7 +7920,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xF];                                       // 0x01E1(0x000F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TimelineComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2a3ad501);
 			return ptr;
 		}
 
@@ -7706,7 +7962,8 @@ namespace Classes {
 		struct FRawCurveTracks                             RawCurveData;                                             // 0x0090(0x0010)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimSequenceBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d66d6f6);
 			return ptr;
 		}
 
@@ -7721,7 +7978,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompositeBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1b2dc938);
 			return ptr;
 		}
 
@@ -7735,7 +7993,8 @@ namespace Classes {
 		struct FAnimTrack                                  AnimationTrack;                                           // 0x00A0(0x0010)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimComposite");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd00d500f);
 			return ptr;
 		}
 
@@ -7767,7 +8026,8 @@ namespace Classes {
 		TArray<int>                                        BranchingPointStateNotifyIndices;                         // 0x0198(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimMontage");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7fe02341);
 			return ptr;
 		}
 
@@ -7799,7 +8059,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x18];                                      // 0x0180(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimSequence");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe6b46c3d);
 			return ptr;
 		}
 
@@ -7825,7 +8086,8 @@ namespace Classes {
 		TArray<struct FEditorElement>                      GridSamples;                                              // 0x0130(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlendSpaceBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfd544727);
 			return ptr;
 		}
 
@@ -7840,7 +8102,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlendSpace");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8442e748);
 			return ptr;
 		}
 
@@ -7853,7 +8116,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AimOffsetBlendSpace");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1ed5910);
 			return ptr;
 		}
 
@@ -7868,7 +8132,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlendSpace1D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe6339867);
 			return ptr;
 		}
 
@@ -7881,7 +8146,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AimOffsetBlendSpace1D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf538c0af);
 			return ptr;
 		}
 
@@ -7900,7 +8166,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x78];                                      // 0x0118(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PoseAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x784b8cb6);
 			return ptr;
 		}
 
@@ -7913,7 +8180,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimStateMachineTypes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa7b219d3);
 			return ptr;
 		}
 
@@ -7926,7 +8194,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimClassInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x246f766f);
 			return ptr;
 		}
 
@@ -7949,7 +8218,8 @@ namespace Classes {
 		TArray<struct FName>                               SyncGroupNames;                                           // 0x0088(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimClassData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfb8f425a);
 			return ptr;
 		}
 
@@ -7969,7 +8239,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x1];                                       // 0x003F(0x0001) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb96fff2);
 			return ptr;
 		}
 
@@ -7991,7 +8262,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_Automatic");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x63ae5562);
 			return ptr;
 		}
 
@@ -8004,7 +8276,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_BitwiseCompressOnly");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xede78578);
 			return ptr;
 		}
 
@@ -8017,7 +8290,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_LeastDestructive");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x873153d4);
 			return ptr;
 		}
 
@@ -8033,7 +8307,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_RemoveEverySecondKey");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x78e55ba7);
 			return ptr;
 		}
 
@@ -8056,7 +8331,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_RemoveLinearKeys");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96b1d5a2);
 			return ptr;
 		}
 
@@ -8094,7 +8370,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xC];                                       // 0x00D4(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_PerTrackCompression");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x41dfba4b);
 			return ptr;
 		}
 
@@ -8111,7 +8388,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimCompress_RemoveTrivialKeys");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x40267e28);
 			return ptr;
 		}
 
@@ -8124,11 +8402,12 @@ namespace Classes {
 	public:
 		class UAnimationAsset*                             CurrentAsset;                                             // 0x0498(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xC8];                                      // 0x04A0(0x00C8) MISSED OFFSET
-		struct FScriptDelegate                             PostEvaluateAnimEvent;                                    // 0x0568(0x0014) (CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference)
+		struct FScriptDelegate                             PostEvaluateAnimEvent;                                    // 0x0568(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0578(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimSingleNodeInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x960e7da7);
 			return ptr;
 		}
 
@@ -8157,7 +8436,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x01A8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimBlueprint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf3610673);
 			return ptr;
 		}
 
@@ -8173,7 +8453,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PoseWatch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd78f2bbf);
 			return ptr;
 		}
 
@@ -8195,7 +8476,8 @@ namespace Classes {
 		TArray<struct FName>                               SyncGroupNames;                                           // 0x0358(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimBlueprintGeneratedClass");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2b38602a);
 			return ptr;
 		}
 
@@ -8211,7 +8493,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0878(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VehicleAnimInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc7668009);
 			return ptr;
 		}
 
@@ -8226,7 +8509,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimMetaData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4f7124b1);
 			return ptr;
 		}
 
@@ -8246,7 +8530,8 @@ namespace Classes {
 		struct FName                                       SocketName;                                               // 0x0078(0x0008) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotify_PlayParticleEffect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5ef747ab);
 			return ptr;
 		}
 
@@ -8265,7 +8550,8 @@ namespace Classes {
 		struct FName                                       AttachName;                                               // 0x0050(0x0008) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotify_PlaySound");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2ed1b44f);
 			return ptr;
 		}
 
@@ -8279,7 +8565,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotifyState");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6080b504);
 			return ptr;
 		}
 
@@ -8303,7 +8590,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotifyState_TimedParticleEffect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc85f70c9);
 			return ptr;
 		}
 
@@ -8324,7 +8612,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimNotifyState_Trail");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x46309e5d);
 			return ptr;
 		}
 
@@ -8350,7 +8639,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x50];                                      // 0x00A0(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimSet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc27daed2);
 			return ptr;
 		}
 
@@ -8363,7 +8653,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AssetImportData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa1aed4b0);
 			return ptr;
 		}
 
@@ -8376,7 +8667,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AssetUserData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1ed77cba);
 			return ptr;
 		}
 
@@ -8403,7 +8695,8 @@ namespace Classes {
 		struct FIntPoint                                   DefaultScreenshotResolution;                              // 0x0318(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AutomationTestSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd3e86f4b);
 			return ptr;
 		}
 
@@ -8416,7 +8709,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavEdgeProviderInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3eb735d5);
 			return ptr;
 		}
 
@@ -8438,7 +8732,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x94];                                      // 0x004C(0x0094) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AvoidanceManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc38076a);
 			return ptr;
 		}
 
@@ -8461,7 +8756,8 @@ namespace Classes {
 		TArray<struct FBlendProfileBoneEntry>              ProfileEntries;                                           // 0x0038(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlendProfile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x77c5ae09);
 			return ptr;
 		}
 
@@ -8474,7 +8770,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelScriptBlueprint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xef085571);
 			return ptr;
 		}
 
@@ -8498,7 +8795,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    ApplicationReceivedScreenOrientationChangedNotificationDelegate;// 0x0190(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlatformGameInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xac2bb92f);
 			return ptr;
 		}
 
@@ -8519,7 +8817,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintPlatformLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa4e6ef8c);
 			return ptr;
 		}
 
@@ -8538,7 +8837,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BlueprintSetLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd9f696cf);
 			return ptr;
 		}
 
@@ -8565,7 +8865,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0030(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DataTable");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x42d45f73);
 			return ptr;
 		}
 
@@ -8578,7 +8879,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DataTableFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4ef8e250);
 			return ptr;
 		}
 
@@ -8595,7 +8897,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DebugDrawService");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8579e889);
 			return ptr;
 		}
 
@@ -8609,7 +8912,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DeveloperSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x55e27e4e);
 			return ptr;
 		}
 
@@ -8628,7 +8932,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xD0];                                      // 0x0088(0x00D0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CollisionProfile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3de995e);
 			return ptr;
 		}
 
@@ -8641,7 +8946,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetSystemLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb4f750da);
 			return ptr;
 		}
 
@@ -8843,7 +9149,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GameplayStatics");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xec734a2);
 			return ptr;
 		}
 
@@ -8956,7 +9263,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HeadMountedDisplayFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcbb2f112);
 			return ptr;
 		}
 
@@ -8988,7 +9296,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetArrayLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf08dec2);
 			return ptr;
 		}
 
@@ -9020,7 +9329,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetGuidLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x93af7ee2);
 			return ptr;
 		}
 
@@ -9041,7 +9351,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetInputLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe98affbb);
 			return ptr;
 		}
 
@@ -9095,7 +9406,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetMaterialLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4f0bee0e);
 			return ptr;
 		}
 
@@ -9114,7 +9426,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetMathLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x77d8b969);
 			return ptr;
 		}
 
@@ -9492,7 +9805,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetNodeHelperLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x39341947);
 			return ptr;
 		}
 
@@ -9519,7 +9833,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetRenderingLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2581b2d7);
 			return ptr;
 		}
 
@@ -9540,7 +9855,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetStringLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd257bca);
 			return ptr;
 		}
 
@@ -9615,7 +9931,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.KismetTextLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xabdfd27c);
 			return ptr;
 		}
 
@@ -9666,7 +9983,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MeshVertexPainterKismetLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d43e47b);
 			return ptr;
 		}
 
@@ -9687,7 +10005,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x88];                                      // 0x0040(0x0088) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PendingNetGame");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x542957b9);
 			return ptr;
 		}
 
@@ -9700,7 +10019,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StereoLayerFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa112b6ed);
 			return ptr;
 		}
 
@@ -9718,7 +10038,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VisualLoggerKismetLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf77609ab);
 			return ptr;
 		}
 
@@ -9756,7 +10077,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xB8];                                      // 0x0268(0x00B8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BodySetup");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa13a3640);
 			return ptr;
 		}
 
@@ -9770,7 +10092,8 @@ namespace Classes {
 		struct FAggregateGeometry2D                        AggGeom2D;                                                // 0x0320(0x0030)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BodySetup2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfba14102);
 			return ptr;
 		}
 
@@ -9789,7 +10112,8 @@ namespace Classes {
 		TArray<class UBodySetup*>                          BodySetup;                                                // 0x0100(0x0010) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Deprecated)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5c6332a4);
 			return ptr;
 		}
 
@@ -9803,7 +10127,8 @@ namespace Classes {
 		TArray<struct FPhysicalAnimationProfile>           PhysicalAnimationData;                                    // 0x0320(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalBodySetup");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7edda0fb);
 			return ptr;
 		}
 
@@ -9817,7 +10142,8 @@ namespace Classes {
 		TArray<struct FInputBlendPose>                     BlendPoses;                                               // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BoneMaskFilter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1634799);
 			return ptr;
 		}
 
@@ -9833,7 +10159,8 @@ namespace Classes {
 		TArray<struct FString>                             HiddenLevels;                                             // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BookMark");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa978cfd1);
 			return ptr;
 		}
 
@@ -9849,7 +10176,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BookMark2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x21559217);
 			return ptr;
 		}
 
@@ -9869,7 +10197,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Breakpoint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3d19a0a4);
 			return ptr;
 		}
 
@@ -9891,7 +10220,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.BrushBuilder");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xea3a18c0);
 			return ptr;
 		}
 
@@ -9905,7 +10235,8 @@ namespace Classes {
 		struct FButtonStyle                                ButtonStyle;                                              // 0x0028(0x02A8) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ButtonStyleAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x97c4d738);
 			return ptr;
 		}
 
@@ -9929,7 +10260,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC];                                       // 0x0544(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraAnim");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7cbc7167);
 			return ptr;
 		}
 
@@ -9951,7 +10283,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x97];                                      // 0x0079(0x0097) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraAnimInst");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc0fb8c3);
 			return ptr;
 		}
 
@@ -9978,7 +10311,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraModifier");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfbf15da3);
 			return ptr;
 		}
 
@@ -10001,7 +10335,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CameraModifier_CameraShake");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc33daf6b);
 			return ptr;
 		}
 
@@ -10031,7 +10366,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x258];                                     // 0x0078(0x0258) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Canvas");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd8593059);
 			return ptr;
 		}
 
@@ -10060,7 +10396,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x38];                                      // 0x0030(0x0038) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Channel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2fa665c2);
 			return ptr;
 		}
 
@@ -10075,7 +10412,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x1C0];                                     // 0x0070(0x01C0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ActorChannel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x32045865);
 			return ptr;
 		}
 
@@ -10089,7 +10427,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x98];                                      // 0x0230(0x0098) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DemoActorChannel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd44f6dc);
 			return ptr;
 		}
 
@@ -10103,7 +10442,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ControlChannel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x86ecc6b9);
 			return ptr;
 		}
 
@@ -10117,7 +10457,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0068(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VoiceChannel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8cfc2736);
 			return ptr;
 		}
 
@@ -10131,7 +10472,8 @@ namespace Classes {
 		struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0028(0x05E0) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CheckBoxStyleAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1c3ff97);
 			return ptr;
 		}
 
@@ -10155,7 +10497,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Commandlet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xae0e52bb);
 			return ptr;
 		}
 
@@ -10169,7 +10512,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0080(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PluginCommandlet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa977f2be);
 			return ptr;
 		}
 
@@ -10182,7 +10526,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SmokeTestCommandlet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x94de008e);
 			return ptr;
 		}
 
@@ -10196,7 +10541,8 @@ namespace Classes {
 		struct FRichCurve                                  FloatCurves[0x4];                                         // 0x0030(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveLinearColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3edaf94a);
 			return ptr;
 		}
 
@@ -10212,7 +10558,8 @@ namespace Classes {
 		struct FRichCurve                                  FloatCurves[0x3];                                         // 0x0030(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveVector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x41aec977);
 			return ptr;
 		}
 
@@ -10227,7 +10574,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveEdPresetCurve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe5aeef31);
 			return ptr;
 		}
 
@@ -10241,7 +10589,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0028(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CurveTable");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e2bacce);
 			return ptr;
 		}
 
@@ -10256,7 +10605,8 @@ namespace Classes {
 		TArray<struct FPreviewMeshCollectionEntry>         SkeletalMeshes;                                           // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PreviewMeshCollection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd07b51ec);
 			return ptr;
 		}
 
@@ -10271,7 +10621,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TireType");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x839c7593);
 			return ptr;
 		}
 
@@ -10312,7 +10663,8 @@ namespace Classes {
 		unsigned char                                      UnknownData06[0x324];                                     // 0x00F4(0x0324) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NetDriver");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfa51022c);
 			return ptr;
 		}
 
@@ -10326,7 +10678,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x240];                                     // 0x00E0(0x0240) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PackageMapClient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9827d4c6);
 			return ptr;
 		}
 
@@ -10355,7 +10708,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x20];                                      // 0x336C8(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NetConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6e72e45a);
 			return ptr;
 		}
 
@@ -10369,7 +10723,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC0];                                      // 0x336E8(0x00C0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DemoNetConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7dedce8d);
 			return ptr;
 		}
 
@@ -10382,7 +10737,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DemoplayableInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x81ae5cc3);
 			return ptr;
 		}
 
@@ -10396,7 +10752,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4F8];                                     // 0x0418(0x04F8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DemoNetDriver");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x52d88c57);
 			return ptr;
 		}
 
@@ -10419,7 +10776,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x28];                                      // 0x0090(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DestructibleFractureSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8de266fa);
 			return ptr;
 		}
 
@@ -10452,7 +10810,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x5];                                       // 0x006B(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AnimationSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb2c1ffe6);
 			return ptr;
 		}
 
@@ -10476,7 +10835,8 @@ namespace Classes {
 		struct FString                                     DialogueFilenameFormat;                                   // 0x00A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.AudioSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x59201fa);
 			return ptr;
 		}
 
@@ -10506,7 +10866,8 @@ namespace Classes {
 		class UDPICustomScalingRule*                       CustomScalingRule;                                        // 0x0160(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.UserInterfaceSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf39a980e);
 			return ptr;
 		}
 
@@ -10536,7 +10897,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StreamingSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc32fc804);
 			return ptr;
 		}
 
@@ -10561,7 +10923,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.GarbageCollectionSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcf0da7b5);
 			return ptr;
 		}
 
@@ -10575,7 +10938,8 @@ namespace Classes {
 		struct FName                                       MeshReductionModuleName;                                  // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MeshSimplificationSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7ef50f7a);
 			return ptr;
 		}
 
@@ -10591,7 +10955,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NetworkSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc246ea36);
 			return ptr;
 		}
 
@@ -10656,7 +11021,8 @@ namespace Classes {
 		TArray<struct FPhysicalSurfaceName>                PhysicalSurfaces;                                         // 0x00B8(0x0010) (CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x42a276eb);
 			return ptr;
 		}
 
@@ -10743,7 +11109,8 @@ namespace Classes {
 		unsigned char                                      UnknownData18[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RendererSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x21156fef);
 			return ptr;
 		}
 
@@ -10758,7 +11125,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RendererOverrideSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb65572ff);
 			return ptr;
 		}
 
@@ -10772,7 +11140,8 @@ namespace Classes {
 		TArray<struct FTextureLODGroup>                    TextureLODGroups;                                         // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureLODSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x22ce2978);
 			return ptr;
 		}
 
@@ -10791,7 +11160,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x48];                                      // 0x0078(0x0048) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DeviceProfile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa51b59e2);
 			return ptr;
 		}
 
@@ -10806,7 +11176,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xD8];                                      // 0x0038(0x00D8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DeviceProfileManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d13afcf);
 			return ptr;
 		}
 
@@ -10824,7 +11195,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DialogueVoice");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa9bb27bb);
 			return ptr;
 		}
 
@@ -10844,7 +11216,8 @@ namespace Classes {
 		struct FGuid                                       LocalizationGUID;                                         // 0x0060(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DialogueWave");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9273c27c);
 			return ptr;
 		}
 
@@ -10858,7 +11231,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Distribution");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xda962953);
 			return ptr;
 		}
 
@@ -10875,7 +11249,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloat");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe7f796fb);
 			return ptr;
 		}
 
@@ -10890,7 +11265,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5d2f20b3);
 			return ptr;
 		}
 
@@ -10910,7 +11286,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatParameterBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x309aa8cb);
 			return ptr;
 		}
 
@@ -10923,7 +11300,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatParticleParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69f2a3f6);
 			return ptr;
 		}
 
@@ -10937,7 +11315,8 @@ namespace Classes {
 		struct FInterpCurveFloat                           ConstantCurve;                                            // 0x0038(0x0018) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatConstantCurve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4931b110);
 			return ptr;
 		}
 
@@ -10952,7 +11331,8 @@ namespace Classes {
 		float                                              Max;                                                      // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatUniform");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe6278755);
 			return ptr;
 		}
 
@@ -10966,7 +11346,8 @@ namespace Classes {
 		struct FInterpCurveVector2D                        ConstantCurve;                                            // 0x0038(0x0018) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionFloatUniformCurve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1c2c3a62);
 			return ptr;
 		}
 
@@ -10983,7 +11364,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc0ef7fba);
 			return ptr;
 		}
 
@@ -11001,7 +11383,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeb56ebf2);
 			return ptr;
 		}
 
@@ -11021,7 +11404,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x5];                                       // 0x008B(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorParameterBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x27d58eac);
 			return ptr;
 		}
 
@@ -11034,7 +11418,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorParticleParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fce462d);
 			return ptr;
 		}
 
@@ -11052,7 +11437,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorConstantCurve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7b18d50b);
 			return ptr;
 		}
 
@@ -11073,7 +11459,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorUniform");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2d0b7cde);
 			return ptr;
 		}
 
@@ -11095,7 +11482,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DistributionVectorUniformCurve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9e54b287);
 			return ptr;
 		}
 
@@ -11108,7 +11496,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DPICustomScalingRule");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x78814784);
 			return ptr;
 		}
 
@@ -11121,7 +11510,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DynamicBlueprintBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x33cdd078);
 			return ptr;
 		}
 
@@ -11135,7 +11525,8 @@ namespace Classes {
 		TArray<struct FBlueprintComponentDelegateBinding>  ComponentDelegateBindings;                                // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ComponentDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x65939fb6);
 			return ptr;
 		}
 
@@ -11148,7 +11539,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x765831b5);
 			return ptr;
 		}
 
@@ -11162,7 +11554,8 @@ namespace Classes {
 		TArray<struct FBlueprintInputActionDelegateBinding> InputActionDelegateBindings;                              // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputActionDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd8e3a42b);
 			return ptr;
 		}
 
@@ -11176,7 +11569,8 @@ namespace Classes {
 		TArray<struct FBlueprintInputAxisDelegateBinding>  InputAxisDelegateBindings;                                // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputAxisDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x31909d14);
 			return ptr;
 		}
 
@@ -11190,7 +11584,8 @@ namespace Classes {
 		TArray<struct FBlueprintInputAxisKeyDelegateBinding> InputAxisKeyDelegateBindings;                             // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputAxisKeyDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd7f1e0d7);
 			return ptr;
 		}
 
@@ -11203,7 +11598,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputVectorAxisDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x45d1d0c3);
 			return ptr;
 		}
 
@@ -11217,7 +11613,8 @@ namespace Classes {
 		TArray<struct FBlueprintInputKeyDelegateBinding>   InputKeyDelegateBindings;                                 // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputKeyDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96469ddc);
 			return ptr;
 		}
 
@@ -11231,7 +11628,8 @@ namespace Classes {
 		TArray<struct FBlueprintInputTouchDelegateBinding> InputTouchDelegateBindings;                               // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputTouchDelegateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x65801cb0);
 			return ptr;
 		}
 
@@ -11250,7 +11648,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7F];                                      // 0x0041(0x007F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EdGraph");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4a8046ca);
 			return ptr;
 		}
 
@@ -11265,7 +11664,8 @@ namespace Classes {
 		struct FString                                     Excerpt;                                                  // 0x00B0(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EdGraphNode_Documentation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x868358a1);
 			return ptr;
 		}
 
@@ -11278,7 +11678,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EdGraphSchema");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf695038b);
 			return ptr;
 		}
 
@@ -11291,7 +11692,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ImportantToggleSettingInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x93621e7c);
 			return ptr;
 		}
 
@@ -11309,7 +11711,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x5];                                       // 0x0033(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EndUserSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xff3e7e);
 			return ptr;
 		}
 
@@ -11322,7 +11725,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EngineHandlerComponentFactory");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96320794);
 			return ptr;
 		}
 
@@ -11345,7 +11749,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Exporter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5021e7b2);
 			return ptr;
 		}
 
@@ -11363,7 +11768,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0050(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ExtendedReflectionSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4613a8d6);
 			return ptr;
 		}
 
@@ -11377,7 +11783,8 @@ namespace Classes {
 		struct FFontImportOptionsData                      Data;                                                     // 0x0028(0x00B0) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.FontImportOptions");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd2141055);
 			return ptr;
 		}
 
@@ -11410,7 +11817,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x50];                                      // 0x0170(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Font");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb796d44a);
 			return ptr;
 		}
 
@@ -11423,7 +11831,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HapticFeedbackEffect_Base");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd2a3ff7e);
 			return ptr;
 		}
 
@@ -11439,7 +11848,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x2C];                                      // 0x003C(0x002C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HapticFeedbackEffect_Buffer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x48b8ff87);
 			return ptr;
 		}
 
@@ -11453,7 +11863,8 @@ namespace Classes {
 		struct FHapticFeedbackDetails_Curve                HapticDetails;                                            // 0x0028(0x0100) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HapticFeedbackEffect_Curve");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x40b767b2);
 			return ptr;
 		}
 
@@ -11467,7 +11878,8 @@ namespace Classes {
 		struct FSoundConcurrencySettings                   Concurrency;                                              // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundConcurrency");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0bb67c3);
 			return ptr;
 		}
 
@@ -11481,7 +11893,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectPreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4fbdbc5c);
 			return ptr;
 		}
 
@@ -11495,7 +11908,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x68];                                      // 0x0028(0x0068) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83487da);
 			return ptr;
 		}
 
@@ -11508,7 +11922,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectSourcePreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbd36728f);
 			return ptr;
 		}
 
@@ -11521,7 +11936,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xabf8bf72);
 			return ptr;
 		}
 
@@ -11534,7 +11950,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectSubmixPreset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc60133d0);
 			return ptr;
 		}
 
@@ -11547,7 +11964,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundEffectSubmix");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d99ae85);
 			return ptr;
 		}
 
@@ -11565,7 +11983,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundSubmix");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc6cfa666);
 			return ptr;
 		}
 
@@ -11596,7 +12015,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf485ecb9);
 			return ptr;
 		}
 
@@ -11611,7 +12031,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundGroups");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xab2b6f32);
 			return ptr;
 		}
 
@@ -11647,7 +12068,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x170];                                     // 0x00F0(0x0170) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundWave");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x58e4dde5);
 			return ptr;
 		}
 
@@ -11662,7 +12084,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0030(0x0030) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.HapticFeedbackEffect_SoundWave");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x71adcb25);
 			return ptr;
 		}
 
@@ -11676,7 +12099,8 @@ namespace Classes {
 		TArray<struct FComponentOverrideRecord>            Records;                                                  // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InheritableComponentHandler");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd198451d);
 			return ptr;
 		}
 
@@ -11694,7 +12118,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x228];                                     // 0x0170(0x0228) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlayerInput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x586b17ce);
 			return ptr;
 		}
 
@@ -11734,7 +12159,8 @@ namespace Classes {
 		TArray<struct FKey>                                ConsoleKeys;                                              // 0x0098(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InputSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd3e8398);
 			return ptr;
 		}
 
@@ -11750,7 +12176,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpCurveEdSetup");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1c214c8a);
 			return ptr;
 		}
 
@@ -11773,7 +12200,8 @@ namespace Classes {
 		TArray<struct FName>                               AllEventNames;                                            // 0x0060(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x82f8dfe7);
 			return ptr;
 		}
 
@@ -11787,7 +12215,8 @@ namespace Classes {
 		struct FString                                     Caption;                                                  // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpFilter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e4d299d);
 			return ptr;
 		}
 
@@ -11800,7 +12229,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpFilter_Classes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe541de04);
 			return ptr;
 		}
 
@@ -11813,7 +12243,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpFilter_Custom");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6cea3c31);
 			return ptr;
 		}
 
@@ -11836,7 +12267,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x004D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroup");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeac89f4c);
 			return ptr;
 		}
 
@@ -11852,7 +12284,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroupCamera");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1dd9919);
 			return ptr;
 		}
 
@@ -11865,7 +12298,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroupDirector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83faab84);
 			return ptr;
 		}
 
@@ -11881,7 +12315,8 @@ namespace Classes {
 		TArray<class UInterpTrackInst*>                    TrackInst;                                                // 0x0038(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroupInst");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc6bf9cac);
 			return ptr;
 		}
 
@@ -11894,7 +12329,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroupInstCamera");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf26980b9);
 			return ptr;
 		}
 
@@ -11907,7 +12343,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpGroupInstDirector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x567ba724);
 			return ptr;
 		}
 
@@ -11935,7 +12372,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x80a0d27c);
 			return ptr;
 		}
 
@@ -11950,7 +12388,8 @@ namespace Classes {
 		struct FName                                       PropertyName;                                             // 0x0080(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackBoolProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x22d8a76f);
 			return ptr;
 		}
 
@@ -11966,7 +12405,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackDirector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2cb3a14);
 			return ptr;
 		}
 
@@ -11985,7 +12425,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc879f064);
 			return ptr;
 		}
 
@@ -12001,7 +12442,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFloatBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb6f40a71);
 			return ptr;
 		}
 
@@ -12018,7 +12460,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackAnimControl");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x68b87436);
 			return ptr;
 		}
 
@@ -12036,7 +12479,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x00A4(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe2f74ab6);
 			return ptr;
 		}
 
@@ -12053,7 +12497,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x00A8(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFloatAnimBPParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7dd6c0c6);
 			return ptr;
 		}
 
@@ -12068,7 +12513,8 @@ namespace Classes {
 		struct FName                                       ParamName;                                                // 0x00A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFloatMaterialParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfad36208);
 			return ptr;
 		}
 
@@ -12082,7 +12528,8 @@ namespace Classes {
 		struct FName                                       ParamName;                                                // 0x0090(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFloatParticleParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x29cd9c0b);
 			return ptr;
 		}
 
@@ -12096,7 +12543,8 @@ namespace Classes {
 		struct FName                                       PropertyName;                                             // 0x0090(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackFloatProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbe8d8705);
 			return ptr;
 		}
 
@@ -12124,7 +12572,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackMove");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xee36a733);
 			return ptr;
 		}
 
@@ -12140,7 +12589,8 @@ namespace Classes {
 		struct FInterpLookupTrack                          LookupTrack;                                              // 0x0098(0x0010)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackMoveAxis");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcc5d6480);
 			return ptr;
 		}
 
@@ -12153,7 +12603,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackSlomo");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8292775c);
 			return ptr;
 		}
 
@@ -12169,7 +12620,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackLinearColorBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6ac7d917);
 			return ptr;
 		}
 
@@ -12183,7 +12635,8 @@ namespace Classes {
 		struct FName                                       PropertyName;                                             // 0x0090(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackLinearColorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x318b407b);
 			return ptr;
 		}
 
@@ -12197,7 +12650,8 @@ namespace Classes {
 		TArray<struct FParticleReplayTrackKey>             TrackKeys;                                                // 0x0070(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackParticleReplay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb918f443);
 			return ptr;
 		}
 
@@ -12217,7 +12671,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackToggle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe65f2b20);
 			return ptr;
 		}
 
@@ -12233,7 +12688,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackVectorBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x13c0067a);
 			return ptr;
 		}
 
@@ -12246,7 +12702,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackAudioMaster");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3bd976cc);
 			return ptr;
 		}
 
@@ -12260,7 +12717,8 @@ namespace Classes {
 		struct FName                                       PropertyName;                                             // 0x0090(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackColorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x288af382);
 			return ptr;
 		}
 
@@ -12273,7 +12731,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackColorScale");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcbd24389);
 			return ptr;
 		}
 
@@ -12293,7 +12752,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackSound");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3c50e0d1);
 			return ptr;
 		}
 
@@ -12308,7 +12768,8 @@ namespace Classes {
 		struct FName                                       ParamName;                                                // 0x00A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackVectorMaterialParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc65a9081);
 			return ptr;
 		}
 
@@ -12322,7 +12783,8 @@ namespace Classes {
 		struct FName                                       PropertyName;                                             // 0x0090(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackVectorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8ee366da);
 			return ptr;
 		}
 
@@ -12340,7 +12802,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackVisibility");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf2ff68d8);
 			return ptr;
 		}
 
@@ -12353,7 +12816,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInst");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8ebc85c);
 			return ptr;
 		}
 
@@ -12368,7 +12832,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstAnimControl");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28234f96);
 			return ptr;
 		}
 
@@ -12381,7 +12846,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstAudioMaster");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x775a0fac);
 			return ptr;
 		}
 
@@ -12394,7 +12860,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstColorScale");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2529d8e9);
 			return ptr;
 		}
 
@@ -12408,7 +12875,8 @@ namespace Classes {
 		class AActor*                                      OldViewTarget;                                            // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstDirector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x97ad134);
 			return ptr;
 		}
 
@@ -12423,7 +12891,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x50c9b904);
 			return ptr;
 		}
 
@@ -12436,7 +12905,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbe0fded6);
 			return ptr;
 		}
 
@@ -12452,7 +12922,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x0034(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstFloatAnimBPParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf0c4fe6);
 			return ptr;
 		}
 
@@ -12469,7 +12940,8 @@ namespace Classes {
 		class UInterpTrackFloatMaterialParam*              InstancedTrack;                                           // 0x0058(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstFloatMaterialParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x63fb88a8);
 			return ptr;
 		}
 
@@ -12484,7 +12956,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstFloatParticleParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x392e23ab);
 			return ptr;
 		}
 
@@ -12499,7 +12972,8 @@ namespace Classes {
 		struct FRotator                                    ResetRotation;                                            // 0x0034(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstMove");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe29bf053);
 			return ptr;
 		}
 
@@ -12514,7 +12988,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstParticleReplay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c4b68a3);
 			return ptr;
 		}
 
@@ -12529,7 +13004,8 @@ namespace Classes {
 		class UObject*                                     PropertyOuterObjectInst;                                  // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstProperty");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x13dba27f);
 			return ptr;
 		}
 
@@ -12546,7 +13022,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstBoolProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4fecb64f);
 			return ptr;
 		}
 
@@ -12562,7 +13039,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstColorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaac04962);
 			return ptr;
 		}
 
@@ -12578,7 +13056,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstFloatProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x275e1ae5);
 			return ptr;
 		}
 
@@ -12593,7 +13072,8 @@ namespace Classes {
 		struct FLinearColor                                ResetColor;                                               // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstLinearColorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x970d2b9b);
 			return ptr;
 		}
 
@@ -12609,7 +13089,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstVectorProp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x634239ba);
 			return ptr;
 		}
 
@@ -12624,7 +13105,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstSlomo");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x837088fc);
 			return ptr;
 		}
 
@@ -12640,7 +13122,8 @@ namespace Classes {
 		class UAudioComponent*                             PlayAudioComp;                                            // 0x0030(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstSound");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3fa95b71);
 			return ptr;
 		}
 
@@ -12658,7 +13141,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstToggle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf28e9240);
 			return ptr;
 		}
 
@@ -12675,7 +13159,8 @@ namespace Classes {
 		class UInterpTrackVectorMaterialParam*             InstancedTrack;                                           // 0x0058(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstVectorMaterialParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6ebb77a1);
 			return ptr;
 		}
 
@@ -12691,7 +13176,8 @@ namespace Classes {
 		float                                              LastUpdatePosition;                                       // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InterpTrackInstVisibility");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x767a57f8);
 			return ptr;
 		}
 
@@ -12716,7 +13202,8 @@ namespace Classes {
 		int                                                SignedInt32Variable;                                      // 0x004C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.IntSerialization");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60cba51c);
 			return ptr;
 		}
 
@@ -12733,7 +13220,8 @@ namespace Classes {
 		TArray<struct FLayerActorStats>                    ActorStats;                                               // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Layer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fb73a38);
 			return ptr;
 		}
 
@@ -12780,7 +13268,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0x18];                                      // 0x0158(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelStreaming");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x35a71fe3);
 			return ptr;
 		}
 
@@ -12799,7 +13288,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelStreamingAlwaysLoaded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69375947);
 			return ptr;
 		}
 
@@ -12812,7 +13302,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelStreamingKismet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb5922c3c);
 			return ptr;
 		}
 
@@ -12827,7 +13318,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LevelStreamingPersistent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x99324afc);
 			return ptr;
 		}
 
@@ -12842,7 +13334,8 @@ namespace Classes {
 		TArray<int>                                        Surfaces;                                                 // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmappedSurfaceCollection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6388aef3);
 			return ptr;
 		}
 
@@ -12856,7 +13349,8 @@ namespace Classes {
 		struct FLightmassPrimitiveSettings                 LightmassSettings;                                        // 0x0028(0x0018) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightmassPrimitiveSettingsObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x63348238);
 			return ptr;
 		}
 
@@ -12869,7 +13363,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LocalMessage");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc4a7071f);
 			return ptr;
 		}
 
@@ -12890,7 +13385,8 @@ namespace Classes {
 		struct FString                                     NewSpecMessage;                                           // 0x0098(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.EngineMessage");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3fdbd110);
 			return ptr;
 		}
 
@@ -12904,7 +13400,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAbs");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x970cbeac);
 			return ptr;
 		}
 
@@ -12917,7 +13414,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionActorPositionWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5e118e64);
 			return ptr;
 		}
 
@@ -12934,7 +13432,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAdd");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x416f1c5);
 			return ptr;
 		}
 
@@ -12949,7 +13448,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAppendVector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa11567a1);
 			return ptr;
 		}
 
@@ -12963,7 +13463,8 @@ namespace Classes {
 		struct FExpressionInput                            WorldPosition;                                            // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAtmosphericFogColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3c3b7e7e);
 			return ptr;
 		}
 
@@ -12976,7 +13477,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAtmosphericLightColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5950f6ce);
 			return ptr;
 		}
 
@@ -12989,7 +13491,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAtmosphericLightVector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x623971b8);
 			return ptr;
 		}
 
@@ -13003,7 +13506,8 @@ namespace Classes {
 		struct FExpressionInput                            Temp;                                                     // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionBlackBody");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd363c135);
 			return ptr;
 		}
 
@@ -13022,7 +13526,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x011A(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionBlendMaterialAttributes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x157572b9);
 			return ptr;
 		}
 
@@ -13036,7 +13541,8 @@ namespace Classes {
 		struct FMaterialAttributesInput                    MaterialAttributes;                                       // 0x0060(0x0040)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionBreakMaterialAttributes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc6d11525);
 			return ptr;
 		}
 
@@ -13056,7 +13562,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionBumpOffset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x775efcb9);
 			return ptr;
 		}
 
@@ -13069,7 +13576,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCameraPositionWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1122beae);
 			return ptr;
 		}
 
@@ -13082,7 +13590,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCameraVectorWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb69493de);
 			return ptr;
 		}
 
@@ -13096,7 +13605,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCeil");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3a7746a7);
 			return ptr;
 		}
 
@@ -13117,7 +13627,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionClamp");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8c0163d9);
 			return ptr;
 		}
 
@@ -13133,7 +13644,8 @@ namespace Classes {
 		struct FGuid                                       ParameterId;                                              // 0x0070(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCollectionParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf5de797d);
 			return ptr;
 		}
 
@@ -13150,7 +13662,8 @@ namespace Classes {
 		struct FLinearColor                                CommentColor;                                             // 0x0078(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionComment");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18002f1b);
 			return ptr;
 		}
 
@@ -13169,7 +13682,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionComponentMask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x785521fd);
 			return ptr;
 		}
 
@@ -13184,7 +13698,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca39e468);
 			return ptr;
 		}
 
@@ -13199,7 +13714,8 @@ namespace Classes {
 		float                                              G;                                                        // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionConstant2Vector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe7f327cf);
 			return ptr;
 		}
 
@@ -13213,7 +13729,8 @@ namespace Classes {
 		struct FLinearColor                                Constant;                                                 // 0x0060(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionConstant3Vector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd45eda0a);
 			return ptr;
 		}
 
@@ -13227,7 +13744,8 @@ namespace Classes {
 		struct FLinearColor                                Constant;                                                 // 0x0060(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionConstant4Vector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x70ffc899);
 			return ptr;
 		}
 
@@ -13243,7 +13761,8 @@ namespace Classes {
 		float                                              Scale;                                                    // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionConstantBiasScale");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2061043b);
 			return ptr;
 		}
 
@@ -13259,7 +13778,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCosine");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x515d379);
 			return ptr;
 		}
 
@@ -13274,7 +13794,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCrossProduct");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x63787011);
 			return ptr;
 		}
 
@@ -13292,7 +13813,8 @@ namespace Classes {
 		TArray<struct FCustomInput>                        Inputs;                                                   // 0x0088(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionCustom");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf6eb015);
 			return ptr;
 		}
 
@@ -13306,7 +13828,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionClearCoatNormalCustomOutput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe123bf9d);
 			return ptr;
 		}
 
@@ -13320,7 +13843,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTangentOutput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x60c55eb4);
 			return ptr;
 		}
 
@@ -13334,7 +13858,8 @@ namespace Classes {
 		struct FExpressionInput                            Value;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDDX");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc43df5fc);
 			return ptr;
 		}
 
@@ -13348,7 +13873,8 @@ namespace Classes {
 		struct FExpressionInput                            Value;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDDY");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xea407065);
 			return ptr;
 		}
 
@@ -13361,7 +13887,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDecalDerivative");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x65045e54);
 			return ptr;
 		}
 
@@ -13374,7 +13901,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDecalLifetimeOpacity");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe38eb881);
 			return ptr;
 		}
 
@@ -13390,7 +13918,8 @@ namespace Classes {
 		float                                              ConstHeight;                                              // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDecalMipmapLevel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xce30412b);
 			return ptr;
 		}
 
@@ -13407,7 +13936,8 @@ namespace Classes {
 		float                                              FadeDistanceDefault;                                      // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDepthFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4358c35);
 			return ptr;
 		}
 
@@ -13423,7 +13953,8 @@ namespace Classes {
 		struct FExpressionInput                            Depth;                                                    // 0x0068(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDepthOfFieldFunction");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7ab63650);
 			return ptr;
 		}
 
@@ -13437,7 +13968,8 @@ namespace Classes {
 		struct FExpressionInput                            InXY;                                                     // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDeriveNormalZ");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd304b2e);
 			return ptr;
 		}
 
@@ -13453,7 +13985,8 @@ namespace Classes {
 		struct FLinearColor                                LuminanceFactors;                                         // 0x00D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDesaturation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc5927869);
 			return ptr;
 		}
 
@@ -13468,7 +14001,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDistance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x501ea405);
 			return ptr;
 		}
 
@@ -13481,7 +14015,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDistanceCullFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1f0fe49f);
 			return ptr;
 		}
 
@@ -13495,7 +14030,8 @@ namespace Classes {
 		struct FExpressionInput                            Position;                                                 // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDistanceFieldGradient");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x11f78443);
 			return ptr;
 		}
 
@@ -13509,7 +14045,8 @@ namespace Classes {
 		struct FExpressionInput                            Position;                                                 // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDistanceToNearestSurface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3bd85e0d);
 			return ptr;
 		}
 
@@ -13526,7 +14063,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDivide");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x977cdaaf);
 			return ptr;
 		}
 
@@ -13541,7 +14079,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDotProduct");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8de3528e);
 			return ptr;
 		}
 
@@ -13556,7 +14095,8 @@ namespace Classes {
 		struct FLinearColor                                DefaultValue;                                             // 0x0070(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionDynamicParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd4ec3348);
 			return ptr;
 		}
 
@@ -13569,7 +14109,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionEyeAdaptation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18f5c740);
 			return ptr;
 		}
 
@@ -13584,7 +14125,8 @@ namespace Classes {
 		struct FExpressionInput                            Inputs[0x4];                                              // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFeatureLevelSwitch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfb86145c);
 			return ptr;
 		}
 
@@ -13598,7 +14140,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFloor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcaba08ce);
 			return ptr;
 		}
 
@@ -13613,7 +14156,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFmod");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf361d556);
 			return ptr;
 		}
 
@@ -13629,7 +14173,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFontSample");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x777b3289);
 			return ptr;
 		}
 
@@ -13645,7 +14190,8 @@ namespace Classes {
 		struct FName                                       Group;                                                    // 0x0088(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFontSampleParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4bc776ce);
 			return ptr;
 		}
 
@@ -13659,7 +14205,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFrac");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x71ad108c);
 			return ptr;
 		}
 
@@ -13679,7 +14226,8 @@ namespace Classes {
 		struct FExpressionInput                            Normal;                                                   // 0x00E0(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFresnel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7aae3e9);
 			return ptr;
 		}
 
@@ -13704,7 +14252,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x47];                                      // 0x00E9(0x0047) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFunctionInput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb5f08218);
 			return ptr;
 		}
 
@@ -13726,7 +14275,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionFunctionOutput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8b36d2eb);
 			return ptr;
 		}
 
@@ -13741,7 +14291,8 @@ namespace Classes {
 		TArray<struct FGuid>                               AttributeGetTypes;                                        // 0x00A0(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionGetMaterialAttributes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9347d858);
 			return ptr;
 		}
 
@@ -13757,7 +14308,8 @@ namespace Classes {
 		struct FExpressionInput                            DynamicIndirect;                                          // 0x00D0(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionGIReplace");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x37d0bfb0);
 			return ptr;
 		}
 
@@ -13779,7 +14331,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0184(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionIf");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x888c23f1);
 			return ptr;
 		}
 
@@ -13792,7 +14345,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionLightmapUVs");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x75fe69e);
 			return ptr;
 		}
 
@@ -13807,7 +14361,8 @@ namespace Classes {
 		struct FExpressionInput                            Lightmass;                                                // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionLightmassReplace");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0dcca98);
 			return ptr;
 		}
 
@@ -13820,7 +14375,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionLightVector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x29fa173d);
 			return ptr;
 		}
 
@@ -13840,7 +14396,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionLinearInterpolate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb7b930b8);
 			return ptr;
 		}
 
@@ -13854,7 +14411,8 @@ namespace Classes {
 		struct FExpressionInput                            X;                                                        // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionLogarithm2");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c95c7ad);
 			return ptr;
 		}
 
@@ -13885,7 +14443,8 @@ namespace Classes {
 		struct FExpressionInput                            PixelDepthOffset;                                         // 0x05A0(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMakeMaterialAttributes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0e01372);
 			return ptr;
 		}
 
@@ -13901,7 +14460,8 @@ namespace Classes {
 		TArray<struct FFunctionExpressionOutput>           FunctionOutputs;                                          // 0x0078(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMaterialFunctionCall");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x636243e7);
 			return ptr;
 		}
 
@@ -13916,7 +14476,8 @@ namespace Classes {
 		struct FExpressionInput                            MaterialProxy;                                            // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMaterialProxyReplace");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d96cdf);
 			return ptr;
 		}
 
@@ -13933,7 +14494,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMax");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc9e3a0e);
 			return ptr;
 		}
 
@@ -13950,7 +14512,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMin");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf75a8d0);
 			return ptr;
 		}
 
@@ -13967,7 +14530,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionMultiply");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc0f40e2c);
 			return ptr;
 		}
 
@@ -13995,7 +14559,8 @@ namespace Classes {
 		uint32_t                                           RepeatSize;                                               // 0x00F4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionNoise");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3541b20a);
 			return ptr;
 		}
 
@@ -14009,7 +14574,8 @@ namespace Classes {
 		struct FExpressionInput                            VectorInput;                                              // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionNormalize");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5e706435);
 			return ptr;
 		}
 
@@ -14022,7 +14588,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionObjectBounds");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbb7219d2);
 			return ptr;
 		}
 
@@ -14035,7 +14602,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionObjectOrientation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe45f83fd);
 			return ptr;
 		}
 
@@ -14048,7 +14616,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionObjectPositionWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x39ed148e);
 			return ptr;
 		}
 
@@ -14061,7 +14630,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionObjectRadius");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd39d7cb);
 			return ptr;
 		}
 
@@ -14075,7 +14645,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionOneMinus");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x706d86d8);
 			return ptr;
 		}
 
@@ -14096,7 +14667,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0115(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPanner");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xed86b9e4);
 			return ptr;
 		}
 
@@ -14112,7 +14684,8 @@ namespace Classes {
 		struct FName                                       Group;                                                    // 0x0078(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7edd94b9);
 			return ptr;
 		}
 
@@ -14129,7 +14702,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionScalarParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb47f2f2d);
 			return ptr;
 		}
 
@@ -14144,7 +14718,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionStaticBoolParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcfebad2b);
 			return ptr;
 		}
 
@@ -14159,7 +14734,8 @@ namespace Classes {
 		struct FExpressionInput                            B;                                                        // 0x00C0(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionStaticSwitchParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3e00cae7);
 			return ptr;
 		}
 
@@ -14178,7 +14754,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionStaticComponentMaskParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e8e4818);
 			return ptr;
 		}
 
@@ -14192,7 +14769,8 @@ namespace Classes {
 		struct FLinearColor                                DefaultValue;                                             // 0x0080(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionVectorParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf65732b6);
 			return ptr;
 		}
 
@@ -14205,7 +14783,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe1012b03);
 			return ptr;
 		}
 
@@ -14218,7 +14797,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleDirection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x14d82c89);
 			return ptr;
 		}
 
@@ -14231,7 +14811,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleMacroUV");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe45bb9fb);
 			return ptr;
 		}
 
@@ -14244,7 +14825,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleMotionBlurFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4f24a849);
 			return ptr;
 		}
 
@@ -14257,7 +14839,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticlePositionWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdd8f12f1);
 			return ptr;
 		}
 
@@ -14270,7 +14853,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleRadius");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x88f0d0f4);
 			return ptr;
 		}
 
@@ -14283,7 +14867,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleRandom");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeec2219b);
 			return ptr;
 		}
 
@@ -14296,7 +14881,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleRelativeTime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8703386d);
 			return ptr;
 		}
 
@@ -14309,7 +14895,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleSize");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x39584ffd);
 			return ptr;
 		}
 
@@ -14322,7 +14909,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleSpeed");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2feaeda3);
 			return ptr;
 		}
 
@@ -14335,7 +14923,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPerInstanceData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b4ca6a8);
 			return ptr;
 		}
 
@@ -14348,7 +14937,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPerInstanceFadeAmount");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x31f248e);
 			return ptr;
 		}
 
@@ -14361,7 +14951,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPerInstanceRandom");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8e6a4bf5);
 			return ptr;
 		}
 
@@ -14374,7 +14965,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPixelDepth");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9d013f3);
 			return ptr;
 		}
 
@@ -14387,7 +14979,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPixelNormalWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x679c7513);
 			return ptr;
 		}
 
@@ -14404,7 +14997,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPower");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd5ad6c1f);
 			return ptr;
 		}
 
@@ -14417,7 +15011,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPrecomputedAOMask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x71ff7e16);
 			return ptr;
 		}
 
@@ -14430,7 +15025,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionPreSkinnedPosition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8cc31b40);
 			return ptr;
 		}
 
@@ -14445,7 +15041,8 @@ namespace Classes {
 		struct FExpressionInput                            Inputs[0x3];                                              // 0x0098(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionQualitySwitch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4b2e67cb);
 			return ptr;
 		}
 
@@ -14461,7 +15058,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionReflectionVectorWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xede12b8);
 			return ptr;
 		}
 
@@ -14480,7 +15078,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0144(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionRotateAboutAxis");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4986c81b);
 			return ptr;
 		}
 
@@ -14499,7 +15098,8 @@ namespace Classes {
 		uint32_t                                           ConstCoordinate;                                          // 0x00DC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionRotator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd32744a3);
 			return ptr;
 		}
 
@@ -14517,7 +15117,8 @@ namespace Classes {
 		struct FVector2D                                   ConstInput;                                               // 0x00D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSceneColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x56c09861);
 			return ptr;
 		}
 
@@ -14535,7 +15136,8 @@ namespace Classes {
 		struct FVector2D                                   ConstInput;                                               // 0x00D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSceneDepth");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2958af8b);
 			return ptr;
 		}
 
@@ -14548,7 +15150,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSceneTexelSize");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x989afe27);
 			return ptr;
 		}
 
@@ -14566,7 +15169,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x5];                                       // 0x009B(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSceneTexture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8b8d27d);
 			return ptr;
 		}
 
@@ -14581,7 +15185,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionScreenPosition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa40de31);
 			return ptr;
 		}
 
@@ -14596,7 +15201,8 @@ namespace Classes {
 		TArray<struct FGuid>                               AttributeSetTypes;                                        // 0x0070(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSetMaterialAttributes");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4d9c6894);
 			return ptr;
 		}
 
@@ -14612,7 +15218,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSine");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x76c70cab);
 			return ptr;
 		}
 
@@ -14632,7 +15239,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSpeedTree");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8e71b5e1);
 			return ptr;
 		}
 
@@ -14651,7 +15259,8 @@ namespace Classes {
 		float                                              HardnessPercent;                                          // 0x0144(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSphereMask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3e24cf87);
 			return ptr;
 		}
 
@@ -14667,7 +15276,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSphericalParticleOpacity");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc2c9a1e);
 			return ptr;
 		}
 
@@ -14681,7 +15291,8 @@ namespace Classes {
 		struct FExpressionInput                            Input;                                                    // 0x0060(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSquareRoot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfce7bf55);
 			return ptr;
 		}
 
@@ -14696,7 +15307,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionStaticBool");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6876f8aa);
 			return ptr;
 		}
 
@@ -14714,7 +15326,8 @@ namespace Classes {
 		struct FExpressionInput                            Value;                                                    // 0x00D8(0x0038)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionStaticSwitch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xebf79d7e);
 			return ptr;
 		}
 
@@ -14731,7 +15344,8 @@ namespace Classes {
 		float                                              ConstB;                                                   // 0x00D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionSubtract");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x438c7270);
 			return ptr;
 		}
 
@@ -14749,7 +15363,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1fe9198e);
 			return ptr;
 		}
 
@@ -14762,7 +15377,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4e7068fc);
 			return ptr;
 		}
 
@@ -14786,7 +15402,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0194(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureSample");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28ba645f);
 			return ptr;
 		}
 
@@ -14801,7 +15418,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0199(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionParticleSubUV");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5b776305);
 			return ptr;
 		}
 
@@ -14817,7 +15435,8 @@ namespace Classes {
 		struct FName                                       Group;                                                    // 0x01B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureSampleParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x52a4f950);
 			return ptr;
 		}
 
@@ -14830,7 +15449,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureObjectParameter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc27d7961);
 			return ptr;
 		}
 
@@ -14843,7 +15463,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureSampleParameter2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf0fda672);
 			return ptr;
 		}
 
@@ -14859,7 +15480,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x01BD(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionAntialiasedTextureMask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9840f060);
 			return ptr;
 		}
 
@@ -14874,7 +15496,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureSampleParameterSubUV");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x849720cb);
 			return ptr;
 		}
 
@@ -14887,7 +15510,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureSampleParameterCube");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d99cc9f);
 			return ptr;
 		}
 
@@ -14906,7 +15530,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureCoordinate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe3d41b4b);
 			return ptr;
 		}
 
@@ -14922,7 +15547,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTextureProperty");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb0c23ff2);
 			return ptr;
 		}
 
@@ -14939,7 +15565,8 @@ namespace Classes {
 		float                                              Period;                                                   // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xba9b5567);
 			return ptr;
 		}
 
@@ -14956,7 +15583,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x009A(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTransform");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xad1a90b8);
 			return ptr;
 		}
 
@@ -14973,7 +15601,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x009A(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTransformPosition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8af8f621);
 			return ptr;
 		}
 
@@ -14986,7 +15615,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionTwoSidedSign");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd36beaea);
 			return ptr;
 		}
 
@@ -14999,7 +15629,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionVariationIndex");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb14a9bd);
 			return ptr;
 		}
 
@@ -15019,7 +15650,8 @@ namespace Classes {
 		uint32_t                                           TileSize;                                                 // 0x00A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionVectorNoise");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4c1e1625);
 			return ptr;
 		}
 
@@ -15032,7 +15664,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionVertexColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6e82fb17);
 			return ptr;
 		}
 
@@ -15045,7 +15678,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionVertexNormalWS");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x68a05d1);
 			return ptr;
 		}
 
@@ -15060,7 +15694,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionViewProperty");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x72300158);
 			return ptr;
 		}
 
@@ -15073,7 +15708,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionViewSize");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc9f7c454);
 			return ptr;
 		}
 
@@ -15088,7 +15724,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialExpressionWorldPosition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbe3ea9e1);
 			return ptr;
 		}
 
@@ -15108,7 +15745,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialFunction");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd28c7596);
 			return ptr;
 		}
 
@@ -15233,7 +15871,8 @@ namespace Classes {
 		TArray<class UTexture*>                            ExpressionTextureReferences;                              // 0x0978(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Material");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e3557fa);
 			return ptr;
 		}
 
@@ -15247,7 +15886,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x01B0(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialInstanceDynamic");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe8323256);
 			return ptr;
 		}
 
@@ -15275,7 +15915,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0058(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialParameterCollection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x758a9b77);
 			return ptr;
 		}
 
@@ -15292,7 +15933,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xA8];                                      // 0x0040(0x00A8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MaterialParameterCollectionInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x305c429e);
 			return ptr;
 		}
 
@@ -15305,7 +15947,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MatineeInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa00750e7);
 			return ptr;
 		}
 
@@ -15320,7 +15963,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MorphTarget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc8722b82);
 			return ptr;
 		}
 
@@ -15333,7 +15977,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavArea_Default");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa4f994d5);
 			return ptr;
 		}
 
@@ -15346,7 +15991,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavArea_LowHeight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e80a1f1);
 			return ptr;
 		}
 
@@ -15359,7 +16005,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavArea_Null");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc9a44c21);
 			return ptr;
 		}
 
@@ -15372,7 +16019,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavArea_Obstacle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x210f15b1);
 			return ptr;
 		}
 
@@ -15385,7 +16033,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavAreaMeta");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaf4dd4d4);
 			return ptr;
 		}
 
@@ -15414,7 +16063,8 @@ namespace Classes {
 		class UClass*                                      Agent15Area;                                              // 0x00B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavAreaMeta_SwitchByAgent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x52bd3637);
 			return ptr;
 		}
 
@@ -15434,7 +16084,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x6F];                                      // 0x00A1(0x006F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavCollision");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe75fdc90);
 			return ptr;
 		}
 
@@ -15448,7 +16099,8 @@ namespace Classes {
 		struct FName                                       NavigationDataName;                                       // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationDataChunk");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x53b97a5a);
 			return ptr;
 		}
 
@@ -15462,7 +16114,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RecastNavMeshDataChunk");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb28144d0);
 			return ptr;
 		}
 
@@ -15479,7 +16132,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x77];                                      // 0x0049(0x0077) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationPath");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb4589606);
 			return ptr;
 		}
 
@@ -15501,7 +16155,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavigationPathGenerator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7d929b8d);
 			return ptr;
 		}
 
@@ -15514,7 +16169,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.RecastFilter_UseDefaultArea");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc2a41417);
 			return ptr;
 		}
 
@@ -15527,7 +16183,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavLinkTrivial");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x107cfcdb);
 			return ptr;
 		}
 
@@ -15540,7 +16197,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.NavNodeInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2b9f9d15);
 			return ptr;
 		}
 
@@ -15561,7 +16219,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x106];                                     // 0x005A(0x0106) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ObjectLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd5c833d);
 			return ptr;
 		}
 
@@ -15575,7 +16234,8 @@ namespace Classes {
 		TArray<class UObject*>                             ReferencedObjects;                                        // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ObjectReferencer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28403203);
 			return ptr;
 		}
 
@@ -15588,7 +16248,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.OnlineEngineInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x725e0cfb);
 			return ptr;
 		}
 
@@ -15601,7 +16262,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.OnlineSession");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x716b39d4);
 			return ptr;
 		}
 
@@ -15614,7 +16276,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleSpriteEmitter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x50548ba);
 			return ptr;
 		}
 
@@ -15642,7 +16305,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModule");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa98e4bc3);
 			return ptr;
 		}
 
@@ -15655,7 +16319,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleOrientationBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x15d5f800);
 			return ptr;
 		}
 
@@ -15670,7 +16335,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleOrientationAxisLock");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7db70ec9);
 			return ptr;
 		}
 
@@ -15699,7 +16365,8 @@ namespace Classes {
 		int                                                PeakActiveParticles;                                      // 0x00B4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleLODLevel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf2735946);
 			return ptr;
 		}
 
@@ -15714,7 +16381,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAccelerationBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2301070c);
 			return ptr;
 		}
 
@@ -15730,7 +16398,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAcceleration");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8db1bbb);
 			return ptr;
 		}
 
@@ -15745,7 +16414,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAccelerationConstant");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbaa83e73);
 			return ptr;
 		}
 
@@ -15760,7 +16430,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       DragCoefficientRaw;                                       // 0x0040(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAccelerationDrag");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb561e435);
 			return ptr;
 		}
 
@@ -15775,7 +16446,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       DragScaleRaw;                                             // 0x0040(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAccelerationDragScaleOverLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdf6b045);
 			return ptr;
 		}
 
@@ -15789,7 +16461,8 @@ namespace Classes {
 		struct FRawDistributionVector                      AccelOverLife;                                            // 0x0038(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAccelerationOverLifetime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x66e2cb90);
 			return ptr;
 		}
 
@@ -15802,7 +16475,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAttractorBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0cdac6e);
 			return ptr;
 		}
 
@@ -15819,7 +16493,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       Strength;                                                 // 0x0080(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAttractorLine");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x996cfa9f);
 			return ptr;
 		}
 
@@ -15845,7 +16520,8 @@ namespace Classes {
 		int                                                LastSelIndex;                                             // 0x00BC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAttractorParticle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6f37fd9b);
 			return ptr;
 		}
 
@@ -15872,7 +16548,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x00F2(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAttractorPoint");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xae58341d);
 			return ptr;
 		}
 
@@ -15889,7 +16566,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       StrengthRaw;                                              // 0x0048(0x0038) (CPF_Edit, CPF_NoClear)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleAttractorPointGravity");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd58c99a5);
 			return ptr;
 		}
 
@@ -15902,7 +16580,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleBeamBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc7eeef21);
 			return ptr;
 		}
 
@@ -15926,7 +16605,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       Strength;                                                 // 0x00E8(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleBeamModifier");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd63496c1);
 			return ptr;
 		}
 
@@ -15967,7 +16647,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       NoiseScale;                                               // 0x0180(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleBeamNoise");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c2ff570);
 			return ptr;
 		}
 
@@ -15996,7 +16677,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x7];                                       // 0x0131(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleBeamSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb098d3e1);
 			return ptr;
 		}
 
@@ -16026,7 +16708,8 @@ namespace Classes {
 		unsigned char                                      UnknownData05[0x8];                                       // 0x0130(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleBeamTarget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x54ce2a85);
 			return ptr;
 		}
 
@@ -16039,7 +16722,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleCameraBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d68355);
 			return ptr;
 		}
 
@@ -16057,7 +16741,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleCameraOffset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x565a59b7);
 			return ptr;
 		}
 
@@ -16070,7 +16755,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleCollisionBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x480fa9d2);
 			return ptr;
 		}
 
@@ -16106,7 +16792,8 @@ namespace Classes {
 		float                                              MaxCollisionDistance;                                     // 0x01B4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleCollision");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9f85ea1);
 			return ptr;
 		}
 
@@ -16127,7 +16814,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x2];                                       // 0x00AE(0x0002) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleCollisionGPU");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x44579121);
 			return ptr;
 		}
 
@@ -16140,7 +16828,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleColorBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2586df53);
 			return ptr;
 		}
 
@@ -16157,7 +16846,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleColor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5ba1c73c);
 			return ptr;
 		}
 
@@ -16171,7 +16861,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x00C0(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleColor_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca9a0b83);
 			return ptr;
 		}
 
@@ -16188,7 +16879,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleColorOverLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x694e0f6c);
 			return ptr;
 		}
 
@@ -16205,7 +16897,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00B9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleColorScaleOverLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f58b59a);
 			return ptr;
 		}
 
@@ -16218,7 +16911,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4f124382);
 			return ptr;
 		}
 
@@ -16232,7 +16926,8 @@ namespace Classes {
 		TArray<struct FParticleEvent_GenerateInfo>         Events;                                                   // 0x0030(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_NoClear)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventGenerator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8a9d0240);
 			return ptr;
 		}
 
@@ -16248,7 +16943,8 @@ namespace Classes {
 		struct FName                                       EventName;                                                // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventReceiverBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf6fcf619);
 			return ptr;
 		}
 
@@ -16263,7 +16959,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventReceiverKillParticles");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3fad77e7);
 			return ptr;
 		}
 
@@ -16285,7 +16982,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventReceiverSpawn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x21dcfe87);
 			return ptr;
 		}
 
@@ -16298,7 +16996,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleKillBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf64cc548);
 			return ptr;
 		}
 
@@ -16317,7 +17016,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleKillBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9ee506f6);
 			return ptr;
 		}
 
@@ -16335,7 +17035,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleKillHeight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf6d10e26);
 			return ptr;
 		}
 
@@ -16348,7 +17049,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLifetimeBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8bc031a5);
 			return ptr;
 		}
 
@@ -16362,7 +17064,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       Lifetime;                                                 // 0x0030(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLifetime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x155fe49e);
 			return ptr;
 		}
 
@@ -16376,7 +17079,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0068(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLifetime_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x43418569);
 			return ptr;
 		}
 
@@ -16389,7 +17093,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLightBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e98d232);
 			return ptr;
 		}
 
@@ -16414,7 +17119,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x6];                                       // 0x0132(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLight");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcbfe8541);
 			return ptr;
 		}
 
@@ -16428,7 +17134,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0138(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLight_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfbf4be70);
 			return ptr;
 		}
 
@@ -16441,7 +17148,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x738a3025);
 			return ptr;
 		}
 
@@ -16457,7 +17165,8 @@ namespace Classes {
 		float                                              DistributeThreshold;                                      // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc3aefb1e);
 			return ptr;
 		}
 
@@ -16471,7 +17180,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocation_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf6294e9);
 			return ptr;
 		}
 
@@ -16484,7 +17194,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationWorldOffset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x302de3e3);
 			return ptr;
 		}
 
@@ -16498,7 +17209,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationWorldOffset_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd41264fe);
 			return ptr;
 		}
 
@@ -16526,7 +17238,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationBoneSocket");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf61778e7);
 			return ptr;
 		}
 
@@ -16543,7 +17256,8 @@ namespace Classes {
 		struct FRawDistributionVector                      Direction;                                                // 0x0120(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationDirect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x94eadc01);
 			return ptr;
 		}
 
@@ -16566,7 +17280,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationEmitter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf8b341f8);
 			return ptr;
 		}
 
@@ -16580,7 +17295,8 @@ namespace Classes {
 		struct FName                                       EmitterName;                                              // 0x0030(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_NoClear, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationEmitterDirect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1f426ebb);
 			return ptr;
 		}
 
@@ -16604,7 +17320,8 @@ namespace Classes {
 		struct FRawDistributionVector                      StartLocation;                                            // 0x0070(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7de2824e);
 			return ptr;
 		}
 
@@ -16623,7 +17340,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0139(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveCylinder");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8258a567);
 			return ptr;
 		}
 
@@ -16637,7 +17355,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0140(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveCylinder_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x65f58c9a);
 			return ptr;
 		}
 
@@ -16651,7 +17370,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       StartRadius;                                              // 0x00C0(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveSphere");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4280b436);
 			return ptr;
 		}
 
@@ -16665,7 +17385,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x00F8(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveSphere_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xceffc801);
 			return ptr;
 		}
 
@@ -16682,7 +17403,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       Thickness;                                                // 0x00F0(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationPrimitiveTriangle");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1875b871);
 			return ptr;
 		}
 
@@ -16712,7 +17434,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleLocationSkelVertSurface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c054bc7);
 			return ptr;
 		}
 
@@ -16726,7 +17449,8 @@ namespace Classes {
 		struct FVector2D                                   PivotOffset;                                              // 0x0030(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModulePivotOffset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6a2bd210);
 			return ptr;
 		}
 
@@ -16740,7 +17464,8 @@ namespace Classes {
 		struct FRawDistributionVector                      SourceMovementScale;                                      // 0x0030(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSourceMovement");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfee7a813);
 			return ptr;
 		}
 
@@ -16753,7 +17478,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMaterialBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9908a68b);
 			return ptr;
 		}
 
@@ -16767,7 +17493,8 @@ namespace Classes {
 		TArray<class UMaterialInterface*>                  MeshMaterials;                                            // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshMaterial");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x83ad0043);
 			return ptr;
 		}
 
@@ -16782,7 +17509,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleOrbitBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x341a2e8a);
 			return ptr;
 		}
 
@@ -16806,7 +17534,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x4];                                       // 0x0144(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleOrbit");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe38aef39);
 			return ptr;
 		}
 
@@ -16819,7 +17548,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleParameterBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe11ce173);
 			return ptr;
 		}
 
@@ -16836,7 +17566,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleParameterDynamic");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc1bbb88f);
 			return ptr;
 		}
 
@@ -16850,7 +17581,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0048(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleParameterDynamic_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9cfaadc2);
 			return ptr;
 		}
 
@@ -16871,7 +17603,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x20];                                      // 0x0040(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SubUVAnimation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5fbc6ef6);
 			return ptr;
 		}
 
@@ -16945,7 +17678,8 @@ namespace Classes {
 		unsigned char                                      UnknownData15[0x20];                                      // 0x0150(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRequired");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2c943364);
 			return ptr;
 		}
 
@@ -16958,7 +17692,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9c6d853a);
 			return ptr;
 		}
 
@@ -16974,7 +17709,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2cf3776a);
 			return ptr;
 		}
 
@@ -16988,7 +17724,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0088(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotation_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf816973d);
 			return ptr;
 		}
 
@@ -17002,7 +17739,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       StartRotation;                                            // 0x0030(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xadeb9449);
 			return ptr;
 		}
 
@@ -17016,7 +17754,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0068(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotation_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x25b68598);
 			return ptr;
 		}
 
@@ -17032,7 +17771,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationOverLifetime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc797f79e);
 			return ptr;
 		}
 
@@ -17045,7 +17785,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationRateBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6a411ec);
 			return ptr;
 		}
 
@@ -17059,7 +17800,8 @@ namespace Classes {
 		struct FRawDistributionVector                      StartRotationRate;                                        // 0x0030(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotationRate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb08588a4);
 			return ptr;
 		}
 
@@ -17073,7 +17815,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       StartRotationRate;                                        // 0x0030(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationRate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb43fd5db);
 			return ptr;
 		}
 
@@ -17087,7 +17830,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0080(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotationRate_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbfff312b);
 			return ptr;
 		}
 
@@ -17101,7 +17845,8 @@ namespace Classes {
 		struct FRawDistributionVector                      LifeMultiplier;                                           // 0x0030(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotationRateMultiplyLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f79f15a);
 			return ptr;
 		}
 
@@ -17117,7 +17862,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleMeshRotationRateOverLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaec83c04);
 			return ptr;
 		}
 
@@ -17131,7 +17877,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0068(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationRate_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x51c9c0f6);
 			return ptr;
 		}
 
@@ -17145,7 +17892,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       LifeMultiplier;                                           // 0x0030(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleRotationRateMultiplyLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5ef09fe9);
 			return ptr;
 		}
 
@@ -17158,7 +17906,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSizeBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e924d3f);
 			return ptr;
 		}
 
@@ -17172,7 +17921,8 @@ namespace Classes {
 		struct FRawDistributionVector                      StartSize;                                                // 0x0030(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSize");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb48a0f40);
 			return ptr;
 		}
 
@@ -17186,7 +17936,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x0080(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSize_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa6c9899f);
 			return ptr;
 		}
 
@@ -17204,7 +17955,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSizeMultiplyLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8ebf6bc6);
 			return ptr;
 		}
 
@@ -17222,7 +17974,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSizeScale");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdab1d7c6);
 			return ptr;
 		}
 
@@ -17237,7 +17990,8 @@ namespace Classes {
 		struct FVector2D                                   MaxScale;                                                 // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSizeScaleBySpeed");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcded3292);
 			return ptr;
 		}
 
@@ -17253,7 +18007,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSpawnBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xedb0af1b);
 			return ptr;
 		}
 
@@ -17274,7 +18029,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x00F9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSpawn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfcf00e04);
 			return ptr;
 		}
 
@@ -17298,7 +18054,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSpawnPerUnit");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe39ed2db);
 			return ptr;
 		}
 
@@ -17311,7 +18068,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSubUVBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x876b94a9);
 			return ptr;
 		}
 
@@ -17328,7 +18086,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSubUV");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf8b4feaa);
 			return ptr;
 		}
 
@@ -17346,7 +18105,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x00BC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleSubUVMovie");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x86f7e9a);
 			return ptr;
 		}
 
@@ -17359,7 +18119,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTrailBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7b73f47e);
 			return ptr;
 		}
 
@@ -17384,7 +18145,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x3];                                       // 0x0095(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTrailSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa7788a96);
 			return ptr;
 		}
 
@@ -17397,7 +18159,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x765deebc);
 			return ptr;
 		}
 
@@ -17419,7 +18182,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataAnimTrail");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xba017358);
 			return ptr;
 		}
 
@@ -17455,7 +18219,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x57];                                      // 0x0111(0x0057) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataBeam2");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc5315e6c);
 			return ptr;
 		}
 
@@ -17473,7 +18238,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xB];                                       // 0x0455(0x000B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataGpu");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6896b313);
 			return ptr;
 		}
 
@@ -17512,7 +18278,8 @@ namespace Classes {
 		unsigned char                                      UnknownData07[0x3];                                       // 0x00B5(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2826d320);
 			return ptr;
 		}
 
@@ -17549,7 +18316,8 @@ namespace Classes {
 		float                                              TangentTessellationScalar;                                // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleTypeDataRibbon");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd04a9337);
 			return ptr;
 		}
 
@@ -17562,7 +18330,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x428353b5);
 			return ptr;
 		}
 
@@ -17580,7 +18349,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldGlobal");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2be58fbf);
 			return ptr;
 		}
 
@@ -17605,7 +18375,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldLocal");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x399b3d63);
 			return ptr;
 		}
 
@@ -17620,7 +18391,8 @@ namespace Classes {
 		struct FVector                                     MaxInitialRotation;                                       // 0x003C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldRotation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbf94d18);
 			return ptr;
 		}
 
@@ -17635,7 +18407,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldRotationRate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc9090f9e);
 			return ptr;
 		}
 
@@ -17650,7 +18423,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       VectorFieldScaleRaw;                                      // 0x0038(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldScale");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x312122f0);
 			return ptr;
 		}
 
@@ -17665,7 +18439,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       VectorFieldScaleOverLifeRaw;                              // 0x0038(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVectorFieldScaleOverLife");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbe4f4bf0);
 			return ptr;
 		}
 
@@ -17681,7 +18456,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocityBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x131acbd1);
 			return ptr;
 		}
 
@@ -17696,7 +18472,8 @@ namespace Classes {
 		struct FRawDistributionFloat                       StartVelocityRadial;                                      // 0x0088(0x0038) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocity");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb0b48dd2);
 			return ptr;
 		}
 
@@ -17710,7 +18487,8 @@ namespace Classes {
 		struct FParticleRandomSeedInfo                     RandomSeedInfo;                                           // 0x00C0(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocity_Seeded");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x18a85265);
 			return ptr;
 		}
 
@@ -17727,7 +18505,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocityCone");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x958a1db7);
 			return ptr;
 		}
 
@@ -17741,7 +18520,8 @@ namespace Classes {
 		struct FRawDistributionVector                      Scale;                                                    // 0x0038(0x0050) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocityInheritParent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xef6d141f);
 			return ptr;
 		}
 
@@ -17757,7 +18537,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleVelocityOverLifetime");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb6de0a0d);
 			return ptr;
 		}
 
@@ -17770,7 +18551,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleModuleEventSendToGame");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x15792d82);
 			return ptr;
 		}
 
@@ -17785,7 +18567,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x14];                                      // 0x002C(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ParticleSystemReplay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5dc38c85);
 			return ptr;
 		}
 
@@ -17798,7 +18581,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DemoPendingNetGame");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x34cd30e8);
 			return ptr;
 		}
 
@@ -17829,7 +18613,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicalMaterial");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5d0b5395);
 			return ptr;
 		}
 
@@ -17842,7 +18627,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicalMaterialPropertyBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1a181b1);
 			return ptr;
 		}
 
@@ -17860,7 +18646,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsCollisionHandler");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fb64080);
 			return ptr;
 		}
 
@@ -17878,7 +18665,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0334(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsConstraintTemplate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x66a59563);
 			return ptr;
 		}
 
@@ -17892,7 +18680,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PhysicsSerializer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6a710458);
 			return ptr;
 		}
 
@@ -17906,7 +18695,8 @@ namespace Classes {
 		TArray<struct FDelegateArray>                      AllDelegates;                                             // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlatformInterfaceBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x78c9bca2);
 			return ptr;
 		}
 
@@ -17922,7 +18712,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CloudStorageBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0985c0);
 			return ptr;
 		}
 
@@ -17939,7 +18730,8 @@ namespace Classes {
 		TArray<struct FScriptDelegate>                     ClosedAdDelegates;                                        // 0x0050(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.InGameAdManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc19c5446);
 			return ptr;
 		}
 
@@ -17955,7 +18747,8 @@ namespace Classes {
 		struct FString                                     LastErrorSolution;                                        // 0x0058(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.MicroTransactionBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5334fcd2);
 			return ptr;
 		}
 
@@ -17968,7 +18761,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TwitterIntegrationBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8264fbb3);
 			return ptr;
 		}
 
@@ -17995,7 +18789,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0060(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.PlatformInterfaceWebResponse");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1b69ce80);
 			return ptr;
 		}
 
@@ -18013,7 +18808,8 @@ namespace Classes {
 		class UNetConnection*                              Parent;                                                   // 0x336E8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ChildConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5fd0b5fd);
 			return ptr;
 		}
 
@@ -18027,7 +18823,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Polys");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e94face);
 			return ptr;
 		}
 
@@ -18041,7 +18838,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ReporterBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x26da94bd);
 			return ptr;
 		}
 
@@ -18055,7 +18853,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x78];                                      // 0x0030(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ReporterGraph");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe4a09d1e);
 			return ptr;
 		}
 
@@ -18080,7 +18879,8 @@ namespace Classes {
 		float                                              RoomRolloffFactor;                                        // 0x0054(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ReverbEffect");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaa517396);
 			return ptr;
 		}
 
@@ -18095,7 +18895,8 @@ namespace Classes {
 		TArray<struct FNode>                               Nodes;                                                    // 0x0038(0x0010) (CPF_Edit, CPF_EditFixedSize, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Rig");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe1a1cd5d);
 			return ptr;
 		}
 
@@ -18114,7 +18915,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0068(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SimpleConstructionScript");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb5072d9d);
 			return ptr;
 		}
 
@@ -18147,7 +18949,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x40];                                      // 0x0100(0x0040) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SCS_Node");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa89d086d);
 			return ptr;
 		}
 
@@ -18161,7 +18964,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x68];                                      // 0x0028(0x0068) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Selection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e190c39);
 			return ptr;
 		}
 
@@ -18177,7 +18981,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0358(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DestructibleMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7612a40c);
 			return ptr;
 		}
 
@@ -18192,7 +18997,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalMeshReductionSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc0e15fb5);
 			return ptr;
 		}
 
@@ -18212,7 +19018,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x005D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SkeletalMeshSocket");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c856704);
 			return ptr;
 		}
 
@@ -18229,7 +19036,8 @@ namespace Classes {
 		struct FSlateBrush                                 Brush;                                                    // 0x0028(0x0090) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SlateBrushAsset");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1ac7c640);
 			return ptr;
 		}
 
@@ -18260,7 +19068,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x5D];                                      // 0x006B(0x005D) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Texture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7ab2da92);
 			return ptr;
 		}
 
@@ -18273,7 +19082,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SlateTextureAtlasInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5224788b);
 			return ptr;
 		}
 
@@ -18287,7 +19097,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0090(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.DialogueSoundWaveProxy");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7db60f79);
 			return ptr;
 		}
 
@@ -18307,7 +19118,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x01A0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundCue");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x20e58d4b);
 			return ptr;
 		}
 
@@ -18321,7 +19133,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x80];                                      // 0x0260(0x0080) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundWaveProcedural");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x51ce74ac);
 			return ptr;
 		}
 
@@ -18339,7 +19152,8 @@ namespace Classes {
 		class USoundClass*                                 ParentClass;                                              // 0x0070(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundClass");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1e4749a);
 			return ptr;
 		}
 
@@ -18361,7 +19175,8 @@ namespace Classes {
 		float                                              FadeOutTime;                                              // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundMix");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa40e5858);
 			return ptr;
 		}
 
@@ -18375,7 +19190,8 @@ namespace Classes {
 		TArray<class USoundNode*>                          ChildNodes;                                               // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNode");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb1ffcd7e);
 			return ptr;
 		}
 
@@ -18388,7 +19204,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeAssetReferencer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96ae0ca1);
 			return ptr;
 		}
 
@@ -18406,7 +19223,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeWavePlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf5dc75ee);
 			return ptr;
 		}
 
@@ -18423,7 +19241,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0139(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeAttenuation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x636d8766);
 			return ptr;
 		}
 
@@ -18437,7 +19256,8 @@ namespace Classes {
 		struct FName                                       BoolParameterName;                                        // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeBranch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x165e5df6);
 			return ptr;
 		}
 
@@ -18451,7 +19271,8 @@ namespace Classes {
 		TArray<float>                                      InputVolume;                                              // 0x0038(0x0010) (CPF_Edit, CPF_EditFixedSize, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeConcatenator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3f4a507b);
 			return ptr;
 		}
 
@@ -18466,7 +19287,8 @@ namespace Classes {
 		float                                              DelayMax;                                                 // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeDelay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x55e2c7d7);
 			return ptr;
 		}
 
@@ -18482,7 +19304,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeDialoguePlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4ecd64e7);
 			return ptr;
 		}
 
@@ -18496,7 +19319,8 @@ namespace Classes {
 		TArray<struct FDistanceDatum>                      CrossFadeInput;                                           // 0x0038(0x0010) (CPF_Edit, CPF_ExportObject, CPF_EditFixedSize, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeDistanceCrossFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x231f94bb);
 			return ptr;
 		}
 
@@ -18510,7 +19334,8 @@ namespace Classes {
 		struct FName                                       ParamName;                                                // 0x0048(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeParamCrossFade");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xaedd67fd);
 			return ptr;
 		}
 
@@ -18525,7 +19350,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeDoppler");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x849b1cae);
 			return ptr;
 		}
 
@@ -18553,7 +19379,8 @@ namespace Classes {
 		float                                              VolumeMax;                                                // 0x016C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeEnveloper");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5284888);
 			return ptr;
 		}
 
@@ -18567,7 +19394,8 @@ namespace Classes {
 		TArray<int>                                        GroupSizes;                                               // 0x0038(0x0010) (CPF_Edit, CPF_EditFixedSize, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeGroupControl");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xad237e32);
 			return ptr;
 		}
 
@@ -18583,7 +19411,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeLooping");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xebfeb2b0);
 			return ptr;
 		}
 
@@ -18596,7 +19425,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeMature");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8e12d2da);
 			return ptr;
 		}
 
@@ -18610,7 +19440,8 @@ namespace Classes {
 		TArray<float>                                      InputVolume;                                              // 0x0038(0x0010) (CPF_Edit, CPF_ExportObject, CPF_EditFixedSize, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeMixer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x75c7ead9);
 			return ptr;
 		}
 
@@ -18627,7 +19458,8 @@ namespace Classes {
 		float                                              VolumeMax;                                                // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeModulator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb335bf8d);
 			return ptr;
 		}
 
@@ -18642,7 +19474,8 @@ namespace Classes {
 		struct FModulatorContinuousParams                  VolumeModulationParams;                                   // 0x0058(0x0020) (CPF_Edit)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeModulatorContinuous");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf2a07994);
 			return ptr;
 		}
 
@@ -18667,7 +19500,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeOscillator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x19250120);
 			return ptr;
 		}
 
@@ -18680,7 +19514,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeQualityLevel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xde870fe5);
 			return ptr;
 		}
 
@@ -18700,7 +19535,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeRandom");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8dd0e1f);
 			return ptr;
 		}
 
@@ -18714,7 +19550,8 @@ namespace Classes {
 		class USoundClass*                                 SoundClassOverride;                                       // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeSoundClass");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6778e651);
 			return ptr;
 		}
 
@@ -18728,7 +19565,8 @@ namespace Classes {
 		struct FName                                       IntParameterName;                                         // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeSwitch");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2009e056);
 			return ptr;
 		}
 
@@ -18742,7 +19580,8 @@ namespace Classes {
 		struct FName                                       WaveParameterName;                                        // 0x0038(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SoundNodeWaveParam");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfce86af8);
 			return ptr;
 		}
 
@@ -18784,7 +19623,8 @@ namespace Classes {
 		class UNavCollision*                               NavCollision;                                             // 0x0140(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_EditConst, CPF_InstancedReference, CPF_DuplicateTransient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StaticMesh");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x364d1dac);
 			return ptr;
 		}
 
@@ -18808,7 +19648,8 @@ namespace Classes {
 		struct FString                                     Tag;                                                      // 0x0058(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.StaticMeshSocket");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x11cad48f);
 			return ptr;
 		}
 
@@ -18825,7 +19666,8 @@ namespace Classes {
 		TArray<unsigned char>                              Data;                                                     // 0x0038(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VertexAttributeStream");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdafa1941);
 			return ptr;
 		}
 
@@ -18843,7 +19685,8 @@ namespace Classes {
 		TArray<class UMaterialInterface*>                  Materials;                                                // 0x0068(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SubDSurface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d0581ec);
 			return ptr;
 		}
 
@@ -18858,7 +19701,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.SubsurfaceProfile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1682cd31);
 			return ptr;
 		}
 
@@ -18874,7 +19718,8 @@ namespace Classes {
 		struct FText                                       TransientText;                                            // 0x0058(0x0018)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextPropertyTestObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7808be5a);
 			return ptr;
 		}
 
@@ -18906,7 +19751,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x1A];                                      // 0x00F6(0x001A) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Texture2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6d054f38);
 			return ptr;
 		}
 
@@ -18923,7 +19769,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0110(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.LightMapTexture2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4082932e);
 			return ptr;
 		}
 
@@ -18938,7 +19785,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ShadowMapTexture2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xabd4a10);
 			return ptr;
 		}
 
@@ -18953,7 +19801,8 @@ namespace Classes {
 		float                                              TextureMultiplier;                                        // 0x0114(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureLightProfile");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9dc4f25);
 			return ptr;
 		}
 
@@ -18969,7 +19818,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xF];                                       // 0x00D1(0x000F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.Texture2DDynamic");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd7e43dfb);
 			return ptr;
 		}
 
@@ -18983,7 +19833,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x58];                                      // 0x00C8(0x0058) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureCube");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96c5c459);
 			return ptr;
 		}
 
@@ -18998,7 +19849,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureRenderTarget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x27798411);
 			return ptr;
 		}
 
@@ -19024,7 +19876,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureRenderTarget2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcc8cbd7);
 			return ptr;
 		}
 
@@ -19041,7 +19894,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0111(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.CanvasRenderTarget2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1ef0e72c);
 			return ptr;
 		}
 
@@ -19066,7 +19920,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x00E9(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TextureRenderTargetCube");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc55fdb5a);
 			return ptr;
 		}
 
@@ -19079,7 +19934,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.ThumbnailInfo");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfb4bf017);
 			return ptr;
 		}
 
@@ -19107,7 +19963,8 @@ namespace Classes {
 		struct FGuid                                       TimelineGuid;                                             // 0x0088(0x0010) (CPF_ZeroConstructor, CPF_DuplicateTransient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TimelineTemplate");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x602d9692);
 			return ptr;
 		}
 
@@ -19130,7 +19987,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.TouchInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf80fd25f);
 			return ptr;
 		}
 
@@ -19144,7 +20002,8 @@ namespace Classes {
 		TArray<struct FText>                               DisplayNames;                                             // 0x0058(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.UserDefinedEnum");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8febdd2c);
 			return ptr;
 		}
 
@@ -19159,7 +20018,8 @@ namespace Classes {
 		float                                              Intensity;                                                // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VectorField");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1b1d9ed8);
 			return ptr;
 		}
 
@@ -19187,7 +20047,8 @@ namespace Classes {
 		float                                              NoiseMax;                                                 // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VectorFieldAnimated");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x463570f3);
 			return ptr;
 		}
 
@@ -19204,7 +20065,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x84];                                      // 0x0054(0x0084) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VectorFieldStatic");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x87105f7a);
 			return ptr;
 		}
 
@@ -19217,7 +20079,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VisualLoggerAutomationTests");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5c88c79b);
 			return ptr;
 		}
 
@@ -19230,7 +20093,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.VisualLoggerDebugSnapshotInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x846f1cf7);
 			return ptr;
 		}
 
@@ -19250,7 +20114,8 @@ namespace Classes {
 		float                                              RebaseOriginDistance;                                     // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class Engine.WorldComposition");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x95a271ab);
 			return ptr;
 		}
 

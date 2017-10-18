@@ -23,7 +23,8 @@ namespace Classes {
 		class UTslAccessoryComponent*                      Slot_Primary;                                             // 0x0818(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass CharacterProxyBase.CharacterProxyBase_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8abd20cd);
 			return ptr;
 		}
 

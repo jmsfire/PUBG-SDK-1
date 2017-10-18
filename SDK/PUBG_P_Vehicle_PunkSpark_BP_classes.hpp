@@ -20,7 +20,8 @@ namespace Classes {
 		float                                              spawnFactor;                                              // 0x0404(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass P_Vehicle_PunkSpark_BP.P_Vehicle_PunkSpark_BP_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x42bbeb35);
 			return ptr;
 		}
 

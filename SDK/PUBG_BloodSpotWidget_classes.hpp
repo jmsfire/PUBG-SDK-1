@@ -21,7 +21,8 @@ namespace Classes {
 		TArray<class UTexture2D*>                          BloodSpotTextures;                                        // 0x0258(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BloodSpotWidget.BloodSpotWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xce557809);
 			return ptr;
 		}
 

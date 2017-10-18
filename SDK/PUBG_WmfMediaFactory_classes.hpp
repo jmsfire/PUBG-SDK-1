@@ -20,7 +20,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x6];                                       // 0x002A(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class WmfMediaFactory.WmfMediaSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc1107a7c);
 			return ptr;
 		}
 

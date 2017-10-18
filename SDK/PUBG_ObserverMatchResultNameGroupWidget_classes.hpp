@@ -31,7 +31,8 @@ namespace Classes {
 		bool                                               bSmall;                                                   // 0x02AC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7eca2df5);
 			return ptr;
 		}
 

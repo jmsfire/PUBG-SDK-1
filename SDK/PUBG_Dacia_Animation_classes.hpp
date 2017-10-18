@@ -57,7 +57,8 @@ namespace Classes {
 		struct FRotator                                    RPMNeedleRot;                                             // 0x2040(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass Dacia_Animation.Dacia_Animation_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x96450078);
 			return ptr;
 		}
 

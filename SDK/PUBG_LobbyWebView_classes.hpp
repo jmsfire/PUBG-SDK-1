@@ -23,7 +23,8 @@ namespace Classes {
 		int                                                TickForWebViewVisibilityChange;                           // 0x0270(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass LobbyWebView.LobbyWebView_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xca647597);
 			return ptr;
 		}
 

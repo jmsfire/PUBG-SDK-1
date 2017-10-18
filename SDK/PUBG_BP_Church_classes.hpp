@@ -97,7 +97,8 @@ namespace Classes {
 		class USceneComponent*                             SharedRoot;                                               // 0x0618(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_Church.BP_Church_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x159ce651);
 			return ptr;
 		}
 

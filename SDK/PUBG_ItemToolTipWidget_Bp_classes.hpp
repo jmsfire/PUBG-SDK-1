@@ -48,7 +48,8 @@ namespace Classes {
 		float                                              DamageMultiplierForMultipleBullet;                        // 0x0320(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ItemToolTipWidget_Bp.ItemToolTipWidget_Bp_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x567829c3);
 			return ptr;
 		}
 

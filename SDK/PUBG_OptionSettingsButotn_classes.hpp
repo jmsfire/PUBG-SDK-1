@@ -21,7 +21,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnButtonDown;                                             // 0x0268(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass OptionSettingsButotn.OptionSettingsButotn_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc206b01);
 			return ptr;
 		}
 

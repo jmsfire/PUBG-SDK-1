@@ -52,7 +52,8 @@ namespace Classes {
 		class UUserWidget*                                 FocusWidget;                                              // 0x0370(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass EquipmentWidget.EquipmentWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3047d6c9);
 			return ptr;
 		}
 

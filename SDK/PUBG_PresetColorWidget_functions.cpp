@@ -19,7 +19,8 @@ namespace Classes
 
 struct FLinearColor UPresetColorWidget_C::GetContentColorAndOpacity_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PresetColorWidget.PresetColorWidget_C.GetContentColorAndOpacity_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x93233607);
 
 	UPresetColorWidget_C_GetContentColorAndOpacity_1_Params params;
 

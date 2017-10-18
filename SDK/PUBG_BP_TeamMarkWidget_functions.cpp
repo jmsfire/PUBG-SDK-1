@@ -19,7 +19,8 @@ namespace Classes
 
 void UBP_TeamMarkWidget_C::DecideWidgetColors(bool Condition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.DecideWidgetColors");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7111a93);
 
 	UBP_TeamMarkWidget_C_DecideWidgetColors_Params params;
 	params.Condition = Condition;
@@ -39,7 +40,8 @@ void UBP_TeamMarkWidget_C::DecideWidgetColors(bool Condition)
 
 bool UBP_TeamMarkWidget_C::IsFreeCam()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.IsFreeCam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4b76bdaa);
 
 	UBP_TeamMarkWidget_C_IsFreeCam_Params params;
 
@@ -58,7 +60,8 @@ bool UBP_TeamMarkWidget_C::IsFreeCam()
 
 void UBP_TeamMarkWidget_C::SetJustification()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.SetJustification");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x749f32a5);
 
 	UBP_TeamMarkWidget_C_SetJustification_Params params;
 
@@ -77,7 +80,8 @@ void UBP_TeamMarkWidget_C::SetJustification()
 
 void UBP_TeamMarkWidget_C::GetPlayerNameTextAddLocation(struct FVector2D* AddLocation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.GetPlayerNameTextAddLocation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1f080906);
 
 	UBP_TeamMarkWidget_C_GetPlayerNameTextAddLocation_Params params;
 
@@ -99,7 +103,8 @@ void UBP_TeamMarkWidget_C::GetPlayerNameTextAddLocation(struct FVector2D* AddLoc
 
 void UBP_TeamMarkWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x90cc53ac);
 
 	UBP_TeamMarkWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -119,7 +124,8 @@ void UBP_TeamMarkWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 struct FText UBP_TeamMarkWidget_C::Get_PlayerName_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Get_PlayerName_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x23faad24);
 
 	UBP_TeamMarkWidget_C_Get_PlayerName_Text_1_Params params;
 

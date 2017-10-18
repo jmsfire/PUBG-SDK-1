@@ -26,7 +26,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0828(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharacter");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5c6f2e41);
 			return ptr;
 		}
 
@@ -48,7 +49,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0788(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharMovementComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5388d530);
 			return ptr;
 		}
 

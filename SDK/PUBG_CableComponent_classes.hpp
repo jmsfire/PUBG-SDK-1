@@ -18,7 +18,8 @@ namespace Classes {
 		class UCableComponent*                             CableComponent;                                           // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CableComponent.CableActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc93468f9);
 			return ptr;
 		}
 
@@ -51,7 +52,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x18];                                      // 0x07E8(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CableComponent.CableComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfeb13f83);
 			return ptr;
 		}
 

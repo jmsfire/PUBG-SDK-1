@@ -54,7 +54,8 @@ namespace Classes {
 		struct FRotator                                    SpeedArrowRot;                                            // 0x1484(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Motorbike_04.ABP_Motorbike_04_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd6157436);
 			return ptr;
 		}
 

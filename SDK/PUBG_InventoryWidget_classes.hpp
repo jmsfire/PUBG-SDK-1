@@ -81,7 +81,8 @@ namespace Classes {
 		class UAttachableItem*                             GamepadadSelectedAttachableItem;                          // 0x0488(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InventoryWidget.InventoryWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x56dc0321);
 			return ptr;
 		}
 

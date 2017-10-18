@@ -25,7 +25,8 @@ namespace Classes {
 		bool                                               bWantToFocus;                                             // 0x0278(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InnerItemSlotListWidget.InnerItemSlotListWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x70a2098d);
 			return ptr;
 		}
 

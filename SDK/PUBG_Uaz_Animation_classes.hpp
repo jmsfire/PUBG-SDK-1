@@ -52,7 +52,8 @@ namespace Classes {
 		struct FRotator                                    VelocityNeedleRot;                                        // 0x1E74(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass Uaz_Animation.Uaz_Animation_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e15f070);
 			return ptr;
 		}
 

@@ -40,7 +40,8 @@ namespace Classes {
 		bool                                               bUniqueCheck;                                             // 0x02D8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass NewMessageBorderWidget.NewMessageBorderWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe9ff403);
 			return ptr;
 		}
 

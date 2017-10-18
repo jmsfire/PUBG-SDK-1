@@ -40,7 +40,8 @@ namespace Classes {
 		struct FName                                       ActionName;                                               // 0x0100(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass TslItemDragDropOperation.TslItemDragDropOperation_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xec86f0b5);
 			return ptr;
 		}
 

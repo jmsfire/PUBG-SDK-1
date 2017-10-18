@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x95858334);
 			return ptr;
 		}
 
@@ -30,7 +31,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureProtocolSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xae3e832c);
 			return ptr;
 		}
 
@@ -53,7 +55,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x140];                                     // 0x00C0(0x0140) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0440143);
 			return ptr;
 		}
 
@@ -66,7 +69,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.AutomatedLevelSequenceCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd25ded16);
 			return ptr;
 		}
 
@@ -83,7 +87,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.LevelCapture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x27d38483);
 			return ptr;
 		}
 
@@ -96,7 +101,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureEnvironment");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x17682d62);
 			return ptr;
 		}
 
@@ -113,7 +119,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.FrameGrabberProtocolSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd10c9468);
 			return ptr;
 		}
 
@@ -126,7 +133,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.BmpImageCaptureSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd7214dc);
 			return ptr;
 		}
 
@@ -141,7 +149,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.ImageCaptureSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4a62c477);
 			return ptr;
 		}
 
@@ -161,7 +170,8 @@ namespace Classes {
 		struct FStringAssetReference                       PostProcessingMaterial;                                   // 0x0048(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3caa1172);
 			return ptr;
 		}
 
@@ -178,7 +188,8 @@ namespace Classes {
 		struct FString                                     VideoCodec;                                               // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MovieSceneCapture.VideoCaptureSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa1afe9e9);
 			return ptr;
 		}
 

@@ -31,7 +31,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    HIddenEnd;                                                // 0x05E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BP_WeaponSlotWidget.BP_WeaponSlotWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xad617fb5);
 			return ptr;
 		}
 

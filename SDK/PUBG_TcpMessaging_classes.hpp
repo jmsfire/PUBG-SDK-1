@@ -23,7 +23,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class TcpMessaging.TcpMessagingSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3bd48072);
 			return ptr;
 		}
 

@@ -21,7 +21,8 @@ namespace Classes {
 		bool                                               isProcessing;                                             // 0x01D0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass Item_Heal_MedKit.Item_Heal_MedKit_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9f72c63f);
 			return ptr;
 		}
 

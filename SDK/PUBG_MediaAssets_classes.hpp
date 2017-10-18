@@ -36,7 +36,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0xA0];                                      // 0x00C0(0x00A0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaPlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2cffba0f);
 			return ptr;
 		}
 
@@ -93,7 +94,8 @@ namespace Classes {
 		TArray<class UMediaSource*>                        Items;                                                    // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaPlaylist");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4a6b213a);
 			return ptr;
 		}
 
@@ -121,7 +123,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0xC8];                                      // 0x0278(0x00C8) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaSoundWave");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdcc89e32);
 			return ptr;
 		}
 
@@ -136,7 +139,8 @@ namespace Classes {
 		struct FName                                       PlayerName;                                               // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcd3c5ebf);
 			return ptr;
 		}
 
@@ -152,7 +156,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.FileMediaSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e2846d5);
 			return ptr;
 		}
 
@@ -168,7 +173,8 @@ namespace Classes {
 		class UMediaSource*                                MediaSource;                                              // 0x0038(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.PlatformMediaSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8be57aa4);
 			return ptr;
 		}
 
@@ -182,7 +188,8 @@ namespace Classes {
 		struct FString                                     StreamUrl;                                                // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.StreamMediaSource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x79f0a2b7);
 			return ptr;
 		}
 
@@ -196,7 +203,8 @@ namespace Classes {
 		TArray<struct FMediaSubtitle>                      Subtitles;                                                // 0x0028(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaSubtitles");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x22fc160f);
 			return ptr;
 		}
 
@@ -218,7 +226,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xBC];                                      // 0x00F4(0x00BC) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class MediaAssets.MediaTexture");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf2ae8c61);
 			return ptr;
 		}
 

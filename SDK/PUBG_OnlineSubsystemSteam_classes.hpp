@@ -19,7 +19,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x33709(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x69453104);
 			return ptr;
 		}
 
@@ -33,7 +34,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0438(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OnlineSubsystemSteam.SteamNetDriver");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7fd5b446);
 			return ptr;
 		}
 

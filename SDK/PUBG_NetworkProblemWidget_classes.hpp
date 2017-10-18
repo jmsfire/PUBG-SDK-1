@@ -23,7 +23,8 @@ namespace Classes {
 		bool                                               isVanishing;                                              // 0x0268(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass NetworkProblemWidget.NetworkProblemWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x162d4fdf);
 			return ptr;
 		}
 

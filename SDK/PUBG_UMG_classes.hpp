@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Visual");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe552069a);
 			return ptr;
 		}
 
@@ -34,16 +35,16 @@ namespace Classes {
 		class UPanelSlot*                                  Slot;                                                     // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		bool                                               bIsEnabled;                                               // 0x0038(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-		struct FScriptDelegate                             bIsEnabledDelegate;                                       // 0x0040(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
-		struct FScriptDelegate                             OnPrepass;                                                // 0x0050(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             bIsEnabledDelegate;                                       // 0x0040(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnPrepass;                                                // 0x0050(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FText                                       ToolTipText;                                              // 0x0060(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             ToolTipTextDelegate;                                      // 0x0078(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ToolTipTextDelegate;                                      // 0x0078(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		class UWidget*                                     ToolTipWidget;                                            // 0x0088(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             ToolTipWidgetDelegate;                                    // 0x0090(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ToolTipWidgetDelegate;                                    // 0x0090(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		TEnumAsByte<ESlateVisibility>                      Visiblity;                                                // 0x00A0(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		TEnumAsByte<ESlateVisibility>                      Visibility;                                               // 0x00A1(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x6];                                       // 0x00A2(0x0006) MISSED OFFSET
-		struct FScriptDelegate                             VisibilityDelegate;                                       // 0x00A8(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             VisibilityDelegate;                                       // 0x00A8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      bOverride_Cursor : 1;                                     // 0x00B8(0x0001) (CPF_Edit)
 		unsigned char                                      UnknownData03[0x3];                                       // 0x00B9(0x0003) MISSED OFFSET
 		TEnumAsByte<EMouseCursor>                          Cursor;                                                   // 0x00BC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -57,7 +58,8 @@ namespace Classes {
 		TArray<class UPropertyBinding*>                    NativeBindings;                                           // 0x0118(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Widget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4982d97a);
 			return ptr;
 		}
 
@@ -118,9 +120,9 @@ namespace Classes {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0128(0x0008) MISSED OFFSET
 		struct FLinearColor                                ColorAndOpacity;                                          // 0x0130(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x0140(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x0140(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSlateColor                                 ForegroundColor;                                          // 0x0150(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             ForegroundColorDelegate;                                  // 0x0178(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ForegroundColorDelegate;                                  // 0x0178(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FMargin                                     Padding;                                                  // 0x0188(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		bool                                               bSupportsKeyboardFocus;                                   // 0x0198(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		bool                                               bIsFocusable;                                             // 0x0199(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -137,7 +139,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x50];                                      // 0x01F0(0x0050) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.UserWidget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9139632f);
 			return ptr;
 		}
 
@@ -225,7 +228,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnFail;                                                   // 0x0038(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.AsyncTaskDownloadImage");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c849cfc);
 			return ptr;
 		}
 
@@ -250,7 +254,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    OnDragged;                                                // 0x0078(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.DragDropOperation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7328680e);
 			return ptr;
 		}
 
@@ -272,7 +277,8 @@ namespace Classes {
 		struct FRichCurve                                  Shear[0x2];                                               // 0x02A0(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MovieScene2DTransformSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa8f94465);
 			return ptr;
 		}
 
@@ -285,7 +291,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MovieScene2DTransformTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf86e06b5);
 			return ptr;
 		}
 
@@ -303,7 +310,8 @@ namespace Classes {
 		struct FRichCurve                                  BottomCurve;                                              // 0x01B0(0x0078)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MovieSceneMarginSection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf835071);
 			return ptr;
 		}
 
@@ -316,7 +324,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MovieSceneMarginTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xccc0f79);
 			return ptr;
 		}
 
@@ -331,7 +340,8 @@ namespace Classes {
 		struct FName                                       TrackName;                                                // 0x0048(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MovieSceneWidgetMaterialTrack");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd805710e);
 			return ptr;
 		}
 
@@ -344,7 +354,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.NamedSlotInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf6f6340e);
 			return ptr;
 		}
 
@@ -360,7 +371,8 @@ namespace Classes {
 		struct FName                                       DestinationProperty;                                      // 0x0040(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.PropertyBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x84f91b78);
 			return ptr;
 		}
 
@@ -373,7 +385,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.BoolBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4aa702b9);
 			return ptr;
 		}
 
@@ -389,7 +402,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.BrushBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf9d0f9dd);
 			return ptr;
 		}
 
@@ -405,7 +419,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.CheckedStateBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4ea67b7);
 			return ptr;
 		}
 
@@ -421,7 +436,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ColorBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x29643dc6);
 			return ptr;
 		}
 
@@ -437,7 +453,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.FloatBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xafaf6463);
 			return ptr;
 		}
 
@@ -452,7 +469,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Int32Binding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcac6a429);
 			return ptr;
 		}
 
@@ -467,7 +485,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MouseCursorBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xae9e9abc);
 			return ptr;
 		}
 
@@ -483,7 +502,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.TextBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5c802baa);
 			return ptr;
 		}
 
@@ -499,7 +519,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.VisibilityBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6c31d745);
 			return ptr;
 		}
 
@@ -514,7 +535,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetBinding");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa0d13e59);
 			return ptr;
 		}
 
@@ -532,7 +554,8 @@ namespace Classes {
 		int                                                RevealedIndex;                                            // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.RichTextBlockDecorator");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x34056667);
 			return ptr;
 		}
 
@@ -545,7 +568,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SlateBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x28c4e7b7);
 			return ptr;
 		}
 
@@ -569,7 +593,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x400];                                     // 0x0030(0x0400) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SlateDataSheet");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x848dddae);
 			return ptr;
 		}
 
@@ -587,7 +612,8 @@ namespace Classes {
 		struct FVector2D                                   ExtentMax;                                                // 0x0058(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SlateVectorArtData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeff3a113);
 			return ptr;
 		}
 
@@ -603,7 +629,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x150];                                     // 0x0050(0x0150) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.UMGSequencePlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e05666f);
 			return ptr;
 		}
 
@@ -618,7 +645,8 @@ namespace Classes {
 		class UWidget*                                     Content;                                                  // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.PanelSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2b5a9f4);
 			return ptr;
 		}
 
@@ -635,7 +663,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x004A(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.BorderSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x64a6867c);
 			return ptr;
 		}
 
@@ -656,7 +685,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x004A(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ButtonSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x51ea951a);
 			return ptr;
 		}
 
@@ -678,7 +708,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.CanvasPanelSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf0115998);
 			return ptr;
 		}
 
@@ -721,7 +752,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.GridSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x838a2eea);
 			return ptr;
 		}
 
@@ -748,7 +780,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xE];                                       // 0x0052(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.HorizontalBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd9f5d705);
 			return ptr;
 		}
 
@@ -770,7 +803,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xE];                                       // 0x004A(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.OverlaySlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf5780202);
 			return ptr;
 		}
 
@@ -794,7 +828,8 @@ namespace Classes {
 		struct FMargin                                     Padding;                                                  // 0x0050(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SafeZoneSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x24dd96eb);
 			return ptr;
 		}
 
@@ -811,7 +846,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x004A(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ScaleBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x98a865bf);
 			return ptr;
 		}
 
@@ -831,7 +867,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xF];                                       // 0x0049(0x000F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ScrollBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xac8492d0);
 			return ptr;
 		}
 
@@ -851,7 +888,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x004A(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SizeBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x97a2a200);
 			return ptr;
 		}
 
@@ -874,7 +912,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0044(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.UniformGridSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3dbb7376);
 			return ptr;
 		}
 
@@ -897,7 +936,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xE];                                       // 0x0052(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.VerticalBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6bf963cf);
 			return ptr;
 		}
 
@@ -919,7 +959,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xE];                                       // 0x004A(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetSwitcherSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbe492d6f);
 			return ptr;
 		}
 
@@ -940,7 +981,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x004A(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WindowTitleBarAreaSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf680590);
 			return ptr;
 		}
 
@@ -964,7 +1006,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xE];                                       // 0x0052(0x000E) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WrapBoxSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc70efb5d);
 			return ptr;
 		}
 
@@ -991,7 +1034,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x17];                                      // 0x01D1(0x0017) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.CircularThrobber");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb1429af5);
 			return ptr;
 		}
 
@@ -1007,11 +1051,12 @@ namespace Classes {
 	class UComboBox : public UWidget {
 	public:
 		TArray<class UObject*>                             Items;                                                    // 0x0128(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-		struct FScriptDelegate                             OnGenerateWidgetEvent;                                    // 0x0138(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnGenerateWidgetEvent;                                    // 0x0138(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0148(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ComboBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa95bf55f);
 			return ptr;
 		}
 
@@ -1033,13 +1078,14 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x2];                                       // 0x0C9E(0x0002) MISSED OFFSET
 		struct FSlateFontInfo                              Font;                                                     // 0x0CA0(0x0068) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FSlateColor                                 ForegroundColor;                                          // 0x0D08(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             OnGenerateWidgetEvent;                                    // 0x0D30(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnGenerateWidgetEvent;                                    // 0x0D30(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptMulticastDelegate                    OnSelectionChanged;                                       // 0x0D40(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnOpening;                                                // 0x0D50(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData01[0x40];                                      // 0x0D60(0x0040) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ComboBoxString");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe7ffb8c8);
 			return ptr;
 		}
 
@@ -1074,7 +1120,8 @@ namespace Classes {
 		float                                              LineHeightPercentage;                                     // 0x014C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.TextLayoutWidget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x805399b9);
 			return ptr;
 		}
 
@@ -1086,9 +1133,9 @@ namespace Classes {
 	class UEditableText : public UWidget {
 	public:
 		struct FText                                       Text;                                                     // 0x0128(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             TextDelegate;                                             // 0x0140(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             TextDelegate;                                             // 0x0140(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FText                                       HintText;                                                 // 0x0150(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0168(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0168(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FEditableTextStyle                          WidgetStyle;                                              // 0x0178(0x0248) (CPF_Edit, CPF_BlueprintVisible)
 		class USlateWidgetStyleAsset*                      Style;                                                    // 0x03C0(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		class USlateBrushAsset*                            BackgroundImageSelected;                                  // 0x03C8(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
@@ -1114,7 +1161,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.EditableText");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x639f74bb);
 			return ptr;
 		}
 
@@ -1134,11 +1182,11 @@ namespace Classes {
 	class UEditableTextBox : public UWidget {
 	public:
 		struct FText                                       Text;                                                     // 0x0128(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             TextDelegate;                                             // 0x0140(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             TextDelegate;                                             // 0x0140(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FEditableTextBoxStyle                       WidgetStyle;                                              // 0x0150(0x0870) (CPF_Edit, CPF_BlueprintVisible)
 		class USlateWidgetStyleAsset*                      Style;                                                    // 0x09C0(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		struct FText                                       HintText;                                                 // 0x09C8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             HintTextDelegate;                                         // 0x09E0(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             HintTextDelegate;                                         // 0x09E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSlateFontInfo                              Font;                                                     // 0x09F0(0x0068) (CPF_Deprecated)
 		struct FLinearColor                                ForegroundColor;                                          // 0x0A58(0x0010) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		struct FLinearColor                                BackgroundColor;                                          // 0x0A68(0x0010) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
@@ -1162,7 +1210,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0AD0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.EditableTextBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2124082);
 			return ptr;
 		}
 
@@ -1196,7 +1245,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0358(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ExpandableArea");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x51b47fd);
 			return ptr;
 		}
 
@@ -1212,14 +1262,15 @@ namespace Classes {
 	public:
 		class USlateBrushAsset*                            Image;                                                    // 0x0128(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		struct FSlateBrush                                 Brush;                                                    // 0x0130(0x0090) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             BrushDelegate;                                            // 0x01C0(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             BrushDelegate;                                            // 0x01C0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FLinearColor                                ColorAndOpacity;                                          // 0x01D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x01E0(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
-		struct FScriptDelegate                             OnMouseButtonDownEvent;                                   // 0x01F0(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x01E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnMouseButtonDownEvent;                                   // 0x01F0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0200(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Image");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x980dabd5);
 			return ptr;
 		}
 
@@ -1250,7 +1301,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0210(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.InputKeySelector");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7f46134c);
 			return ptr;
 		}
 
@@ -1271,7 +1323,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0128(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.NativeWidgetHost");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1fa464f5);
 			return ptr;
 		}
 
@@ -1286,7 +1339,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.PanelWidget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b9e2774);
 			return ptr;
 		}
 
@@ -1310,7 +1364,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.CanvasPanel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x620c1b3c);
 			return ptr;
 		}
 
@@ -1325,7 +1380,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ContentWidget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9c372f21);
 			return ptr;
 		}
 
@@ -1340,27 +1396,28 @@ namespace Classes {
 	class UBorder : public UContentWidget {
 	public:
 		struct FLinearColor                                ContentColorAndOpacity;                                   // 0x0140(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             ContentColorAndOpacityDelegate;                           // 0x0150(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ContentColorAndOpacityDelegate;                           // 0x0150(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FMargin                                     Padding;                                                  // 0x0160(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		TEnumAsByte<EHorizontalAlignment>                  HorizontalAlignment;                                      // 0x0170(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TEnumAsByte<EVerticalAlignment>                    VerticalAlignment;                                        // 0x0171(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x6];                                       // 0x0172(0x0006) MISSED OFFSET
 		struct FSlateBrush                                 Background;                                               // 0x0178(0x0090) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             BackgroundDelegate;                                       // 0x0208(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             BackgroundDelegate;                                       // 0x0208(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FLinearColor                                BrushColor;                                               // 0x0218(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             BrushColorDelegate;                                       // 0x0228(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             BrushColorDelegate;                                       // 0x0228(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FVector2D                                   DesiredSizeScale;                                         // 0x0238(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bShowEffectWhenDisabled;                                  // 0x0240(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0241(0x0007) MISSED OFFSET
-		struct FScriptDelegate                             OnMouseButtonDownEvent;                                   // 0x0248(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
-		struct FScriptDelegate                             OnMouseButtonUpEvent;                                     // 0x0258(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
-		struct FScriptDelegate                             OnMouseMoveEvent;                                         // 0x0268(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
-		struct FScriptDelegate                             OnMouseDoubleClickEvent;                                  // 0x0278(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnMouseButtonDownEvent;                                   // 0x0248(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnMouseButtonUpEvent;                                     // 0x0258(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnMouseMoveEvent;                                         // 0x0268(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnMouseDoubleClickEvent;                                  // 0x0278(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0288(0x0010) MISSED OFFSET
 		class USlateBrushAsset*                            Brush;                                                    // 0x0298(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Border");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7f691ad8);
 			return ptr;
 		}
 
@@ -1399,7 +1456,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0468(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Button");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbbcf128e);
 			return ptr;
 		}
 
@@ -1417,7 +1475,7 @@ namespace Classes {
 	public:
 		TEnumAsByte<ECheckBoxState>                        CheckedState;                                             // 0x0140(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
-		struct FScriptDelegate                             CheckedStateDelegate;                                     // 0x0148(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             CheckedStateDelegate;                                     // 0x0148(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FCheckBoxStyle                              WidgetStyle;                                              // 0x0158(0x05E0) (CPF_Edit, CPF_BlueprintVisible)
 		class USlateWidgetStyleAsset*                      Style;                                                    // 0x0738(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		class USlateBrushAsset*                            UncheckedImage;                                           // 0x0740(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
@@ -1440,7 +1498,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x10];                                      // 0x07E0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.CheckBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3222405d);
 			return ptr;
 		}
 
@@ -1462,7 +1521,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x16];                                      // 0x0142(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.InvalidationBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4e7321ad);
 			return ptr;
 		}
 
@@ -1478,7 +1538,7 @@ namespace Classes {
 	class UMenuAnchor : public UContentWidget {
 	public:
 		class UClass*                                      MenuClass;                                                // 0x0140(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             OnGetMenuContentEvent;                                    // 0x0148(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnGetMenuContentEvent;                                    // 0x0148(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		TEnumAsByte<EMenuPlacement>                        Placement;                                                // 0x0158(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               ShouldDeferPaintingAfterWindowContent;                    // 0x0159(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               UseApplicationMenuStack;                                  // 0x015A(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1487,7 +1547,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0170(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MenuAnchor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf1d8d4c);
 			return ptr;
 		}
 
@@ -1509,7 +1570,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.NamedSlot");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb5e5bf61);
 			return ptr;
 		}
 
@@ -1527,7 +1589,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0158(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.RetainerBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb81b4c17);
 			return ptr;
 		}
 
@@ -1549,7 +1612,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x14];                                      // 0x0144(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SafeZone");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e7c3267);
 			return ptr;
 		}
 
@@ -1568,7 +1632,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x17];                                      // 0x0149(0x0017) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ScaleBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x498e0373);
 			return ptr;
 		}
 
@@ -1602,7 +1667,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0160(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SizeBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x61c15904);
 			return ptr;
 		}
 
@@ -1632,7 +1698,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0150(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Viewport");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6fd2e5ec);
 			return ptr;
 		}
 
@@ -1654,7 +1721,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x1F];                                      // 0x0141(0x001F) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WindowTitleBarArea");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc7b34154);
 			return ptr;
 		}
 
@@ -1674,7 +1742,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0160(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.GridPanel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc73d4288);
 			return ptr;
 		}
 
@@ -1690,7 +1759,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.HorizontalBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x16e07d01);
 			return ptr;
 		}
 
@@ -1706,7 +1776,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Overlay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x36502936);
 			return ptr;
 		}
 
@@ -1732,7 +1803,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x1B];                                      // 0x08BD(0x001B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ScrollBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x30177794);
 			return ptr;
 		}
 
@@ -1755,7 +1827,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0158(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.UniformGridPanel");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd933ba0c);
 			return ptr;
 		}
 
@@ -1774,7 +1847,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0140(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.VerticalBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4b3b6a43);
 			return ptr;
 		}
 
@@ -1791,7 +1865,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x14];                                      // 0x0144(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetSwitcher");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe8315a3);
 			return ptr;
 		}
 
@@ -1812,7 +1887,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0148(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WrapBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc58d4c39);
 			return ptr;
 		}
 
@@ -1835,13 +1911,14 @@ namespace Classes {
 		TEnumAsByte<EProgressBarFillType>                  BarFillType;                                              // 0x0304(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bIsMarquee;                                               // 0x0305(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x2];                                       // 0x0306(0x0002) MISSED OFFSET
-		struct FScriptDelegate                             PercentDelegate;                                          // 0x0308(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             PercentDelegate;                                          // 0x0308(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FLinearColor                                FillColorAndOpacity;                                      // 0x0318(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             FillColorAndOpacityDelegate;                              // 0x0328(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             FillColorAndOpacityDelegate;                              // 0x0328(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0338(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ProgressBar");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4ef39476);
 			return ptr;
 		}
 
@@ -1865,7 +1942,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x14];                                      // 0x0654(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ScrollBar");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4b636dec);
 			return ptr;
 		}
 
@@ -1880,7 +1958,7 @@ namespace Classes {
 	public:
 		float                                              Value;                                                    // 0x0128(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x012C(0x0004) MISSED OFFSET
-		struct FScriptDelegate                             ValueDelegate;                                            // 0x0130(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ValueDelegate;                                            // 0x0130(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSliderStyle                                WidgetStyle;                                              // 0x0140(0x0250) (CPF_Edit, CPF_BlueprintVisible)
 		TEnumAsByte<EOrientation>                          Orientation;                                              // 0x0390(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x3];                                       // 0x0391(0x0003) MISSED OFFSET
@@ -1900,7 +1978,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x10];                                      // 0x0410(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Slider");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x15a8773d);
 			return ptr;
 		}
 
@@ -1923,7 +2002,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0130(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Spacer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x112a3efe);
 			return ptr;
 		}
 
@@ -1938,7 +2018,7 @@ namespace Classes {
 	public:
 		float                                              Value;                                                    // 0x0128(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x012C(0x0004) MISSED OFFSET
-		struct FScriptDelegate                             ValueDelegate;                                            // 0x0130(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ValueDelegate;                                            // 0x0130(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSpinBoxStyle                               WidgetStyle;                                              // 0x0140(0x0310) (CPF_Edit, CPF_BlueprintVisible)
 		class USlateWidgetStyleAsset*                      Style;                                                    // 0x0450(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		float                                              Delta;                                                    // 0x0458(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1965,7 +2045,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x14];                                      // 0x054C(0x0014) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.SpinBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3401d605);
 			return ptr;
 		}
 
@@ -1997,7 +2078,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.TableViewBase");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7b9f680e);
 			return ptr;
 		}
 
@@ -2015,11 +2097,12 @@ namespace Classes {
 		TArray<class UObject*>                             Items;                                                    // 0x0130(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 		TEnumAsByte<ESelectionMode>                        SelectionMode;                                            // 0x0140(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
-		struct FScriptDelegate                             OnGenerateRowEvent;                                       // 0x0148(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnGenerateRowEvent;                                       // 0x0148(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0158(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.ListView");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4b210dd);
 			return ptr;
 		}
 
@@ -2035,11 +2118,12 @@ namespace Classes {
 		TArray<class UObject*>                             Items;                                                    // 0x0130(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 		TEnumAsByte<ESelectionMode>                        SelectionMode;                                            // 0x0140(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0141(0x0007) MISSED OFFSET
-		struct FScriptDelegate                             OnGenerateTileEvent;                                      // 0x0148(0x0014) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             OnGenerateTileEvent;                                      // 0x0148(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0158(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.TileView");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7e9fc3a5);
 			return ptr;
 		}
 
@@ -2056,7 +2140,7 @@ namespace Classes {
 	public:
 		struct FText                                       Text;                                                     // 0x0150(0x0018) (CPF_Edit)
 		struct FText                                       HintText;                                                 // 0x0168(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0180(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0180(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FTextBlockStyle                             WidgetStyle;                                              // 0x0190(0x0208) (CPF_Edit, CPF_BlueprintVisible)
 		struct FSlateFontInfo                              Font;                                                     // 0x0398(0x0068) (CPF_Deprecated)
 		bool                                               AllowContextMenu;                                         // 0x0400(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2066,7 +2150,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0428(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MultiLineEditableText");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x295e9432);
 			return ptr;
 		}
 
@@ -2084,7 +2169,7 @@ namespace Classes {
 	public:
 		struct FText                                       Text;                                                     // 0x0150(0x0018) (CPF_Edit)
 		struct FText                                       HintText;                                                 // 0x0168(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0180(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             HintTextDelegate;                                         // 0x0180(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FEditableTextBoxStyle                       WidgetStyle;                                              // 0x0190(0x0870) (CPF_Edit, CPF_BlueprintVisible)
 		struct FTextBlockStyle                             TextStyle;                                                // 0x0A00(0x0208) (CPF_Edit, CPF_BlueprintVisible)
 		bool                                               AllowContextMenu;                                         // 0x0C08(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2099,7 +2184,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0CD0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.MultiLineEditableTextBox");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7397d4c9);
 			return ptr;
 		}
 
@@ -2117,14 +2203,15 @@ namespace Classes {
 	class URichTextBlock : public UTextLayoutWidget {
 	public:
 		struct FText                                       Text;                                                     // 0x0150(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             TextDelegate;                                             // 0x0168(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             TextDelegate;                                             // 0x0168(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSlateFontInfo                              Font;                                                     // 0x0178(0x0068) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FLinearColor                                Color;                                                    // 0x01E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<class URichTextBlockDecorator*>             Decorators;                                               // 0x01F0(0x0010) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData00[0x218];                                     // 0x0200(0x0218) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.RichTextBlock");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6eb38108);
 			return ptr;
 		}
 
@@ -2136,19 +2223,20 @@ namespace Classes {
 	class UTextBlock : public UTextLayoutWidget {
 	public:
 		struct FText                                       Text;                                                     // 0x0150(0x0018) (CPF_Edit)
-		struct FScriptDelegate                             TextDelegate;                                             // 0x0168(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             TextDelegate;                                             // 0x0168(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSlateColor                                 ColorAndOpacity;                                          // 0x0178(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x01A0(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ColorAndOpacityDelegate;                                  // 0x01A0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FSlateFontInfo                              Font;                                                     // 0x01B0(0x0068) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FVector2D                                   ShadowOffset;                                             // 0x0218(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FLinearColor                                ShadowColorAndOpacity;                                    // 0x0220(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FScriptDelegate                             ShadowColorAndOpacityDelegate;                            // 0x0230(0x0014) (CPF_ZeroConstructor, CPF_InstancedReference)
+		struct FScriptDelegate                             ShadowColorAndOpacityDelegate;                            // 0x0230(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		float                                              MinDesiredWidth;                                          // 0x0240(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bWrapWithInvalidationPanel;                               // 0x0244(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x13];                                      // 0x0245(0x0013) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.TextBlock");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1939210a);
 			return ptr;
 		}
 
@@ -2178,7 +2266,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x01C8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.Throbber");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1a14ea2e);
 			return ptr;
 		}
 
@@ -2198,7 +2287,8 @@ namespace Classes {
 		TArray<class UWidget*>                             AllWidgets;                                               // 0x0030(0x0010) (CPF_ZeroConstructor)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetTree");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9b8fcfa6);
 			return ptr;
 		}
 
@@ -2216,7 +2306,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x148];                                     // 0x0060(0x0148) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetAnimation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x882998c4);
 			return ptr;
 		}
 
@@ -2239,7 +2330,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetBlueprintGeneratedClass");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5b4f5eca);
 			return ptr;
 		}
 
@@ -2252,7 +2344,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetBlueprintLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5dfa2f84);
 			return ptr;
 		}
 
@@ -2357,7 +2450,8 @@ namespace Classes {
 		unsigned char                                      UnknownData08[0x3C];                                      // 0x0874(0x003C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5f555477);
 			return ptr;
 		}
 
@@ -2403,7 +2497,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x5];                                       // 0x04EB(0x0005) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetInteractionComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8548d7cf);
 			return ptr;
 		}
 
@@ -2431,7 +2526,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetLayoutLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f52c39);
 			return ptr;
 		}
 
@@ -2463,7 +2559,8 @@ namespace Classes {
 		struct FWidgetNavigationData                       Previous;                                                 // 0x00A0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class UMG.WidgetNavigation");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x414a52bc);
 			return ptr;
 		}
 

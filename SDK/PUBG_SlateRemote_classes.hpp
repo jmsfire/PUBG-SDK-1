@@ -21,7 +21,8 @@ namespace Classes {
 		struct FString                                     GameServerEndpoint;                                       // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SlateRemote.SlateRemoteSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3634e4);
 			return ptr;
 		}
 

@@ -28,7 +28,8 @@ namespace Classes {
 		class UMaterialInstanceDynamic*                    Gauge90_101;                                              // 0x03D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BoostGaugeWidget_BP.BoostGaugeWidget_BP_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x240f6531);
 			return ptr;
 		}
 

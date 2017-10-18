@@ -22,7 +22,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceGraphInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc0e9f30b);
 			return ptr;
 		}
 
@@ -56,7 +57,8 @@ namespace Classes {
 		TArray<class USubstanceGraphInstance*>             Consumers;                                                // 0x0150(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceImageInput");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1899bd8b);
 			return ptr;
 		}
 
@@ -72,7 +74,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceInstanceFactory");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x71ee996b);
 			return ptr;
 		}
 
@@ -91,7 +94,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x2];                                       // 0x0036(0x0002) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x48b64cd9);
 			return ptr;
 		}
 
@@ -109,7 +113,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x16];                                      // 0x0102(0x0016) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceTexture2D");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x11c46dd);
 			return ptr;
 		}
 
@@ -122,7 +127,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class SubstanceCore.SubstanceUtility");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9e86cb76);
 			return ptr;
 		}
 

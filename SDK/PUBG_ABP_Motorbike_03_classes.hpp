@@ -44,7 +44,8 @@ namespace Classes {
 		class ATslMotorbikeVehicle*                        BikeRef4;                                                 // 0x16B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Motorbike_03.ABP_Motorbike_03_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd363a908);
 			return ptr;
 		}
 

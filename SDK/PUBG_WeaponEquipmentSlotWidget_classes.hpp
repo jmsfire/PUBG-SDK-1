@@ -66,7 +66,8 @@ namespace Classes {
 		bool                                               bPressedB;                                                // 0x0474(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4a42f92d);
 			return ptr;
 		}
 

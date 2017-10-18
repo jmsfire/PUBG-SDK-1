@@ -19,7 +19,8 @@ namespace Classes {
 		class UAkAudioEvent*                               MouseOverSound;                                           // 0x0248(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass SlotBaseWidget.SlotBaseWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc7c3b27b);
 			return ptr;
 		}
 

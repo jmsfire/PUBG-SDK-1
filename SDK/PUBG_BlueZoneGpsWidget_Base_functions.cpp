@@ -19,7 +19,8 @@ namespace Classes
 
 void UBlueZoneGpsWidget_Base_C::IsWarningBp(bool* bIsWarning)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsWarningBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd8177a8f);
 
 	UBlueZoneGpsWidget_Base_C_IsWarningBp_Params params;
 
@@ -39,7 +40,8 @@ void UBlueZoneGpsWidget_Base_C::IsWarningBp(bool* bIsWarning)
 
 void UBlueZoneGpsWidget_Base_C::TickWaning()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.TickWaning");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xacd2ebda);
 
 	UBlueZoneGpsWidget_Base_C_TickWaning_Params params;
 
@@ -58,7 +60,8 @@ void UBlueZoneGpsWidget_Base_C::TickWaning()
 
 void UBlueZoneGpsWidget_Base_C::SetReset(bool bReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.SetReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf0435306);
 
 	UBlueZoneGpsWidget_Base_C_SetReset_Params params;
 	params.bReset = bReset;
@@ -79,7 +82,8 @@ void UBlueZoneGpsWidget_Base_C::SetReset(bool bReset)
 
 void UBlueZoneGpsWidget_Base_C::SetResetTimeCheck(float ResetTimeCheck, float* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.SetResetTimeCheck");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd5563edf);
 
 	UBlueZoneGpsWidget_Base_C_SetResetTimeCheck_Params params;
 	params.ResetTimeCheck = ResetTimeCheck;
@@ -102,7 +106,8 @@ void UBlueZoneGpsWidget_Base_C::SetResetTimeCheck(float ResetTimeCheck, float* R
 
 void UBlueZoneGpsWidget_Base_C::GetResetTimeCheck(float* ResetTimeCheck)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetResetTimeCheck");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa8094133);
 
 	UBlueZoneGpsWidget_Base_C_GetResetTimeCheck_Params params;
 
@@ -124,7 +129,8 @@ void UBlueZoneGpsWidget_Base_C::GetResetTimeCheck(float* ResetTimeCheck)
 
 void UBlueZoneGpsWidget_Base_C::SetPlayzoneReset(bool bNewPlayzoneReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.SetPlayzoneReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1a31a096);
 
 	UBlueZoneGpsWidget_Base_C_SetPlayzoneReset_Params params;
 	params.bNewPlayzoneReset = bNewPlayzoneReset;
@@ -144,7 +150,8 @@ void UBlueZoneGpsWidget_Base_C::SetPlayzoneReset(bool bNewPlayzoneReset)
 
 void UBlueZoneGpsWidget_Base_C::IsPlayzoneReset(bool* bReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsPlayzoneReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa89053c);
 
 	UBlueZoneGpsWidget_Base_C_IsPlayzoneReset_Params params;
 
@@ -166,7 +173,8 @@ void UBlueZoneGpsWidget_Base_C::IsPlayzoneReset(bool* bReset)
 
 void UBlueZoneGpsWidget_Base_C::SetBluezoneReset(bool bNewBluezoneReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.SetBluezoneReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa8babb0);
 
 	UBlueZoneGpsWidget_Base_C_SetBluezoneReset_Params params;
 	params.bNewBluezoneReset = bNewBluezoneReset;
@@ -186,7 +194,8 @@ void UBlueZoneGpsWidget_Base_C::SetBluezoneReset(bool bNewBluezoneReset)
 
 void UBlueZoneGpsWidget_Base_C::IsBluezoneReset(bool* bBluezoneReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsBluezoneReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd3aa92ba);
 
 	UBlueZoneGpsWidget_Base_C_IsBluezoneReset_Params params;
 
@@ -208,7 +217,8 @@ void UBlueZoneGpsWidget_Base_C::IsBluezoneReset(bool* bBluezoneReset)
 
 void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZoneRadius(float* CurrentPlayzoneRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayZoneRadius");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbdd522de);
 
 	UBlueZoneGpsWidget_Base_C_GetCurrentPlayZoneRadius_Params params;
 
@@ -230,7 +240,8 @@ void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZoneRadius(float* CurrentPlayzoneR
 
 void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZonePosition(struct FVector* CurrentPlayzonePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayZonePosition");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x42ee5085);
 
 	UBlueZoneGpsWidget_Base_C_GetCurrentPlayZonePosition_Params params;
 
@@ -252,7 +263,8 @@ void UBlueZoneGpsWidget_Base_C::GetCurrentPlayZonePosition(struct FVector* Curre
 
 void UBlueZoneGpsWidget_Base_C::IsResetBp(bool* bReset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsResetBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb109ad76);
 
 	UBlueZoneGpsWidget_Base_C_IsResetBp_Params params;
 
@@ -274,7 +286,8 @@ void UBlueZoneGpsWidget_Base_C::IsResetBp(bool* bReset)
 
 void UBlueZoneGpsWidget_Base_C::GetNextplayzoneRadiusBp(float* NextPlayzoneRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextplayzoneRadiusBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe285e06a);
 
 	UBlueZoneGpsWidget_Base_C_GetNextplayzoneRadiusBp_Params params;
 
@@ -296,7 +309,8 @@ void UBlueZoneGpsWidget_Base_C::GetNextplayzoneRadiusBp(float* NextPlayzoneRadiu
 
 void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionBp(struct FVector* NextPlayzonePosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7cfadff9);
 
 	UBlueZoneGpsWidget_Base_C_GetNextPlayzonePositionBp_Params params;
 
@@ -318,7 +332,8 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionBp(struct FVector* NextPl
 
 void UBlueZoneGpsWidget_Base_C::GetBluezoneStateBp(int* Stae)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetBluezoneStateBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcd4e22d8);
 
 	UBlueZoneGpsWidget_Base_C_GetBluezoneStateBp_Params params;
 
@@ -340,7 +355,8 @@ void UBlueZoneGpsWidget_Base_C::GetBluezoneStateBp(int* Stae)
 
 void UBlueZoneGpsWidget_Base_C::IsStateBluezoneReady(bool* IsReady)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsStateBluezoneReady");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfcc4ce45);
 
 	UBlueZoneGpsWidget_Base_C_IsStateBluezoneReady_Params params;
 
@@ -362,7 +378,8 @@ void UBlueZoneGpsWidget_Base_C::IsStateBluezoneReady(bool* IsReady)
 
 struct FText UBlueZoneGpsWidget_Base_C::GetBluezoneTimeText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetBluezoneTimeText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x400dffe5);
 
 	UBlueZoneGpsWidget_Base_C_GetBluezoneTimeText_Params params;
 
@@ -381,7 +398,8 @@ struct FText UBlueZoneGpsWidget_Base_C::GetBluezoneTimeText()
 
 void UBlueZoneGpsWidget_Base_C::UpdateGauge()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.UpdateGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd6510add);
 
 	UBlueZoneGpsWidget_Base_C_UpdateGauge_Params params;
 
@@ -400,7 +418,8 @@ void UBlueZoneGpsWidget_Base_C::UpdateGauge()
 
 void UBlueZoneGpsWidget_Base_C::BluezoneGpsMainPrepass(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.BluezoneGpsMainPrepass");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x167af8b0);
 
 	UBlueZoneGpsWidget_Base_C_BluezoneGpsMainPrepass_Params params;
 	params.BoundWidget = BoundWidget;
@@ -420,7 +439,8 @@ void UBlueZoneGpsWidget_Base_C::BluezoneGpsMainPrepass(class UWidget* BoundWidge
 
 void UBlueZoneGpsWidget_Base_C::GetTslCharacter(class ACharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetTslCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5a4204f3);
 
 	UBlueZoneGpsWidget_Base_C_GetTslCharacter_Params params;
 
@@ -442,7 +462,8 @@ void UBlueZoneGpsWidget_Base_C::GetTslCharacter(class ACharacter** Character)
 
 struct FLinearColor UBlueZoneGpsWidget_Base_C::GetIsInNextPlayzone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetIsInNextPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3c86e2b7);
 
 	UBlueZoneGpsWidget_Base_C_GetIsInNextPlayzone_Params params;
 
@@ -463,7 +484,8 @@ struct FLinearColor UBlueZoneGpsWidget_Base_C::GetIsInNextPlayzone()
 
 void UBlueZoneGpsWidget_Base_C::IsInNextPlayzoneBp(bool* bIsIn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.IsInNextPlayzoneBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4a1dcb6b);
 
 	UBlueZoneGpsWidget_Base_C_IsInNextPlayzoneBp_Params params;
 
@@ -485,7 +507,8 @@ void UBlueZoneGpsWidget_Base_C::IsInNextPlayzoneBp(bool* bIsIn)
 
 void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCurrentBlueZoneLength(float* Length)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayerzoneToCurrentBlueZoneLength");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfef6f401);
 
 	UBlueZoneGpsWidget_Base_C_GetNextPlayerzoneToCurrentBlueZoneLength_Params params;
 
@@ -507,7 +530,8 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCurrentBlueZoneLength(float* 
 
 void UBlueZoneGpsWidget_Base_C::GetPlayerLength(float* PlayerLength)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetPlayerLength");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6401b4a6);
 
 	UBlueZoneGpsWidget_Base_C_GetPlayerLength_Params params;
 
@@ -530,7 +554,8 @@ void UBlueZoneGpsWidget_Base_C::GetPlayerLength(float* PlayerLength)
 
 void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCharacterDirection(float Scale, struct FVector* Direction)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayerzoneToCharacterDirection");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb88ce9e4);
 
 	UBlueZoneGpsWidget_Base_C_GetNextPlayerzoneToCharacterDirection_Params params;
 	params.Scale = Scale;
@@ -555,7 +580,8 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayerzoneToCharacterDirection(float Scal
 
 void UBlueZoneGpsWidget_Base_C::GetSafeLength(float* SafeLength, struct FVector* A, struct FVector* B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetSafeLength");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe3b9d572);
 
 	UBlueZoneGpsWidget_Base_C_GetSafeLength_Params params;
 
@@ -582,7 +608,8 @@ void UBlueZoneGpsWidget_Base_C::GetSafeLength(float* SafeLength, struct FVector*
 
 void UBlueZoneGpsWidget_Base_C::GetBluezonePositionAndRadius(struct FVector* BluezonePosition, float* BluezoneRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetBluezonePositionAndRadius");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc4ecd13f);
 
 	UBlueZoneGpsWidget_Base_C_GetBluezonePositionAndRadius_Params params;
 
@@ -607,7 +634,8 @@ void UBlueZoneGpsWidget_Base_C::GetBluezonePositionAndRadius(struct FVector* Blu
 
 void UBlueZoneGpsWidget_Base_C::GetCurrentPlayzonePositionAndRadius(struct FVector* CurrentPlayzonePosition, float* CurrentPlayzoneRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetCurrentPlayzonePositionAndRadius");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x74a88822);
 
 	UBlueZoneGpsWidget_Base_C_GetCurrentPlayzonePositionAndRadius_Params params;
 
@@ -632,7 +660,8 @@ void UBlueZoneGpsWidget_Base_C::GetCurrentPlayzonePositionAndRadius(struct FVect
 
 void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionAndRadius(struct FVector* NextPlayzonePosition, float* Radius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetNextPlayzonePositionAndRadius");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc0842b90);
 
 	UBlueZoneGpsWidget_Base_C_GetNextPlayzonePositionAndRadius_Params params;
 
@@ -658,7 +687,8 @@ void UBlueZoneGpsWidget_Base_C::GetNextPlayzonePositionAndRadius(struct FVector*
 
 void UBlueZoneGpsWidget_Base_C::GetDangerLength(float* DangerLength, struct FVector* A, struct FVector* B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.GetDangerLength");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdb5b0248);
 
 	UBlueZoneGpsWidget_Base_C_GetDangerLength_Params params;
 
@@ -682,7 +712,8 @@ void UBlueZoneGpsWidget_Base_C::GetDangerLength(float* DangerLength, struct FVec
 
 void UBlueZoneGpsWidget_Base_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc3e8f0f6);
 
 	UBlueZoneGpsWidget_Base_C_Construct_Params params;
 
@@ -701,7 +732,8 @@ void UBlueZoneGpsWidget_Base_C::Construct()
 
 void UBlueZoneGpsWidget_Base_C::MainPrepassWidgetVisibilitySetting(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.MainPrepassWidgetVisibilitySetting");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfbb2b7d0);
 
 	UBlueZoneGpsWidget_Base_C_MainPrepassWidgetVisibilitySetting_Params params;
 	params.BoundWidget = BoundWidget;
@@ -719,7 +751,8 @@ void UBlueZoneGpsWidget_Base_C::MainPrepassWidgetVisibilitySetting(class UWidget
 
 void UBlueZoneGpsWidget_Base_C::OnWarning()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.OnWarning");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x77b3f534);
 
 	UBlueZoneGpsWidget_Base_C_OnWarning_Params params;
 
@@ -736,7 +769,8 @@ void UBlueZoneGpsWidget_Base_C::OnWarning()
 
 void UBlueZoneGpsWidget_Base_C::OnLeaveNextPlayzone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.OnLeaveNextPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbaec1e52);
 
 	UBlueZoneGpsWidget_Base_C_OnLeaveNextPlayzone_Params params;
 
@@ -753,7 +787,8 @@ void UBlueZoneGpsWidget_Base_C::OnLeaveNextPlayzone()
 
 void UBlueZoneGpsWidget_Base_C::OnEnterNextPlayzone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.OnEnterNextPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc9e926f1);
 
 	UBlueZoneGpsWidget_Base_C_OnEnterNextPlayzone_Params params;
 
@@ -772,7 +807,8 @@ void UBlueZoneGpsWidget_Base_C::OnEnterNextPlayzone()
 
 void UBlueZoneGpsWidget_Base_C::ChildResetBluezone(float Gauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.ChildResetBluezone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7b9cf716);
 
 	UBlueZoneGpsWidget_Base_C_ChildResetBluezone_Params params;
 	params.Gauge = Gauge;
@@ -792,7 +828,8 @@ void UBlueZoneGpsWidget_Base_C::ChildResetBluezone(float Gauge)
 
 void UBlueZoneGpsWidget_Base_C::ChildResetPlayzone(float Gauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.ChildResetPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdc6cbb3c);
 
 	UBlueZoneGpsWidget_Base_C_ChildResetPlayzone_Params params;
 	params.Gauge = Gauge;
@@ -812,7 +849,8 @@ void UBlueZoneGpsWidget_Base_C::ChildResetPlayzone(float Gauge)
 
 void UBlueZoneGpsWidget_Base_C::ChildUpdateGauge(float Gauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.ChildUpdateGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8d7ead95);
 
 	UBlueZoneGpsWidget_Base_C_ChildUpdateGauge_Params params;
 	params.Gauge = Gauge;
@@ -832,7 +870,8 @@ void UBlueZoneGpsWidget_Base_C::ChildUpdateGauge(float Gauge)
 
 void UBlueZoneGpsWidget_Base_C::ExecuteUbergraph_BlueZoneGpsWidget_Base(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Base.BlueZoneGpsWidget_Base_C.ExecuteUbergraph_BlueZoneGpsWidget_Base");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3cbeaad);
 
 	UBlueZoneGpsWidget_Base_C_ExecuteUbergraph_BlueZoneGpsWidget_Base_Params params;
 	params.EntryPoint = EntryPoint;

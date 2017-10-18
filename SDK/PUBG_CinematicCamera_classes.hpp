@@ -31,7 +31,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        PreviewMesh_CraneCounterWeight;                           // 0x03E8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x5c2895d6);
 			return ptr;
 		}
 
@@ -53,7 +54,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        PreviewMesh_Mount;                                        // 0x03E0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Rail");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0cfa9bf);
 			return ptr;
 		}
 
@@ -79,7 +81,8 @@ namespace Classes {
 		float                                              DefaultLensFStop;                                         // 0x090C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CinematicCamera.CineCameraComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8f8958aa);
 			return ptr;
 		}
 
@@ -94,7 +97,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x08E0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CinematicCamera.CineCameraActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2e004158);
 			return ptr;
 		}
 

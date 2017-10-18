@@ -21,7 +21,8 @@ namespace Classes {
 		float                                              YFactor;                                                  // 0x0404(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass P_Boat_FrontDrive_FoamLeft_BP.P_Boat_FrontDrive_FoamLeft_BP_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xb1b8f859);
 			return ptr;
 		}
 

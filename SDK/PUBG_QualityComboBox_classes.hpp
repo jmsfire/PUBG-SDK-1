@@ -23,7 +23,8 @@ namespace Classes {
 		TArray<struct FComboBoxOption>                     OptionList;                                               // 0x0280(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass QualityComboBox.QualityComboBox_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x4a3b0d95);
 			return ptr;
 		}
 

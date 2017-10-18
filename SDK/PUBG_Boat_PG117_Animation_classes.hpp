@@ -30,7 +30,8 @@ namespace Classes {
 		struct FRotator                                    PropellerRot;                                             // 0x0794(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass Boat_PG117_Animation.Boat_PG117_Animation_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa5482488);
 			return ptr;
 		}
 

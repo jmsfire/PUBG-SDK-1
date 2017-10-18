@@ -22,7 +22,8 @@ namespace Classes {
 		float                                              LastInteractionTime;                                      // 0x0450(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("BlueprintGeneratedClass VehicleSeatBase_Moto.VehicleSeatBase_Moto_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x64e074bd);
 			return ptr;
 		}
 

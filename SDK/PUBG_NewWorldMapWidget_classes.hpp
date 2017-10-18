@@ -75,7 +75,8 @@ namespace Classes {
 		class UCurveFloat*                                 ZoomMultiplier;                                           // 0x0408(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass NewWorldMapWidget.NewWorldMapWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x24c4d9d1);
 			return ptr;
 		}
 

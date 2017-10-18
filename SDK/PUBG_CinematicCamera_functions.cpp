@@ -19,7 +19,8 @@ namespace Classes
 
 class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CinematicCamera.CineCameraActor.GetCineCameraComponent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x219c3443);
 
 	ACineCameraActor_GetCineCameraComponent_Params params;
 

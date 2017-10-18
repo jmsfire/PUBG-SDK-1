@@ -19,7 +19,8 @@ namespace Classes
 
 struct FText UReplayTimelineKillEventItem_C::GetToolTipText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimelineKillEventItem.ReplayTimelineKillEventItem_C.GetToolTipText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc02248d3);
 
 	UReplayTimelineKillEventItem_C_GetToolTipText_Params params;
 

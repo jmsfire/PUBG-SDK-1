@@ -53,7 +53,8 @@ namespace Classes {
 		bool                                               bMoving;                                                  // 0x0F45(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("AnimBlueprintGeneratedClass ABP_Parachute.ABP_Parachute_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3419aeb8);
 			return ptr;
 		}
 

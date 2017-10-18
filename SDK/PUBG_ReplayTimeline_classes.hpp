@@ -40,7 +40,8 @@ namespace Classes {
 		struct FTimerHandle                                GetKillEventsTimer;                                       // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ReplayTimeline.ReplayTimeline_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa2230e55);
 			return ptr;
 		}
 

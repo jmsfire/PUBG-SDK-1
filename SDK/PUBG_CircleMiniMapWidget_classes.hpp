@@ -27,7 +27,8 @@ namespace Classes {
 		float                                              Radius;                                                   // 0x0288(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass CircleMiniMapWidget.CircleMiniMapWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x43225d09);
 			return ptr;
 		}
 

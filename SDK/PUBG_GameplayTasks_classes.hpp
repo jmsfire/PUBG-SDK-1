@@ -17,7 +17,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskOwnerInterface");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xf24e6232);
 			return ptr;
 		}
 
@@ -34,7 +35,8 @@ namespace Classes {
 		class UGameplayTask*                               ChildTask;                                                // 0x0060(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7ca2ea50);
 			return ptr;
 		}
 
@@ -51,7 +53,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_ClaimResource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x50214189);
 			return ptr;
 		}
 
@@ -71,7 +74,8 @@ namespace Classes {
 		class UClass*                                      ClassToSpawn;                                             // 0x00A0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_SpawnActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x727861d3);
 			return ptr;
 		}
 
@@ -90,7 +94,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTask_WaitDelay");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x674aa145);
 			return ptr;
 		}
 
@@ -111,7 +116,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTaskResource");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd99921ec);
 			return ptr;
 		}
 
@@ -132,7 +138,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x8];                                       // 0x0158(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class GameplayTasks.GameplayTasksComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1d8c121c);
 			return ptr;
 		}
 

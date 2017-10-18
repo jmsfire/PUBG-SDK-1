@@ -32,7 +32,8 @@ namespace Classes {
 		bool                                               isSafezoneDirectionVanishing;                             // 0x02EC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x3dec9c7);
 			return ptr;
 		}
 

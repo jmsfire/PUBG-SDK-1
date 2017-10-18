@@ -48,7 +48,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0xB];                                       // 0x0455(0x000B) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTWidget");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xac05e136);
 			return ptr;
 		}
 
@@ -75,7 +76,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc3493115);
 			return ptr;
 		}
 
@@ -89,7 +91,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTJSEvent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xdbe289c5);
 			return ptr;
 		}
 
@@ -111,7 +114,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x796b1a20);
 			return ptr;
 		}
 
@@ -138,7 +142,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTJSPayload");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcde32097);
 			return ptr;
 		}
 
@@ -157,7 +162,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTEventHelpers");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2712c705);
 			return ptr;
 		}
 
@@ -188,7 +194,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CoherentUIGTPlugin.CoherentUIGTSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x8d251021);
 			return ptr;
 		}
 

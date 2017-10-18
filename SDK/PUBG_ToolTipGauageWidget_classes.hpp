@@ -23,7 +23,8 @@ namespace Classes {
 		struct FText                                       GaugeName;                                                // 0x0268(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ToolTipGauageWidget.ToolTipGauageWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x295efa4d);
 			return ptr;
 		}
 

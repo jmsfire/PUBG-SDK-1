@@ -25,7 +25,8 @@ namespace Classes {
 		TEnumAsByte<ESubjectToReport>                      SubjectToReportType;                                      // 0x0271(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ReportPlayerWidget.ReportPlayerWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcb93c103);
 			return ptr;
 		}
 

@@ -20,7 +20,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0368(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc6dd67a8);
 			return ptr;
 		}
 
@@ -35,7 +36,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x48];                                      // 0x0378(0x0048) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableSkeletalComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7819def2);
 			return ptr;
 		}
 
@@ -53,7 +55,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0xA0];                                      // 0x0060(0x00A0) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableInstancePrivateData");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x2308bdda);
 			return ptr;
 		}
 
@@ -76,7 +79,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableObject");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcbbbb06d);
 			return ptr;
 		}
 
@@ -102,7 +106,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0128(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableObjectInstance");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xeb5a3a94);
 			return ptr;
 		}
 
@@ -123,7 +128,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x60];                                      // 0x0090(0x0060) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class CustomizableObject.CustomizableObjectSystem");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x6dbf909a);
 			return ptr;
 		}
 

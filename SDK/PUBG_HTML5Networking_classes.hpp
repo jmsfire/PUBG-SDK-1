@@ -18,7 +18,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x10];                                      // 0x336E8(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketConnection");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7a0f5d88);
 			return ptr;
 		}
 
@@ -33,7 +34,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0xC];                                       // 0x041C(0x000C) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketNetDriver");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xa2c1cc6b);
 			return ptr;
 		}
 

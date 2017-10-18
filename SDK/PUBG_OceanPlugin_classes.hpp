@@ -45,7 +45,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x17];                                      // 0x0389(0x0017) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.BuoyancyForceComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x85888168);
 			return ptr;
 		}
 
@@ -76,7 +77,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x28];                                      // 0x0400(0x0028) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.OceanManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xbc14f367);
 			return ptr;
 		}
 
@@ -115,7 +117,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x18];                                      // 0x01B0(0x0018) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.BuoyancyComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x89656e7f);
 			return ptr;
 		}
 
@@ -146,7 +149,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x8];                                       // 0x0A08(0x0008) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.BuoyantDestructibleComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd0568395);
 			return ptr;
 		}
 
@@ -160,7 +164,8 @@ namespace Classes {
 		class UBuoyantDestructibleComponent*               BuoyantDestructibleComponent;                             // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.BuoyantDestructible");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x7c40a4b8);
 			return ptr;
 		}
 
@@ -195,7 +200,8 @@ namespace Classes {
 		class UWaterHeightmapComponent*                    WaterHeightmap;                                           // 0x0868(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.BuoyantMeshComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xe6f89efa);
 			return ptr;
 		}
 
@@ -209,7 +215,8 @@ namespace Classes {
 		class APawn*                                       PlayerPawn;                                               // 0x06D0(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.CustomVehicleController");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xc43163b7);
 			return ptr;
 		}
 
@@ -238,7 +245,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x20];                                      // 0x03D8(0x0020) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.FishManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xcf538e83);
 			return ptr;
 		}
 
@@ -282,7 +290,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0xBF];                                      // 0x04C1(0x00BF) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.FlockFish");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x94f68ff1);
 			return ptr;
 		}
 
@@ -310,7 +319,8 @@ namespace Classes {
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0320(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.InfiniteSystemComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x63362c4);
 			return ptr;
 		}
 
@@ -356,7 +366,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x38];                                      // 0x0430(0x0038) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.TimeManager");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xd91fe338);
 			return ptr;
 		}
 
@@ -391,7 +402,8 @@ namespace Classes {
 		class AOceanManager*                               OceanManager;                                             // 0x0168(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class OceanPlugin.WaterHeightmapComponent");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1844b99f);
 			return ptr;
 		}
 

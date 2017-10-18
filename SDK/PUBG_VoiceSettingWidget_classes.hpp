@@ -29,7 +29,8 @@ namespace Classes {
 		struct FString                                     VoiceChannelNoneOptionString;                             // 0x02F8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass VoiceSettingWidget.VoiceSettingWidget_C");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x122e7031);
 			return ptr;
 		}
 

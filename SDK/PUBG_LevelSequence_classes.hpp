@@ -20,7 +20,8 @@ namespace Classes {
 		TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                         // 0x0080(0x0050) (CPF_ZeroConstructor, CPF_Deprecated)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x90f32297);
 			return ptr;
 		}
 
@@ -47,7 +48,8 @@ namespace Classes {
 		unsigned char                                      UnknownData04[0x78];                                      // 0x00E8(0x0078) MISSED OFFSET
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0xfec432b8);
 			return ptr;
 		}
 
@@ -78,7 +80,8 @@ namespace Classes {
 	public:
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x65b8f37c);
 			return ptr;
 		}
 
@@ -95,7 +98,8 @@ namespace Classes {
 		class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9a716ef1);
 			return ptr;
 		}
 
@@ -116,7 +120,8 @@ namespace Classes {
 		class ULevelSequenceBurnIn*                        BurnInInstance;                                           // 0x03D0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x9623a3a6);
 			return ptr;
 		}
 
@@ -134,7 +139,8 @@ namespace Classes {
 		class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0288(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
-			static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x39524cfd);
 			return ptr;
 		}
 
