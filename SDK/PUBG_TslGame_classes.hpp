@@ -576,6 +576,7 @@ namespace Classes {
 		void ServerNextSetViewTarget(bool bIsPrev);
 		void ServerMoveToVehicleSeat(int SeatIndex);
 		void ServerMapLoadFinishedOnClient();
+		void ServerLogLanguage(const struct FString& WindowsLanguage, const struct FString& GameLanguage);
 		void ServerLeaveMatchIntentionally();
 		void ServerKickCharacter(class ATslCharacter* TslCharacter, const struct FText& Reason);
 		void ServerCheat(const struct FString& Msg);
@@ -2090,7 +2091,7 @@ namespace Classes {
 
 		bool SetNextGasInBlackboard();
 		void InitRadius();
-		float GetPoisonGasDamagePerSecond();
+		float GetPoisonGasDamagePerSecond(float CharaterToCenterDistance, float SafetyZoneRadius, float PoisonGasWarningRadius);
 		int GetMaxPhaseCount();
 	};
 
@@ -7217,7 +7218,7 @@ namespace Classes {
 
 
 	// Class TslGame.TslSpectatorPawn
-	// 0x0198 (0x05C0 - 0x0428)
+	// 0x01A8 (0x05D0 - 0x0428)
 	class ATslSpectatorPawn : public ASpectatorPawn {
 	public:
 		class UClass*                                      ReplayHUD;                                                // 0x0428(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -7270,6 +7271,7 @@ namespace Classes {
 		TArray<struct FSavedObPos>                         ArrObPos;                                                 // 0x0530(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		unsigned char                                      UnknownData11[0x70];                                      // 0x0540(0x0070) MISSED OFFSET
 		struct FScriptMulticastDelegate                    OnPlayerInfoDistanceDelegate;                             // 0x05B0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+		unsigned char                                      UnknownData12[0x10];                                      // 0x05C0(0x0010) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;

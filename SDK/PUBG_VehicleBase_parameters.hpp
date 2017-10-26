@@ -54,8 +54,8 @@ namespace Classes {
 	struct AVehicleBase_C_OnRep_IsBrakeEngaged_Params {
 	};
 
-	// Function VehicleBase.VehicleBase_C.OnRep_isLightsOn
-	struct AVehicleBase_C_OnRep_isLightsOn_Params {
+	// Function VehicleBase.VehicleBase_C.OnRep_IsLightsOn
+	struct AVehicleBase_C_OnRep_IsLightsOn_Params {
 	};
 
 	// Function VehicleBase.VehicleBase_C.UserConstructionScript

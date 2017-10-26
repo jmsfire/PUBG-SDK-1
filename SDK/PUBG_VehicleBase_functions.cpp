@@ -195,15 +195,15 @@ void AVehicleBase_C::OnRep_IsBrakeEngaged()
 }
 
 
-// Function VehicleBase.VehicleBase_C.OnRep_isLightsOn
+// Function VehicleBase.VehicleBase_C.OnRep_IsLightsOn
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void AVehicleBase_C::OnRep_isLightsOn()
+void AVehicleBase_C::OnRep_IsLightsOn()
 {
 	static UFunction* fn = nullptr;
-	if (!fn) fn = UObject::FindObject<UFunction>(0x448b0ec4);
+	if (!fn) fn = UObject::FindObject<UFunction>(0x156af124);
 
-	AVehicleBase_C_OnRep_isLightsOn_Params params;
+	AVehicleBase_C_OnRep_IsLightsOn_Params params;
 
 	auto flags = fn->FunctionFlags;
 

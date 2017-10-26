@@ -1549,7 +1549,7 @@ namespace Classes {
 	};
 
 	// ScriptStruct TslGame.BattleRoyalePoisionGasData
-	// 0x001C
+	// 0x0030
 	struct FBattleRoyalePoisionGasData {
 		float                                              StartDelay;                                               // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              WarningDuration;                                          // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1558,6 +1558,10 @@ namespace Classes {
 		float                                              RandomRadiusRate;                                         // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              PoisonGasDamagePerSecond;                                 // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              SpreadRatio;                                              // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              DamageMagnifierForDistance;                               // 0x001C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              DamageMagnifier;                                          // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+		class UCurveFloat*                                 DamageMagnifierCurve;                                     // 0x0028(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct TslGame.WeaponGunData
@@ -3084,6 +3088,14 @@ namespace Classes {
 	// 0x0030 (0x0058 - 0x0028)
 	struct FWuLogCarePackageSpawn : public FLogBase {
 		struct FWuLogItemPackage                           ItemPackage;                                              // 0x0028(0x0030)
+	};
+
+	// ScriptStruct TslGame.WuLogLanguage
+	// 0x0058 (0x0080 - 0x0028)
+	struct FWuLogLanguage : public FLogBase {
+		struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+		struct FString                                     WindowsLanguage;                                          // 0x0060(0x0010) (CPF_ZeroConstructor)
+		struct FString                                     GameLanguage;                                             // 0x0070(0x0010) (CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct TslGame.WuLogItemUse

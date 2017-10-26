@@ -532,6 +532,12 @@ namespace Classes {
 	struct ATslPlayerController_ServerMapLoadFinishedOnClient_Params {
 	};
 
+	// Function TslGame.TslPlayerController.ServerLogLanguage
+	struct ATslPlayerController_ServerLogLanguage_Params {
+		struct FString                                     WindowsLanguage;                                          // (CPF_Parm, CPF_ZeroConstructor)
+		struct FString                                     GameLanguage;                                             // (CPF_Parm, CPF_ZeroConstructor)
+	};
+
 	// Function TslGame.TslPlayerController.ServerLeaveMatchIntentionally
 	struct ATslPlayerController_ServerLeaveMatchIntentionally_Params {
 	};
@@ -1899,6 +1905,9 @@ namespace Classes {
 
 	// Function TslGame.BattleRoyaleModeController.GetPoisonGasDamagePerSecond
 	struct ABattleRoyaleModeController_GetPoisonGasDamagePerSecond_Params {
+		float                                              CharaterToCenterDistance;                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              SafetyZoneRadius;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              PoisonGasWarningRadius;                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 

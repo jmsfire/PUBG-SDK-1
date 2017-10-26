@@ -105,7 +105,7 @@ namespace Classes {
 		void TickWheelCaching();
 		void TickWheelSound();
 		void OnRep_IsBrakeEngaged();
-		void OnRep_isLightsOn();
+		void OnRep_IsLightsOn();
 		void UserConstructionScript();
 		void InpActEvt_Handbrake_K2Node_InputActionEvent_4(const struct FKey& Key);
 		void InpActEvt_Handbrake_K2Node_InputActionEvent_3(const struct FKey& Key);

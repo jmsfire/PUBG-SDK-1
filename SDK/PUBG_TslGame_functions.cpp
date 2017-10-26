@@ -2166,6 +2166,29 @@ namespace Classes {
 	}
 
 
+	// Function TslGame.TslPlayerController.ServerLogLanguage
+	// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
+	// Parameters:
+	// struct FString                 WindowsLanguage                (CPF_Parm, CPF_ZeroConstructor)
+	// struct FString                 GameLanguage                   (CPF_Parm, CPF_ZeroConstructor)
+
+	void ATslPlayerController::ServerLogLanguage(const struct FString& WindowsLanguage, const struct FString& GameLanguage) {
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0x16a519d5);
+
+		ATslPlayerController_ServerLogLanguage_Params params;
+		params.WindowsLanguage = WindowsLanguage;
+		params.GameLanguage = GameLanguage;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+	}
+
+
 	// Function TslGame.TslPlayerController.ServerLeaveMatchIntentionally
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
@@ -7857,13 +7880,19 @@ namespace Classes {
 	// Function TslGame.BattleRoyaleModeController.GetPoisonGasDamagePerSecond
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 	// Parameters:
+	// float                          CharaterToCenterDistance       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	// float                          SafetyZoneRadius               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	// float                          PoisonGasWarningRadius         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ABattleRoyaleModeController::GetPoisonGasDamagePerSecond() {
+	float ABattleRoyaleModeController::GetPoisonGasDamagePerSecond(float CharaterToCenterDistance, float SafetyZoneRadius, float PoisonGasWarningRadius) {
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcb66d12c);
 
 		ABattleRoyaleModeController_GetPoisonGasDamagePerSecond_Params params;
+		params.CharaterToCenterDistance = CharaterToCenterDistance;
+		params.SafetyZoneRadius = SafetyZoneRadius;
+		params.PoisonGasWarningRadius = PoisonGasWarningRadius;
 
 		auto flags = fn->FunctionFlags;
 		fn->FunctionFlags |= 0x400;
