@@ -17,6 +17,11 @@ namespace Classes {
 	struct AParachutePlayer_C_UserConstructionScript_Params {
 	};
 
+	// Function ParachutePlayer.ParachutePlayer_C.ReceiveEndPlay
+	struct AParachutePlayer_C_ReceiveEndPlay_Params {
+		TEnumAsByte<EEndPlayReason>*                       EndPlayReason;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	};
+
 	// Function ParachutePlayer.ParachutePlayer_C.ReceiveHit
 	struct AParachutePlayer_C_ReceiveHit_Params {
 		class UPrimitiveComponent**                        MyComp;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
