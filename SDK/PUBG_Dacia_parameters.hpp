@@ -3,24 +3,22 @@
 // PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
 #include "../SDK.hpp"
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Parameters
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Parameters
+	//---------------------------------------------------------------------------
 
-// Function Dacia.Dacia_C.UserConstructionScript
-struct ADacia_C_UserConstructionScript_Params
-{
-};
+	// Function Dacia.Dacia_C.UserConstructionScript
+	struct ADacia_C_UserConstructionScript_Params {
+	};
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif
