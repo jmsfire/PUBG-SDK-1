@@ -3,25 +3,25 @@
 // PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-#pragma pack(push, 0x8)
+	#pragma pack(push, 0x8)
 #endif
 
 #include "../SDK.hpp"
 
 namespace Classes
 {
-	//---------------------------------------------------------------------------
-	//Parameters
-	//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
 
-	// Function KeyReceiverWidget_BP.KeyReceiverWidget_BP_C.GetBorderColorAndOpacity
-	struct UKeyReceiverWidget_BP_C_GetBorderColorAndOpacity_Params
-	{
-		struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-	};
+// Function KeyReceiverWidget_BP.KeyReceiverWidget_BP_C.GetBorderColorAndOpacity
+struct UKeyReceiverWidget_BP_C_GetBorderColorAndOpacity_Params
+{
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 }
 
 #ifdef _MSC_VER
-#pragma pack(pop)
+	#pragma pack(pop)
 #endif

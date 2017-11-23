@@ -3,33 +3,33 @@
 // PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-#pragma pack(push, 0x8)
+	#pragma pack(push, 0x8)
 #endif
 
 namespace Classes
 {
-	//---------------------------------------------------------------------------
-	//Classes
-	//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
 
-	// WidgetBlueprintGeneratedClass BuggyStanceWidget.BuggyStanceWidget_C
-	// 0x0000 (0x0240 - 0x0240)
-	class UBuggyStanceWidget_C : public UUserWidget
+// WidgetBlueprintGeneratedClass BuggyStanceWidget.BuggyStanceWidget_C
+// 0x0000 (0x0240 - 0x0240)
+class UBuggyStanceWidget_C : public UUserWidget
+{
+public:
+
+	static UClass* StaticClass()
 	{
-	public:
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0x25440a8d);
+		return ptr;
+	}
 
-		static UClass* StaticClass()
-		{
-			static UClass* ptr = nullptr;
-			if (!ptr) ptr = UObject::FindClass(0x25440a8d);
-			return ptr;
-		}
-
-	};
+};
 
 
 }
 
 #ifdef _MSC_VER
-#pragma pack(pop)
+	#pragma pack(pop)
 #endif

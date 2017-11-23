@@ -3,24 +3,24 @@
 // PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-#pragma pack(push, 0x8)
+	#pragma pack(push, 0x8)
 #endif
 
 #include "../SDK.hpp"
 
 namespace Classes
 {
-	//---------------------------------------------------------------------------
-	//Parameters
-	//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
 
-	// Function Uaz.Uaz_C.UserConstructionScript
-	struct AUaz_C_UserConstructionScript_Params
-	{
-	};
+// Function Uaz.Uaz_C.UserConstructionScript
+struct AUaz_C_UserConstructionScript_Params
+{
+};
 
 }
 
 #ifdef _MSC_VER
-#pragma pack(pop)
+	#pragma pack(pop)
 #endif
