@@ -6038,26 +6038,26 @@ namespace Classes {
 		TArray<struct FColorBlindColorSet>                 OverrideMarkerColors;                                     // 0x0270(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		float                                              PunchClientHitLeeway_Attacker;                            // 0x0280(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              PunchClientHitLeeway_Victim;                              // 0x0284(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideHitLeeway;                                      // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogClientSideHitLeeway;                                   // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeeway;                           // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceMax;                              // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              TravelDistanceLeeway;                                     // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              AllowedHitLag;                                            // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogMinHitLag;                                             // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              HackDetectionSpeed;                                       // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData07[0x4];                                       // 0x02AC(0x0004) MISSED OFFSET
+		float                                              PunchClientHitLeeway_VictimInPlace;                       // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideHitLeeway;                                      // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogClientSideHitLeeway;                                   // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeeway;                           // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceMax;                              // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              TravelDistanceLeeway;                                     // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              AllowedHitLag;                                            // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogMinHitLag;                                             // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              HackDetectionSpeed;                                       // 0x02AC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		float                                              FakeDoorBlockMaxY;                                        // 0x02C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData08[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
+		unsigned char                                      UnknownData07[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
 		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02D8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		float                                              FreelookRecoveryInterpSpeed;                              // 0x02E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData09[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
+		unsigned char                                      UnknownData08[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
 		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F0(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		bool                                               bIsESports;                                               // 0x0340(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData10[0x57];                                      // 0x0341(0x0057) MISSED OFFSET
+		unsigned char                                      UnknownData09[0x57];                                      // 0x0341(0x0057) MISSED OFFSET
 		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0398(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
