@@ -1257,10 +1257,10 @@ namespace Classes {
 
 
 	// Class TslGame.HackReporterComponent
-	// 0x0188 (0x0280 - 0x00F8)
+	// 0x01C8 (0x02C0 - 0x00F8)
 	class UHackReporterComponent : public UActorComponent {
 	public:
-		unsigned char                                      UnknownData00[0x188];                                     // 0x00F8(0x0188) MISSED OFFSET
+		unsigned char                                      UnknownData00[0x1C8];                                     // 0x00F8(0x01C8) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -1269,7 +1269,7 @@ namespace Classes {
 		}
 
 
-		void ServerOnWallHackDetected(float Distance);
+		void ServerOnWallHackDetected(class ATslCharacter* Victim, float Distance);
 	};
 
 
@@ -5952,7 +5952,7 @@ namespace Classes {
 
 
 	// Class TslGame.TslSettings
-	// 0x0388 (0x03B0 - 0x0028)
+	// 0x0390 (0x03B8 - 0x0028)
 	class UTslSettings : public UObject {
 	public:
 		float                                              RepDistance_Item;                                         // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -6040,27 +6040,29 @@ namespace Classes {
 		float                                              PunchClientHitLeeway_Victim;                              // 0x0284(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              PunchClientHitLeeway_VictimInPlace;                       // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              ClientSideHitLeeway;                                      // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogClientSideHitLeeway;                                   // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeeway;                           // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceMax;                              // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              TravelDistanceLeeway;                                     // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              AllowedHitLag;                                            // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogMinHitLag;                                             // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              HackDetectionSpeed;                                       // 0x02AC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FakeDoorBlockMaxY;                                        // 0x02C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData07[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
-		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02D8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FreelookRecoveryInterpSpeed;                              // 0x02E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData08[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
-		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F0(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		bool                                               bIsESports;                                               // 0x0340(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData09[0x57];                                      // 0x0341(0x0057) MISSED OFFSET
-		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0398(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		float                                              ClientSideHitLeewayInPlace;                               // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogClientSideHitLeeway;                                   // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeeway;                           // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceMax;                              // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              TravelDistanceLeeway;                                     // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              AllowedHitLag;                                            // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogMinHitLag;                                             // 0x02AC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              HackDetectionSpeed;                                       // 0x02B0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData07[0x4];                                       // 0x02B4(0x0004) MISSED OFFSET
+		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FakeDoorBlockMaxY;                                        // 0x02C8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData08[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
+		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02E0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FreelookRecoveryInterpSpeed;                              // 0x02F0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData09[0x4];                                       // 0x02F4(0x0004) MISSED OFFSET
+		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F8(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		bool                                               bIsESports;                                               // 0x0348(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData10[0x57];                                      // 0x0349(0x0057) MISSED OFFSET
+		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -9094,7 +9096,7 @@ namespace Classes {
 
 		void SimulateHit_UnReliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
 		void SimulateHit_Reliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
-		void ServerNotifyHit(float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
+		void ServerNotifyHit(const struct FVector& RelativeImpact, float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
 		void ServerNotifyCrack(class ATslCharacter* TargetCharacter, const struct FVector_NetQuantize& LocationRelative, float BulletVelocity);
 		void OnRep_WeaponSpread(float LastWeaponSpread);
 		bool IsBulletInAir();
